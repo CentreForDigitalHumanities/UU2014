@@ -4,3 +4,6 @@
 [submodule "libraries/bootstrap3"]
 	path = libraries/bootstrap3
 	url = https://github.com/components/bootstrap
+[submodule "libraries/redux"]
+	path = libraries/redux
+	url = https://github.com/ReduxFramework/redux-framework
