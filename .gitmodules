@@ -7,3 +7,6 @@
 [submodule "libraries/redux"]
 	path = libraries/redux
 	url = https://github.com/ReduxFramework/redux-framework
+[submodule "libraries/option-tree"]
+	path = libraries/option-tree
+	url = https://github.com/valendesigns/option-tree
