@@ -90,6 +90,12 @@ add_action( 'widgets_init', 'uu2014_widgets_init' );
 function uu2014_scripts() {
 	wp_enqueue_style( 'uu2014-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/libraries/bootstrap3/css/bootstrap.css', array( ), false, 'all' );
+
+	wp_enqueue_script('jquery');
+	
+	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/libraries/bootstrap3/js/bootstrap.js', array( ), false, 'all' );
+
 	wp_enqueue_script( 'uu2014-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
 	wp_enqueue_script( 'uu2014-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
@@ -124,3 +130,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load Custom Navigation Walker.
+ */
+require_once ('libraries/wp-bootstrap-navwalker/wp_bootstrap_navwalker.php');

@@ -22,17 +22,38 @@
 <div id="page" class="hfeed site">
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'uu2014' ); ?></button>
-			<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'uu2014' ); ?></a>
+					<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
+					<?php bloginfo('name'); ?>
+					</a>
+				</div>
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<?php
+					wp_nav_menu(array(
+					'menu' => 'primary',
+					'theme_location' => 'primary',
+					'depth' => 2,
+					'container' => false,
+					'menu_class' => 'nav navbar-nav',
+					'fallback_cb' => 'wp_page_menu',
+					'walker' => new wp_bootstrap_navwalker())
+					);
+					?>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
 	</header><!-- #masthead -->
 
-	<div id="content" class="site-content">
+	<div id="content" class="site-content container">
