@@ -1,0 +1,35 @@
+/******************************************************************
+Site Name:
+Author: 
+
+Stylesheet: Variables
+
+******************************************************************/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700,300);
+
+$sans: 'Verdana', sans-serif;
+$serif: serif;
+$default-font-size: 14px;
+
+$alert-yellow: #ebe16f;
+$alert-red: #fbe3e4;
+$alert-green: #e6efc2;
+$alert-blue: #d5edf8;
+
+$link-color: red;
+$link-hover-color: #007BA1;
+
+// Grid Stuff
+$screen-sm-min: 768px;
+$container-sm: 750px;
+
+$screen-md-min: 992px;
+$container-md: 970px;
+
+$screen-lg-min: 1200px;
+$container-lg: 1170px;
+
+$grid-columns: 12;
+$grid-gutter-width: 15px;
+
+$plugins-path: '/wp-content/plugins/';

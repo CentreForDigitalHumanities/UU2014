@@ -1,0 +1,479 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylesheet
+and will be used across all viewports.
+
+******************************************************************/
+
+/*
+CONTENTS:
+1. General Styles
+3. Header Styles
+4. Navigation Styles
+5. Posts & Content Styles
+6. Page Navigation Styles
+7. Comments & Comment Form Styles
+8. Sidebars & Asides
+9. Footer Styles
+*/
+
+/*********************
+GENERAL STYLES
+*********************/
+html {
+	height:100%;
+	overflow-x: hidden;
+}
+
+body {
+	height:auto;
+    overflow-x: hidden;
+
+    #container{
+		height:100%;
+		/*styles for mobile nav slide in*/
+		position:relative;
+		@include transition(all 0.25s ease-in-out);
+    }
+}
+
+/*********************
+HEADER SYTLES
+*********************/
+
+/* Ensure that there is no gap between the header and the admin bar for WordPress versions before 3.8. */
+#wpadminbar { min-height: 32px; }
+
+.header {}
+	#logo {}
+	#banner {
+
+		background-position:top center;
+		background-repeat:no-repeat;
+		background-size: cover;
+
+		.spacer {
+			padding-top: 26%; // change this value based on the aspect ratio of your header image
+		}
+	}
+	
+/*********************
+NAVIGATION STYLES
+*********************/
+
+/* Look for menu styles in /includes/_offcanvas-nav.scss */
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+#content {
+	margin: 2em 0;
+
+	#inner-content{
+
+		.hentry {
+
+			header {}
+
+			footer {}
+
+		} /* end .hentry */
+
+		.entry-content {} /* general title class */
+
+		.page-title {}
+
+		.single-title {}
+
+		.archive-title {}
+
+		.search-title {}
+
+		/* want to style individual post classes? Booya! */
+		.post-id {}         /* post by id (i.e. post-3) */
+		.post {}            /* general post style */
+		.page {}            /* general article on a page style */
+		.attachment {}      /* general style on an attatchment */
+		.sticky {}          /* sticky post style */
+		.hentry {}          /* hentry class */
+		.category-slug {}   /* style by category (i.e. category-videos) */
+		.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+		/* post meta */
+		.byline {
+			color: #999;
+			margin: -1em 0 1em;
+
+			time {}
+		}
+
+		/* entry content */
+		.entry-content {
+
+			p {}
+
+
+			ul, ol, table, dl {}
+
+			ul, ol {
+
+				li {}
+
+			}
+
+			ul {
+
+				li {}
+
+			}
+
+			ol {
+
+				li {}
+
+			}
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			dl {}
+
+			dt {}
+
+			dd {}
+		}
+	}
+
+}
+
+/******************************************************************
+PAGE NAVIGATION STYLES
+******************************************************************/
+
+.page-navigation,
+.wp-prev-next {}
+
+    .scaffolding_page_navi {
+        margin:1em 0;
+
+        li {
+            float: left;
+            margin:0;
+
+            a {
+                display: block;
+                color:#333;
+                text-decoration: none;
+                padding: 3px 10px;
+                position: relative;
+
+                &:hover,
+                &:focus {
+                    color: $link-color;
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        /* current page link */
+        li.bpn-current {
+            background-color:#f5f5f5;
+            color:$link-color;
+            padding: 3px 10px;
+            position: relative;
+
+            a {
+                /* hovering on current page link */
+                &:hover,
+                &:focus {
+                    color:#333;
+                }
+
+            }
+
+        } /* end .scaffolding_page_navi .bpn-current */
+
+        /* common styles for page-navi links */
+        li.bpn-prev-link,
+        li.bpn-next-link {
+            font-weight: 700;
+
+            a {
+                color:$link-color;
+
+                &:hover,
+                &:focus {
+                    color:#333;
+                }
+            }
+        }
+
+        /* remove the bg on end links */
+        li.bpn-prev-link a:hover,
+        li.bpn-next-link a:hover,
+        li.bpn-first-page-link a:hover,
+        li.bpn-last-page-link a:hover {
+            background: none;
+        }
+
+        /* previous link */
+        li.bpn-prev-link {
+            a {
+                &:hover,
+                &:focus {}
+            }
+        }
+
+        /* next page link */
+        li.bpn-next-link {
+            a {
+                &:hover,
+                &:focus {}
+            }
+        }
+
+        /* first page link */
+        li.bpn-first-page-link {
+            a {
+                &:hover,
+                &:focus {}
+            }
+        }
+
+        /* last page link */
+        li.bpn-last-page-link {
+            a {
+                &:hover,
+                &:focus {}
+            }
+        }
+
+    } /* end .scaffolding_page_navi */
+
+    /* fallback previous & next links */
+    .wp-prev-next {
+
+        ul {}
+
+        .prev-link {
+            float: left;
+        }
+
+        .next-link {
+            float: right;
+        }
+
+    } /* end .wp-prev-next */
+
+/******************************************************************
+COMMENTS & COMMENT FORM STYLES
+******************************************************************/
+
+// styles in _base_comments.scss
+@import "includes/base_comments";
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+	margin-top: 2em;
+}
+
+	.widgettitle {
+		margin-bottom: 0.75em;
+	}
+
+	.widget {
+		padding: 0 10px;
+		margin: 2.2em 0;
+
+		&.first-widget {
+			margin: 0 0 2.2em;
+		}
+
+		ul {
+			li {
+				margin-bottom: 0.75em;
+
+				&:first-child {}
+				&:last-child {}
+				a {}
+				/* deep nesting */
+
+				ul {
+					margin-top: 0.75em;
+					padding-left: 1em;
+				}
+			}
+		}
+	}
+
+
+	/* links widget */
+	.widget_links {}
+	.widget_links ul {}
+	.widget_links ul li {}
+	.widget_links ul li a {}
+
+	/* meta widget */
+	.widget_meta {}
+	.widget_meta ul {}
+	.widget_meta ul li {}
+	.widget_meta ul li a {}
+
+	/* pages widget */
+	.widget_pages {}
+	.widget_pages ul {}
+	.widget_pages ul li {}
+	.widget_pages ul li a {}
+
+	/* recent-posts widget */
+	.widget_recent_entries {}
+	.widget_recent_entries ul {}
+	.widget_recent_entries ul li {}
+	.widget_recent_entries ul li a {}
+
+	/* archives widget */
+	.widget_archive {}
+	.widget_archive ul {}
+	.widget_archive ul li {}
+	.widget_archive ul li a {}
+	.widget_archive select {}
+	.widget_archive option {}
+
+	/* tag-cloud widget */
+	.widget_links {}
+	.widget_links li:after {}
+	.widget_links li:before {}
+	.widget_tag_cloud {}
+	.widget_tag_cloud a {}
+	.widget_tag_cloud a:after {}
+	.widget_tag_cloud a:before {}
+
+	/* calendar widget */
+	.widget_calendar {}
+	#calendar_wrap {}
+	#calendar_wrap th {}
+	#calendar_wrap td {}
+	#wp-calendar tr td {}
+	#wp-calendar caption {}
+	#wp-calendar a {}
+	#wp-calendar #today {}
+	#wp-calendar #prev {}
+	#wp-calendar #next {}
+	#wp-calendar #next a {}
+	#wp-calendar #prev a {}
+
+	/* category widget */
+	.widget_categories {}
+	.widget_categories ul {}
+	.widget_categories ul li {}
+	.widget_categories ul ul.children {}
+	.widget_categories a {}
+	.widget_categories select{}
+	.widget_categories select#cat {}
+	.widget_categories select.postform {}
+	.widget_categories option {}
+	.widget_categories .level-0 {}
+	.widget_categories .level-1 {}
+	.widget_categories .level-2 {}
+	.widget_categories .level-3 {}
+
+	/* recent-comments widget */
+	.recentcomments {}
+	#recentcomments {}
+	#recentcomments li {}
+	#recentcomments li a {}
+	.widget_recent_comments {}
+
+	/* search widget */
+	#searchform {}
+	.widget_search {}
+	.screen-reader-text {}
+
+	/* text widget */
+	.textwidget {}
+	.widget_text {}
+	.textwidget p {}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+#colophon {
+	clear: both;
+	background-color:#111;
+	color:#999;
+	padding:1em 0;
+}
+
+	ul.footer-menu {
+		display:inline-block;
+		text-align:right;
+		margin:0;
+		padding:0;
+
+		li {
+			display:inline-block;
+			margin:0 0 0 -4px;
+			padding:0;
+
+			a{
+				border-left:1px solid #ccc;
+				color:#999;
+				line-height:normal;
+				padding:0 1em;
+			}
+
+			&:first-child a{
+				border-left:none;
+			}
+		}
+	} /* end .footer-menu */
+
+	.copyright {}
+
+	#back-top {
+		position: fixed;
+		bottom: 10px;
+		margin-right: 30px;
+		right: 0;
+		z-index: 9999;
+
+		a {
+			width: 40px;
+			display: block;
+			text-decoration: none;
+			opacity: .2;
+			background: #000;
+			@include transition(all 1s ease-in-out);
+			@include border-radius(500px);
+
+			&:hover, &:focus {
+				color: #000;
+				opacity: 1;
+			}
+		}
+
+		i {
+			width: 40px;
+			height: 40px;
+			display: block;
+			margin-bottom: 7px;
+			font-size: 1.5em;
+			line-height: 35px;
+			color: #FFF;
+			text-align: center;
+		}
+	}

@@ -1,0 +1,315 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+@import "variables";
+
+/*********************
+CLEARFIX - http://nicolasgallagher.com/micro-clearfix-hack/
+*********************/
+
+.clearfix {
+  zoom: 1;
+	&:before, &:after { content: " "; display: table; }
+	&:after { clear: both; }
+}
+
+/*********************
+IMAGES
+*********************/
+
+.img-border {
+    border:1px solid #CCC;
+    padding:5px;
+}
+
+.img-rounded {
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.img-circle {
+  -webkit-border-radius: 500px;
+     -moz-border-radius: 500px;
+          border-radius: 500px;
+}
+
+/*********************
+TYPOGRAPHY
+*********************/
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Arial, serif !important;
+  font-style: italic;
+}
+
+// alerts and notices  -  *You'll need to be using Sass 3.2+ for these to work.
+%alert {
+	margin: 10px;
+	padding: 5px 18px;
+	border: 1px solid;
+}
+
+.alert-help {
+	@extend %alert;
+	border-color: darken($alert-yellow, 5%);
+	background: $alert-yellow;
+}
+
+.alert-info {
+	@extend %alert;
+	border-color: darken($alert-blue, 5%);
+	background: $alert-blue;
+}
+
+.alert-error {
+	@extend %alert;
+	border-color: darken($alert-red, 5%);
+	background: $alert-red;
+}
+
+.alert-success {
+	@extend %alert;
+	border-color: darken($alert-green, 5%);
+	background: $alert-green;
+}
+
+
+// Responsive utilities
+@mixin responsive-visibility($parent) {
+  #{$parent} { display: block !important; }
+  tr#{$parent} { display: table-row !important; }
+  th#{$parent},
+  td#{$parent} { display: table-cell !important; }
+}
+
+// [converter] $parent hack
+@mixin responsive-invisibility($parent) {
+    #{$parent},
+  tr#{$parent},
+  th#{$parent},
+  td#{$parent} { display: none !important; }
+}
+
+// Device-specific hide/show classes. Written in reverse logic for IE compatibility
+@include responsive-invisibility('.mobile-only');
+@media only screen and (max-width: 480px) {
+    @include responsive-visibility('.mobile-only');
+}
+
+@include responsive-visibility('.mobile-hide');
+@media only screen and (max-width: 480px) {
+    @include responsive-invisibility('.mobile-hide');
+}
+
+@include responsive-invisibility('.tablet-only');
+@media only screen and (min-width:480px) and (max-width: 768px) {
+    @include responsive-visibility('.tablet-only');
+}
+
+@include responsive-visibility('.tablet-hide');
+@media only screen and (min-width:480px) and (max-width: 768px) {
+    @include responsive-invisibility('.tablet-hide');
+}
+
+@include responsive-invisibility('.desktop-only');
+@media only screen and (min-width:768px) {
+    @include responsive-visibility('.desktop-only');
+}
+
+@include responsive-visibility('.desktop-hide');
+@media only screen and (min-width:768px) {
+    @include responsive-invisibility('.desktop-hide');
+}
+
+/******************************************************************
+ UTILITY STYLES
+******************************************************************/
+.float-left{float:left;}
+.float-none{float:none;}
+.float-right{float:right;}
+.clear-left{clear:left;}
+.clear-both{clear:both;}
+.clear-right{clear:right;}
+
+/* Image replacement */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*********************
+TRANSITION
+*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*********************/
+@mixin transition($transition...) {
+	// defining prefixes so we can use them in mixins below
+	$prefixes:      ("-webkit", "-moz", "-ms", "-o",  "");
+  @each $prefix in $prefixes {
+    #{$prefix}-transition: $transition;
+  }
+
+  transition: $transition;
+}
+
+/*********************
+ANIMATION
+*
+Compass CSS3 mixins don't yet handle vendor prefixes for CSS animations, so this is a very simple mixin to simulate that functionality.
+*********************/
+@mixin animation($name, $duration: 1000ms, $iterations: infinite, $timing-function: ease, $delay: 0ms) {
+  // There is a FF bug that requires all time values to have units, even 0 !!!!!!
+  -webkit-animation: $name $duration $iterations $timing-function $delay;
+  -moz-animation: $name $duration $iterations $timing-function $delay;
+  -o-animation: $name $duration $iterations $timing-function $delay;
+  animation: $name $duration $iterations $timing-function $delay;
+}
+
+/*********************
+VERTICAL ALIGN DYNAMIC HEIGHT - http://css-tricks.com/centering-in-the-unknown/
+*********************/
+@mixin dynamicVerticalAlign(){
+  &:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%; width: .1px;
+  }
+}
+
+/*********************
+TEXT TRUNCATION
+*********************/
+@mixin truncateText($overflow: ellipsis){
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: $overflow; // values are: clip, ellipsis, or a string
+}
+
+/*********************
+GRAYSCALE
+*********************/
+@mixin grayscale {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+    -webkit-transition: all .6s ease; /* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+
+	&:hover {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0\'/></filter></svg>#grayscale");
+    -webkit-filter: grayscale(0%);
+	}
+}
+
+/*********************
+TRANSPARENT BG-COLOR
+*********************/
+@mixin transparent($color, $alpha) {
+    $rgba: rgba($color, $alpha);
+    $ie-hex-str: ie-hex-str($rgba);
+    background-color: transparent;
+    background-color: $rgba;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#{$ie-hex-str},endColorstr=#{$ie-hex-str});
+    zoom: 1;
+}
+
+/*********************
+CSS3 GRADIENTS
+*
+Be careful with these since they can
+really slow down your CSS. Don't overdue it.
+USAGE: @include css-gradient(#dfdfdf,#f8f8f8);
+*********************/
+@mixin css-gradient($from: #dfdfdf, $to: #f8f8f8) {
+	background-color: $to;
+	background-image: -webkit-gradient(linear, left top, left bottom, from($from), to($to));
+	background-image: -webkit-linear-gradient(top, $from, $to);
+	background-image: -moz-linear-gradient(top, $from, $to);
+	background-image: -o-linear-gradient(top, $from, $to);
+	background-image: linear-gradient(to bottom, $from, $to);
+}

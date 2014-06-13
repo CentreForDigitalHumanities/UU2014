@@ -4,66 +4,87 @@
  *
  * The area of the page that contains both current comments
  * and the comment form.
- *
- * @package UU2014
  */
+
+// Do not delete these lines
+if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME'])) {
+	die ('Please do not load this page directly. Thanks!');
+}
 
 /*
  * If the current post is protected by a password and
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
+if ( post_password_required() ) { ?>
+	<div class="alert help">
+	<p class="nocomments"><?php _e("This post is password protected. Enter the password to view comments.", "scaffolding"); ?></p>
+	</div>
+	<?php
 	return;
 }
 ?>
 
-<div id="comments" class="comments-area">
+<?php // You can start editing here -- including this comment!
+ if ( have_comments() ) : ?>
+ <div id="comments" class="comments-area">
 
-	<?php // You can start editing here -- including this comment! ?>
+	<h3 class="h2 comments"><?php comments_number(__('<span>No</span> Responses', 'uu2014dev'), __('<span>One</span> Response', 'uu2014dev'), _n('<span>%</span> Response', '<span>%</span> Responses', get_comments_number(),'uu2014dev') );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
-	<?php if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-				printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'uu2014' ),
-					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
-			?>
-		</h2>
+	<nav class="comment-nav">
+		<ul class="clearfix">
+	  		<li><?php previous_comments_link(); ?></li>
+	  		<li><?php next_comments_link(); ?></li>
+	 	</ul>
+	</nav>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-above" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'uu2014' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'uu2014' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'uu2014' ) ); ?></div>
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // check for comment navigation ?>
+	<ol class="commentlist">
+		<?php wp_list_comments('type=comment&callback=uu2014dev_comments'); ?>
+	</ol>
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
-		</ol><!-- .comment-list -->
+	<nav class="comment-nav">
+		<ul class="clearfix">
+	  		<li><?php previous_comments_link() ?></li>
+	  		<li><?php next_comments_link() ?></li>
+		</ul>
+	</nav>
+</div>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
-		<nav id="comment-nav-below" class="comment-navigation" role="navigation">
-			<h1 class="screen-reader-text"><?php _e( 'Comment navigation', 'uu2014' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'uu2014' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'uu2014' ) ); ?></div>
-		</nav><!-- #comment-nav-below -->
-		<?php endif; // check for comment navigation ?>
+<?php else : // this is displayed if there are no comments so far ?>
 
-	<?php endif; // have_comments() ?>
+	<?php if ( comments_open() ) : ?>
+		<!-- If comments are open, but there are no comments. -->
 
-	<?php
-		// If comments are closed and there are comments, let's leave a little note, shall we?
-		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'uu2014' ); ?></p>
+	<?php else : // comments are closed ?>
+
+		<!-- If comments are closed. -->
+		<!--p class="nocomments"><?php _e("Comments are closed.", "scaffolding"); ?></p-->
+
 	<?php endif; ?>
 
-	<?php comment_form(); ?>
+<?php endif; ?>
 
-</div><!-- #comments -->
+
+<?php if ( comments_open() ) : ?>
+
+	<section class="respond-form">
+
+		<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
+
+			<div class="alert help">
+				<p><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'uu2014dev'), '<a href="<?php echo wp_login_url( get_permalink() ); ?>">', '</a>' ); ?></p>
+			</div>
+
+		<?php else : ?>
+
+			<!--<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">-->
+
+			<?php comment_form(); ?>
+
+			<!--</form>-->
+
+		<?php endif; // If registration required and not logged in ?>
+
+	</section>
+
+<?php endif; // if you delete this the sky will fall on your head ?>

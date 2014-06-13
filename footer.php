@@ -3,21 +3,36 @@
  * The template for displaying the footer.
  *
  * Contains the closing of the #content div and all content after
- *
- * @package UU2014
  */
 ?>
+		</div><?php //END #main ?>
 
-	</div><!-- #content -->
+	<?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
+		<div id="left-sidebar" class="sidebar col-sm-3 col-md-pull-9 clearfix" role="complementary">
+			<?php dynamic_sidebar( 'left-sidebar' ); ?>
+		</div>
+	<?php endif; ?>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'uu2014' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'uu2014' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'uu2014' ), 'UU2014', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+	<?php if ( is_active_sidebar( 'right-sidebar' ) ) : ?>
+		<div id="right-sidebar" class="sidebar col-sm-3 clearfix" role="complementary">
+			<?php dynamic_sidebar( 'right-sidebar' ); ?>
+		</div>
+	<?php endif; ?>
+
+		</div><?php //END #inner-content ?>
+
+	</div><?php //END #content ?>
+
+<?php get_template_part( 'parts/widgetarea', 'footer' ); ?>  
+
+<?php get_template_part( 'parts/colofon'); ?>  
+
+
+	<p id="back-top">
+        <a href="#top"><i class="fa fa-angle-up"></i></a>
+    </p>
+
+</div><?php //END #container ?>
 
 <?php wp_footer(); ?>
 

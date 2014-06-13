@@ -1,46 +1,43 @@
-<?php
-/**
- * The main template file.
- *
- * This is the most generic template file in a WordPress theme
- * and one of the two required files for a theme (the other being style.css).
- * It is used to display a page when nothing more specific matches a query.
- * E.g., it puts together the home page when no home.php file exists.
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
- *
- * @package UU2014
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-		<?php if ( have_posts() ) : ?>
+						<header class="article-header">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+							<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
 
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
+							<p class="byline vcard"><?php printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'uu2014dev'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), uu2014dev_get_the_author_posts_link(), get_the_category_list(', ')); ?></p>
 
-			<?php endwhile; ?>
+						</header><?php // end article header ?>
 
-			<?php uu2014_paging_nav(); ?>
+						<section class="entry-content clearfix" itemprop="articleBody">
+							<?php the_content(); ?>
+							<?php wp_link_pages( array(
+								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'uu2014dev' ) . '</span>',
+								'after'       => '</div>',
+								'link_before' => '<span>',
+								'link_after'  => '</span>',
+							) ); ?>
+						</section><?php // end article section ?>
 
-		<?php else : ?>
+						<footer class="article-footer">
 
-			<?php get_template_part( 'content', 'none' ); ?>
+							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
 
-		<?php endif; ?>
+						</footer><?php // end article footer ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+						<?php comments_template(); ?>
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+					</article><?php // end article ?>
+
+				<?php endwhile; ?>
+
+			<?php else : ?>
+
+			<?php get_template_part('includes/template','error'); // WordPress template error message ?>
+
+			<?php endif; ?>
+
+<?php get_footer();

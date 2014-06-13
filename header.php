@@ -1,59 +1,90 @@
 <?php
 /**
- * The Header for our theme.
+ * The template for displaying the header.
  *
- * Displays all of the <head> section and everything up till <div id="content">
- *
- * @package UU2014
+ * Contains the opening tag for the page structure
  */
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title><?php wp_title( '|', true, 'right' ); ?></title>
+<title><?php wp_title(''); ?></title>
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
+<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-icon-touch.png">
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+<!--[if IE]><link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico"><![endif]-->
+<meta name="msapplication-TileColor" content="#f01d4f">
+<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
+
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv-printshiv.min.js"></script>
+<![endif]-->
 
 <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
+<?php get_template_part( 'parts/brandbar'); ?>      
+	<div id="container">
 
-	<header id="masthead" class="site-header" role="banner">
-		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="container">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
+		<header id="masthead" class="header" role="banner">
 
-					<a class="navbar-brand" href="<?php bloginfo('url'); ?>">
-					<?php bloginfo('name'); ?>
-					</a>
-				</div>
+			<div id="inner-header" class="wrap clearfix">
 
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse navbar-ex1-collapse">
-					<?php
-					wp_nav_menu(array(
-					'menu' => 'primary',
-					'theme_location' => 'primary',
-					'depth' => 2,
-					'container' => false,
-					'menu_class' => 'nav navbar-nav',
-					'fallback_cb' => 'wp_page_menu',
-					'walker' => new wp_bootstrap_navwalker())
-					);
-					?>
-				</div><!-- /.navbar-collapse -->
-			</div><!-- /.container -->
+				<?php // to use a image just replace the bloginfo('name') with <img> ?>
+				<div id="logo" class="h1"><a href="<?php  echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
+
+				<?php // if you'd like to use the site description you can un-comment it below
+				// echo '<p class="site-description">'. bloginfo( "description" ) .'</p>' ?>
+
+			</div>
+
+		</header>
+
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'test' ); ?></a>
+
+		<nav id="main-navigation" class="clearfix" role="navigation">
+
+			<?php uu2014dev_main_nav(); ?>
+
 		</nav>
-	</header><!-- #masthead -->
 
-	<div id="content" class="site-content container">
+<?php get_template_part( 'parts/banner', 'home' ); ?>
+		
+
+<?php get_template_part( 'parts/widgetarea', 'home' ); ?>      	
+			
+       
+
+		<div id="content">
+
+			<div id="inner-content" class="wrap clearfix">
+
+				<?php // Test for active sidebars to set the main content width
+					if(is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' )) { //both sidebars
+						$main_class = 'col-sm-6 col-sm-push-3';
+					}
+					elseif(is_active_sidebar( 'left-sidebar' ) && !is_active_sidebar( 'right-sidebar' )) { //left sidebar
+						$main_class = 'col-sm-9 col-sm-push-3';
+					}
+					elseif(!is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' )) { //right sidebar
+						$main_class = 'col-sm-9';
+					}
+					else { //no sidebar
+						$main_class = 'col-sm-12';
+					}
+				?>
+
+				<div id="main" class="<?php echo $main_class;?> clearfix" role="main">

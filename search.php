@@ -1,38 +1,45 @@
-<?php
-/**
- * The template for displaying Search Results pages.
- *
- * @package UU2014
- */
+<?php get_header(); ?>
 
-get_header(); ?>
+		<div itemscope itemtype="http://schema.org/SearchResultsPage">
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+			<h1 class="archive-title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
 
-		<?php if ( have_posts() ) : ?>
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'uu2014' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+						<header class="article-header">
 
-				<?php get_template_part( 'content', 'search' ); ?>
+							<h3 class="entry-title search-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
-			<?php endwhile; ?>
+							<?php
+							/* Hidden by default
+							<p class="byline vcard"><?php _e("Posted", "scaffolding"); ?> <time class="updated" datetime="<?php echo the_time('Y-m-j'); ?>" pubdate><?php the_time('F jS, Y'); ?></time> <?php _e("by", "scaffolding"); ?> <span class="author"><?php the_author_posts_link(); ?></span> <span class="amp">&</span> <?php _e("filed under", "scaffolding"); ?> <?php the_category(', '); ?>.</p>
+							*/ ?>
 
-			<?php uu2014_paging_nav(); ?>
+						</header><?php // end article header ?>
 
-		<?php else : ?>
+						<section class="entry-content" itemprop="description">
+							<?php the_excerpt('<span class="read-more">Read more &raquo;</span>'); ?>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+						</section><?php // end article section ?>
 
-		<?php endif; ?>
+						<footer class="article-footer">
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+						</footer><?php // end article footer ?>
 
-<?php get_sidebar(); ?>
-<?php get_footer(); ?>
+					</article><?php // end article ?>
+
+				<?php endwhile; ?>
+
+				<?php get_template_part('includes/template','pager'); // WordPress template pager/pagination ?>
+
+			<?php else : ?>
+
+			<?php get_template_part('includes/template','error'); // WordPress template error message ?>
+
+			<?php endif; ?>
+
+		</div>
+
+<?php get_footer();
