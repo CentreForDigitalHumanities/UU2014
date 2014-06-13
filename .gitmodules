@@ -10,3 +10,6 @@
 [submodule "libraries/option-tree"]
 	path = libraries/option-tree
 	url = https://github.com/valendesigns/option-tree
+[submodule "includes/libraries/ReduxFramework"]
+	path = includes/libraries/ReduxFramework
+	url = https://github.com/ReduxFramework/redux-framework
