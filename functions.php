@@ -49,6 +49,14 @@ define('SCAFFOLDING_INCLUDE_PATH', dirname(__FILE__).'/includes/');
 require_once(SCAFFOLDING_INCLUDE_PATH.'base-functions.php');
 //require_once(SCAFFOLDING_INCLUDE_PATH.'custom-post-type.php');
 
+if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/ReduxCore/framework.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/ReduxCore/framework.php' );
+}
+
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' );
+}
+
 
 /*********************
 2. SCRIPTS & ENQUEUEING
@@ -394,7 +402,7 @@ function uu2014dev_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 	register_sidebar(array(
-		'id' => 'banner-area-1',
+		'id' => 'banner-widget-area-1',
 		'name' => __('Banner Widget Area 1', 'uu2014dev'),
 		'description' => __('First column in banner widget area', 'uu2014dev'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -403,7 +411,7 @@ function uu2014dev_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 	register_sidebar(array(
-		'id' => 'banner-area-2',
+		'id' => 'banner-widget-area-2',
 		'name' => __('Banner Widget Area 2', 'uu2014dev'),
 		'description' => __('Second column in banner widget area', 'uu2014dev'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -412,7 +420,7 @@ function uu2014dev_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 	register_sidebar(array(
-		'id' => 'banner-area-3',
+		'id' => 'banner-widget-area-3',
 		'name' => __('Banner Widget Area 3', 'uu2014dev'),
 		'description' => __('Last column in banner widget area', 'uu2014dev'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
