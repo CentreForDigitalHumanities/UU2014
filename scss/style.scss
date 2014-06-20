@@ -9,14 +9,21 @@ Stylesheet: Main Stylesheet
 @import "libs/normalize";
 
 // STEP 2: Import all our resources
+
+@import "bower_components/compass-mixin/lib/compass";
+
 @import "includes/variables";
 @import "includes/typography";
 @import "includes/mixins";
 @import "includes/forms";
 @import "includes/offcanvas-nav";
 
+// @import "bower_components/compass-mixin/lib/compass/css3/box-sizing";
+// @import "bower_components/compass-mixin/lib/compass/css3/border-radius";
 @import "includes/brandbar";
 @import "includes/footer";
+
+
 
 // STEP 3: Import all our libraries
 //@import "includes/gravity-forms"; /* gravity forms styles - uncheck box to NOT output default CSS */
@@ -57,6 +64,7 @@ This is for the larger monitors and possibly full screen viewers.
 @media only screen and (min-width: $screen-lg-min) {
 	@import "responsive-styles/lg";
 }
+
 
 // STEP 4: Add in styles for retina devices, iPhone 5, and Print
 

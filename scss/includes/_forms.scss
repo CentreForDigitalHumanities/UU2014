@@ -126,7 +126,7 @@ input[type=button] {
 		background-image: none;
 		opacity: 0.65;
 		filter: alpha(opacity=65);
-		@include box-shadow(none);
+		@include box-shadow(1px);
 	}
 	
 	&:first-child {

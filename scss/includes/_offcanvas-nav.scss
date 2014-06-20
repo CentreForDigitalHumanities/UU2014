@@ -153,7 +153,7 @@ Here you can begin to add more resource-intensive styles.
 	        right:auto;
 	        padding: 0;
 	        margin: 0 auto;
-	        @include box-shadow(none);
+	       // @include box-shadow(none);
 
 			li {
 				display:inline-block;
