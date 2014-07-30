@@ -34,7 +34,6 @@ html {
 body {
 	height:auto;
     overflow-x: hidden;
-    background-color: red;
 
     #container{
 		height:100%;
@@ -69,6 +68,14 @@ NAVIGATION STYLES
 *********************/
 
 /* Look for menu styles in /includes/_offcanvas-nav.scss */
+
+/*********************
+CAROUSEL STYLES
+*********************/
+
+.carousel img {
+	width: 100%;
+}
 
 /*********************
 POSTS & CONTENT STYLES

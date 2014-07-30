@@ -61,8 +61,9 @@
 
 		</nav>
 
-<?php get_template_part( 'parts/banner', 'home' ); ?>
-		
+<?php // get_template_part( 'parts/banner', 'home' ); ?>
+
+<?php get_template_part( 'parts/carousel', '' ); ?>		
 
 <?php get_template_part( 'parts/widgetarea', 'home' ); ?>      	
 			

@@ -57,6 +57,10 @@ if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libr
     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' );
 }
 
+if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' );
+}
+
 
 /*********************
 2. SCRIPTS & ENQUEUEING
@@ -74,14 +78,20 @@ function uu2014dev_scripts_and_styles() {
 	// register main stylesheet
 	wp_enqueue_style( 'uu2014dev-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 
+	// Boostrap CSS
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+
 	// ie-only style sheet
 	wp_enqueue_style( 'uu2014dev-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
 	$wp_styles->add_data( 'uu2014dev-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
-	//Magnific Popup (LightBox)
+	// Bootstrap javascript
+	wp_enqueue_script( 'bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
+
+	// Magnific Popup (LightBox)
 	wp_enqueue_script( 'uu2014dev-magnific-popup-js', '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js', array( 'jquery' ), '0.9.9', true );
 
-	//Font Awesome (icon set)
+	// Font Awesome (icon set)
 	wp_enqueue_style( 'uu2014dev-font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
 
 	// iCheck (better radio and checkbox inputs)
