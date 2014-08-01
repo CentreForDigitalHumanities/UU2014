@@ -1,7 +1,7 @@
 <?php if(is_active_sidebar( 'colofon' )) : ?>
 
 			<footer id="colophon" class="footer" role="contentinfo">
-				<div class="wrap">
+				<div class="container">
 					<div class="row">
 						<div class="col-md-12 col-sm-12">
 							<?php dynamic_sidebar( 'colofon' ); ?>
@@ -14,7 +14,7 @@
 			
 			<footer id="colophon" class="footer" role="contentinfo">
 
-				<div id="inner-footer" class="wrap clearfix">
+				<div id="inner-footer" class="container clearfix">
 					<div class="row">
 						<div class="col-md-8">
 							<nav role="navigation">

@@ -9,7 +9,20 @@ on larger screens.
 
 ******************************************************************/
 
-.container-fluid,
-.wrap {
+
+.carousel,
+.home-widget-area,
+#container {
 	max-width: $container-lg;
+	margin: 0 auto;
+}
+
+.container-fluid,
+.wrap,
+.container {
+	max-width: $container-lg-inner;
+}
+
+.carousel {
+	margin: 0 auto;
 }

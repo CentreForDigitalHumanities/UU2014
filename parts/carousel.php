@@ -59,9 +59,15 @@
 		<div class="item">
 			<?php the_post_thumbnail('full', array('class' => 'img-responsive'));?>
 			<div class="carousel-caption">
-			<h4><?php the_title();?></h4>
-			<?php the_excerpt();?>
+				<div class="carousel-caption-text">
+					<h4><?php the_title();?></h4>
+					<?php the_excerpt();?>
+				</div>
+				<div class="carousel-caption-link">
+					<a href="<?php the_permalink(); ?>">Read more</a>
+				</div>	
 			</div>
+			
 		</div><!-- item -->
 		<?php 
 		endwhile; 

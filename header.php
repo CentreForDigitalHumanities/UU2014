@@ -36,12 +36,12 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php get_template_part( 'parts/brandbar'); ?>      
+     
 	<div id="container">
-
+		<?php get_template_part( 'parts/brandbar'); ?> 
 		<header id="masthead" class="header" role="banner">
 
-			<div id="inner-header" class="wrap clearfix">
+			<div id="inner-header" class="container clearfix">
 
 				<?php // to use a image just replace the bloginfo('name') with <img> ?>
 				<div id="logo" class="h1"><a href="<?php  echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
@@ -56,22 +56,27 @@
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'test' ); ?></a>
 
 		<nav id="main-navigation" class="clearfix" role="navigation">
-
-			<?php uu2014dev_main_nav(); ?>
-
+			<div class="container">
+				<div class="row">
+					<?php uu2014dev_main_nav(); ?>
+				</div>
+			</div>	
 		</nav>
 
-<?php // get_template_part( 'parts/banner', 'home' ); ?>
+<?php if ( is_home() || is_front_page() ) :
+	get_template_part( 'parts/carousel', '' );
+	get_template_part( 'parts/widgetarea', 'home' );
+ else : 
+ 	get_template_part( 'parts/banner', '' );
 
-<?php get_template_part( 'parts/carousel', '' ); ?>		
-
-<?php get_template_part( 'parts/widgetarea', 'home' ); ?>      	
+ endif;	?>
+ 	
 			
        
 
 		<div id="content">
 
-			<div id="inner-content" class="wrap clearfix">
+			<div id="inner-content" class="container clearfix">
 
 				<?php // Test for active sidebars to set the main content width
 					if(is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' )) { //both sidebars

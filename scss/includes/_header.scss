@@ -1,0 +1,20 @@
+#brandbar {
+	background: #FFFFFF;
+	border-bottom: 1px solid #EFEFEF;
+	img {
+		width: 155px;
+		margin: 10px 0;
+	}
+}
+
+#logo a {
+	color: $uu-title-color;
+	font-size: 38px;
+    font-weight: 100;
+    font-family: "Frutiger",Helvetica,Arial,sans-serif;
+}
+
+.header-image img {
+	width: 100%;
+	height: auto;
+}

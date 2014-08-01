@@ -75,11 +75,13 @@ function uu2014dev_scripts_and_styles() {
 	// respondjs
 	wp_enqueue_script( 'uu2014dev-respondjs', '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js', false, null );
 
+	// Boostrap CSS
+	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+
 	// register main stylesheet
 	wp_enqueue_style( 'uu2014dev-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
 
-	// Boostrap CSS
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	
 
 	// ie-only style sheet
 	wp_enqueue_style( 'uu2014dev-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );

@@ -34,13 +34,15 @@ html {
 body {
 	height:auto;
     overflow-x: hidden;
-
+	background-color: $uu-body;
     #container{
 		height:100%;
 		/*styles for mobile nav slide in*/
 		position:relative;
 		@include transition(all 0.25s ease-in-out);
     }
+    color: $uu-body-color;
+    font-size: 13px;
 }
 
 /*********************
@@ -81,7 +83,8 @@ CAROUSEL STYLES
 POSTS & CONTENT STYLES
 *********************/
 #content {
-	margin: 2em 0;
+	padding: 2em 0;
+	background-color: $uu-content;
 
 	#inner-content{
 
@@ -295,9 +298,6 @@ COMMENTS & COMMENT FORM STYLES
 SIDEBARS & ASIDES
 *********************/
 
-.home-widget-area {
-	background: $lighter-grey;
-}
 
 .sidebar {
 	margin-top: 2em;
@@ -305,6 +305,10 @@ SIDEBARS & ASIDES
 
 	.widgettitle {
 		margin-bottom: 0.75em;
+		font-family: $title;
+		font-size: 20px;
+		font-weight: 400;
+		margin-bottom: 0;
 	}
 
 	.widget {
@@ -426,7 +430,7 @@ FOOTER STYLES
 
 #colophon {
 	clear: both;
-	background-color:#111;
+	background-color: $uu-footer;
 	color:#999;
 	padding:1em 0;
 }

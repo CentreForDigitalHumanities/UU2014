@@ -12,4 +12,7 @@ This stylesheet is only for the wysiwyg editor.
 @import "includes/typography";
 
 // import grids - so it can be used in the wysiwyg
-@import "includes/bootstrap-grid";
+@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
+@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/grid";

@@ -1,6 +1,3 @@
-<?php // Interior Header Image ?>
-        <div class="banner-wrap">
-            <div id="banner">
-                             
-            </div>
-        </div>
+<div class="header-image">        
+    <img src="<?php header_image() ?>" />           
+</div>       
