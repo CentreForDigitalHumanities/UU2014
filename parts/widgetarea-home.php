@@ -1,4 +1,15 @@
 <?php 
+		if(is_active_sidebar( 'home-widget-area-0' ) ) { ?>
+			<div class="home-widget-area-0">
+	
+					
+							<?php dynamic_sidebar( 'home-widget-area-0' ); ?>
+				
+	
+			</div>	
+		<?php	}
+
+
        	if(is_active_sidebar( 'home-widget-area-1' ) && is_active_sidebar( 'home-widget-area-2' ) && is_active_sidebar( 'home-widget-area-3' )) { ?>
 			<div class="home-widget-area">
 				<div class="container">

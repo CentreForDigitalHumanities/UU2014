@@ -1,0 +1,32 @@
+.widget img {
+	width: 100%;
+	height: auto;
+}
+
+.uu-image-blok {
+	position: relative;
+
+}
+
+.uu-image-blok-content {
+	position: absolute;
+	bottom: 60px;
+	background: $uu-foto-blok;
+	width: auto;
+	min-width: 50%;
+	max-width: 80%;
+	right: 20px;
+}
+
+.uu-image-blok-titel h4 {
+	font-size: 16px;
+	font-weight: bold;
+	margin: 5px 10px;
+	color: #fff;
+	font-family: $uu-serif;
+}
+
+.uu-image-blok-url {
+margin-bottom: -45px;
+
+}

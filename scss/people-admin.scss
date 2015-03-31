@@ -1,0 +1,16 @@
+.personalia-admin {
+	label {
+		width: 150px;
+		display: inline-block;
+	}
+	.personalia-photo {
+		width: 150px;
+		float: left;
+	}
+	.personalia-content {
+		margin-left: 150px;
+	}
+	textarea {
+		vertical-align: top;
+	}
+}

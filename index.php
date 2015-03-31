@@ -1,43 +1,207 @@
 <?php get_header(); ?>
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php get_template_part( 'parts/page-header-1col'); ?> 
+	<div class="container home-blog">
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+		<?php $post_type = get_field('uu_options_post_types', 'option');  
+			if ($post_type == 'news_agenda') { ?>
 
-						<header class="article-header">
+				<div class="col-sm-6">
+					<h2><?php if(get_field('uu_options_alternative_title_news', 'option')) { the_field('uu_options_alternative_title_news', 'option'); } else { _e('News', 'uu2014'); } ?></h2>
 
-							<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+					<?php 
+						$pubdate = get_field('uu_options_news_show_pubdate', 'option');
+						$newsamount = get_field('uu_options_news_amount', 'option');
+						$newscats = get_field('uu_options_news_frontpage_cat', 'option');
+						if ($newscats) { 
+							$terms = implode(', ', $newscats);	
+						} else {
+							$terms='';
+						}
+					
+						$args = array(
+							'post_type' => 'post',
+							'pagination'    => true,
+							'posts_per_page' => $newsamount,
+							'cat' => $terms,
+							'ignore_sticky_posts'    => false,
 
-							<p class="byline vcard"><?php printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'uu2014dev'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), uu2014dev_get_the_author_posts_link(), get_the_category_list(', ')); ?></p>
+						);
+the_field('uu_options_alternative_title_news');
+					$newsquery = new WP_Query( $args );
+					if ( $newsquery->have_posts() ) {
+							while ( $newsquery->have_posts() ) {
+									$newsquery->the_post(); 
+					
+					get_template_part( 'parts/post-loop-frontpage'); ?> 
+					
 
-						</header><?php // end article header ?>
+					<?php } } else { ?>
 
-						<section class="entry-content clearfix" itemprop="articleBody">
-							<?php the_content(); ?>
-							<?php wp_link_pages( array(
-								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'uu2014dev' ) . '</span>',
-								'after'       => '</div>',
-								'link_before' => '<span>',
-								'link_after'  => '</span>',
-							) ); ?>
-						</section><?php // end article section ?>
+					<?php get_template_part('includes/template','error'); // WordPress template error message ?>
 
-						<footer class="article-footer">
+					<?php } ?>
+					
+				</div>
 
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+				<div class="col-sm-6">
+					<h2><?php if(get_field('uu_options_alternative_title_agenda', 'option')) { the_field('uu_options_alternative_title_agenda', 'option'); } else { _e('Agenda', 'uu2014'); } ?></h2>
 
-						</footer><?php // end article footer ?>
+					<div class="agenda-archive">
+						<?php 
 
-						<?php comments_template(); ?>
+						$today = date('Ymd');
+						$agenda_amount = get_field('uu_options_agenda_amount', 'option');
+						$args2 = array(
+							'post_type'		=> 'post',
+							'category_name' => 'agenda',
+							'posts_per_page'	=> $agenda_amount,
+							'meta_key'		=> 'uu_agenda_start_date',
+							'meta_query' => array(
+						        array(
+						            'key' => 'uu_agenda_start_date',
+						            'value' => $today,
+						            'compare' => '>='
+						        )
+						    ),
+							'orderby'		=> 'meta_value_num',
+							'order'			=> 'ASC',
+						);
 
-					</article><?php // end article ?>
 
-				<?php endwhile; ?>
+						$agenda_query = new WP_Query( $args2 );
 
-			<?php else : ?>
+							if ( $agenda_query->have_posts() ) : ?>
 
-			<?php get_template_part('includes/template','error'); // WordPress template error message ?>
+								<?php while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
 
-			<?php endif; ?>
+									<?php get_template_part( 'parts/post-loop-agenda'); ?> 
+
+								<?php endwhile; ?>
+
+									
+
+							<?php else : ?>
+							<div class="no-events">
+								<?php _e('No upcoming events', 'uu2014') ?>
+							</div>
+							<?php endif; ?>
+					</div>
+				</div>
+			<?php }
+
+			elseif ($post_type == 'news') { ?>
+				<div class="col-sm-8 col-sm-offset-2">
+					<h2><?php if(get_field('uu_options_alternative_title_news', 'option')) { the_field('uu_options_alternative_title_news', 'option'); } else { _e('News', 'uu2014'); } ?></h2>
+					<?php 
+
+						$newsamount = get_field('uu_options_news_amount', 'option');
+						$newscats = get_field('uu_options_news_frontpage_cat', 'option');
+						if ($newscats) { 
+							$terms = implode(', ', $newscats);	
+						} else {
+							$terms='';
+						}
+					
+						$args = array(
+							'post_type' => 'post',
+							'pagination'    => true,
+							'posts_per_page' => $newsamount,
+							'cat' => $terms,
+							'ignore_sticky_posts'    => false,
+
+						);
+
+					$newsquery = new WP_Query( $args );
+					if ( $newsquery->have_posts() ) {
+							while ( $newsquery->have_posts() ) {
+									$newsquery->the_post(); 
+					
+					get_template_part( 'parts/post-loop-frontpage'); ?> 
+					
+
+					<?php } } else { ?>
+
+					<?php get_template_part('includes/template','error'); // WordPress template error message ?>
+
+					<?php } ?>
+				</div>
+				
+			<?php }
+
+			elseif ($post_type == 'agenda') { ?>
+				<div class="col-sm-8 col-sm-offset-2">
+					<h2><?php _e('Agenda', 'uu2014') ?></h2>
+					<div class="agenda-archive">
+						<?php 
+
+						$today = date('Ymd');
+
+						$args = array(
+							'post_type'		=> 'post',
+							'posts_per_page'	=> 3,
+							'meta_key'		=> 'uu_agenda_start_date',
+							'meta_query' => array(
+						        array(
+						            'key' => 'uu_agenda_start_date',
+						            'value' => $today,
+						            'compare' => '>='
+						        )
+						    ),
+							'orderby'		=> 'meta_value_num',
+							'order'			=> 'ASC',
+						);
+
+
+						$agenda_query = new WP_Query( $args );
+
+							if ( $agenda_query->have_posts() ) : ?>
+
+								<?php while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
+
+									<?php get_template_part( 'parts/post-loop-agenda'); ?> 
+
+								<?php endwhile; ?>
+
+									<?php get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
+
+							<?php else : ?>
+							<div class="no-events">
+								<?php _e('No upcoming events', 'uu2014') ?>
+							</div>
+							<?php endif; ?>
+					</div>
+				</div>
+			
+			<?php }
+			else { ?>
+				<div class="col-sm-8 col-sm-offset-2">
+					<h2><?php _e('News', 'uu2014') ?></h2>
+					<?php 
+						$args = array(
+							'post_type' => 'post',
+							'pagination'    => true,
+							'ignore_sticky_posts'    => false,
+
+						);
+
+					$newsquery = new WP_Query( $args );
+					if ( $newsquery->have_posts() ) {
+							while ( $newsquery->have_posts() ) {
+									$newsquery->the_post(); 
+					
+					get_template_part( 'parts/post-loop-frontpage'); ?> 
+					
+					<?php } } else { ?>
+
+					<?php get_template_part('includes/template','error'); // WordPress template error message ?>
+
+					<?php } ?>
+				</div>
+			<?php }
+		?>
+			
+	</div>
+<?php get_template_part( 'parts/page-footer-1col'); ?> 
 
 <?php get_footer();

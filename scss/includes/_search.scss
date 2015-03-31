@@ -1,0 +1,51 @@
+.searchpage {
+	margin: 0 0 20px 0;
+}
+
+.search-form-large {
+
+	padding-left: 100px;
+	@include bp(sm) {
+		padding: 0 30px 30px 30px;
+		background: $uu-geel;
+	}
+}
+
+.search-form-large.search-wrapper {
+	width: 100%;
+	margin: 0;
+	.searchfield {
+		position: relative;
+		width: 100%;
+		
+		font-size: 16px;
+		padding: 5px 10px;
+		@include bp(sm) {
+			background: #fff;
+		}
+		@include bp(xs) {
+            display: inline-block;
+        } 
+	}
+	.searchbutton {
+		left: auto;
+		right: 30px;
+		top: 3px;
+	}
+}
+
+
+
+.search article {
+	padding-top: 1em;
+	border-top: 1px solid $lighter-grey;
+	h3 {
+		margin-top: 0;
+	}
+}
+
+.search .header-image {
+	@include bp(sm) {
+		display: none;
+	}
+}

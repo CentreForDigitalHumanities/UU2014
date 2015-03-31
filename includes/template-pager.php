@@ -1,6 +1,6 @@
 				<?php //Pagination/Pager
-				if (function_exists('uu2014dev_page_navi')):
-					uu2014dev_page_navi();
+				if (function_exists('uu2014_page_navi')):
+					uu2014_page_navi();
 				else: ?>
 
 					<nav class="wp-prev-next">

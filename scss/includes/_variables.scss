@@ -5,31 +5,12 @@ Author:
 Stylesheet: Variables
 
 ******************************************************************/
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400,700,300);
-
-$sans: 'Verdana', sans-serif;
-$serif: serif;
-$title: "Frutiger","Open Sans",Helvetica,Arial,sans-serif;
-$default-font-size: 13px;
-
-$alert-yellow: #ebe16f;
-$alert-red: #fbe3e4;
-$alert-green: #e6efc2;
-$alert-blue: #d5edf8;
-
-$link-color: red;
-$link-hover-color: #007BA1;
-
-$lighter-grey: #efefef;
-$light-grey: #dddddd;
-$grey: #cccccc;
-$dark-grey: #888888;
-$darker-grey: #333333;
-
+//@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,700);
 
 // UU kleuren
 
 $uu-geel: #ffcd00;
+$uu-lichtgeel: lighten($uu-geel, 30%);
 $uu-rood: #F52A01;
 $uu-foto-blok: rgba(0, 0, 0, 0.5);
 
@@ -40,20 +21,56 @@ $uu-content: #EFEFEF;
 $uu-sub-footer: #262626;
 $uu-sub-color: #AEAEAE;
 $uu-footer: #000000;
+$uu-link-color: #262626;
+
+
+
+$sans: "Open Sans","Frutiger",Helvetica,Arial,sans-serif;
+$uu-serif: "Merriweather", serif;
+$default-font-size: 16px;
+
+$alert-yellow: #ebe16f;
+$alert-red: #fbe3e4;
+$alert-green: #e6efc2;
+$alert-blue: #d5edf8;
+
+$link-color: $uu-body-color;
+$link-hover-color: #007BA1;
+
+$lighter-grey: #efefef;
+$light-grey: #dddddd;
+$grey: #cccccc;
+$dark-grey: #888888;
+$darker-grey: #262626;
+
+
+
+
+
+// UU Stijlen
 
 
 // Grid Stuff
-$screen-sm-min: 768px;
-$container-sm: 750px;
+$screen-sm-min: 766px;
+$container-sm: 768px;
 
-$screen-md-min: 992px;
-$container-md: 970px;
+$screen-md-min: 990px;
+$container-md: 992px;
 
-$screen-lg-min: 1600px;
-$container-lg: 1570px;
+$screen-lg-min: 1168px;
+$container-lg: 1170px;
 $container-lg-inner: 1170px;
 
 $grid-columns: 12;
-$grid-gutter-width: 15px;
+$grid-gutter-width: 20px;
 
 $plugins-path: '/wp-content/plugins/';
+
+// other bootstrap stuff
+
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+
+$input-border-radius: 0;

@@ -1,0 +1,772 @@
+# Copyright (C) 2014 Automattic
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: uu2014\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"POT-Creation-Date: 2015-03-24 09:36+0100\n"
+"PO-Revision-Date: 2015-03-24 09:42+0100\n"
+"Last-Translator: \n"
+"Language-Team: ictenmedia <ictenmedia@uu.nl>\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Textdomain-Support: yes\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../page.php:10 ../single-agenda.php:36 ../page-test.php:51 ../single.php:59
+#: ../page-full-width.php:17 ../parts/post-loop.php:18
+msgid "Pages:"
+msgstr "Pagina's:"
+
+#: ../page-home-agenda.php:37 ../index.php:48 ../index.php:134
+#: ../includes/custom-post-type.php:60
+#: ../includes/functions/custom-post-type-agenda.php:8
+msgid "Agenda"
+msgstr "Agenda"
+
+#: ../page-home-agenda.php:73 ../index.php:86 ../index.php:170
+#: ../category-agenda.php:49
+msgid "No upcoming events"
+msgstr "Geen items"
+
+#: ../page-people-large.php:70 ../page-people.php:73
+#: ../simple-image-widget/widget.php:35 ../parts/carousel.php:55
+#: ../parts/carousel.php:86
+msgid "Read more"
+msgstr "Lees meer"
+
+#: ../page-people-large.php:78 ../page-people.php:78
+msgid "Mail"
+msgstr "E-mailadres"
+
+#: ../single-agenda.php:17
+#, php-format
+msgid ""
+"Posted <time class=\"updated\" datetime=\"%1$s\" pubdate>%2$s</time> by "
+"<span class=\"author\">%3$s</span> <span class=\"amp\">&amp;</span> filed "
+"under %4$s."
+msgstr ""
+"Geplaatst op <time class=\"updated\" datetime=\"%1$s\" pubdate>%2$s</time> "
+"door <span class=\"author\">%3$s</span> <span class=\"amp\">&amp;</span> in "
+"%4$s."
+
+#: ../functions.php:230
+msgid "Main Menu"
+msgstr "Hoofdmenu"
+
+#: ../functions.php:231
+msgid "Footer Menu"
+msgstr "Footer menu"
+
+#: ../functions.php:249
+msgid "default"
+msgstr "standaard"
+
+#: ../functions.php:283
+msgid "Small Thumbnail"
+msgstr "Kleine thumbnail"
+
+#: ../functions.php:403
+msgid "Left Sidebar"
+msgstr "Linker sidebar"
+
+#: ../functions.php:404
+msgid "The Left (primary) sidebar used for the interior menu."
+msgstr "De linker sidebar, wordt o.a. gebruikt voor submenus."
+
+#: ../functions.php:412
+msgid "Below Content"
+msgstr "Onder content"
+
+#: ../functions.php:413
+msgid "Below Content used for the call to actions."
+msgstr "Wordt gebruikt voor \"call to actions\" of andere quotes."
+
+#: ../functions.php:421
+msgid "Banner Widget Area"
+msgstr "Banner Widget Gebied"
+
+#: ../functions.php:422
+msgid "Banner widget area"
+msgstr "Banner widget gebied"
+
+#: ../functions.php:430
+msgid "Home Widget Area 0"
+msgstr "Home Widget gebied 0"
+
+#: ../functions.php:431
+msgid "Full-width area above home widget areas 1,2 and 3"
+msgstr ""
+
+#: ../functions.php:439
+msgid "Home Widget Area 1"
+msgstr "Home Widget gebied 1"
+
+#: ../functions.php:440
+msgid "First column in home widget area"
+msgstr "Eerste kolom in home widget gebied"
+
+#: ../functions.php:448
+msgid "Home Widget Area 2"
+msgstr "Home Widget gebied 2"
+
+#: ../functions.php:449
+msgid "Second column in home widget area"
+msgstr "Tweede kolom in home widget gebied"
+
+#: ../functions.php:457
+msgid "Home Widget Area 3"
+msgstr "Home Widget gebied 3"
+
+#: ../functions.php:458
+msgid "Last column in home widget area"
+msgstr "Derde kolom in home widget gebied"
+
+#: ../functions.php:466
+msgid "footer Widget Area 1"
+msgstr "Footer Widget kolom 1"
+
+#: ../functions.php:467
+msgid "First column in footer widget area"
+msgstr "Eerste kolom in footer widget gebied"
+
+#: ../functions.php:475
+msgid "footer Widget Area 2"
+msgstr "Footer Widget kolom 2"
+
+#: ../functions.php:476
+msgid "Second column in footer widget area"
+msgstr "Tweede kolom in footer widget gebied"
+
+#: ../functions.php:484
+msgid "footer Widget Area 3"
+msgstr "Footer Widget kolom 3"
+
+#: ../functions.php:485
+msgid "Third column in footer widget area"
+msgstr "Derde kolom in footer widget gebied"
+
+#: ../functions.php:493
+msgid "footer Widget Area 4"
+msgstr "Footer Widget kolom 4"
+
+#: ../functions.php:494
+msgid "Last column in footer widget area"
+msgstr "Laatste kolom in footer widget gebied"
+
+#: ../functions.php:502
+msgid "Colofon Widget Area"
+msgstr "Colofon widget gebied"
+
+#: ../functions.php:503
+msgid "Bottom area full width"
+msgstr "Gebied helemaal onderaan de pagina, volledige content breedte."
+
+#: ../functions.php:542
+msgid "No Related Posts Yet!"
+msgstr "Geen gerelateerde berichten gevonden."
+
+#: ../functions.php:573
+#, php-format
+msgid "<cite class=\"fn\">%s</cite>"
+msgstr "<cite class=\"fn\">%s</cite>"
+
+#: ../functions.php:574
+msgid "F jS, Y"
+msgstr "F jS, Y"
+
+#: ../functions.php:575
+msgid "(Edit)"
+msgstr "(Edit)"
+
+#: ../functions.php:579
+msgid "Your comment is awaiting moderation."
+msgstr "Uw reactie wacht op goedkeuring."
+
+#: ../functions.php:600 ../parts/brandbar.php:27 ../parts/brandbar.php:43
+msgid "Search for:"
+msgstr "Zoek:"
+
+#: ../functions.php:601 ../parts/brandbar.php:28 ../parts/brandbar.php:44
+msgid "Search the Site..."
+msgstr "Zoek in deze site"
+
+#: ../functions.php:602
+msgid "Search"
+msgstr "Zoek"
+
+#: ../functions.php:692
+msgid "Read"
+msgstr "Lees"
+
+#: ../functions.php:692
+msgid "Read more &raquo;"
+msgstr "Lees meer &raquo;"
+
+#: ../functions.php:706
+#, php-format
+msgid "Posts by %s"
+msgstr "Berichten door %s"
+
+#: ../functions.php:823
+msgid "UU Site Options"
+msgstr "UU Site Opties"
+
+#: ../functions.php:824
+msgid "UU Options"
+msgstr "UU Opties"
+
+#: ../functions.php:884
+msgid "Posted"
+msgstr "Geplaatst"
+
+#: ../functions.php:886
+msgid "on"
+msgstr "op"
+
+#: ../functions.php:889
+msgid "by"
+msgstr "door"
+
+#: ../functions.php:892
+msgid "<br />in: "
+msgstr "<br />in:"
+
+#: ../404.php:15
+msgid "That page can&rsquo;t be found."
+msgstr "Pagina niet gevonden."
+
+#: ../404.php:20
+msgid ""
+"It looks like nothing was found at this location. This may be due to the "
+"page being moved, renamed or deleted.<ul><li>Check the URL in the address "
+"bar above</li><li>Look for the page in the main navigation above or on the "
+"<a href=\"/site-map/\" title=\"Site Map Page\">Site Map</a> page</li><li>Try "
+"using the Search below.</li></ul>"
+msgstr ""
+"<ul><li>Kijk of de URL klopt</li><li>Zoek de pagina hierboven in het menu of "
+"op de <a href=\"/site-map/\" title=\"Site Map Page\">Site Map</a> pagina</"
+"li><li>Probeer de zoekmachine hieronder</li></ul>"
+
+#: ../comments.php:21
+msgid "This post is password protected. Enter the password to view comments."
+msgstr ""
+"Dit bericht is beveiligd met een wachtwoord, voer het wachtwoord in om de "
+"reacties te tonen."
+
+#: ../comments.php:32
+msgid "<span>No</span> Responses"
+msgstr "<span>Geen</span> reacties"
+
+#: ../comments.php:32
+msgid "<span>One</span> Response"
+msgstr "<span>Een</span> reactie"
+
+#: ../comments.php:32
+msgid "<span>%</span> Response"
+msgid_plural "<span>%</span> Responses"
+msgstr[0] "<span>%</span> reactie"
+msgstr[1] "<span>%</span> reacties"
+
+#: ../comments.php:61
+msgid "Comments are closed."
+msgstr "Geen reacties mogelijk."
+
+#: ../comments.php:75
+#, php-format
+msgid "You must be %1$slogged in%2$s to post a comment."
+msgstr "U moet %1$singelogd%2$s zijn om een reactie te kunnen plaatsen"
+
+#: ../page-test.php:20
+msgid "Site"
+msgstr "Website"
+
+#: ../page-test.php:21
+msgid "Type"
+msgstr "Type"
+
+#: ../page-test.php:22
+msgid "Owner"
+msgstr "Eigenaar"
+
+#: ../single.php:25
+msgid "Datum"
+msgstr ""
+
+#: ../single.php:34
+msgid "Locatie"
+msgstr ""
+
+#: ../single.php:40 ../includes/functions/metabox-agenda.php:72
+msgid "Url"
+msgstr "Url"
+
+#: ../header.php:32
+#, php-format
+msgid "Page %s"
+msgstr "Pagina %s"
+
+#: ../header.php:83
+msgid "Skip to content"
+msgstr "Direct naar het inhoud"
+
+#: ../index.php:10 ../index.php:95 ../index.php:179
+msgid "News"
+msgstr "Nieuws"
+
+#: ../category-agenda.php:14
+msgid "Upcoming events"
+msgstr "Agenda items"
+
+#: ../category-agenda.php:54
+msgid "Previous events"
+msgstr "Agenda archief"
+
+#: ../category-agenda.php:86
+msgid "No previous events"
+msgstr "Geen items"
+
+#: ../search.php:8 ../parts/page-header-1col.php:76
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Zoek resultaten voor: %s"
+
+#: ../includes/template-error.php:5
+msgid "No items found"
+msgstr "Niets gevonden."
+
+#: ../includes/template-error.php:11
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Sorry, niets gevonden voor uw zoektermen. Probeer het nogmaals met andere "
+"termen."
+
+#: ../includes/base-functions.php:131
+msgid "First"
+msgstr "Eerste"
+
+#: ../includes/base-functions.php:162
+msgid "Last"
+msgstr "Laatste"
+
+#: ../includes/custom-post-type.php:9
+#: ../includes/functions/custom-post-type-people.php:9
+msgctxt "Post Type General Name"
+msgid "People"
+msgstr "Personen"
+
+#: ../includes/custom-post-type.php:10
+#: ../includes/functions/custom-post-type-people.php:10
+msgctxt "Post Type Singular Name"
+msgid "Person"
+msgstr "Persoon"
+
+#: ../includes/custom-post-type.php:11
+#: ../includes/functions/custom-post-type-people.php:11
+msgid "People"
+msgstr "Personen"
+
+#: ../includes/custom-post-type.php:12 ../includes/custom-post-type.php:61
+#: ../includes/functions/custom-post-type-agenda.php:9
+#: ../includes/functions/custom-post-type-people.php:12
+msgid "Parent:"
+msgstr "Ouder:"
+
+#: ../includes/custom-post-type.php:13
+#: ../includes/functions/custom-post-type-people.php:13
+msgid "All people"
+msgstr "Alle personen"
+
+#: ../includes/custom-post-type.php:14
+#: ../includes/functions/custom-post-type-people.php:14
+msgid "View Person"
+msgstr "Bekijk persoon"
+
+#: ../includes/custom-post-type.php:15
+#: ../includes/functions/custom-post-type-people.php:15
+msgid "Add New Person"
+msgstr "Voeg nieuwe persoon toe"
+
+#: ../includes/custom-post-type.php:16
+#: ../includes/functions/custom-post-type-people.php:16
+msgid "New Person"
+msgstr "Nieuw persoon"
+
+#: ../includes/custom-post-type.php:17
+#: ../includes/functions/custom-post-type-people.php:17
+msgid "Edit Person"
+msgstr "Persoon aanpassen"
+
+#: ../includes/custom-post-type.php:18
+#: ../includes/functions/custom-post-type-people.php:18
+msgid "Update Person"
+msgstr "Persoon bijwerken"
+
+#: ../includes/custom-post-type.php:19
+#: ../includes/functions/custom-post-type-people.php:19
+msgid "Search persons"
+msgstr "Zoek persoon"
+
+#: ../includes/custom-post-type.php:20
+#: ../includes/functions/custom-post-type-people.php:20
+msgid "No persons found"
+msgstr "Geen personen gevonden"
+
+#: ../includes/custom-post-type.php:21
+#: ../includes/functions/custom-post-type-people.php:21
+msgid "No persons found in Trash"
+msgstr "Geen personen gevonden in prullenbak"
+
+#: ../includes/custom-post-type.php:24
+#: ../includes/functions/custom-post-type-people.php:24
+msgid "people"
+msgstr "personen"
+
+#: ../includes/custom-post-type.php:25
+#: ../includes/functions/custom-post-type-people.php:25
+msgid "post type for making people listing pages"
+msgstr "Content type om overzicht van personen te maken"
+
+#: ../includes/custom-post-type.php:58
+#: ../includes/functions/custom-post-type-agenda.php:6
+msgctxt "Post Type General Name"
+msgid "Agenda"
+msgstr "Agenda"
+
+#: ../includes/custom-post-type.php:59
+#: ../includes/functions/custom-post-type-agenda.php:7
+msgctxt "Post Type Singular Name"
+msgid "Agenda"
+msgstr "Agenda"
+
+#: ../includes/custom-post-type.php:62
+#: ../includes/functions/custom-post-type-agenda.php:10
+msgid "All Agenda items"
+msgstr "Alle agenda items"
+
+#: ../includes/custom-post-type.php:63
+#: ../includes/functions/custom-post-type-agenda.php:11
+msgid "View Agenda item"
+msgstr "Bekijk agenda items"
+
+#: ../includes/custom-post-type.php:64
+#: ../includes/functions/custom-post-type-agenda.php:12
+msgid "Add New Agenda item"
+msgstr "Voeg nieuwe agenda item toe"
+
+#: ../includes/custom-post-type.php:65
+#: ../includes/functions/custom-post-type-agenda.php:13
+msgid "New Agenda item"
+msgstr "Nieuw agenda item"
+
+#: ../includes/custom-post-type.php:66
+#: ../includes/functions/custom-post-type-agenda.php:14
+msgid "Edit Agenda item"
+msgstr "Pas agenda item aan"
+
+#: ../includes/custom-post-type.php:67
+#: ../includes/functions/custom-post-type-agenda.php:15
+msgid "Update Agenda item"
+msgstr "Agenda item bijwerken"
+
+#: ../includes/custom-post-type.php:68
+#: ../includes/functions/custom-post-type-agenda.php:16
+msgid "Search Agenda"
+msgstr "Zoek agenda item"
+
+#: ../includes/custom-post-type.php:69
+#: ../includes/functions/custom-post-type-agenda.php:17
+msgid "Nothing found"
+msgstr "Niets gevonden"
+
+#: ../includes/custom-post-type.php:70
+#: ../includes/functions/custom-post-type-agenda.php:18
+msgid "Nothing found in Trash"
+msgstr "Niets gevonden in prullenbak"
+
+#: ../includes/custom-post-type.php:73
+#: ../includes/functions/custom-post-type-agenda.php:26
+msgid "agenda"
+msgstr "agenda"
+
+#: ../includes/custom-post-type.php:74
+#: ../includes/functions/custom-post-type-agenda.php:27
+msgid "post type for making events"
+msgstr "content type om agenda berichten aan te maken"
+
+#: ../includes/template-pager.php:8
+msgid "&laquo; Older Entries"
+msgstr "&laquo; Oudere items"
+
+#: ../includes/template-pager.php:9
+msgid "Newer Entries &raquo;"
+msgstr "Nieuwere items &raquo;"
+
+#: ../includes/tinymce/styles-dropdown.php:47
+msgid "Button"
+msgstr "Knop"
+
+#: ../includes/tinymce/styles-dropdown.php:53
+msgid "Lead Paragraph"
+msgstr "Intro paragraaf (large breaker)"
+
+#: ../includes/tinymce/styles-dropdown.php:58
+msgid "Label"
+msgstr "Label"
+
+#: ../includes/tinymce/styles-dropdown.php:63
+msgid "Panel"
+msgstr "Panel"
+
+#: ../includes/tinymce/styles-dropdown.php:69
+msgid "Panel callout"
+msgstr "Panel callout"
+
+#: ../includes/tinymce/styles-dropdown.php:76
+msgid "Radius (Panel, Label, Button)"
+msgstr "Radius (Panel, Label, Button)"
+
+#: ../includes/tinymce/styles-dropdown.php:82
+msgid "Round (Label, Button)"
+msgstr "Round (Label, Button)"
+
+#: ../includes/tinymce/styles-dropdown.php:88
+msgid "Alert (Label, Button)"
+msgstr "Alert (Label, Button)"
+
+#: ../includes/tinymce/styles-dropdown.php:93
+msgid "Success (Label, Button)"
+msgstr "Success (Label, Button)"
+
+#: ../includes/tinymce/styles-dropdown.php:98
+msgid "Secondary (Label, Button)"
+msgstr "Secondary (Label, Button)"
+
+#: ../includes/tinymce/styles-dropdown.php:103
+msgid "Subheader (Headings)"
+msgstr "Subheader (Headings)"
+
+#: ../includes/tinymce/styles-dropdown.php:108
+msgid "Keyboard CMD"
+msgstr "Keyboard CMD"
+
+#: ../includes/functions/metabox-people.php:18
+msgid "Personalia"
+msgstr "Personalia"
+
+#: ../includes/functions/metabox-people.php:39
+#: ../includes/functions/metabox-people.php:79
+msgid "Choose or Upload an Image"
+msgstr "Kies of upload een afbeelding"
+
+#: ../includes/functions/metabox-people.php:44
+msgid "Title / short description"
+msgstr "Titel / korte omschrijving"
+
+#: ../includes/functions/metabox-people.php:49
+msgid "Institution"
+msgstr "Organisatie"
+
+#: ../includes/functions/metabox-people.php:54
+msgid "Biography / about"
+msgstr "Biography / over de auteur"
+
+#: ../includes/functions/metabox-people.php:59
+msgid "Website"
+msgstr "Website"
+
+#: ../includes/functions/metabox-people.php:80
+msgid "Use this image"
+msgstr "Gebruik deze afbeelding"
+
+#: ../includes/functions/metabox-agenda.php:47
+msgid "Agenda details"
+msgstr "Agenda details"
+
+#: ../includes/functions/metabox-agenda.php:56
+msgid "Date"
+msgstr "Datum"
+
+#: ../includes/functions/metabox-agenda.php:58
+#: ../includes/functions/metabox-agenda.php:65
+msgid "From"
+msgstr "Van"
+
+#: ../includes/functions/metabox-agenda.php:60
+#: ../includes/functions/metabox-agenda.php:67
+msgid "till"
+msgstr "tot"
+
+#: ../includes/functions/metabox-agenda.php:63
+msgid "Time"
+msgstr "Tijd"
+
+#: ../includes/functions/shortcodes/featured-image-text.php:8
+msgctxt "uu2014"
+msgid "read more"
+msgstr "lees meer"
+
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:12
+msgid "Upcoming Agenda items"
+msgstr "Aankomende Agenda Items"
+
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:13
+msgid "display a list of upcoming items"
+msgstr "toon een lijst met aankomende agenda items"
+
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:93
+msgid "Title:"
+msgstr "Titel:"
+
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:97
+msgid "Amount of items to show"
+msgstr "Aantal items te tonen"
+
+#: ../parts/page-header-2col.php:39 ../parts/page-header-1col.php:31
+#, php-format
+msgid "Author Archive: %s"
+msgstr "Auteur archief: %s"
+
+#: ../parts/page-header-2col.php:42 ../parts/page-header-1col.php:34
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Archief per dag: %s"
+
+#: ../parts/page-header-2col.php:45 ../parts/page-header-1col.php:37
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Archief per maand: %s"
+
+#: ../parts/page-header-2col.php:45 ../parts/page-header-1col.php:37
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: ../parts/page-header-2col.php:48 ../parts/page-header-1col.php:40
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Archief per jaar: %s"
+
+#: ../parts/page-header-2col.php:48 ../parts/page-header-1col.php:40
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: ../parts/page-header-2col.php:51 ../parts/page-header-1col.php:43
+msgid "Asides"
+msgstr "Asides"
+
+#: ../parts/page-header-2col.php:54 ../parts/page-header-1col.php:46
+msgid "Galleries"
+msgstr "Gallerijen"
+
+#: ../parts/page-header-2col.php:57 ../parts/page-header-1col.php:49
+msgid "Images"
+msgstr "Afbeeldingen"
+
+#: ../parts/page-header-2col.php:60 ../parts/page-header-1col.php:52
+msgid "Videos"
+msgstr "Videos"
+
+#: ../parts/page-header-2col.php:63 ../parts/page-header-1col.php:55
+msgid "Quotes"
+msgstr "Quotes"
+
+#: ../parts/page-header-2col.php:66 ../parts/page-header-1col.php:58
+msgid "Links"
+msgstr "Links"
+
+#: ../parts/page-header-2col.php:69 ../parts/page-header-1col.php:61
+msgid "Statuses"
+msgstr "Statussen"
+
+#: ../parts/page-header-2col.php:72 ../parts/page-header-1col.php:64
+msgid "Audios"
+msgstr "Audio bestanden"
+
+#: ../parts/page-header-2col.php:75 ../parts/page-header-1col.php:67
+msgid "Chats"
+msgstr "Discussies"
+
+#: ../parts/page-header-2col.php:84
+msgctxt "label"
+msgid "Search"
+msgstr "Zoek"
+
+#: ../parts/page-header-2col.php:97
+msgctxt "placeholder"
+msgid "Search …"
+msgstr "Zoek ..."
+
+#: ../parts/page-header-2col.php:97
+msgctxt "label"
+msgid "Search for:"
+msgstr "Zoeken naar:"
+
+#: ../parts/page-header-2col.php:98
+msgctxt "submit button"
+msgid "Search"
+msgstr "Zoek"
+
+#: ../parts/page-header-2col.php:105 ../parts/page-header-1col.php:91
+msgid "Show sidebar"
+msgstr "Bekijk sidebar"
+
+#: ../parts/carousel.php:99
+msgid "Previous slide"
+msgstr "Vorige slide"
+
+#: ../parts/carousel.php:100
+msgid "Next slide"
+msgstr "Volgende Slide"
+
+#: ../parts/brandbar.php:19 ../parts/colofon.php:20
+msgid "Logo Utrecht University"
+msgstr "Logo Universiteit Utrecht"
+
+#: ../parts/colofon.php:26
+msgid "Utrecht University"
+msgstr "Universiteit Utrecht"
+
+#: ../parts/colofon.php:32
+msgid "disclaimer"
+msgstr "disclaimer"
+
+#~ msgid "Widget 2 Column"
+#~ msgstr "2 koloms widget"
+
+#~ msgid "Thumbnail for overview pages"
+#~ msgstr "Thumbnail voor overzichtspagina's"
+
+#~ msgid "Archives"
+#~ msgstr "Archief"
+
+#~ msgid "Oops, Post Not Found!"
+#~ msgstr "Bericht niet gevonden."
+
+#~ msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
+#~ msgstr "Niets gevonden"
+
+#~ msgid ""
+#~ "Posted <time class=\"updated\" datetime=\"%1$s\" pubdate><a href=\"%5$s\">"
+#~ "%2$s</a></time> by <span class=\"author\">%3$s</span> <span class=\"amp"
+#~ "\">&</span> filed under %4$s."
+#~ msgstr ""
+#~ "Geplaatst op <time class=\"updated\" datetime=\"%1$s\" pubdate><a href="
+#~ "\"%5$s\">%2$s</a></time> door <span class=\"author\">%3$s</span> <span "
+#~ "class=\"amp\">&</span> in %4$s."
+
+#~ msgid "Tags:"
+#~ msgstr "Tags:"

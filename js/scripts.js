@@ -27,6 +27,12 @@ if (!window.getComputedStyle) {
 	}
 }
 
+jQuery(document).ready(function($) {
+  $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+  });
+});
+
 //Calculate the width of the scroll bar so css media queries and js widow.width match
 function getScrollBarWidth () {
 	var inner = document.createElement('p');
@@ -61,11 +67,11 @@ jQuery(document).ready(function($) {
 	$("select").chosen({no_results_text: "Oops, nothing found!", width: "99.5%"});
 
 	//Lightbox - http://dimsemenov.com/plugins/magnific-popup/
-	if($.fn.magnificPopup) {
-		$('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').magnificPopup({
-			type: 'image'
-		});
-	}
+	// if($.fn.magnificPopup) {
+	// 	$('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').magnificPopup({
+	// 		type: 'image'
+	// 	});
+	// }
 
 	//iCheck - http://fronteed.com/iCheck/
 	if($.fn.iCheck) {
@@ -110,7 +116,7 @@ jQuery(document).ready(function($) {
 	var menu = $('#main-navigation > ul');
 
 	/* responsive nav */
-	$('#main-navigation > .menu-button').on('click', function(e) {
+	$('.navbar-toggle').on('click', function(e) {
 		$('body').toggleClass('menu-open');
 	});
 
@@ -266,3 +272,25 @@ jQuery(document).ready(function($) {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
+
+/*
+	Add a class with the height of .page-title h1 when it exceeds 70px
+	*/
+
+jQuery(window).resize(function(){
+
+	var max = 71;
+	var height = jQuery('.page-title h1').outerHeight();
+
+	if (height >= max) {
+        jQuery('.page-title h1').removeClass();
+        jQuery('.page-title h1').addClass(function() {
+        	return "height-" + height;
+        });
+        jQuery('.page-header-placeholder').attr('class', 'page-header-placeholder');
+        jQuery('.page-header-placeholder').addClass(function() {
+        	return "height-" + height;
+        });
+    }
+	
+});

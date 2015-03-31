@@ -10,15 +10,36 @@
 <!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<title><?php wp_title(''); ?></title>
+<meta charset="UTF-8">
+<title><?php
+  /*
+   * Print the <title> tag based on what is being viewed.
+   */
+  global $page, $paged;
+
+  wp_title( '|', true, 'right' );
+
+  // Add the blog name.
+  bloginfo( 'name' );
+
+  // Add the blog description for the home/front page.
+  $site_description = get_bloginfo( 'description', 'display' );
+  if ( $site_description && ( is_home() || is_front_page() ) )
+    echo " | $site_description";
+
+  // Add a page number if necessary:
+  if ( $paged >= 2 || $page >= 2 )
+    echo ' | ' . sprintf( __( 'Page %s', 'uu-template' ), max( $paged, $page ) );
+
+  ?></title>
+
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-icon-touch.png">
-<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
 <!--[if IE]><link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico"><![endif]-->
 <meta name="msapplication-TileColor" content="#f01d4f">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
@@ -35,16 +56,22 @@
 
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-spy="scroll" data-target="#sidebarnav">
      
-	<div id="container">
+	<div id="page">
 		<?php get_template_part( 'parts/brandbar'); ?> 
 		<header id="masthead" class="header" role="banner">
 
-			<div id="inner-header" class="container clearfix">
+			<div class="container">
 
 				<?php // to use a image just replace the bloginfo('name') with <img> ?>
-				<div id="logo" class="h1"><a href="<?php  echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a></div>
+				<h1>
+
+				<a href="<?php  echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo('name'); ?>">
+					<?php bloginfo('name'); ?>
+				</a>
+
+			    </h1>
 
 				<?php // if you'd like to use the site description you can un-comment it below
 				// echo '<p class="site-description">'. bloginfo( "description" ) .'</p>' ?>
@@ -53,44 +80,13 @@
 
 		</header>
 
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'test' ); ?></a>
+		<a class="skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'uu2014' ); ?></a>
 
-		<nav id="main-navigation" class="clearfix" role="navigation">
-			<div class="container">
-				<div class="row">
-					<?php uu2014dev_main_nav(); ?>
-				</div>
-			</div>	
-		</nav>
+<?php uu_main_navigation(); ?>
 
-<?php if ( is_home() || is_front_page() ) :
-	get_template_part( 'parts/carousel', '' );
-	get_template_part( 'parts/widgetarea', 'home' );
- else : 
- 	get_template_part( 'parts/banner', '' );
 
- endif;	?>
  	
 			
        
 
-		<div id="content">
-
-			<div id="inner-content" class="container clearfix">
-
-				<?php // Test for active sidebars to set the main content width
-					if(is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' )) { //both sidebars
-						$main_class = 'col-sm-4 col-sm-push-4';
-					}
-					elseif(is_active_sidebar( 'left-sidebar' ) && !is_active_sidebar( 'right-sidebar' )) { //left sidebar
-						$main_class = 'col-sm-8 col-sm-push-4';
-					}
-					elseif(!is_active_sidebar( 'left-sidebar' ) && is_active_sidebar( 'right-sidebar' )) { //right sidebar
-						$main_class = 'col-sm-8';
-					}
-					else { //no sidebar
-						$main_class = 'col-sm-12';
-					}
-				?>
-
-				<div id="main" class="<?php echo $main_class;?> clearfix" role="main">
+		

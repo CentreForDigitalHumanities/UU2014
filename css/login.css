@@ -29,9 +29,10 @@ with the width and height.
   white-space: nowrap;
   overflow: hidden;
   padding-bottom: 15px;
-  display: block; }
+  display: block;
+  height: 40px; }
 
-/* line 41, ../scss/login.scss */
+/* line 42, ../scss/login.scss */
 form {
   margin-left: 8px;
   padding: 26px 24px 46px;
@@ -45,7 +46,7 @@ form {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-/* line 51, ../scss/login.scss */
+/* line 52, ../scss/login.scss */
 body form .input {
   font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
   font-weight: 200;

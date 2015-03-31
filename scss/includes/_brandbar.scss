@@ -1,0 +1,114 @@
+#brandbar {
+	background: #FFFFFF;
+	border-bottom: 1px solid #EFEFEF;
+	height: 66px;
+	overflow: hidden;
+	@include bp(sm) {
+		height: 50px;
+	}
+	img {
+		height: 48px;
+		width: 179px;
+        @include bp(sm) {
+            width: 140px;
+            height: 37px;
+        }
+	}
+    @include bp(xs) {
+        &.affix-top {
+            
+        }
+    }
+}
+
+.search-wrapper {
+   	width: 210px;
+    margin-top: 18px;
+    position: relative;
+    @include bp(sm) {
+            margin-top: 10px;
+        }
+    .searchfield {
+        background: none repeat scroll 0 0 #efefef;
+        border: 0 none;
+        font-size: 14px;
+        height: 30px;
+        outline: medium none;
+        padding-left: 10px;
+        padding-right: 40px;
+        color: #3b3b3b;
+        text-decoration: none;
+        line-height: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 210px;
+        @include bp(sm) {
+            width: 180px;
+        }
+
+        @include bp(xs) {
+            display: none;
+        }    
+    }    
+}
+
+
+
+input[type="submit"].searchbutton, .searchbutton {
+    text-indent: normal;
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-family: "icomoon";
+    font-size: 14px;
+    color: #777777;
+    content: "";
+    background: none repeat scroll 0 0 #efefef;
+    position: absolute;
+    left: 180px;
+    top: 0;
+    border: 0;
+    line-height: 14px;
+    &:hover {
+        color: #000;
+    }
+     @include bp(xs) {
+        position: relative;
+        background-color: transparent;
+        left: 20px;
+        font-size: 16px;
+
+    } 
+}
+
+
+.language-switch {
+	line-height: 70px;
+	font-size: 14px;
+	padding-left: 15px;
+	display: inline-block;
+    position: relative;
+    border-left: 1px solid #EFEFEF;
+    a {
+    	color: #787878;
+    }
+    @include bp(sm) {
+		line-height: 50px;	
+	}
+}
+
+.logodiv {
+	padding-bottom: 10px;
+    padding-left: 6px;
+    padding-top: 10px;
+    @include bp(sm) {
+		padding-bottom: 5px;
+    	padding-left: 6px;
+    	padding-top: 5px;
+    	min-width: 194px;
+    	display: inline-block;
+    }
+}
+

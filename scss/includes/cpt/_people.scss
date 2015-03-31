@@ -1,0 +1,43 @@
+.people-item {
+	margin-bottom: 2em;
+}
+.people-item:nth-child(odd) {
+	clear: left;
+}
+
+.people-item-content {
+	@include bp(sm) {
+		margin-top: 1em;
+		margin-bottom: 3em;
+	}
+}
+
+.people-item-content-naam {
+	font-weight: bold;
+	line-height: 24px;
+}
+
+.people-item-content-rol {
+	font-size: 14px;
+	font-family: $sans;
+	 line-height: 18px;
+}
+
+.people-item-content-omschrijving {
+	font-size: 14px;
+	margin-top: 8px;
+	line-height: 18px;
+}
+
+.people-item-content-url, .people-item-content-mail {
+	font-size: 14px;
+}
+
+.people-item-large {
+	.people-item-content-omschrijving {
+
+		margin-top: 1em;
+		line-height: 24px;
+	}
+}
+

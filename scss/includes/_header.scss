@@ -1,18 +1,24 @@
-#brandbar {
-	background: #FFFFFF;
-	border-bottom: 1px solid #EFEFEF;
-	img {
-		width: 155px;
-		margin: 10px 0;
+#masthead h1 {
+	@extend .uu-subsite-header;
+    line-height: 108px;
+    margin: 0;
+    padding: 0;
+    color: $uu-title-color;
+    @include bp(sm) {
+		font-size: 24px;
+		line-height: 58px;
+		margin-left: 8px;
+    }
+    a, a:hover, a:focus {
+		color: $uu-title-color;
+		text-decoration: none;
 	}
 }
 
-#logo a {
-	color: $uu-title-color;
-	font-size: 38px;
-    font-weight: 100;
-    font-family: "Frutiger",Helvetica,Arial,sans-serif;
+.header {
+	background: #FFFFFF;
 }
+
 
 .header-image img {
 	width: 100%;

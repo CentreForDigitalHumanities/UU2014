@@ -1,0 +1,49 @@
+{
+    "key": "group_550ae771dcc20",
+    "title": "Advanced options",
+    "fields": [
+        {
+            "key": "field_550ae77bc1d9f",
+            "label": "test",
+            "name": "test",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "uu-site-options"
+            },
+            {
+                "param": "current_user_role",
+                "operator": "==",
+                "value": "super_admin"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1426778124
+}

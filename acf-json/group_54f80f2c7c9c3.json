@@ -1,0 +1,443 @@
+{
+    "key": "group_54f80f2c7c9c3",
+    "title": "Theme options",
+    "fields": [
+        {
+            "key": "field_5507ea155fbe0",
+            "label": "Site info",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
+            "key": "field_55080ac123fd5",
+            "label": "Site description",
+            "name": "uu_siteoptions_description",
+            "prefix": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 3,
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5507ea2a5fbe1",
+            "label": "Owner",
+            "name": "uu_siteoptions_owner",
+            "prefix": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "uu": "Corporate UU",
+                "geo": "Faculty of Geosciences",
+                "hum": "Faculty of Humanities",
+                "rebo": "Faculty of Law, Economics and Governance",
+                "gnk": "Faculty of Medicine",
+                "beta": "Faculty of Science",
+                "sw": "Faculty of Social and Behavioural Sciences",
+                "dgk": "Faculty of Veterinary Medicine",
+                "other": "Other"
+            },
+            "default_value": {
+                "": ""
+            },
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_5507ee2eedc13",
+            "label": "Other",
+            "name": "uu_siteoptions_other",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5507ea2a5fbe1",
+                        "operator": "==",
+                        "value": "other"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5507eaf15fbe2",
+            "label": "Type",
+            "name": "uu_siteoptions_type",
+            "prefix": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Conference": "Conference",
+                "Research": "Research",
+                "Blog": "Blog",
+                "Documentation": "Documentation"
+            },
+            "default_value": {
+                "": ""
+            },
+            "layout": "horizontal"
+        },
+        {
+            "key": "field_54f9b27dcd98d",
+            "label": "Homepage",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
+            "key": "field_54f80f57662f3",
+            "label": "Post types",
+            "name": "uu_options_post_types",
+            "prefix": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": 50,
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "news_agenda": "news and agenda",
+                "news": "news items only",
+                "agenda": "agenda items only"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "news_agenda",
+            "layout": "vertical"
+        },
+        {
+            "key": "field_54f98aefba4de",
+            "label": "Categories news",
+            "name": "uu_options_news_frontpage_cat",
+            "prefix": "",
+            "type": "taxonomy",
+            "instructions": "Choose one or more categories to display on the homepage. You may need to create a category first (menuitem: posts > categories)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "!=",
+                        "value": "agenda"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "load_save_terms": 1,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_54f81046662f4",
+            "label": "Number of news items",
+            "name": "uu_options_news_amount",
+            "prefix": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "!=",
+                        "value": "agenda"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": 50,
+                "class": "pull-right",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54f98a7eba4dd",
+            "label": "News alternative title",
+            "name": "uu_options_alternative_title_news",
+            "prefix": "",
+            "type": "text",
+            "instructions": "Choose an alternative title for the items on the frontpage, i.e. \"Blog\".",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "!=",
+                        "value": "agenda"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54f810ef662f5",
+            "label": "Number of agenda items",
+            "name": "uu_options_agenda_amount",
+            "prefix": "",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "!=",
+                        "value": "news"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": 50,
+                "class": "pull-right",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54f98a27ba4dc",
+            "label": "Agenda alternative title",
+            "name": "uu_options_alternative_title_agenda",
+            "prefix": "",
+            "type": "text",
+            "instructions": "Optionally choose an alternative title for Agenda, i.e. \"events\"",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "!=",
+                        "value": "news"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_55014f8690c1a",
+            "label": "News show publication date",
+            "name": "uu_options_news_show_pubdate",
+            "prefix": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "!=",
+                        "value": "agenda"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        },
+        {
+            "key": "field_550a9f05c78e3",
+            "label": "Posts and pages",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
+            "key": "field_550a9f18c78e4",
+            "label": "Show Metadata",
+            "name": "uu_options_posts_metadata",
+            "prefix": "",
+            "type": "checkbox",
+            "instructions": "Select what type of metadata to show",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "date": "Date of publication",
+                "author": "Author",
+                "taxonomy": "Category, tags or other taxonomy"
+            },
+            "default_value": {
+                "date": "date",
+                "author": "author",
+                "taxonomy": "taxonomy"
+            },
+            "layout": "vertical"
+        },
+        {
+            "key": "field_5507ed4b840ac",
+            "label": "Appearance",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
+            "key": "field_5507ed02fea05",
+            "label": "Custom CSS",
+            "name": "uu_options_custom_css",
+            "prefix": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "uu-site-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "field",
+    "hide_on_screen": "",
+    "modified": 1426777965
+}

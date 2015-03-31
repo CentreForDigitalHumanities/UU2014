@@ -29,7 +29,7 @@ if ( post_password_required() ) { ?>
  if ( have_comments() ) : ?>
  <div id="comments" class="comments-area">
 
-	<h3 class="h2 comments"><?php comments_number(__('<span>No</span> Responses', 'uu2014dev'), __('<span>One</span> Response', 'uu2014dev'), _n('<span>%</span> Response', '<span>%</span> Responses', get_comments_number(),'uu2014dev') );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+	<h3 class="h2 comments"><?php comments_number(__('<span>No</span> Responses', 'uu2014'), __('<span>One</span> Response', 'uu2014'), _n('<span>%</span> Response', '<span>%</span> Responses', get_comments_number(),'uu2014') );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
 
 	<nav class="comment-nav">
 		<ul class="clearfix">
@@ -39,7 +39,7 @@ if ( post_password_required() ) { ?>
 	</nav>
 
 	<ol class="commentlist">
-		<?php wp_list_comments('type=comment&callback=uu2014dev_comments'); ?>
+		<?php wp_list_comments('type=comment&callback=uu2014_comments'); ?>
 	</ol>
 
 	<nav class="comment-nav">
@@ -72,7 +72,7 @@ if ( post_password_required() ) { ?>
 		<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
 
 			<div class="alert help">
-				<p><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'uu2014dev'), '<a href="<?php echo wp_login_url( get_permalink() ); ?>">', '</a>' ); ?></p>
+				<p><?php printf( __('You must be %1$slogged in%2$s to post a comment.', 'uu2014'), '<a href="<?php echo wp_login_url( get_permalink() ); ?>">', '</a>' ); ?></p>
 			</div>
 
 		<?php else : ?>

@@ -30,7 +30,6 @@ Stylesheet: Off-Canvas Navigation
 
             a {
 				display: inline-block;
-				color: #fff;
 				font-size: 13px;
 				font-weight: 400;
 				text-decoration: none;
@@ -39,7 +38,6 @@ Stylesheet: Off-Canvas Navigation
 
 				&:hover, &:focus {
 	                background-color: #222;
-					color:#ccc;
                 }
             }
 
@@ -78,6 +76,14 @@ Stylesheet: Off-Canvas Navigation
 				    width: 100%;
 			    }
 			}
+
+			&.menu-item-home {
+				a {
+					@extend .ir;
+				}
+				
+			}
+
 
 			&.menu-item-has-children {}
 
