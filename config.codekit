@@ -3165,6 +3165,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/images\/default-thumb.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5565,
+		"inputAbbreviatedPath": "\/images\/default-thumb.jpg",
+		"outputAbbreviatedPath": "\/images\/default-thumb.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/images\/headers\/Basisheader_GW_Academiegebouw_1600x400.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -10917,15 +10928,6 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/scss\/style copy.css": {
-		"fileType": 16,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/scss\/style copy.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/scss\/style.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 1,
@@ -11010,7 +11012,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Simon Welling",
+"lastSavedByUser": "Welling, S.F. (Simon)",
 "manualImportLinks": {
 	},
 "projectAttributes": {
