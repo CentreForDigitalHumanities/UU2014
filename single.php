@@ -1,48 +1,121 @@
 <?php get_header(); ?>
 
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<?php get_template_part( 'parts/page-header-2col'); ?> 
 
-						<header class="article-header">
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-							<h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+		<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+			<?php if ( has_post_thumbnail() ) { ?>
+			<?php //the_post_thumbnail('large', array( 'class' => 'img-responsive' )); ?>
+			<?php } ?>
 
-							<p class="byline vcard"><?php printf(__('Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&amp;</span> filed under %4$s.', 'uu2014dev'), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), uu2014dev_get_the_author_posts_link(), get_the_category_list(', ')); ?></p>
 
-						</header><?php // end article header ?>
+			<section class="entry-content clearfix" itemprop="articleBody">
+				<?php if( function_exists('get_field') && get_field('uu_agenda_start_date') ) { ?>
+				<div class="agenda-date">	
+					
+					<?php 
 
-						<section class="entry-content clearfix" itemprop="articleBody">
-							<?php the_content(); ?>
-							<?php wp_link_pages( array(
-								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'uu2014dev' ) . '</span>',
-								'after'       => '</div>',
-								'link_before' => '<span>',
-								'link_after'  => '</span>',
-							) ); ?>
-						</section><?php // end article section ?>
+					
+					$start_date_timestamp = strtotime(get_field('uu_agenda_start_date')); 
+					$end_date_timestamp = strtotime(get_field('uu_agenda_end_date'));
+					$startday = date_i18n('j', $start_date_timestamp);
+					$endday = date_i18n('j', $end_date_timestamp);
+					$startmonth = date_i18n('m', $start_date_timestamp);
+					$endmonth = date_i18n('m', $end_date_timestamp);
+					$startyear = date_i18n('Y', $start_date_timestamp);
+					$endyear = date_i18n('Y', $end_date_timestamp);
+					$sameday = false;
+					$samemonth = false;
+					$sameyear = false;
+					if ($startday == $endday) {$sameday=true;} 
+					if ($startmonth == $endmonth) {$samemonth=true;}
+					if ($startyear == $endyear) {$sameyear=true;} ?>
+					
+					
 
-						<footer class="article-footer">
+					<div class="agenda-item">
+						<label class="agenda-item-label"><?php _e('Datum', 'uu2014') ?>: </label>
+						<?php 
+						if( get_field('uu_agenda_start_date') ) {
+						 	
+						 	if( get_field('uu_agenda_end_date') ) { 
+						 		if (!$sameyear || !$samemonth) {
+						 			echo date_i18n('j M Y', $start_date_timestamp). ' - ' . date_i18n('j M Y', $end_date_timestamp);
+						 		}
+						 		elseif(!$sameday) {
+						 			echo date_i18n('j', $start_date_timestamp). ' - ' . date_i18n('j F Y', $end_date_timestamp);
+						 		} else {	
+								echo date_i18n('j F Y', $start_date_timestamp);
+								}
 
-							<?php the_tags('<p class="tags"><span class="tags-title">Tags:</span> ', ', ', '</p>'); ?>
+							 } else {
+							 	echo date_i18n('j F Y', $start_date_timestamp);	
+							 } 
+							
+						} ?>
+					
+					</div>
+				
+					<?php if( get_field('uu_agenda_location') ) { ?>
+						<div class="agenda-item">
+							<label class="agenda-item-label"><?php _e('Locatie', 'uu2014') ?>: </label>
+							<?php echo get_field('uu_agenda_location'); ?>
+						</div>
+					<?php 	} 
+					if( get_field('uu_agenda_url') ) { ?>
+						<div class="agenda-item">
+							<label class="agenda-item-label"><?php _e('Url', 'uu2014') ?>: </label>
+							<a href="<?php echo get_field('uu_agenda_url'); ?>"><?php echo get_field('uu_agenda_url'); ?></a>
+						</div>
+					<?php 	} ?>	
+				</div>
+				
+				<?php 	} else { 
+					$metadata = get_field('uu_options_posts_metadata' , 'options' );
+					if( !empty($metadata) ) {
+						
+						if ( in_array( 'date', $metadata ) ) {
+							uu_metadata();
+						}
 
-						</footer><?php // end article footer ?>
+			 		}  
+			 	} ?>
+				<h1><?php the_title(); ?></h1>	
+				<?php the_content(); ?>
+				<?php wp_link_pages( array(
+					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'uu2014' ) . '</span>',
+					'after'       => '</div>',
+					'link_before' => '<span>',
+					'link_after'  => '</span>',
+				) ); ?>
+			</section><?php // end article section ?>
 
-						<?php
-							// If comments are open or we have at least one comment, load up the comment template
-							if ( comments_open() || '0' != get_comments_number() ) :
-								comments_template();
-							endif;
-						?>
+			<footer class="article-footer">
+					
+				
 
-					</article><?php // end article ?>
+			</footer><?php // end article footer ?>
 
-				<?php endwhile; ?>
+			<?php
+				// If comments are open or we have at least one comment, load up the comment template
+				if ( comments_open() || '0' != get_comments_number() ) :
+					comments_template();
+				endif;
+			?>
 
-			<?php else : ?>
+		</article><?php // end article ?>
+	
+	<?php endwhile; ?>
 
-			<?php get_template_part('includes/template','error'); // WordPress template error message ?>
+	<?php else : ?>
 
-			<?php endif; ?>
+		<?php get_template_part('includes/template','error'); // WordPress template error message ?>
+
+	<?php endif; ?>
+
+<?php get_template_part( 'parts/page-footer-2col'); ?> 
 
 <?php get_footer();

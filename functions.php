@@ -31,73 +31,104 @@ TABLE OF CONTENTS
 
 //Set up the content width value based on the theme's design.
 if ( ! isset( $content_width ) ) {
-	$content_width = 474;
+	$content_width = 740;
 }
 
 //Adjust content_width value for image attachment template.
-function uu2014dev_content_width() {
+function uu2014_content_width() {
 	if ( is_attachment() && wp_attachment_is_image() ) {
 		$GLOBALS['content_width'] = 810;
 	}
 }
-add_action( 'template_redirect', 'uu2014dev_content_width' );
+add_action( 'template_redirect', 'uu2014_content_width' );
 
 /*********************
 1. INCLUDE FILES
 *********************/
 define('SCAFFOLDING_INCLUDE_PATH', dirname(__FILE__).'/includes/');
 require_once(SCAFFOLDING_INCLUDE_PATH.'base-functions.php');
-//require_once(SCAFFOLDING_INCLUDE_PATH.'custom-post-type.php');
 
-if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/ReduxCore/framework.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/ReduxCore/framework.php' );
+
+// if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/ReduxCore/framework.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/ReduxCore/framework.php' );
+// }
+
+// if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' );
+// }
+
+// if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' );
+// }
+
+// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' );
+// }
+
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/lecturenet.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/lecturenet.php' );
 }
 
-if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' );
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/iframe.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/iframe.php' );
 }
 
-if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' );
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured-image-text.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured-image-text.php' );
 }
+
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' );
+}
+
+// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' );
+// }
+
+// if ( file_exists( dirname( __FILE__ ) . '/includes/acf.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/acf.php' );
+// }
+
+
+
 
 
 /*********************
 2. SCRIPTS & ENQUEUEING
 *********************/
 
-function uu2014dev_scripts_and_styles() {
+function uu2014_scripts_and_styles() {
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
 	// modernizr (without media query polyfill)
-	wp_enqueue_script( 'uu2014dev-modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', false, null );
+	wp_enqueue_script( 'uu2014-modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', false, null );
 
 	// respondjs
-	wp_enqueue_script( 'uu2014dev-respondjs', '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js', false, null );
+	wp_enqueue_script( 'uu2014-respondjs', '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js', false, null );
 
 	// Boostrap CSS
-	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
+	// wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 
 	// register main stylesheet
-	wp_enqueue_style( 'uu2014dev-stylesheet', get_stylesheet_directory_uri() . '/css/style.css', array(), '', 'all' );
-
-	
+	wp_enqueue_style( 'uu2014-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );	
 
 	// ie-only style sheet
-	wp_enqueue_style( 'uu2014dev-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
-	$wp_styles->add_data( 'uu2014dev-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+	wp_enqueue_style( 'uu2014-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
+	$wp_styles->add_data( 'uu2014-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 	// Bootstrap javascript
 	wp_enqueue_script( 'bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
 
 	// Magnific Popup (LightBox)
-	wp_enqueue_script( 'uu2014dev-magnific-popup-js', '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js', array( 'jquery' ), '0.9.9', true );
+	// wp_enqueue_script( 'uu2014-magnific-popup-js', '//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js', array( 'jquery' ), '0.9.9', true );
 
 	// Font Awesome (icon set)
-	wp_enqueue_style( 'uu2014dev-font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
+	//wp_enqueue_style( 'uu2014-font-awesome', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css', array(), '4.0.3' );
 
+	// ************************************************************************************
+	// Uitgeschakeld omdat conditionele logica in Foridable Froms hierdoor niet meer werkt.
 	// iCheck (better radio and checkbox inputs)
-	wp_enqueue_script( 'uu2014dev-icheck', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.1/icheck.min.js', array( 'jquery' ), '1.0.1', true );
+	// wp_enqueue_script( 'uu2014-icheck', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.1/icheck.min.js', array( 'jquery' ), '1.0.1', true );
 
 	//Chosen - http://harvesthq.github.io/chosen/
     wp_enqueue_script( 'chosen-js', '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js', array( 'jquery' ), '1.1.0', true );
@@ -108,23 +139,34 @@ function uu2014dev_scripts_and_styles() {
 	}
 
 	//adding scripts file in the footer
-	wp_enqueue_script( 'uu2014dev-js', get_stylesheet_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'uu2014-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
+	
 }
 
+add_action('wp_enqueue_scripts', 'uu2014_scripts_and_styles', 20 );
+
+
+
+function load_fonts() {
+            wp_register_style('googleFonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,700,400italic');
+            wp_enqueue_style( 'googleFonts');
+        }
+    
+ add_action('wp_print_styles', 'load_fonts');	
 
 /*********************
 3. THEME SUPPORT
 *********************/
 
 // Adding WP 3+ Functions & Theme Support
-function uu2014dev_theme_support() {
+function uu2014_theme_support() {
 
 	// Make theme available for translation
-	load_theme_textdomain( 'uu2014dev', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'uu2014', get_template_directory() . '/languages' );
 
 	add_theme_support( 'post-thumbnails' ); // wp thumbnails (sizes handled in functions.php)
 
-	set_post_thumbnail_size( 125, 125, true ); // default thumb size
+	set_post_thumbnail_size( 100, 100, true ); // default thumb size
 
 	/*  Feature Currently Disabled
 	// wp custom background (thx to @bransonwerner for update)
@@ -143,21 +185,24 @@ function uu2014dev_theme_support() {
 
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 	//adding custome header suport
-	add_theme_support( 'custom-header', array(
-		'default-image'=> '%s/images/headers/default.jpg',
-		'random-default'=> false,
-		'width'=> 1140,  // Make sure to set this
-		'height'=> 250, // Make sure to set this
-		'flex-height'=> false,
-		'flex-width'=> false,
-		'default-text-color'=> 'ffffff',
-		'header-text'=> false,
-		'uploads'=> true,
-		'wp-head-callback'=> 'uu2014dev_custom_headers_callback',
-		'admin-head-callback'=> '',
-		'admin-preview-callback'=> '',
-		)
-	);
+
+	require_once(SCAFFOLDING_INCLUDE_PATH.'custom-header.php');
+
+	// add_theme_support( 'custom-header', array(
+	// 	'default-image'=> '%s/images/headers/default.jpg',
+	// 	'random-default'=> false,
+	// 	'width'=> 1368,  // Make sure to set this
+	// 	'height'=> 250, // Make sure to set this
+	// 	'flex-height'=> true,
+	// 	'flex-width'=> false,
+	// 	'default-text-color'=> 'ffffff',
+	// 	'header-text'=> false,
+	// 	'uploads'=> true,
+	// 	'wp-head-callback'=> 'uu2014_custom_headers_callback',
+	// 	'admin-head-callback'=> '',
+	// 	'admin-preview-callback'=> '',
+	// 	)
+	// );
 
 /* Feature Currently Disabled
 	// adding post format support
@@ -182,10 +227,14 @@ function uu2014dev_theme_support() {
 	// registering wp3+ menus
 	register_nav_menus(
 		array(
-			'main-nav' => __( 'Main Menu', 'uu2014dev' ),	// main nav in header
-			'footer-nav' => __( 'Footer Menu', 'uu2014dev' ) // secondary nav in footer
+			'main-nav' => __( 'Main Menu', 'uu2014' ),	// main nav in header
+			'footer-nav' => __( 'Footer Menu', 'uu2014' ) // secondary nav in footer
 		)
 	);
+
+	// https://make.wordpress.org/core/2014/10/29/title-tags-in-4-1/
+	//add_theme_support( 'title-tag' );
+
 } /* end scaffolding theme support */
 
 
@@ -197,12 +246,12 @@ register_default_headers( array(
 	'default' => array(
 		'url' => get_template_directory_uri().'/images/headers/default.jpg',
 		'thumbnail_url' => get_template_directory_uri().'/images/headers/default.jpg',
-		'description' => __( 'default', 'uu2014dev' )
+		'description' => __( 'default', 'uu2014' )
 	)
 ));
 
 //Set header image as a BG
-function uu2014dev_custom_headers_callback() {
+function uu2014_custom_headers_callback() {
 	?>	<style type="text/css">#banner {
 			background-image: url(<?php header_image(); ?>);
 			/*-ms-behavior: url(<?php echo get_template_directory_uri() ?>/includes/backgroundsize.min.htc);*/
@@ -215,32 +264,32 @@ function uu2014dev_custom_headers_callback() {
 *********************/
 
 // Thumbnail sizes
-if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'widget-double-column', 550 ); 
+
+add_action( 'after_setup_theme', 'uu_2014_custom_thumb_size' );
+
+function uu_2014_custom_thumb_size() {	
+	add_image_size( 'uu-thumbnail', 100, 100, true );
+	add_image_size( 'uu-header', 1600 );
+	// change default wordpress image sizes
+	update_option('medium_size_w', 278);
+	update_option('large_size_w', 740);
+}
 
 
-//add custom size to admin
 add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 
 function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        'widget-double-column' => __('Widget 2 Column'),
+        'uu-thumbnail' => __( 'Small Thumbnail' )
     ) );
 }
-
-}
-
-// change default wordpress image sizes
-update_option('medium_size_w', 355);
-update_option('large_size_w', 852);
-
 
 /*********************
 6. CHANGE NAME OF POSTS TYPE IN ADMIN BACKEND
 *********************/
 
 /* //Currently commented out. This is useful for improving UX in the WP backend
-function uu2014dev_change_post_menu_label() {
+function uu2014_change_post_menu_label() {
 	global $menu;
 	global $submenu;
 	$menu[5][0] = 'News';
@@ -251,7 +300,7 @@ function uu2014dev_change_post_menu_label() {
 	echo '';
 }
 
-function uu2014dev_change_post_object_label() {
+function uu2014_change_post_object_label() {
 	global $wp_post_types;
 	$labels = &$wp_post_types['post']->labels;
 	$labels->name = 'News';
@@ -265,8 +314,8 @@ function uu2014dev_change_post_object_label() {
 	$labels->not_found = 'No News Entries found';
 	$labels->not_found_in_trash = 'No News Entries found in Trash';
 }
-add_action( 'init', 'uu2014dev_change_post_object_label' );
-add_action( 'admin_menu', 'uu2014dev_change_post_menu_label' );
+add_action( 'init', 'uu2014_change_post_object_label' );
+add_action( 'admin_menu', 'uu2014_change_post_menu_label' );
 */
 
 
@@ -274,8 +323,36 @@ add_action( 'admin_menu', 'uu2014dev_change_post_menu_label' );
 7. MENUS & NAVIGATION
 *********************/
 
+function uu_main_navigation() {
+    ?>
+    <nav id="#access" class="navbar navbar-default navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                
+            </div>
+        <?php
+            echo  wp_nav_menu(
+                array(
+                    'menu'              => 'main-nav',
+                    'theme_location'    => 'main-nav',
+                    'depth'             => 2,
+                    'container'         => 'div',
+                    'container_class'   => 'collapse navbar-collapse',
+                    'container_id'      => 'main-menu-collapse',
+                    'menu_class'        => 'nav navbar-nav',
+                    'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+                    'walker'            => new wp_bootstrap_navwalker())
+            );
+        ?>
+    	</div>
+    </nav> <!-- #access .navbar -->
+    <?php
+}
+
+
 // the main menu
-function uu2014dev_main_nav() {
+function uu2014_main_nav() {
 	// display the wp3 menu if available
 	wp_nav_menu(array(
 		'container' => '',						 	 // remove nav container
@@ -289,13 +366,13 @@ function uu2014dev_main_nav() {
 		'link_after' => '',							 	 // after each link
 		'depth' => 0,								 	 // limit the depth of the nav
 		'fallback_cb' => '',	 // fallback function
-		'items_wrap' => '<a href="#" class="menu-button" title="Click to open menu"><i class="fa fa-bars"></i> Menu</a><ul id="%1$s" class="%2$s">%3$s</ul>',
-		'walker'=> new uu2014dev_walker_nav_menu
+		'items_wrap' => '',
+		'walker'=> new wp_bootstrap_navwalker
 	));
 } /* end scaffolding main nav */
 
 // the footer menu (should you choose to use one)
-function uu2014dev_footer_nav() {
+function uu2014_footer_nav() {
 	wp_nav_menu(array(
 		'container' => '',
 		'container_class' => '',
@@ -311,82 +388,8 @@ function uu2014dev_footer_nav() {
 	));
 } /* end scaffolding footer link */
 
-//Custom walker to build main menu
-class uu2014dev_walker_nav_menu extends Walker_Nav_Menu {
-	// add classes to ul sub-menus
-	function start_lvl(&$output, $depth = 0, $args = Array()) {
-		// depth dependent classes
-		$indent = ( $depth > 0 ? str_repeat( "\t", $depth ) : '' ); // code indent
-		$display_depth = ( $depth + 1); // because it counts the first submenu as 0
-		$classes = array(
-				'sub-menu',
-				( $display_depth % 2 ? 'menu-odd' : 'menu-even' ),
-				'menu-depth-' . $display_depth
-			);
-		$class_names = implode( ' ', $classes );
-		// build html
-		$output .= "\n" . $indent . '<ul class="' . $class_names . '"><li><a class="menu-back-button" title="Click to Go Back a Menu"><i class="fa fa-chevron-left"></i> Back</a></li>' . "\n";
-	}
-
-	function start_el(&$output, $item, $depth = 0, $args = Array(), $id = 0) {
-		global $wp_query;
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-
-		$class_names = $value = '';
-
-		//set <li> classes
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		$classes[] = 'menu-item-' . $item->ID;
-		if( $args->has_children ){ $classes[] = 'menu-has-children'; }
-		if( !$args->has_children ){ $classes[] = 'menu-item-no-children'; }
-		//combine the class array into a string
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
-		$class_names = ' class="' . esc_attr( $class_names ) . '"';
-
-		//set <li> id
-		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
-		$id = strlen( $id ) ? ' id="' . esc_attr( $id ) . '"' : '';
-
-		//set outer <li> and it's attributes
-		$output .= $indent . '<li' . $id . $value . $class_names .'>';
-
-		//set <a> attributes
-		$attributes  = ! empty( $item->attr_title ) ? ' title="'  . esc_attr( $item->attr_title ) .'"' : ' title="' . esc_attr( strip_tags($item->title) ) . '"';
-		$attributes .= ! empty( $item->target ) ? ' target="' . esc_attr( $item->target ) . '"' : '';
-		$attributes .= ! empty( $item->xfn ) ? ' rel="'	. esc_attr( $item->xfn ) . '"' : '';
-		$attributes .= ! empty( $item->url ) ? ' href="' . esc_attr( $item->url ) . '"' : '';
-
-		//Add menu button links to items with children
-		if ( $args->has_children ) {
-			$menu_pull_link = '<a class="menu-button" title="Click to Open Menu"><i class="fa fa-chevron-right"></i></a>';
-		}else{
-			$menu_pull_link = '';
-		}
-
-		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'>';
-		$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-		$item_output .= '</a>';
-		$item_output .= $menu_pull_link.$args->after;
-
-		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-	}
-
-	function end_el(&$output, $item, $depth=0, $args=array()) {
-		$output .= "</li>\n";
-	}
-
-   function display_element( $element, &$children_elements, $max_depth, $depth=0, $args, &$output ) {
-
-		//Set custom arg to tell if item has children
-		$id_field = $this->db_fields['id'];
-		if ( is_object( $args[0] ) ) {
-			$args[0]->has_children = ! empty( $children_elements[$element->$id_field] );
-		}
-
-		return parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
-	}
-}
+// Register Custom Navigation Walker
+require_once( dirname( __FILE__ ) . '/includes/wp_bootstrap_navwalker.php');
 
 
 /*********************
@@ -394,47 +397,38 @@ class uu2014dev_walker_nav_menu extends Walker_Nav_Menu {
 *********************/
 
 // Sidebars & Widgetizes Areas
-function uu2014dev_register_sidebars() {
+function uu2014_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'left-sidebar',
-		'name' => __('Left Sidebar', 'uu2014dev'),
-		'description' => __('The Left (primary) sidebar used for the interior menu.', 'uu2014dev'),
+		'name' => __('Left Sidebar', 'uu2014'),
+		'description' => __('The Left (primary) sidebar used for the interior menu.', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
 	register_sidebar(array(
-		'id' => 'right-sidebar',
-		'name' => __('Right Sidebar', 'uu2014dev'),
-		'description' => __('The Right sidebar used for the interior call to actions.', 'uu2014dev'),
+		'id' => 'below-content',
+		'name' => __('Below Content', 'uu2014'),
+		'description' => __('Below Content used for the call to actions.', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
 	register_sidebar(array(
-		'id' => 'banner-widget-area-1',
-		'name' => __('Banner Widget Area 1', 'uu2014dev'),
-		'description' => __('First column in banner widget area', 'uu2014dev'),
+		'id' => 'banner-widget-area',
+		'name' => __('Banner Widget Area', 'uu2014'),
+		'description' => __('Banner widget area', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
+		'before_title' => '',
+		'after_title' => '',
 	));
 	register_sidebar(array(
-		'id' => 'banner-widget-area-2',
-		'name' => __('Banner Widget Area 2', 'uu2014dev'),
-		'description' => __('Second column in banner widget area', 'uu2014dev'),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h4 class="widgettitle">',
-		'after_title' => '</h4>',
-	));
-	register_sidebar(array(
-		'id' => 'banner-widget-area-3',
-		'name' => __('Banner Widget Area 3', 'uu2014dev'),
-		'description' => __('Last column in banner widget area', 'uu2014dev'),
+		'id' => 'home-widget-area-0',
+		'name' => __('Home Widget Area 0', 'uu2014'),
+		'description' => __('Full-width area above home widget areas 1,2 and 3', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -442,8 +436,8 @@ function uu2014dev_register_sidebars() {
 	));
 	register_sidebar(array(
 		'id' => 'home-widget-area-1',
-		'name' => __('Home Widget Area 1', 'uu2014dev'),
-		'description' => __('First column in home widget area', 'uu2014dev'),
+		'name' => __('Home Widget Area 1', 'uu2014'),
+		'description' => __('First column in home widget area', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -451,8 +445,8 @@ function uu2014dev_register_sidebars() {
 	));
 	register_sidebar(array(
 		'id' => 'home-widget-area-2',
-		'name' => __('Home Widget Area 2', 'uu2014dev'),
-		'description' => __('Second column in home widget area', 'uu2014dev'),
+		'name' => __('Home Widget Area 2', 'uu2014'),
+		'description' => __('Second column in home widget area', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -460,8 +454,8 @@ function uu2014dev_register_sidebars() {
 	));
 	register_sidebar(array(
 		'id' => 'home-widget-area-3',
-		'name' => __('Home Widget Area 3', 'uu2014dev'),
-		'description' => __('Last column in home widget area', 'uu2014dev'),
+		'name' => __('Home Widget Area 3', 'uu2014'),
+		'description' => __('Last column in home widget area', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -469,8 +463,8 @@ function uu2014dev_register_sidebars() {
 	));
 	register_sidebar(array(
 		'id' => 'footer-widget-area-1',
-		'name' => __('footer Widget Area 1', 'uu2014dev'),
-		'description' => __('First column in footer widget area', 'uu2014dev'),
+		'name' => __('footer Widget Area 1', 'uu2014'),
+		'description' => __('First column in footer widget area', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -478,8 +472,8 @@ function uu2014dev_register_sidebars() {
 	));
 	register_sidebar(array(
 		'id' => 'footer-widget-area-2',
-		'name' => __('footer Widget Area 2', 'uu2014dev'),
-		'description' => __('Second column in footer widget area', 'uu2014dev'),
+		'name' => __('footer Widget Area 2', 'uu2014'),
+		'description' => __('Second column in footer widget area', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -487,8 +481,17 @@ function uu2014dev_register_sidebars() {
 	));
 	register_sidebar(array(
 		'id' => 'footer-widget-area-3',
-		'name' => __('footer Widget Area 3', 'uu2014dev'),
-		'description' => __('Last column in footer widget area', 'uu2014dev'),
+		'name' => __('footer Widget Area 3', 'uu2014'),
+		'description' => __('Third column in footer widget area', 'uu2014'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	register_sidebar(array(
+		'id' => 'footer-widget-area-4',
+		'name' => __('footer Widget Area 4', 'uu2014'),
+		'description' => __('Last column in footer widget area', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -496,8 +499,8 @@ function uu2014dev_register_sidebars() {
 	));
 	register_sidebar(array(
 		'id' => 'colofon',
-		'name' => __('Colofon Widget Area', 'uu2014dev'),
-		'description' => __('Bottom area full width', 'uu2014dev'),
+		'name' => __('Colofon Widget Area', 'uu2014'),
+		'description' => __('Bottom area full width', 'uu2014'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -513,9 +516,9 @@ function uu2014dev_register_sidebars() {
 9. RELATED POSTS FUNCTION
 *********************/
 
-// Related Posts Function (call using uu2014dev_related_posts(); )
-function uu2014dev_related_posts() {
-	echo '<ul id="uu2014dev-related-posts">';
+// Related Posts Function (call using uu2014_related_posts(); )
+function uu2014_related_posts() {
+	echo '<ul id="uu2014-related-posts">';
 	global $post;
 	$tags = wp_get_post_tags($post->ID);
 	if($tags) {
@@ -536,7 +539,7 @@ function uu2014dev_related_posts() {
 			endforeach;
 		}
 		else {
-			echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'uu2014dev' ) . '</li>';
+			echo '<li class="no_related_post">' . __( 'No Related Posts Yet!', 'uu2014' ) . '</li>';
 		}
 	}
 	wp_reset_query();
@@ -549,7 +552,7 @@ function uu2014dev_related_posts() {
 *********************/
 
 // Comment Layout
-function uu2014dev_comments($comment, $args, $depth) {
+function uu2014_comments($comment, $args, $depth) {
    $GLOBALS['comment'] = $comment; ?>
 	<li <?php comment_class(); ?>>
 		<article id="comment-<?php comment_ID(); ?>" class="clearfix">
@@ -567,13 +570,13 @@ function uu2014dev_comments($comment, $args, $depth) {
 				?>
 				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/images/nothing.gif" />
 				<!-- end custom gravatar call -->
-				<?php printf(__('<cite class="fn">%s</cite>', 'uu2014dev'), get_comment_author_link()) ?>
-				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__('F jS, Y', 'uu2014dev')); ?> </a></time>
-				<?php edit_comment_link(__('(Edit)', 'uu2014dev'),'  ','') ?>
+				<?php printf(__('<cite class="fn">%s</cite>', 'uu2014'), get_comment_author_link()) ?>
+				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__('F jS, Y', 'uu2014')); ?> </a></time>
+				<?php edit_comment_link(__('(Edit)', 'uu2014'),'  ','') ?>
 			</header>
 			<?php if ($comment->comment_approved == '0') : ?>
 	   			<div class="alert info">
-		  			<p><?php _e('Your comment is awaiting moderation.', 'uu2014dev') ?></p>
+		  			<p><?php _e('Your comment is awaiting moderation.', 'uu2014') ?></p>
 		  		</div>
 			<?php endif; ?>
 			<section class="comment_content clearfix">
@@ -590,21 +593,24 @@ function uu2014dev_comments($comment, $args, $depth) {
 11. SEARCH FUNCTIONS
 *********************/
 
+
 // Search Form
-function uu2014dev_wpsearch($form) {
-	$form = '<form role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
-	<label class="screen-reader-text" for="s">' . __('Search for:', 'uu2014dev') . '</label>
-	<input type="text" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...','uu2014dev').'" />
-	<input type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'" />
-	</form>';
+function uu2014_wpsearch($form) {
+	$form = '<form role="search" class="form-inline" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+	<div class="form-group"><label class="screen-reader-text" for="s">' . __('Search for:', 'uu2014') . '</label>
+	<input type="text" class="form-control" value="' . get_search_query() . '" name="s" id="s" placeholder="'.esc_attr__('Search the Site...','uu2014').'" />
+	<input type="submit" id="searchsubmit" class="button" value="'. esc_attr__('Search') .'" />
+	</div></form>';
 	return $form;
 } // don't remove this bracket!
+
+add_filter( 'get_search_form', 'uu2014_wpsearch' );
 
 /*********************
 12. ADD FIRST AND LAST CLASSES TO MENU & SIDEBAR
 *********************/
 
-function uu2014dev_add_first_and_last($output) {
+function uu2014_add_first_and_last($output) {
 	$output = preg_replace('/class="menu-item/', 'class="first-item menu-item', $output, 1);
 	$last_pos = strripos($output, 'class="menu-item');
 	if($last_pos !== false) {
@@ -612,10 +618,10 @@ function uu2014dev_add_first_and_last($output) {
 	}
 	return $output;
 }
-add_filter('wp_nav_menu', 'uu2014dev_add_first_and_last');
+add_filter('wp_nav_menu', 'uu2014_add_first_and_last');
 
 // Add "first" and "last" CSS classes to dynamic sidebar widgets. Also adds numeric index class for each widget (widget-1, widget-2, etc.)
-function uu2014dev_widget_first_last_classes($params) {
+function uu2014_widget_first_last_classes($params) {
 
 	global $my_widget_num; // Global a counter array
 	$this_id = $params[0]['id']; // Get the id for the current sidebar we're processing
@@ -650,14 +656,14 @@ function uu2014dev_widget_first_last_classes($params) {
 	return $params;
 
 }
-add_filter( 'dynamic_sidebar_params', 'uu2014dev_widget_first_last_classes' );
+add_filter( 'dynamic_sidebar_params', 'uu2014_widget_first_last_classes' );
 
 
 /*********************
 13. ADD FIRST AND LAST CLASSES TO POSTS
 *********************/
 
-function uu2014dev_post_classes( $classes ) {
+function uu2014_post_classes( $classes ) {
 	global $wp_query;
 	if($wp_query->current_post == 0) {
 		$classes[] = 'first-post';
@@ -667,23 +673,34 @@ function uu2014dev_post_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'post_class', 'uu2014dev_post_classes' );
+add_filter( 'post_class', 'uu2014_post_classes' );
 
 
 /*********************
 14. CUSTOM FUNCTIONS
 *********************/
 
-// This removes the annoying […] to a Read More link
-function uu2014dev_excerpt_more($more) {
+//This removes the annoying […] to a Read More link and removes the Read More link entirely in de Slider
+function uu2014_excerpt_more($more) {
 	global $post;
+	if ( in_category('slider') ) {
+    return '';
+  	} 
+  	else 
+  	{
 	// edit here if you like
-	return '...  <a href="'. get_permalink($post->ID) . '" title="'. __('Read', 'uu2014dev') . get_the_title($post->ID).'">'. __('Read more &raquo;', 'uu2014dev') .'</a>';
+	return '...  <a href="'. get_permalink($post->ID) . '" title="'. __('Read', 'uu2014') . get_the_title($post->ID).'" class="button icon" >'. __('Read more', 'uu2014') .'</a>';
+	}
 }
+
+function uu2014_custom_excerpt_length( $length ) {
+	return 30;
+}
+add_filter( 'excerpt_length', 'uu2014_custom_excerpt_length', 999 );
 
 //This is a modified the_author_posts_link() which just returns the link.
 //This is necessary to allow usage of the usual l10n process with printf().
-function uu2014dev_get_the_author_posts_link() {
+function uu2014_get_the_author_posts_link() {
 	global $authordata;
 	if ( !is_object( $authordata ) ) {
 		return false;
@@ -695,4 +712,228 @@ function uu2014dev_get_the_author_posts_link() {
 		get_the_author()
 	);
 	return $link;
+}
+// add shortcodes to excerpt and widgets
+add_filter('widget_text', 'do_shortcode');
+add_filter('the_excerpt', 'do_shortcode');
+
+//remove_filter('get_the_excerpt', 'wp_trim_excerpt');
+// add_filter('get_the_excerpt', 'custom_wp_trim_excerpt');
+
+// custom excerpt for homepage caroussel
+function caroussel_excerpt() {    
+    if( $post->post_excerpt ) {
+        $content = get_the_excerpt();
+    } else {
+    	$lenght = "50";
+        $content = "test";
+        $content = get_the_content();
+        $content = wp_trim_words( $content , $length );
+    }
+    return $excerpt;
+}
+
+function uu_excerpt($charlength) {
+	$excerpt = get_the_excerpt();
+	$charlength++;
+
+	if ( mb_strlen( $excerpt ) > $charlength ) {
+		$subex = mb_substr( $excerpt, 0, $charlength - 5 );
+		$exwords = explode( ' ', $subex );
+		$excut = - ( mb_strlen( $exwords[ count( $exwords ) - 1 ] ) );
+		if ( $excut < 0 ) {
+			echo mb_substr( $subex, 0, $excut );
+		} else {
+			echo $subex;
+		}
+		echo '[...]';
+	} else {
+		echo $excerpt;
+	}
+}
+
+// WPML language selector
+
+function icl_language_link(){
+  $languages = icl_get_languages('skip_missing=1');
+  if(1 < count($languages)){
+    foreach($languages as $l){
+      if(!$l['active']) $langs[] = '<a href="'.$l['url'].'">'.$l['native_name'].'</a>';
+    }
+    echo join(', ', $langs);
+  }
+}
+
+// http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/
+// allow svg in media uploader
+function uu2014_mime_types($mimes) {
+  $mimes['svg'] = 'image/svg+xml';
+  return $mimes;
+}
+add_filter('upload_mimes', 'uu2014_mime_types');
+
+// http://wordpress.stackexchange.com/questions/6731/if-is-custom-post-type
+function is_custom_post_type( $post = NULL )
+{
+    $all_custom_post_types = get_post_types( array ( '_builtin' => FALSE ) );
+
+    // there are no custom post types
+    if ( empty ( $all_custom_post_types ) )
+        return FALSE;
+
+    $custom_types      = array_keys( $all_custom_post_types );
+    $current_post_type = get_post_type( $post );
+
+    // could not detect current type
+    if ( ! $current_post_type )
+        return FALSE;
+
+    return in_array( $current_post_type, $custom_types );
+}
+
+// set default display name http://drzdigital.com/setting-a-default-display-name-in-wordpress/
+function change_display_name( $user_id ) {
+    $info = get_userdata( $user_id );
+    $args = array(
+        'ID' => $user_id,
+        'display_name' => $info->first_name . ' ' . $info->last_name
+    );
+    wp_update_user( $args );
+}
+add_action('user_register','change_display_name');
+
+// custom excerpt 
+
+function uu2014_custom_excerpts($limit) {
+    return wp_trim_words(get_the_excerpt(), $limit, '');
+}
+
+// Create Slider category
+// function uu2014_create_slider_cat() {
+// 	if(!term_exists('Slider', 'category')){
+// 	  wp_insert_term('Slider', 'category');
+// 	}
+// }
+
+// add_action( 'init', 'uu2014_create_slider_cat' );
+
+
+
+/*  ACF Options page  */
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> __('UU Site Options', 'uu2014'),
+		'menu_title'	=> __('UU Options', 'uu2014'),
+		'menu_slug' 	=> 'uu-site-options',
+		'capability'	=> 'manage_options',
+		'icon_url'		=> get_template_directory_uri().'/images/uu-dashboard-icon.svg',
+		'redirect'		=> false
+	));
+	
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Header Settings',
+	// 	'menu_title'	=> 'Header',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
+	
+	// acf_add_options_sub_page(array(
+	// 	'page_title' 	=> 'Theme Footer Settings',
+	// 	'menu_title'	=> 'Footer',
+	// 	'parent_slug'	=> 'theme-general-settings',
+	// ));
+	
+}
+
+add_filter('acf/settings/load_json', 'my_acf_json_load_point');
+
+function my_acf_json_load_point( $paths ) {
+    
+    // remove original path (optional)
+    unset($paths[0]);
+    
+    
+    // append path
+    $paths[] = get_template_directory() . '/acf-json';
+    
+    
+    // return
+    return $paths;
+    
+}
+
+
+/* ACF Options enqueue custom CSS  */ 
+
+function uu_enqueue_custom_styles() {
+$css = get_field('uu_options_custom_css', 'option');  
+
+	wp_enqueue_style(
+			'custom-style',
+			get_template_directory_uri() . '/css/custom.css'
+	);
+
+	if( !empty( $css ) ) {
+	wp_add_inline_style( 'custom-style', $css );
+	} 
+}
+add_action( 'wp_enqueue_scripts', 'uu_enqueue_custom_styles', 30 ); 
+
+
+function uu_metadata() {
+	global $post;
+	$metadata = get_field('uu_options_posts_metadata' , 'options' );
+	if( !empty($metadata) ) {
+		echo '<div class="metadata">' . __('Posted') . ' ';
+		if ( in_array( 'date', $metadata ) ) {
+			echo __('on', 'uu2014') . ' ' . get_the_date() . ' ';
+		}
+		if ( in_array( 'author', $metadata ) ) {
+			echo __('by', 'uu2014') . ' ' . get_the_author() . ' ';
+		}
+		if ( in_array( 'taxonomy', $metadata ) ) {
+			echo __('<br />in: ', 'uu2014') . ' ';
+			uu_display_all_taxonomies();
+		}
+		
+		echo '</div>';
+	}		
+}
+
+function uu_display_all_taxonomies() {
+	global $post;
+	$args=array('public'   => true); 
+	$output = 'names';
+	$operator = 'and';
+	$taxonomies=get_taxonomies($args,$output,$operator); 
+
+	if  ($taxonomies) {
+	    foreach ($taxonomies  as $taxonomy ) {
+
+	        $terms = get_terms($taxonomy);
+	        $count = count($terms);
+
+	        if ( $count > 0 ){
+	        	
+	            echo $taxonomy. ': ';
+	          	echo get_the_term_list( $post->ID, $taxonomy, '', ', ', '' );
+	        
+	        
+			}
+	    }
+	}
+
+}
+
+add_filter('get_frm_stylesheet',  'uu_formidable_custom_stylesheet', 30, 2);
+function uu_formidable_custom_stylesheet($previous_css, $location='header'){
+    global $frm_vars;
+
+    
+        $css_file['formidable'] = '';
+   
+
+    return $css_file;
 }

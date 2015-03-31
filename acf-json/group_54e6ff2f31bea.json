@@ -1,0 +1,186 @@
+{
+    "key": "group_54e6ff2f31bea",
+    "title": "Agenda",
+    "fields": [
+        {
+            "key": "field_54afc57a46488",
+            "label": "Start Datum",
+            "name": "uu_agenda_start_date",
+            "prefix": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "first_day": 1,
+            "return_format": "Ymd",
+            "display_format": "d\/m\/Y"
+        },
+        {
+            "key": "field_54afc5c646489",
+            "label": "Eind datum",
+            "name": "uu_agenda_end_date",
+            "prefix": "",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "first_day": 1,
+            "return_format": "Ymd",
+            "display_format": "d\/m\/Y"
+        },
+        {
+            "key": "field_54afc6714648c",
+            "label": "Geen tijd",
+            "name": "uu_agenda_all_day",
+            "prefix": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        },
+        {
+            "key": "field_54afc5d94648a",
+            "label": "Start tijd",
+            "name": "uu_agenda_start_time",
+            "prefix": "",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54afc6714648c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_date": "false",
+            "date_format": "m\/d\/y",
+            "time_format": "h:mm tt",
+            "show_week_number": "false",
+            "picker": "select",
+            "save_as_timestamp": "true",
+            "get_as_timestamp": "false"
+        },
+        {
+            "key": "field_54afc6414648b",
+            "label": "Eind tijd",
+            "name": "uu_agenda_end_time",
+            "prefix": "",
+            "type": "date_time_picker",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54afc6714648c",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_date": "false",
+            "date_format": "m\/d\/y",
+            "time_format": "h:mm tt",
+            "show_week_number": "false",
+            "picker": "select",
+            "save_as_timestamp": "true",
+            "get_as_timestamp": "false"
+        },
+        {
+            "key": "field_54afc6bb4648d",
+            "label": "Locatie",
+            "name": "uu_agenda_location",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_54afc6d94648e",
+            "label": "Url",
+            "name": "uu_agenda_url",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            },
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:agenda"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "modified": 1426163722
+}

@@ -1,0 +1,28 @@
+article.frontpage-news-item {
+	border: 1px solid #efefef;
+	margin-bottom: -1px;
+	min-height: 123px;
+	padding: 15px;
+	h1 {
+		font-family: $sans;
+	    font-size: 16px;
+	    font-weight: bold;
+	    line-height: 24px;
+	    margin: 0;
+	}
+	.entry-content p {
+		font-size: 14px;
+		font-family: $sans;
+		line-height: 24px;
+	}
+	.date {
+		color: #787878;
+	    font-family: $sans;
+	    font-size: 12px;
+	    font-weight: 300;
+	    line-height: 12px;
+	    text-transform: uppercase;
+	    margin-bottom: 4px;
+	}
+
+}

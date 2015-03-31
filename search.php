@@ -1,11 +1,13 @@
 <?php get_header(); ?>
 
+			
+
+<?php get_template_part( 'parts/page-header-2col'); ?> 
+
 		<div itemscope itemtype="http://schema.org/SearchResultsPage">
-
-			<h1 class="archive-title"><span>Search Results for:</span> <?php echo esc_attr(get_search_query()); ?></h1>
-
+			<h2 class="searchpage"><?php printf( __( 'Search Results for: %s', 'uu2014' ), esc_attr(get_search_query()) ); ?></h2>	
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
+			
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 
 						<header class="article-header">
@@ -20,7 +22,7 @@
 						</header><?php // end article header ?>
 
 						<section class="entry-content" itemprop="description">
-							<?php the_excerpt('<span class="read-more">Read more &raquo;</span>'); ?>
+							<?php uu_excerpt('160'); ?>
 
 						</section><?php // end article section ?>
 
@@ -41,5 +43,7 @@
 			<?php endif; ?>
 
 		</div>
+
+<?php get_template_part( 'parts/page-footer-2col'); ?> 		
 
 <?php get_footer();

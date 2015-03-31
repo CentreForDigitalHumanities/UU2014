@@ -2,7 +2,7 @@
 				<article id="post-not-found" class="hentry clearfix">
 
 					<header class="article-header">
-						<h2><?php _e("Oops, Post Not Found!", "scaffolding"); ?></h2>
+						<p><?php _e("No items found", "uu2014"); ?></p>
 					</header>
 
 					<section class="entry-content">
@@ -11,7 +11,7 @@
 						<p><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'scaffoldingtheme' ); ?></p>
 						<?php get_search_form(); ?>
 					<?php else : //error if there are no post for the loop  ?>
-						<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for.', 'scaffoldingtheme' ); ?></p>
+						
 					<?php endif; ?>
 
 					</section>

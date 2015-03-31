@@ -1,60 +1,47 @@
-.carousel-inner .item {
-	max-height: 400px;
-	overflow: none;
+.carousel-inner {
+	.item {
+		max-height: 400px;
+		overflow: none;
+		&.active {
+			display: block;
+		}
+	
+		.carousel-caption {
+			left: 50%;
+			right: 12%;
+			padding-bottom: 50px;
+			@include bp(sm) {
+				left: 12%;
+				right: 12%;
+			}
+			.carousel-caption-text {
+				background-color: $uu-foto-blok;
+				padding: 2em;
+				width: auto;
+				bottom: 92px;
+				h4 {
+					font-size: 20px;
+					font-weight: 300;
+					margin: 0;
+					color: #fff;
+
+				}
+			}
+			.carousel-caption-link {
+				position: absolute;
+				text-align: right;
+				bottom: 5px;
+				right: 0;
+			}	
+
+		}
+
+	}
+
+
 }
 
-.carousel-caption-text {
-	background-color: $uu-foto-blok;
-	padding: 40px;
-	width: auto;
-	bottom: 92px;
-}
-
-.carousel-caption,
-.carousel-caption-link {
-	left: 20%;
-	right: 20%;
-
-}
-
-.carousel-inner > .active, 
-.carousel-inner > .active .carousel-caption-link 
-{
-    display: block;
-}
-
-.carousel-caption-link {
-	position: absolute;
-	text-align: right;
-	bottom: 20px;
-	width: auto;
-
-}
-
-.carousel-caption-link a {
-	display: inline-block;
-	color: $uu-body-color;
-	background-color: $uu-geel;
-	text-transform: uppercase;
-	font-size: 15px;
-    font-weight: bold;
-    line-height: 42px;
-    padding: 0 20px;
-}
-
-.carousel-caption-link a:after {
-	font-family: FontAwesome;
-	content: "";
-	left: 4px;
-	font-size: 120%;
-	position: relative;
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-}
-
-.carousel-caption-link:hover a:after {
-	background: black;
-	color: $uu-geel;
-
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	max-width: auto;
+	width: 100%;
 }

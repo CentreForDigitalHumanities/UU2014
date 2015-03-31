@@ -1,6 +1,8 @@
 #footer-widget-area {
+	padding: 60px 0 38px;
 	background: #252525;
 	color: #fff;
+	font-family: $sans;
 }
 
 footer#colophon {
@@ -8,3 +10,73 @@ footer#colophon {
 		color: #eee;
 	}
 }
+
+#footer-widget-area {
+	.widget {
+		h4 {
+			font-weight: 300;
+			font-size: 21px;
+			color: #fff;
+			height: 50px;
+			margin: 0;
+		}
+	}
+	.widget ul {
+		margin: 0;
+		padding: 0;
+	}
+	.widget ul li {
+	    list-style: none outside none;
+	    margin-left: 0;
+	    position: relative;
+	    a {
+			color: #aeaeae;
+			font-size: 16px;
+			text-decoration: none;
+			line-height: 20px;
+		}
+	}
+}
+
+#back-top {
+		position: fixed;
+		bottom: 10px;
+		margin-right: 30px;
+		right: 0;
+		z-index: 9999;
+
+		a {
+			width: 40px;
+			display: block;
+			text-decoration: none;
+			opacity: .2;
+			background: #000;
+
+			@include transition(all 1s ease-in-out);
+			@include border-radius(500px);
+
+			&:hover, &:focus {
+				color: #000;
+				opacity: 1;
+			}
+		}
+
+		i {
+			width: 40px;
+			height: 40px;
+			display: block;
+			margin-bottom: 7px;
+			font-style: normal;
+			
+			color: #FFF;
+			text-align: center;
+			&:before {
+				content: "";
+				font-family: "icomoon";
+				font-size: 10px;
+				line-height: 30px;
+			}
+			
+		}
+
+	}

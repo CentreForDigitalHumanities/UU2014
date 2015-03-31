@@ -148,6 +148,24 @@ span.amp {
     @include responsive-invisibility('.desktop-hide');
 }
 
+@mixin bp($point) {
+  @if $point == xl {
+    @media (min-width: 1850px) { @content; }
+  }
+  @if $point == lg {
+    @media (min-width: 1600px) { @content; }
+  }
+  @if $point == md {
+    @media (max-width: 1170px) { @content; }
+  }
+  @else if $point == sm {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == xs {
+    @media (max-width: 420px)  { @content; }
+  }
+}
+
 /******************************************************************
  UTILITY STYLES
 ******************************************************************/
@@ -313,4 +331,3 @@ USAGE: @include css-gradient(#dfdfdf,#f8f8f8);
 	background-image: -o-linear-gradient(top, $from, $to);
 	background-image: linear-gradient(to bottom, $from, $to);
 }
-

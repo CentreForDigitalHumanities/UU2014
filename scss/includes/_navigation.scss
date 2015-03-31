@@ -1,0 +1,99 @@
+
+.navbar {
+	margin: 0;
+	border-radius: 0;
+	min-height: 0;
+	border: 0;
+}
+
+.navbar-nav {
+	@include bp(sm) {
+		margin: 10px;
+	}
+}
+
+.navbar-nav > li > a {
+	font-size: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
+	transition: 0.3s;
+	font-family: $sans;
+	text-decoration: none;
+}
+
+.navbar-nav > li.first-item > a {
+	padding-left: 0px;
+	@include bp(sm) {
+		padding-left: 20px;
+	}
+}
+
+.navbar-toggle {
+	float: left;
+	margin: 0;
+	padding-top: 13px;
+	padding-bottom: 0;
+}
+
+.navbar-toggle .icon-bar {
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    width: 22px;
+    background-color: #333;
+}
+
+.navbar-collapse {
+	padding-left: 0px;
+}
+
+.navbar-inverse {
+    background-color: #000;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #FFFFFF;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus, 
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > li.current-menu-item > a,
+.navbar-inverse .navbar-nav > li.current-menu-parent > a
+ {
+    background-color: #000;
+    color: $uu-geel;
+}
+
+#home-icon {
+	@include bp(sm) {
+		display: none;
+	}
+}
+
+.menuitem-home {
+	display: none;
+	@include bp(sm) {
+		display: block;
+	}
+}	
+
+.current-menu-item .home-icon,
+.home-icon:hover {
+	fill: $uu-geel;
+}
+
+.dropdown-menu > li > a {
+	text-decoration: none;
+	line-height: 1.42857;
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+.dropdown-menu > li:hover > a, .dropdown-menu > li > a:focus {
+    background-color: #efefef;
+    color: #262626;
+    text-decoration: none;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    border-radius: 0;
+}

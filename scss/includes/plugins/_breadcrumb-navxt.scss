@@ -1,0 +1,21 @@
+.breadcrumbs {
+	background-color: rgba(0, 0, 0, 0.5);
+    color: #efefef;
+    font-size: 13px;
+    left: 0;
+    line-height: 22px;
+    padding: 6px 0;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    a, a:visited {
+    	color: #efefef;
+    }
+    @include bp(sm) {
+		display: none;
+	}
+}
+
+.home .breadcrumbs {
+    display: none;
+}

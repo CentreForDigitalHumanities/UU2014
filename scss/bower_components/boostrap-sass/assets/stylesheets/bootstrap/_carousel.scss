@@ -23,6 +23,7 @@
     > a > img {
       @include img-responsive();
       line-height: 1;
+      width: 100%;
     }
   }
 

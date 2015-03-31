@@ -1,0 +1,324 @@
+
+
+.button {
+	display: inline-block;
+	padding: 0 19px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 40px;
+	text-decoration: none !important;
+	font-family: $sans;
+	position: relative;
+    text-transform: uppercase;
+    text-shadow: none !important;
+    background-color: $uu-geel;
+    color: #000;
+    margin-bottom: 5px;
+    transition: none;
+    border: 0;
+    &:hover {
+    	text-decoration: none;
+    	color: $uu-geel;
+    	background-color: #000000;
+    }
+}
+
+.button.icon {
+	padding: 0 0 0 19px;
+	&:hover {
+    	text-decoration: none;
+    	color: #000000;
+    	background-color: $uu-geel;
+    }
+	&:after {
+		font-size: 0.9em;
+		text-align: center;
+		margin-left: 19px;
+		position: relative;
+		z-index: 15;
+	    font-family: "icomoon";
+	    display: inline-block;
+	    width: 40px;
+	    content: "";
+	    font-weight: normal;
+	}
+	&:hover:after {
+	    background: #000;
+	    color: $uu-geel;
+	}
+}
+
+.button.left {
+	padding: 0 19px 0 0;
+	&:after{
+		margin-left: 0;
+		width: 0;
+		content: "" !important;
+	}
+	&:before {
+		font-size: 0.9em;
+		text-align: center;
+		margin-right: 19px;
+		position: relative;
+		z-index: 15;
+	    font-family: "icomoon";
+	    display: inline-block;
+	    width: 40px;
+	    content: "";
+	    font-weight: normal;
+	}
+	&:hover:before {
+		background: #000000;
+		color: $uu-geel;
+	}
+}
+
+.button.arrow-left {
+	&:after, &:before {
+		content: "";
+	}
+}
+
+.button.arrow-right {
+	&:after, &:before {
+		content: "";
+	}
+}
+
+.button.arrow-up {
+	&:after, &:before {
+		content: "";
+	}
+}
+
+.button.arrow-down {
+	&:after, &:before {
+		content: "";
+	}
+}
+
+.button.search {
+	&:after, &:before {
+		content: "search";
+	}
+}
+
+.button.ext-link {
+	&:after {
+		content: "";
+		font-size: 0.8em;
+	}
+	&:hover:after {
+		background: $uu-geel;
+    	color: #000000;
+	}
+}
+
+
+.button.yellow {
+	background-color: $uu-geel;
+	color: #000000;
+	&:hover:after {
+		background-color: #000000;
+		color: $uu-geel;
+	}
+}
+
+.button.black {
+	background-color: #000000;
+	color: #ffffff !important;
+	&:hover {
+		background-color: #000000;
+		color: #ffffff;
+	}
+	&:hover:after, &:hover:before { 
+		background-color: #ffffff;
+		color: #000000;
+	}
+}
+
+.button.white {
+	background-color: #ffffff;
+	color: #000000;
+	&:hover {
+		background-color: $uu-geel;
+		color: #000000;
+	}
+}
+
+.button.border {
+	border: 1px solid #000;
+}
+
+.button.large {
+	font-size: 20px;
+	line-height: 60px;
+	&.icon {
+		padding: 0 0 0 24px;
+	}
+	&.icon.left {
+		padding: 0 24px 0 0;
+	}
+	&:after, &:before {
+		height: 60px;
+		width: 60px;
+	}
+
+}
+
+/*
+*    Other (social) buttons
+*
+*/
+
+.icononly {
+	font-size: 0.9em;
+	text-align: center;
+	position: relative;
+	z-index: 15;
+    font-family: "icomoon";
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    text-decoration: none !important;
+    &:before {
+		position: absolute;
+		margin-left: -14px;
+		font-size: 32px
+    }
+}
+
+.linkedin {
+	background-color: #0274B3;
+	&:before {
+		color: white;
+	    content: "";
+	    font-size: 28px;
+	    margin-left: -14px;
+	    margin-top: 0;
+	}
+}
+
+.facebook {
+	background-color: #3B5997;
+	&:before {
+		content: "";
+		color: white;
+	}
+}
+
+.twitter {
+	background-color: #01ACEC;
+	&:before {
+		content: "";
+		color: white;
+	}
+}
+
+.youtube {
+	background-color: white;
+	&:before {
+		color: #d62327;
+    	content: "";
+    	font-size: 33px;
+    	margin-left: -16px;
+	}
+}
+
+.pinterest {
+	background-color: white;
+	&:before {
+		color: #d62327;
+    	content: "";
+    	font-size: 39px;
+    	margin-left: -19px;
+    	margin-top: 0;
+	}
+}
+
+.instagram {
+	background-color: #246087;
+	&:before {
+		content: "";
+    	font-size: 31px;
+    	margin-left: -15px;
+    	color: white;
+	}
+}
+
+.rss {
+	background-color: transparent;
+	&:before {
+		color: black;
+    	content: "";
+    	font-size: 20px;
+    	margin-right: 6px;
+	}
+}
+
+
+
+
+#content .page-content-inner {
+	.pager {
+			font-family: $sans;
+			background: $lighter-grey;
+			display: inline-block;
+			height: 40px;
+			width: 40px;
+			line-height: 40px;
+			font-size: 15px;
+			color: black;
+			text-decoration: none;
+			margin: 0 5px;
+			&:hover {
+				background-color: $uu-geel;
+			}
+			&.active {
+				background-color: $uu-geel;
+			}
+			&.back {
+				background-color: black;
+				a {
+					color: #fff;
+				}
+			}
+			&.next {
+				background-color: black;
+				a {
+					color: #fff;
+					content: "";    
+	    			font-size: 0.9em;
+	    			text-align: center;
+				    font-family: "icomoon";
+				    display: inline-block;
+				    width: 40px;
+				    height: 100%;
+				}
+			}
+	}
+}
+
+#content .page-content-inner .page-navigation {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 0;
+	ul {
+		margin: 0 auto;
+		display: inline-block;
+		li {
+			list-style: none outside none;
+			float: left;
+		}
+	}
+}
+
+.toggle-btn-div {
+	margin-top: 10px;
+}
+
+.toggle-btn {
+	margin: 0;
+}
+

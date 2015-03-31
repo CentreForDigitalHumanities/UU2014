@@ -1,0 +1,4 @@
+1. ja/scripts.js
+
+Line 113 	$('#main-navigation > .menu-button').on('click', function(e) {
+			$('#main-navigation > .container > .row > .menu-button').on('click', function(e) {

@@ -44,74 +44,74 @@ class Scaffolding_Editor_Styles {
 
         $style_formats = array(
             array(
-                'title'    => __( 'Button', 'uu2014dev' ),
+                'title'    => __( 'Button', 'uu2014' ),
                 'selector' => 'a',
                 'classes'  => 'button',
                 'exact'    => true
             ),
             array(
-                'title' => __( 'Lead Paragraph', 'uu2014dev' ),
+                'title' => __( 'Lead Paragraph', 'uu2014' ),
                 'selector' => 'p',
                 'classes' => 'lead'
             ),
             array(
-                'title'  => __( 'Label', 'uu2014dev' ),
+                'title'  => __( 'Label', 'uu2014' ),
                 'inline' => 'span',
                 'classes'=> 'label'
             ),
             array(
-                'title'   => __( 'Panel', 'uu2014dev' ),
+                'title'   => __( 'Panel', 'uu2014' ),
                 'block'   => 'div',
                 'classes' => 'panel',
                 'wrapper' => true
             ),
             array(
-                'title'   => __( 'Panel callout', 'uu2014dev' ),
+                'title'   => __( 'Panel callout', 'uu2014' ),
                 'block'   => 'div',
                 'classes' => 'panel callout',
                 'wrapper' => true
             ),
 
             array(
-                'title'    => __( 'Radius (Panel, Label, Button)', 'uu2014dev' ),
+                'title'    => __( 'Radius (Panel, Label, Button)', 'uu2014' ),
                 'selector' => 'a.button, span.label, div.panel, div.panel.callout',
                 'classes'  => 'radius'
             ),
 
             array(
-                'title'    => __( 'Round (Label, Button)', 'uu2014dev' ),
+                'title'    => __( 'Round (Label, Button)', 'uu2014' ),
                 'selector' => 'a.button, span.label',
                 'classes'  => 'round'
             ),
 
             array(
-                'title'    => __( 'Alert (Label, Button)', 'uu2014dev' ),
+                'title'    => __( 'Alert (Label, Button)', 'uu2014' ),
                 'selector' => 'a.button, span.label',
                 'classes'  => 'alert'
             ),
             array(
-                'title'    => __( 'Success (Label, Button)', 'uu2014dev' ),
+                'title'    => __( 'Success (Label, Button)', 'uu2014' ),
                 'selector' => 'a.button, span.label',
                 'classes'  => 'success'
             ),
             array(
-                'title'    => __( 'Secondary (Label, Button)', 'uu2014dev' ),
+                'title'    => __( 'Secondary (Label, Button)', 'uu2014' ),
                 'selector' => 'a.button, span.label',
                 'classes'  => 'secondary'
             ),
             array(
-                'title'    => __( 'Subheader (Headings)', 'uu2014dev' ),
+                'title'    => __( 'Subheader (Headings)', 'uu2014' ),
                 'selector' => 'h1, h2, h3, h4, h5, h6',
                 'classes'  => 'subheader'
             ),
             array(
-                'title'  => __( 'Keyboard CMD', 'uu2014dev' ),
+                'title'  => __( 'Keyboard CMD', 'uu2014' ),
                 'inline' => 'kbd'
             )
         );
 
         // Let devs get a chance to remove and change that stuff.
-        $settings['style_formats'] = json_encode( apply_filters( 'uu2014dev_editor_stlye_args', $style_formats ) );
+        $settings['style_formats'] = json_encode( apply_filters( 'uu2014_editor_stlye_args', $style_formats ) );
 
         return $settings;
     }
