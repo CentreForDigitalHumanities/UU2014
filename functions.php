@@ -81,6 +81,10 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-m
     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' );
 }
 
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/slider.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/slider.php' );
+}
+
 // if ( file_exists( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' ) ) {
 //     require_once( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' );
 // }

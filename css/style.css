@@ -4516,104 +4516,14 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     width: 100%; }
 
 /* end .wp-caption */
-/*Image Gallery*/
-/* line 408, ../scss/includes/_typography.scss */
-.gallery .gallery-item {
-  display: inline-block;
-  margin: 1%;
-  overflow: hidden;
-  position: relative; }
-  /* line 414, ../scss/includes/_typography.scss */
-  .gallery .gallery-item .gallery-icon {
-    text-align: center; }
-    /* line 419, ../scss/includes/_typography.scss */
-    .gallery .gallery-item .gallery-icon a img {
-      vertical-align: bottom; }
-/* line 424, ../scss/includes/_typography.scss */
-.gallery > br {
-  display: none; }
-
-/* line 427, ../scss/includes/_typography.scss */
-.gallery-caption {
-  background-color: black;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  font-size: 0.8em;
-  text-align: left;
-  line-height: 1;
-  opacity: 0;
-  max-height: 75%;
-  width: 100%;
-  padding: 3px 5px;
-  margin: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0; }
-
-/* line 444, ../scss/includes/_typography.scss */
-.gallery-caption:before {
-  content: "";
-  height: 100%;
-  min-height: 49px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%; }
-
-/* line 454, ../scss/includes/_typography.scss */
-.gallery-item:hover .gallery-caption {
-  opacity: 1; }
-
-/* line 461, ../scss/includes/_typography.scss */
-.gallery-columns-7 .gallery-caption,
-.gallery-columns-8 .gallery-caption,
-.gallery-columns-9 .gallery-caption {
-  display: none; }
-
-/* line 467, ../scss/includes/_typography.scss */
-.gallery-columns-1 .gallery-item {
-  width: 98%; }
-
-/* line 472, ../scss/includes/_typography.scss */
-.gallery-columns-2 .gallery-item {
-  width: 48%; }
-
-/* line 477, ../scss/includes/_typography.scss */
-.gallery-columns-3 .gallery-item {
-  width: 31.3%; }
-
-/* line 482, ../scss/includes/_typography.scss */
-.gallery-columns-4 .gallery-item {
-  width: 23%; }
-
-/* line 487, ../scss/includes/_typography.scss */
-.gallery-columns-5 .gallery-item {
-  width: 18%; }
-
-/* line 492, ../scss/includes/_typography.scss */
-.gallery-columns-6 .gallery-item {
-  width: 14.6%; }
-
-/* line 497, ../scss/includes/_typography.scss */
-.gallery-columns-7 .gallery-item {
-  width: 12.2%; }
-
-/* line 502, ../scss/includes/_typography.scss */
-.gallery-columns-8 .gallery-item {
-  width: 10.5%; }
-
-/* line 507, ../scss/includes/_typography.scss */
-.gallery-columns-9 .gallery-item {
-  width: 9.1%; }
-
 /*Core Media Player*/
 /*video player*/
-/* line 540, ../scss/includes/_typography.scss */
+/* line 435, ../scss/includes/_typography.scss */
 .mejs-video {
   width: 100% !important;
   height: auto !important;
   padding-top: 57%; }
-  /* line 549, ../scss/includes/_typography.scss */
+  /* line 444, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-mediaelement video {
     position: absolute;
     top: 0;
@@ -4622,24 +4532,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     bottom: 0;
     width: 100% !important;
     height: 100% !important; }
-  /* line 572, ../scss/includes/_typography.scss */
+  /* line 467, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-layers .mejs-poster {
     width: 100% !important;
     height: 100% !important; }
-  /* line 580, ../scss/includes/_typography.scss */
+  /* line 475, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-overlay-play {
     width: 100% !important;
     height: 100% !important; }
 
 /*audio player*/
 /* Audio Playlist */
-/* line 624, ../scss/includes/_typography.scss */
+/* line 519, ../scss/includes/_typography.scss */
 .wp-playlist {
   overflow: hidden; }
-  /* line 651, ../scss/includes/_typography.scss */
+  /* line 546, ../scss/includes/_typography.scss */
   .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption {
     display: block; }
-    /* line 654, ../scss/includes/_typography.scss */
+    /* line 549, ../scss/includes/_typography.scss */
     .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption .wp-playlist-item-title {
       overflow: hidden;
       white-space: nowrap;
@@ -4647,7 +4557,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 /*Block Quote Alignment*/
 /*Image Sizes*/
-/* line 672, ../scss/includes/_typography.scss */
+/* line 567, ../scss/includes/_typography.scss */
 .size-auto,
 .size-full,
 .size-large,
@@ -4658,7 +4568,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 /*Use this class for any Editor Specific Styles to help the user experience
  * set the max size of the content area in the editor to match the template*/
-/* line 691, ../scss/includes/_typography.scss */
+/* line 586, ../scss/includes/_typography.scss */
 .mceContentBody {
   background-color: #FDFDFD; }
 
@@ -5068,22 +4978,23 @@ footer#colophon a {
   color: #000;
   margin-bottom: 5px;
   transition: none;
-  border: 0; }
-  /* line 19, ../scss/includes/_buttons.scss */
+  border: 0;
+  -moz-osx-font-smoothing: grayscale; }
+  /* line 20, ../scss/includes/_buttons.scss */
   .button:hover {
     text-decoration: none;
     color: #ffcd00;
     background-color: #000000; }
 
-/* line 26, ../scss/includes/_buttons.scss */
+/* line 27, ../scss/includes/_buttons.scss */
 .button.icon {
   padding: 0 0 0 19px; }
-  /* line 28, ../scss/includes/_buttons.scss */
+  /* line 29, ../scss/includes/_buttons.scss */
   .button.icon:hover {
     text-decoration: none;
     color: #000000;
     background-color: #ffcd00; }
-  /* line 33, ../scss/includes/_buttons.scss */
+  /* line 34, ../scss/includes/_buttons.scss */
   .button.icon:after {
     font-size: 0.9em;
     text-align: center;
@@ -5095,20 +5006,20 @@ footer#colophon a {
     width: 40px;
     content: "";
     font-weight: normal; }
-  /* line 45, ../scss/includes/_buttons.scss */
+  /* line 46, ../scss/includes/_buttons.scss */
   .button.icon:hover:after {
     background: #000;
     color: #ffcd00; }
 
-/* line 51, ../scss/includes/_buttons.scss */
+/* line 52, ../scss/includes/_buttons.scss */
 .button.left {
   padding: 0 19px 0 0; }
-  /* line 53, ../scss/includes/_buttons.scss */
+  /* line 54, ../scss/includes/_buttons.scss */
   .button.left:after {
     margin-left: 0;
     width: 0;
     content: "" !important; }
-  /* line 58, ../scss/includes/_buttons.scss */
+  /* line 59, ../scss/includes/_buttons.scss */
   .button.left:before {
     font-size: 0.9em;
     text-align: center;
@@ -5120,86 +5031,86 @@ footer#colophon a {
     width: 40px;
     content: "";
     font-weight: normal; }
-  /* line 70, ../scss/includes/_buttons.scss */
+  /* line 71, ../scss/includes/_buttons.scss */
   .button.left:hover:before {
     background: #000000;
     color: #ffcd00; }
 
-/* line 77, ../scss/includes/_buttons.scss */
+/* line 78, ../scss/includes/_buttons.scss */
 .button.arrow-left:after, .button.arrow-left:before {
   content: ""; }
 
-/* line 83, ../scss/includes/_buttons.scss */
+/* line 84, ../scss/includes/_buttons.scss */
 .button.arrow-right:after, .button.arrow-right:before {
   content: ""; }
 
-/* line 89, ../scss/includes/_buttons.scss */
+/* line 90, ../scss/includes/_buttons.scss */
 .button.arrow-up:after, .button.arrow-up:before {
   content: ""; }
 
-/* line 95, ../scss/includes/_buttons.scss */
+/* line 96, ../scss/includes/_buttons.scss */
 .button.arrow-down:after, .button.arrow-down:before {
   content: ""; }
 
-/* line 101, ../scss/includes/_buttons.scss */
+/* line 102, ../scss/includes/_buttons.scss */
 .button.search:after, .button.search:before {
   content: "search"; }
 
-/* line 107, ../scss/includes/_buttons.scss */
+/* line 108, ../scss/includes/_buttons.scss */
 .button.ext-link:after {
   content: "";
   font-size: 0.8em; }
-/* line 111, ../scss/includes/_buttons.scss */
+/* line 112, ../scss/includes/_buttons.scss */
 .button.ext-link:hover:after {
   background: #ffcd00;
   color: #000000; }
 
-/* line 118, ../scss/includes/_buttons.scss */
+/* line 119, ../scss/includes/_buttons.scss */
 .button.yellow {
   background-color: #ffcd00;
   color: #000000; }
-  /* line 121, ../scss/includes/_buttons.scss */
+  /* line 122, ../scss/includes/_buttons.scss */
   .button.yellow:hover:after {
     background-color: #000000;
     color: #ffcd00; }
 
-/* line 127, ../scss/includes/_buttons.scss */
+/* line 128, ../scss/includes/_buttons.scss */
 .button.black {
   background-color: #000000;
   color: #ffffff !important; }
-  /* line 130, ../scss/includes/_buttons.scss */
+  /* line 131, ../scss/includes/_buttons.scss */
   .button.black:hover {
     background-color: #000000;
     color: #ffffff; }
-  /* line 134, ../scss/includes/_buttons.scss */
+  /* line 135, ../scss/includes/_buttons.scss */
   .button.black:hover:after, .button.black:hover:before {
     background-color: #ffffff;
     color: #000000; }
 
-/* line 140, ../scss/includes/_buttons.scss */
+/* line 141, ../scss/includes/_buttons.scss */
 .button.white {
   background-color: #ffffff;
   color: #000000; }
-  /* line 143, ../scss/includes/_buttons.scss */
+  /* line 144, ../scss/includes/_buttons.scss */
   .button.white:hover {
     background-color: #ffcd00;
     color: #000000; }
 
-/* line 149, ../scss/includes/_buttons.scss */
+/* line 150, ../scss/includes/_buttons.scss */
 .button.border {
   border: 1px solid #000; }
 
-/* line 153, ../scss/includes/_buttons.scss */
+/* line 154, ../scss/includes/_buttons.scss */
 .button.large {
   font-size: 20px;
   line-height: 60px; }
-  /* line 156, ../scss/includes/_buttons.scss */
+  /* line 157, ../scss/includes/_buttons.scss */
   .button.large.icon {
     padding: 0 0 0 24px; }
-  /* line 159, ../scss/includes/_buttons.scss */
+  /* line 160, ../scss/includes/_buttons.scss */
   .button.large.icon.left {
     padding: 0 24px 0 0; }
-  /* line 162, ../scss/includes/_buttons.scss */
+  /* line 163, ../scss/includes/_buttons.scss */
   .button.large:after, .button.large:before {
     height: 60px;
     width: 60px; }
@@ -5208,7 +5119,7 @@ footer#colophon a {
 *    Other (social) buttons
 *
 */
-/* line 174, ../scss/includes/_buttons.scss */
+/* line 175, ../scss/includes/_buttons.scss */
 .icononly {
   font-size: 0.9em;
   text-align: center;
@@ -5220,16 +5131,16 @@ footer#colophon a {
   height: 42px;
   line-height: 42px;
   text-decoration: none !important; }
-  /* line 185, ../scss/includes/_buttons.scss */
+  /* line 186, ../scss/includes/_buttons.scss */
   .icononly:before {
     position: absolute;
     margin-left: -14px;
     font-size: 32px; }
 
-/* line 192, ../scss/includes/_buttons.scss */
+/* line 193, ../scss/includes/_buttons.scss */
 .linkedin {
   background-color: #0274B3; }
-  /* line 194, ../scss/includes/_buttons.scss */
+  /* line 195, ../scss/includes/_buttons.scss */
   .linkedin:before {
     color: white;
     content: "";
@@ -5237,36 +5148,36 @@ footer#colophon a {
     margin-left: -14px;
     margin-top: 0; }
 
-/* line 203, ../scss/includes/_buttons.scss */
+/* line 204, ../scss/includes/_buttons.scss */
 .facebook {
   background-color: #3B5997; }
-  /* line 205, ../scss/includes/_buttons.scss */
+  /* line 206, ../scss/includes/_buttons.scss */
   .facebook:before {
     content: "";
     color: white; }
 
-/* line 211, ../scss/includes/_buttons.scss */
+/* line 212, ../scss/includes/_buttons.scss */
 .twitter {
   background-color: #01ACEC; }
-  /* line 213, ../scss/includes/_buttons.scss */
+  /* line 214, ../scss/includes/_buttons.scss */
   .twitter:before {
     content: "";
     color: white; }
 
-/* line 219, ../scss/includes/_buttons.scss */
+/* line 220, ../scss/includes/_buttons.scss */
 .youtube {
   background-color: white; }
-  /* line 221, ../scss/includes/_buttons.scss */
+  /* line 222, ../scss/includes/_buttons.scss */
   .youtube:before {
     color: #d62327;
     content: "";
     font-size: 33px;
     margin-left: -16px; }
 
-/* line 229, ../scss/includes/_buttons.scss */
+/* line 230, ../scss/includes/_buttons.scss */
 .pinterest {
   background-color: white; }
-  /* line 231, ../scss/includes/_buttons.scss */
+  /* line 232, ../scss/includes/_buttons.scss */
   .pinterest:before {
     color: #d62327;
     content: "";
@@ -5274,27 +5185,34 @@ footer#colophon a {
     margin-left: -19px;
     margin-top: 0; }
 
-/* line 240, ../scss/includes/_buttons.scss */
+/* line 241, ../scss/includes/_buttons.scss */
 .instagram {
   background-color: #246087; }
-  /* line 242, ../scss/includes/_buttons.scss */
+  /* line 243, ../scss/includes/_buttons.scss */
   .instagram:before {
     content: "";
     font-size: 31px;
     margin-left: -15px;
     color: white; }
 
-/* line 250, ../scss/includes/_buttons.scss */
+/* line 251, ../scss/includes/_buttons.scss */
 .rss {
-  background-color: transparent; }
-  /* line 252, ../scss/includes/_buttons.scss */
+  background-color: transparent;
+  font-weight: 300;
+  margin: 10px 0 0 0; }
+  /* line 255, ../scss/includes/_buttons.scss */
   .rss:before {
     color: black;
     content: "";
     font-size: 20px;
-    margin-right: 6px; }
+    margin-right: 6px;
+    font-family: "icomoon"; }
+  /* line 262, ../scss/includes/_buttons.scss */
+  .rss:hover {
+    background: transparent;
+    color: black; }
 
-/* line 264, ../scss/includes/_buttons.scss */
+/* line 272, ../scss/includes/_buttons.scss */
 #content .page-content-inner .pager {
   font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
   background: #efefef;
@@ -5306,22 +5224,22 @@ footer#colophon a {
   color: black;
   text-decoration: none;
   margin: 0 5px; }
-  /* line 275, ../scss/includes/_buttons.scss */
+  /* line 283, ../scss/includes/_buttons.scss */
   #content .page-content-inner .pager:hover {
     background-color: #ffcd00; }
-  /* line 278, ../scss/includes/_buttons.scss */
+  /* line 286, ../scss/includes/_buttons.scss */
   #content .page-content-inner .pager.active {
     background-color: #ffcd00; }
-  /* line 281, ../scss/includes/_buttons.scss */
+  /* line 289, ../scss/includes/_buttons.scss */
   #content .page-content-inner .pager.back {
     background-color: black; }
-    /* line 283, ../scss/includes/_buttons.scss */
+    /* line 291, ../scss/includes/_buttons.scss */
     #content .page-content-inner .pager.back a {
       color: #fff; }
-  /* line 287, ../scss/includes/_buttons.scss */
+  /* line 295, ../scss/includes/_buttons.scss */
   #content .page-content-inner .pager.next {
     background-color: black; }
-    /* line 289, ../scss/includes/_buttons.scss */
+    /* line 297, ../scss/includes/_buttons.scss */
     #content .page-content-inner .pager.next a {
       color: #fff;
       content: "";
@@ -5332,25 +5250,25 @@ footer#colophon a {
       width: 40px;
       height: 100%; }
 
-/* line 303, ../scss/includes/_buttons.scss */
+/* line 311, ../scss/includes/_buttons.scss */
 #content .page-content-inner .page-navigation {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 0; }
-  /* line 307, ../scss/includes/_buttons.scss */
+  /* line 315, ../scss/includes/_buttons.scss */
   #content .page-content-inner .page-navigation ul {
     margin: 0 auto;
     display: inline-block; }
-    /* line 310, ../scss/includes/_buttons.scss */
+    /* line 318, ../scss/includes/_buttons.scss */
     #content .page-content-inner .page-navigation ul li {
       list-style: none outside none;
       float: left; }
 
-/* line 317, ../scss/includes/_buttons.scss */
+/* line 325, ../scss/includes/_buttons.scss */
 .toggle-btn-div {
   margin-top: 10px; }
 
-/* line 321, ../scss/includes/_buttons.scss */
+/* line 329, ../scss/includes/_buttons.scss */
 .toggle-btn {
   margin: 0; }
 

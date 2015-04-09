@@ -16,6 +16,7 @@
     margin-bottom: 5px;
     transition: none;
     border: 0;
+    -moz-osx-font-smoothing: grayscale;
     &:hover {
     	text-decoration: none;
     	color: $uu-geel;
@@ -249,11 +250,18 @@
 
 .rss {
 	background-color: transparent;
+	font-weight: 300;
+	margin: 10px 0 0 0;
 	&:before {
 		color: black;
     	content: "";
     	font-size: 20px;
     	margin-right: 6px;
+    	font-family: "icomoon";
+	}
+	&:hover {
+		background: transparent;
+		color: black;
 	}
 }
 
