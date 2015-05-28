@@ -15,7 +15,7 @@
 
 
 	<p id="back-top">
-        <a href="#top"><i></i></a>
+        <a href="#top"><i class="fa fa-angle-up"></i></a>
     </p>
 
 </div><?php //END #container ?>

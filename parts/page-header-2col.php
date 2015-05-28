@@ -95,7 +95,7 @@
 	    			<?php if ( is_search() ) { ?>
 
 										<form role="search" method="get" class="search-form-large search-wrapper visible-xs" action="<?php echo home_url( '/' ); ?>">
-												<input type="search" class="searchfield" placeholder="<?php echo esc_attr_x( 'Search …', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
+												<input type="search" class="searchfield" placeholder="<?php echo esc_attr_x( 'Search', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
 												<input type="submit" class="searchbutton" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
 										</form>    
 					<?php   }  ?>

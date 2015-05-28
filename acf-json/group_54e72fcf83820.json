@@ -1,5 +1,5 @@
 {
-    "key": "group_54e70022c902f",
+    "key": "group_54e72fcf83820",
     "title": "People",
     "fields": [
         {
@@ -171,7 +171,7 @@
                 },
                 {
                     "key": "field_54b8d0a737d2f",
-                    "label": "E-mailadres",
+                    "label": "Email",
                     "name": "uu_people_email",
                     "prefix": "",
                     "type": "text",
@@ -224,14 +224,7 @@
                     },
                     "return_format": "id",
                     "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": 0,
-                    "min_height": 0,
-                    "min_size": 0,
-                    "max_width": 0,
-                    "max_height": 0,
-                    "max_size": 0,
-                    "mime_types": ""
+                    "library": "all"
                 },
                 {
                     "key": "field_54b8ea1b77e82",
@@ -270,6 +263,13 @@
     "location": [
         [
             {
+                "param": "page",
+                "operator": "==",
+                "value": "67"
+            }
+        ],
+        [
+            {
                 "param": "page_template",
                 "operator": "==",
                 "value": "page-people.php"
@@ -289,5 +289,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1426167248
+    "modified": 1426155854
 }

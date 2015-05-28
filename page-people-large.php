@@ -25,7 +25,7 @@
 									// vars
 									$type = get_sub_field('uu_people_type');
 									$thumb = wp_get_attachment_image_src(get_sub_field('uu_people_image'), 'thumbnail');
-									$medium = wp_get_attachment_image_src(get_sub_field('uu_people_image'), 'medium');
+									$large = wp_get_attachment_image_src(get_sub_field('uu_people_image'), 'large');
 									$naam = get_sub_field('uu_people_name');
 									$omschrijving = get_sub_field('uu_people_desc');
 									$rol = get_sub_field('uu_people_title');
@@ -49,11 +49,11 @@
 
 											<div class="people-item people-item-large row">
 
-												<div class="people-item-image col-sm-5">
-													<img class="img-responsive" src="<?php echo $medium[0]; ?>" alt="<?php echo get_the_title(get_field('uu_people_image')) ?>" />
+												<div class="people-item-image col-sm-6">
+													<img class="img-responsive" src="<?php echo $large[0]; ?>" alt="" />
 												</div>
 
-												<div class="people-item-content col-sm-7">	
+												<div class="people-item-content col-sm-6">	
 
 												    	<div class="people-item-content-naam"><?php echo $naam; ?></div>
 												    <?php if( $rol ): ?>	

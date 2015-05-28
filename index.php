@@ -10,7 +10,7 @@
 					<h2><?php if(get_field('uu_options_alternative_title_news', 'option')) { the_field('uu_options_alternative_title_news', 'option'); } else { _e('News', 'uu2014'); } ?></h2>
 
 					<?php 
-						$pubdate = get_field('uu_options_news_show_pubdate', 'option');
+
 						$newsamount = get_field('uu_options_news_amount', 'option');
 						$newscats = get_field('uu_options_news_frontpage_cat', 'option');
 						if ($newscats) { 
@@ -33,13 +33,10 @@ the_field('uu_options_alternative_title_news');
 							while ( $newsquery->have_posts() ) {
 									$newsquery->the_post(); 
 					
-					get_template_part( 'parts/post-loop-frontpage');  ?> 
+					get_template_part( 'parts/post-loop-frontpage'); ?> 
 					
-  	
-					<?php }  ?> 
 
-					<a class="button rss" href="<?php echo get_category_link( $newscats[0] ); ?>feed">RSS</a>
-					<?php } else { ?>
+					<?php } } else { ?>
 
 					<?php get_template_part('includes/template','error'); // WordPress template error message ?>
 
@@ -81,8 +78,7 @@ the_field('uu_options_alternative_title_news');
 									<?php get_template_part( 'parts/post-loop-agenda'); ?> 
 
 								<?php endwhile; ?>
-								<?php $agenda_id = get_cat_ID( 'Agenda' ); ?>
-							<a class="button rss" href="<?php echo get_category_link( $agenda_id ); ?>feed">RSS</a>
+
 									
 
 							<?php else : ?>

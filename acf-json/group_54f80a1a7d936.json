@@ -1,5 +1,5 @@
 {
-    "key": "group_54e6ff2f31bea",
+    "key": "group_54f80a1a7d936",
     "title": "Agenda",
     "fields": [
         {
@@ -79,7 +79,7 @@
             },
             "show_date": "false",
             "date_format": "m\/d\/y",
-            "time_format": "h:mm tt",
+            "time_format": "H:mm",
             "show_week_number": "false",
             "picker": "select",
             "save_as_timestamp": "true",
@@ -109,7 +109,7 @@
             },
             "show_date": "false",
             "date_format": "m\/d\/y",
-            "time_format": "h:mm tt",
+            "time_format": "H:mm",
             "show_week_number": "false",
             "picker": "select",
             "save_as_timestamp": "true",
@@ -160,6 +160,24 @@
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
+        },
+        {
+            "key": "field_54afc6fc4648f",
+            "label": "Afbeelding",
+            "name": "uu_agenda_image",
+            "prefix": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "preview_size": "thumbnail",
+            "library": "all",
+            "return_format": "array"
         }
     ],
     "location": [
@@ -182,5 +200,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1426163722
+    "modified": 1428936639
 }
