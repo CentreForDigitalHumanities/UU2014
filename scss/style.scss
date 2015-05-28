@@ -34,11 +34,12 @@ Stylesheet: Main Stylesheet
 @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/dropdowns";
 @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/navbar";
 @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/navs";
-//@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/forms";
+@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/forms";
 @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/component-animations";
-//@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/modals";
+@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/type";
+@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/tables";
 //@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap";
 
 // STEP 3: Import all our libraries
@@ -64,7 +65,7 @@ Stylesheet: Main Stylesheet
 @import "includes/layout";
 @import "includes/content";
 @import "includes/search";
-@import "includes/forms";
+//@import "includes/forms";
 @import "includes/archive";
 @import "includes/shortcodes";
 
@@ -74,8 +75,12 @@ Stylesheet: Main Stylesheet
 
 @import "includes/widgets/wpml";
 @import "includes/widgets/image";
+@import "includes/widgets/socialmedia";
 
 @import "includes/plugins/breadcrumb-navxt";
+@import "includes/plugins/formidable";
+
+@import "includes/fixes";
 
 // STEP 6: Import our responsive stylesheets (where you'll put your styles)
 

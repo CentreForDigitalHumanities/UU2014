@@ -21,8 +21,7 @@
     }
 }
 
-.search-wrapper {
-   	width: 210px;
+#searchform {
     margin-top: 18px;
     position: relative;
     @include bp(sm) {
@@ -44,10 +43,6 @@
         right: 0;
         width: 210px;
         @include bp(sm) {
-            width: 180px;
-        }
-
-        @include bp(xs) {
             display: none;
         }    
     }    
@@ -67,14 +62,14 @@ input[type="submit"].searchbutton, .searchbutton {
     content: "";
     background: none repeat scroll 0 0 #efefef;
     position: absolute;
-    left: 180px;
+    right: 0;
     top: 0;
     border: 0;
     line-height: 14px;
     &:hover {
         color: #000;
     }
-     @include bp(xs) {
+     @include bp(sm) {
         position: relative;
         background-color: transparent;
         left: 20px;
@@ -109,6 +104,9 @@ input[type="submit"].searchbutton, .searchbutton {
     	padding-top: 5px;
     	min-width: 194px;
     	display: inline-block;
+    }
+    @include bp(xs) {
+        min-width: auto;
     }
 }
 

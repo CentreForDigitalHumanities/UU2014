@@ -181,12 +181,12 @@
     display: inline-block;
     width: 42px;
     height: 42px;
-    line-height: 42px;
+    line-height: 42px !important;
     text-decoration: none !important;
     &:before {
 		position: absolute;
 		margin-left: -14px;
-		font-size: 32px
+		font-size: 32px;
     }
 }
 
