@@ -59,7 +59,7 @@
 <body <?php body_class(); ?> data-spy="scroll" data-target="#sidebarnav">
      
 	<div id="page">
-		<?php get_template_part( 'parts/brandbar'); ?> 
+		<?php if( get_field('uu_options_brandbar', 'option') ) {} else {get_template_part( 'parts/brandbar');} ?> 
 		<header id="masthead" class="header" role="banner">
 
 			<div class="container">

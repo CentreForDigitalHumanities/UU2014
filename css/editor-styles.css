@@ -1523,60 +1523,50 @@ table {
   table th {
     background-color: #ffcd00;
     border: 0px solid #FFFFFF;
-    padding: 5px;
+    padding: 10px 15px;
     color: #3D3D3D;
     text-align: center; }
   /* line 232, ../scss/includes/_typography.scss */
   table td {
     border: 0px;
     color: #3D3D3D;
-    padding: 5px;
+    padding: 5px 15px;
     vertical-align: top; }
-  /* line 238, ../scss/includes/_typography.scss */
-  table tr:nth-child(even),
+  /* line 239, ../scss/includes/_typography.scss */
   table tr.even {
     background-color: #FFFFFF; }
-  /* line 242, ../scss/includes/_typography.scss */
-  table tr:nth-child(odd),
+  /* line 243, ../scss/includes/_typography.scss */
   table tr.odd {
     background-color: #F0F0F0; }
-
-/* line 250, ../scss/includes/_typography.scss */
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-  background-color: #f9f9f9; }
-
-/* line 253, ../scss/includes/_typography.scss */
-table tr:nth-child(2n+1), table tr.odd {
-  background-color: #f8f8f8; }
 
 /*********************
 LINK STYLES
 *********************/
-/* line 260, ../scss/includes/_typography.scss */
+/* line 254, ../scss/includes/_typography.scss */
 a, a:visited {
   color: #262626; }
 
-/* line 263, ../scss/includes/_typography.scss */
+/* line 257, ../scss/includes/_typography.scss */
 a:hover, a:focus {
   color: #787878;
   transition: color 0.5s ease 0s; }
 
-/* line 268, ../scss/includes/_typography.scss */
+/* line 262, ../scss/includes/_typography.scss */
 .page-content,
 article {
   /* on hover */
   /* on click */ }
-  /* line 270, ../scss/includes/_typography.scss */
+  /* line 264, ../scss/includes/_typography.scss */
   .page-content a, .page-content a:visited,
   article a,
   article a:visited {
     text-decoration: underline; }
-  /* line 276, ../scss/includes/_typography.scss */
+  /* line 270, ../scss/includes/_typography.scss */
   .page-content a:hover, .page-content a:focus,
   article a:hover,
   article a:focus {
     text-decoration: underline; }
-  /* line 284, ../scss/includes/_typography.scss */
+  /* line 278, ../scss/includes/_typography.scss */
   .page-content a:link,
   article a:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
@@ -1584,77 +1574,77 @@ article {
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 293, ../scss/includes/_typography.scss */
+/* line 287, ../scss/includes/_typography.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility; }
-  /* line 297, ../scss/includes/_typography.scss */
+  /* line 291, ../scss/includes/_typography.scss */
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
 
-/* line 306, ../scss/includes/_typography.scss */
+/* line 300, ../scss/includes/_typography.scss */
 .single h1 {
   margin-top: 22px; }
 
 /******************************************************************
  TINYMCE STYLES DROPDOWN
 ******************************************************************/
-/* line 338, ../scss/includes/_typography.scss */
+/* line 332, ../scss/includes/_typography.scss */
 .underline {
   text-decoration: underline; }
 
-/* line 342, ../scss/includes/_typography.scss */
+/* line 336, ../scss/includes/_typography.scss */
 .italic {
   font-style: italic; }
 
-/* line 346, ../scss/includes/_typography.scss */
+/* line 340, ../scss/includes/_typography.scss */
 .bold {
   font-weight: bold; }
 
-/* line 350, ../scss/includes/_typography.scss */
+/* line 344, ../scss/includes/_typography.scss */
 .text-left {
   text-align: left; }
 
-/* line 354, ../scss/includes/_typography.scss */
+/* line 348, ../scss/includes/_typography.scss */
 .text-center {
   text-align: center; }
 
-/* line 358, ../scss/includes/_typography.scss */
+/* line 352, ../scss/includes/_typography.scss */
 .text-right {
   text-align: right; }
 
 /* image alignment */
-/* line 363, ../scss/includes/_typography.scss */
+/* line 357, ../scss/includes/_typography.scss */
 .alignleft, img.alignleft {
   float: left;
   margin: 0 15px 10px 0; }
 
-/* line 368, ../scss/includes/_typography.scss */
+/* line 362, ../scss/includes/_typography.scss */
 .alignright, img.alignright {
   float: right;
   margin: 0 0 10px 15px; }
 
-/* line 373, ../scss/includes/_typography.scss */
+/* line 367, ../scss/includes/_typography.scss */
 .aligncenter, img.aligncenter {
   display: block;
   margin: 0 auto 10px auto; }
 
-/* line 378, ../scss/includes/_typography.scss */
+/* line 372, ../scss/includes/_typography.scss */
 .alignnone, img.alignnone {
   display: block;
   margin: 0 0 10px 0; }
 
-/* line 383, ../scss/includes/_typography.scss */
+/* line 377, ../scss/includes/_typography.scss */
 .aligncenter, img.aligncenter,
 .alignnone, img.alignnone {
   clear: both; }
 
 /*Image Caption*/
-/* line 389, ../scss/includes/_typography.scss */
+/* line 383, ../scss/includes/_typography.scss */
 .wp-caption {
   max-width: 100% !important;
   padding: 5px;
   /* images inside wp-caption */ }
-  /* line 394, ../scss/includes/_typography.scss */
+  /* line 388, ../scss/includes/_typography.scss */
   .wp-caption img {
     margin-bottom: 0;
     width: 100%; }
@@ -1662,12 +1652,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 /* end .wp-caption */
 /*Core Media Player*/
 /*video player*/
-/* line 435, ../scss/includes/_typography.scss */
+/* line 429, ../scss/includes/_typography.scss */
 .mejs-video {
   width: 100% !important;
   height: auto !important;
   padding-top: 57%; }
-  /* line 444, ../scss/includes/_typography.scss */
+  /* line 438, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-mediaelement video {
     position: absolute;
     top: 0;
@@ -1676,24 +1666,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     bottom: 0;
     width: 100% !important;
     height: 100% !important; }
-  /* line 467, ../scss/includes/_typography.scss */
+  /* line 461, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-layers .mejs-poster {
     width: 100% !important;
     height: 100% !important; }
-  /* line 475, ../scss/includes/_typography.scss */
+  /* line 469, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-overlay-play {
     width: 100% !important;
     height: 100% !important; }
 
 /*audio player*/
 /* Audio Playlist */
-/* line 519, ../scss/includes/_typography.scss */
+/* line 513, ../scss/includes/_typography.scss */
 .wp-playlist {
   overflow: hidden; }
-  /* line 546, ../scss/includes/_typography.scss */
+  /* line 540, ../scss/includes/_typography.scss */
   .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption {
     display: block; }
-    /* line 549, ../scss/includes/_typography.scss */
+    /* line 543, ../scss/includes/_typography.scss */
     .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption .wp-playlist-item-title {
       overflow: hidden;
       white-space: nowrap;
@@ -1701,7 +1691,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 /*Block Quote Alignment*/
 /*Image Sizes*/
-/* line 567, ../scss/includes/_typography.scss */
+/* line 561, ../scss/includes/_typography.scss */
 .size-auto,
 .size-full,
 .size-large,
@@ -1712,6 +1702,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 /*Use this class for any Editor Specific Styles to help the user experience
  * set the max size of the content area in the editor to match the template*/
-/* line 586, ../scss/includes/_typography.scss */
+/* line 580, ../scss/includes/_typography.scss */
 .mceContentBody {
   background-color: #FDFDFD; }

@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-sm-6 col-xs-6 logodiv">
+			<div class="col-sm-6 col-xs-8 logodiv">
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu-collapse">
                     <span class="sr-only">Navigation</span>
                     <span class="icon-bar"></span>
@@ -20,22 +20,22 @@
 			</div>
 
 <?php if ( function_exists('icl_object_id') ) :  //check if WPML is activated ?> 
-			<div class="col-sm-3 col-xs-3">
+			<div class="col-sm-3 col-xs-2">
 				<div class="brandbar-search">
-					<div class="search-wrapper">
+					
 						<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
 							<label class="screen-reader-text" for="s"><?php __('Search for:', 'uu2014'); ?>'</label>
 							<input type="text" class= "searchfield" value="<?php get_search_query() ?>" name="s" id="s" placeholder="<?php _e('Search the Site...','uu2014'); ?>" />
 							<input type="submit" id="searchsubmit" class="searchbutton" value="" />
 						</form>
-					</div>
+					
 				</div>
 			</div>
-			<div class="col-sm-3 col-xs-3">
+			<div class="col-sm-3 col-xs-2">
 				<div class="language-switch"><?php icl_language_link(); ?></div>
 			</div>
 		<?php else : ?>
-			<div class="col-sm-6 col-xs-6">
+			<div class="col-sm-6 col-xs-4">
 				
 					<div class="pull-right">
 						<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" >

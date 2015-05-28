@@ -224,7 +224,7 @@ table {
 	th {
 		background-color: #ffcd00;
 		border: 0px solid #FFFFFF;
-		padding: 5px;
+		padding: 10px 15px;
 		color: #3D3D3D;
 		text-align: center;
 	}
@@ -232,14 +232,14 @@ table {
 	td {
 		border: 0px;
 		color: #3D3D3D;
-		padding: 5px;
+		padding: 5px 15px;
 		vertical-align: top;
 	}
-	tr:nth-child(even),
+
 	tr.even{
 		background-color: #FFFFFF;
 	}
-	tr:nth-child(odd),
+
 	tr.odd{
 		background-color: #F0F0F0;
 	}
@@ -247,12 +247,6 @@ table {
 	tr:hover{}
 }
 
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: #f9f9f9;
-}
-table tr:nth-child(2n+1), table tr.odd {
-    background-color: #f8f8f8;
-}
 
 /*********************
 LINK STYLES

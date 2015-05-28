@@ -16,7 +16,6 @@ get_header(); ?>
 			<?php get_template_part( 'parts/post-loop'); ?> 
 
 		<?php endwhile; ?>
-			<a class="button rss" href="feed">RSS</a>
 
 			<?php get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
 

@@ -14,7 +14,7 @@ $output = '';
 			$blogs = $wpdb->get_col( "SELECT blog_id FROM `" . $wpdb->blogs . "` WHERE public = '1' AND archived = '0' AND mature = '0' AND spam = '0' ORDER BY blog_id DESC" );
 
 if ( $blogs ) { ?>
-	<table id="sitelist" class="display table table-striped table-bordered clearfix">
+	<table id="sitelist" class="display table table-striped">
 		<thead>
 			<tr>
 				<th><?php _e('Site', 'uu2014'); ?></th>

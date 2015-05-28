@@ -37,7 +37,7 @@
 					
 
 					<div class="agenda-item">
-						<label class="agenda-item-label"><?php _e('Datum', 'uu2014') ?>: </label>
+						<label class="agenda-item-label"><?php _e('Date', 'uu2014') ?>: </label>
 						<?php 
 						if( get_field('uu_agenda_start_date') ) {
 						 	
@@ -58,10 +58,17 @@
 						} ?>
 					
 					</div>
+					<?php if( get_field('uu_agenda_start_time') ) { ?>
+						<div class="agenda-item">
+							<label class="agenda-item-label"><?php _e('Time', 'uu2014') ?>: </label>
+							<?php echo get_field('uu_agenda_start_time'); ?><?php if( get_field('uu_agenda_end_time') ) { ?> - <?php echo get_field('uu_agenda_end_time'); } ?>
+
+						</div>
+					<?php 	} ?>
 				
 					<?php if( get_field('uu_agenda_location') ) { ?>
 						<div class="agenda-item">
-							<label class="agenda-item-label"><?php _e('Locatie', 'uu2014') ?>: </label>
+							<label class="agenda-item-label"><?php _e('Location', 'uu2014') ?>: </label>
 							<?php echo get_field('uu_agenda_location'); ?>
 						</div>
 					<?php 	} 
@@ -85,6 +92,10 @@
 			 	} ?>
 				<h1><?php the_title(); ?></h1>	
 				<?php the_content(); ?>
+
+				<?php if(function_exists('get_field') && get_field('uu_options_share_buttons_location', 'option')) { get_template_part( 'parts/share'); }?>
+
+
 				<?php wp_link_pages( array(
 					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'uu2014' ) . '</span>',
 					'after'       => '</div>',

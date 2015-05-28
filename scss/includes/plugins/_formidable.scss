@@ -1,0 +1,53 @@
+.with_frm_style .frm_form_field {
+    clear: both;
+}
+
+.frm_form_field.frm_half, .frm_form_field.frm_third, .frm_form_field.frm_fourth, .frm_form_field.frm_fifth, .frm_form_field.frm_sixth, .frm_form_field.frm_seventh, .frm_form_field.frm_eighth, .frm_form_field.frm_inline {
+    clear: none;
+    float: left;
+}
+
+.frm_form_field.frm_left_half, .frm_form_field.frm_right_half, .frm_form_field.frm_first_half, .frm_form_field.frm_last_half, .frm_form_field.frm_half {
+    width: 48%;
+}
+
+.frm_form_field.frm_left_fourth, .frm_form_field.frm_fourth, .frm_form_field.frm_right_fourth, .frm_form_field.frm_first_fourth, .frm_form_field.frm_last_fourth {
+    width: 22%;
+}
+
+.frm_form_field.frm_left_half, .frm_form_field.frm_first_half, .frm_form_field.frm_half.frm_first {
+    margin-right: 4%;
+}
+
+.frm_form_field.frm_left_fourth, .frm_form_field.frm_fourth, .frm_form_field.frm_first_fourth {
+    margin-right: 4%;
+}
+
+.frm_form_field.frm_right_half, .frm_form_field.frm_right_third, .frm_form_field.frm_right_two_thirds, .frm_form_field.frm_right_fourth, .frm_form_field.frm_right_fifth, .frm_form_field.frm_right_inline, .frm_form_field.frm_last_half, .frm_form_field.frm_last_third, .frm_form_field.frm_last_two_thirds, .frm_form_field.frm_last_fourth, .frm_form_field.frm_last_fifth, .frm_form_field.frm_last_sixth, .frm_form_field.frm_last_seventh, .frm_form_field.frm_last_eighth, .frm_form_field.frm_last_inline, .frm_form_field.frm_last {
+    clear: none;
+    float: right;
+}
+
+.frm_form_field.frm_left_half, .frm_form_field.frm_left_third, .frm_form_field.frm_left_two_thirds, .frm_form_field.frm_left_fourth, .frm_form_field.frm_left_fifth, .frm_form_field.frm_left_inline, .frm_form_field.frm_first_half, .frm_form_field.frm_first_third, .frm_form_field.frm_first_two_thirds, .frm_form_field.frm_first_fourth, .frm_form_field.frm_first_fifth, .frm_form_field.frm_first_sixth, .frm_form_field.frm_first_seventh, .frm_form_field.frm_first_eighth, .frm_form_field.frm_first_inline, .frm_form_field.frm_first {
+    clear: left;
+    float: left;
+}
+
+
+.with_frm_style .frm_radio input[type="radio"], .with_frm_style .frm_checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.form-group {
+	font-size: 16px;
+}
+
+.radio-inline, .checkbox-inline {
+    margin-top: 0;
+}
+
+.frm_add_form_row {
+	padding: 5px 10px;
+
+}

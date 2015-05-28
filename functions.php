@@ -80,9 +80,12 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' );
 }
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' );
+}
 
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/slider.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/slider.php' );
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' );
 }
 
 // if ( file_exists( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' ) ) {
@@ -762,7 +765,7 @@ function icl_language_link(){
   $languages = icl_get_languages('skip_missing=1');
   if(1 < count($languages)){
     foreach($languages as $l){
-      if(!$l['active']) $langs[] = '<a href="'.$l['url'].'">'.$l['native_name'].'</a>';
+      if(!$l['active']) $langs[] = '<span class="hidden-xs"><a href="'.$l['url'].'">'.$l['native_name'].'</a></span><span class="visible-xs"><a href="'.$l['url'].'">'.$l['language_code'].'</a></span>';
     }
     echo join(', ', $langs);
   }
@@ -833,6 +836,15 @@ if( function_exists('acf_add_options_page') ) {
 		'menu_title'	=> __('UU Options', 'uu2014'),
 		'menu_slug' 	=> 'uu-site-options',
 		'capability'	=> 'manage_options',
+		'icon_url'		=> get_template_directory_uri().'/images/uu-dashboard-icon.svg',
+		'redirect'		=> false
+	));
+
+	acf_add_options_page(array(
+		'page_title' 	=> __('UU Advanced Options', 'uu2014'),
+		'menu_title'	=> __('UU Advanced', 'uu2014'),
+		'menu_slug' 	=> 'uu-advanced-options',
+		'capability'	=> 'manage_sites',
 		'icon_url'		=> get_template_directory_uri().'/images/uu-dashboard-icon.svg',
 		'redirect'		=> false
 	));
@@ -931,13 +943,3 @@ function uu_display_all_taxonomies() {
 
 }
 
-add_filter('get_frm_stylesheet',  'uu_formidable_custom_stylesheet', 30, 2);
-function uu_formidable_custom_stylesheet($previous_css, $location='header'){
-    global $frm_vars;
-
-    
-        $css_file['formidable'] = '';
-   
-
-    return $css_file;
-}

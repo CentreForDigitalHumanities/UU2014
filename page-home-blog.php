@@ -8,24 +8,27 @@
 get_header(); ?>
 
 
-<?php get_template_part( 'parts/page-header-1col'); ?> 
+<?php get_template_part( 'parts/posts-header'); ?> 
+
+	<div class="container frontpage-archive-container">
+		<div class="row">
 
 
-<div class="clearfix">
+
 <?php 
-	if (term_exists('slider', 'category') ) {
-		$slider = get_category_by_slug( 'slider' );
-		$slider_cat = $slider->term_id;
-	}
+				if (term_exists('slider', 'category') ) {
+					$slider = get_category_by_slug( 'slider' );
+					$slider_cat = $slider->term_id;
+				}
 
-	$args = array (
-		'category__not_in'     => $slider_cat,
-		'offset'                 => '1',
-		'posts_per_page'         => '1',
-	);
+$args = array (
+	'category__not_in'     => $slider_cat,
+	'offset'                 => '1',
+	'posts_per_page'         => '1',
+);
 
 
-	$featured_query = new WP_Query( $args );
+$featured_query = new WP_Query( $args );
 
 if ( $featured_query->have_posts() ) {
 	while ( $featured_query->have_posts() ) {
@@ -35,10 +38,11 @@ if ( $featured_query->have_posts() ) {
 					
 						<div class="front-page-post-featured-thumbnail"><?php the_post_thumbnail('large', array( 'class' => 'img-responsive' )); ?></div>
 						<div class="front-page-post-featured-content">
+
 							<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 							<span class="front-page-featured-date"><?php echo get_the_date(); ?></span>
 							<p><?php the_excerpt(); ?></p>
-						</div>
+							</div>
 						
 					
 				</div>
@@ -85,6 +89,6 @@ if ( $home_query->have_posts() ) {
 
 				wp_reset_postdata();	
 			?>
-</div>			
-<?php get_template_part( 'parts/page-footer-1col'); ?> 
+		</div><!-- /row -->
+</div> <!-- /container -->
 <?php get_footer();
