@@ -918,6 +918,41 @@ function uu_metadata() {
 	}		
 }
 
+function uu_sharebuttons() {
+	if(function_exists('get_field')) {
+		$sharebuttons = get_field('uu_options_share_buttons_selection' , 'options' );
+		$content = '';
+		if( !empty($sharebuttons) ) {
+			$shortURL = get_permalink();
+			$siteTitle = bloginfo('name');
+			$shortTitle = get_the_title();
+			$twitterURL = 'https://twitter.com/intent/tweet?text='.$shortTitle.'&amp;url='.$shortURL.'&amp';
+			$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$shortURL;
+			$googleURL = 'https://plus.google.com/share?url='.$shortURL;
+			$linkedinURL = 'https://www.linkedin.com/shareArticle?mini=true&url='.$shortURL.'&title='.$shortTitle.'&source='.$siteTitle;
+			
+
+			$content .= '<div class="sharebuttons"><h2>' . __('Share') . '</h2> ';
+			if ( in_array( 'twitter', $sharebuttons ) ) {
+				$content .= '<a class="button icononly sharebutton twitter" href="'. $twitterURL .'" target="_blank" title="Twitter"></a>';
+			}
+			if ( in_array( 'google', $sharebuttons ) ) {
+				$content .= '<a class="button icononly sharebutton googleplus" href="'.$googleURL.'" target="_blank" title="Google+"></a>';
+			}
+			if ( in_array( 'linkedin', $sharebuttons ) ) {
+				$content .= '<a class="button icononly sharebutton linkedin" href="'.$linkedinURL.'" target="_blank" title="LinkedIn"></a>';
+			}
+			if ( in_array( 'facebook', $sharebuttons ) ) {
+				$content .= '<a class="button icononly sharebutton facebook" href="'.$facebookURL.'" target="_blank" title="Facebook"></a>';
+			}
+			$content .= '</div>';
+
+			echo $content;
+		}	
+
+	}	
+}
+
 function uu_display_all_taxonomies() {
 	global $post;
 	$args=array('public'   => true); 

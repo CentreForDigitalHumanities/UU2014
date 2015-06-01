@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /******************************************************************
 Site Name:
 Author:
@@ -5665,16 +5666,25 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
       #brandbar img {
         width: 140px;
         height: 37px; } }
+  /* line 17, ../scss/includes/_brandbar.scss */
+  #brandbar img.alternative-logo {
+    height: 48px;
+    width: auto; }
+    @media (max-width: 768px) {
+      /* line 17, ../scss/includes/_brandbar.scss */
+      #brandbar img.alternative-logo {
+        width: auto;
+        height: 37px; } }
 
-/* line 24, ../scss/includes/_brandbar.scss */
+/* line 32, ../scss/includes/_brandbar.scss */
 #searchform {
   margin-top: 18px;
   position: relative; }
   @media (max-width: 768px) {
-    /* line 24, ../scss/includes/_brandbar.scss */
+    /* line 32, ../scss/includes/_brandbar.scss */
     #searchform {
       margin-top: 10px; } }
-  /* line 30, ../scss/includes/_brandbar.scss */
+  /* line 38, ../scss/includes/_brandbar.scss */
   #searchform .searchfield {
     background: none repeat scroll 0 0 #efefef;
     border: 0 none;
@@ -5691,11 +5701,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     right: 0;
     width: 210px; }
     @media (max-width: 768px) {
-      /* line 30, ../scss/includes/_brandbar.scss */
+      /* line 38, ../scss/includes/_brandbar.scss */
       #searchform .searchfield {
         display: none; } }
 
-/* line 53, ../scss/includes/_brandbar.scss */
+/* line 61, ../scss/includes/_brandbar.scss */
 input[type="submit"].searchbutton, .searchbutton {
   text-indent: normal;
   text-align: center;
@@ -5712,18 +5722,18 @@ input[type="submit"].searchbutton, .searchbutton {
   top: 0;
   border: 0;
   line-height: 14px; }
-  /* line 69, ../scss/includes/_brandbar.scss */
+  /* line 77, ../scss/includes/_brandbar.scss */
   input[type="submit"].searchbutton:hover, .searchbutton:hover {
     color: #000; }
   @media (max-width: 768px) {
-    /* line 53, ../scss/includes/_brandbar.scss */
+    /* line 61, ../scss/includes/_brandbar.scss */
     input[type="submit"].searchbutton, .searchbutton {
       position: relative;
       background-color: transparent;
       left: 20px;
       font-size: 16px; } }
 
-/* line 82, ../scss/includes/_brandbar.scss */
+/* line 90, ../scss/includes/_brandbar.scss */
 .language-switch {
   line-height: 70px;
   font-size: 14px;
@@ -5731,21 +5741,21 @@ input[type="submit"].searchbutton, .searchbutton {
   display: inline-block;
   position: relative;
   border-left: 1px solid #EFEFEF; }
-  /* line 89, ../scss/includes/_brandbar.scss */
+  /* line 97, ../scss/includes/_brandbar.scss */
   .language-switch a {
     color: #787878; }
   @media (max-width: 768px) {
-    /* line 82, ../scss/includes/_brandbar.scss */
+    /* line 90, ../scss/includes/_brandbar.scss */
     .language-switch {
       line-height: 50px; } }
 
-/* line 97, ../scss/includes/_brandbar.scss */
+/* line 105, ../scss/includes/_brandbar.scss */
 .logodiv {
   padding-bottom: 10px;
   padding-left: 6px;
   padding-top: 10px; }
   @media (max-width: 768px) {
-    /* line 97, ../scss/includes/_brandbar.scss */
+    /* line 105, ../scss/includes/_brandbar.scss */
     .logodiv {
       padding-bottom: 5px;
       padding-left: 6px;
@@ -5753,7 +5763,7 @@ input[type="submit"].searchbutton, .searchbutton {
       min-width: 194px;
       display: inline-block; } }
   @media (max-width: 420px) {
-    /* line 97, ../scss/includes/_brandbar.scss */
+    /* line 105, ../scss/includes/_brandbar.scss */
     .logodiv {
       min-width: auto; } }
 
@@ -6221,7 +6231,6 @@ footer#colophon a {
   font-size: 0.9em;
   text-align: center;
   position: relative;
-  z-index: 15;
   font-family: "icomoon";
   display: inline-block;
   width: 42px;
@@ -6241,40 +6250,41 @@ footer#colophon a {
   .linkedin:before {
     color: white;
     content: "";
-    font-size: 28px;
+    font-size: 22px;
     margin-left: -14px;
-    margin-top: 0; }
+    margin-top: 0;
+    padding: 0 0 0 5px; }
 
-/* line 204, ../scss/includes/_buttons.scss */
+/* line 205, ../scss/includes/_buttons.scss */
 .facebook {
   background-color: #3B5997; }
-  /* line 206, ../scss/includes/_buttons.scss */
+  /* line 207, ../scss/includes/_buttons.scss */
   .facebook:before {
     content: "";
     color: white; }
 
-/* line 212, ../scss/includes/_buttons.scss */
+/* line 213, ../scss/includes/_buttons.scss */
 .twitter {
   background-color: #01ACEC; }
-  /* line 214, ../scss/includes/_buttons.scss */
+  /* line 215, ../scss/includes/_buttons.scss */
   .twitter:before {
     content: "";
     color: white; }
 
-/* line 220, ../scss/includes/_buttons.scss */
+/* line 221, ../scss/includes/_buttons.scss */
 .youtube {
   background-color: white; }
-  /* line 222, ../scss/includes/_buttons.scss */
+  /* line 223, ../scss/includes/_buttons.scss */
   .youtube:before {
     color: #d62327;
     content: "";
     font-size: 33px;
     margin-left: -16px; }
 
-/* line 230, ../scss/includes/_buttons.scss */
+/* line 231, ../scss/includes/_buttons.scss */
 .pinterest {
   background-color: white; }
-  /* line 232, ../scss/includes/_buttons.scss */
+  /* line 233, ../scss/includes/_buttons.scss */
   .pinterest:before {
     color: #d62327;
     content: "";
@@ -6282,34 +6292,68 @@ footer#colophon a {
     margin-left: -19px;
     margin-top: 0; }
 
-/* line 241, ../scss/includes/_buttons.scss */
+/* line 242, ../scss/includes/_buttons.scss */
 .instagram {
   background-color: #246087; }
-  /* line 243, ../scss/includes/_buttons.scss */
+  /* line 244, ../scss/includes/_buttons.scss */
   .instagram:before {
     content: "";
     font-size: 31px;
     margin-left: -15px;
     color: white; }
 
-/* line 251, ../scss/includes/_buttons.scss */
+/* line 253, ../scss/includes/_buttons.scss */
+.googleplus:before {
+  content: "";
+  font-size: 25px;
+  line-height: 42px;
+  padding: 0 0 0 3px; }
+
+/* line 261, ../scss/includes/_buttons.scss */
 .rss {
   background-color: transparent;
   font-weight: 300;
   margin: 10px 0 0 0; }
-  /* line 255, ../scss/includes/_buttons.scss */
+  /* line 265, ../scss/includes/_buttons.scss */
   .rss:before {
     color: black;
     content: "";
     font-size: 20px;
     margin-right: 6px;
     font-family: "icomoon"; }
-  /* line 262, ../scss/includes/_buttons.scss */
+  /* line 272, ../scss/includes/_buttons.scss */
   .rss:hover {
     background: transparent;
     color: black; }
 
-/* line 272, ../scss/includes/_buttons.scss */
+/* line 278, ../scss/includes/_buttons.scss */
+.sharebutton {
+  height: 42px;
+  width: 42px;
+  background-color: black;
+  margin-right: 57px;
+  display: inline-block; }
+  /* line 284, ../scss/includes/_buttons.scss */
+  .sharebutton:before {
+    color: white;
+    font-weight: normal; }
+  /* line 289, ../scss/includes/_buttons.scss */
+  .sharebutton:after {
+    background-color: #ffcd00;
+    color: black;
+    content: "" !important;
+    display: inline-block;
+    font-size: 12px;
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    vertical-align: top;
+    width: 42px;
+    margin-left: 23px;
+    font-weight: normal;
+    padding: 0 0 0 3px !important; }
+
+/* line 308, ../scss/includes/_buttons.scss */
 #content .page-content-inner .pager {
   font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
   background: #efefef;
@@ -6321,22 +6365,22 @@ footer#colophon a {
   color: black;
   text-decoration: none;
   margin: 0 5px; }
-  /* line 283, ../scss/includes/_buttons.scss */
+  /* line 319, ../scss/includes/_buttons.scss */
   #content .page-content-inner .pager:hover {
     background-color: #ffcd00; }
-  /* line 286, ../scss/includes/_buttons.scss */
+  /* line 322, ../scss/includes/_buttons.scss */
   #content .page-content-inner .pager.active {
     background-color: #ffcd00; }
-  /* line 289, ../scss/includes/_buttons.scss */
+  /* line 325, ../scss/includes/_buttons.scss */
   #content .page-content-inner .pager.back {
     background-color: black; }
-    /* line 291, ../scss/includes/_buttons.scss */
+    /* line 327, ../scss/includes/_buttons.scss */
     #content .page-content-inner .pager.back a {
       color: #fff; }
-  /* line 295, ../scss/includes/_buttons.scss */
+  /* line 331, ../scss/includes/_buttons.scss */
   #content .page-content-inner .pager.next {
     background-color: black; }
-    /* line 297, ../scss/includes/_buttons.scss */
+    /* line 333, ../scss/includes/_buttons.scss */
     #content .page-content-inner .pager.next a {
       color: #fff;
       content: "";
@@ -6347,25 +6391,25 @@ footer#colophon a {
       width: 40px;
       height: 100%; }
 
-/* line 311, ../scss/includes/_buttons.scss */
+/* line 347, ../scss/includes/_buttons.scss */
 #content .page-content-inner .page-navigation {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 0; }
-  /* line 315, ../scss/includes/_buttons.scss */
+  /* line 351, ../scss/includes/_buttons.scss */
   #content .page-content-inner .page-navigation ul {
     margin: 0 auto;
     display: inline-block; }
-    /* line 318, ../scss/includes/_buttons.scss */
+    /* line 354, ../scss/includes/_buttons.scss */
     #content .page-content-inner .page-navigation ul li {
       list-style: none outside none;
       float: left; }
 
-/* line 325, ../scss/includes/_buttons.scss */
+/* line 361, ../scss/includes/_buttons.scss */
 .toggle-btn-div {
   margin-top: 10px; }
 
-/* line 329, ../scss/includes/_buttons.scss */
+/* line 365, ../scss/includes/_buttons.scss */
 .toggle-btn {
   margin: 0; }
 

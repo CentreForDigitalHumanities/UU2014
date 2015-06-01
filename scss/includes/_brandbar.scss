@@ -13,7 +13,15 @@
             width: 140px;
             height: 37px;
         }
-	}
+    }    
+    img.alternative-logo {
+        height: 48px;
+        width: auto;
+        @include bp(sm) {
+            width: auto;
+            height: 37px;
+        }
+    }    
     @include bp(xs) {
         &.affix-top {
             

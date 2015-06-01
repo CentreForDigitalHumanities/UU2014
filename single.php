@@ -93,7 +93,7 @@
 				<h1><?php the_title(); ?></h1>	
 				<?php the_content(); ?>
 
-				<?php if(function_exists('get_field') && get_field('uu_options_share_buttons_location', 'option')) { get_template_part( 'parts/share'); }?>
+				<?php uu_sharebuttons(); ?>
 
 
 				<?php wp_link_pages( array(

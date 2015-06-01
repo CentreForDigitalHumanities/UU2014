@@ -86,7 +86,7 @@
         {
             "key": "field_556475f3703de",
             "label": "Custom logo url",
-            "name": "custom_logo_url",
+            "name": "uu_options_custom_logo_url",
             "prefix": "",
             "type": "url",
             "instructions": "",
@@ -116,5 +116,5 @@
     "label_placement": "left",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1432647202
+    "modified": 1432819515
 }

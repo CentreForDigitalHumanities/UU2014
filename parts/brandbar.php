@@ -9,6 +9,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+
+<?php if(function_exists('get_field') && get_field('uu_options_custom_logo', 'options') )	{ 
+	$image = get_field('uu_options_custom_logo', 'options');
+	?>
+	<a href="
+	<?php if(get_field('uu_options_custom_logo_url', 'options')) {
+		echo get_field('uu_options_custom_logo_url', 'options');
+	} else {
+		echo siteurl();
+	} ?>
+
+	">
+		<img src="<?php echo $image['url']; ?>" class="alternative-logo" />
+	</a>	
+<?php } else { ?>
+
 				<a href="
 				<?php $mylocale = get_bloginfo('language');
 										if($mylocale == 'en-US') {
@@ -17,6 +33,8 @@
 										echo 'http://www.uu.nl';
 										} ?>
 				"><img src="<?php echo get_template_directory_uri() ?>/images/uu-logo.svg" alt="<?php _e('Logo Utrecht University', 'uu2014'); ?>" /></a>
+			
+<?php } ?>
 			</div>
 
 <?php if ( function_exists('icl_object_id') ) :  //check if WPML is activated ?> 
