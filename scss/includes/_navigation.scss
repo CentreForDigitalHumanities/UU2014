@@ -7,6 +7,7 @@
 }
 
 .navbar-nav {
+	margin-left: -15px;
 	@include bp(sm) {
 		margin: 10px;
 	}
@@ -22,7 +23,7 @@
 }
 
 .navbar-nav > li.first-item > a {
-	padding-left: 0px;
+	
 	@include bp(sm) {
 		padding-left: 20px;
 	}
