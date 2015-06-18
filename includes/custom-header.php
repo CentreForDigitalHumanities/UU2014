@@ -10,8 +10,8 @@
 $defaults = array(
   'default-image'=> '%s/images/headers/default.jpg',
   'random-default'=> false,
-  'width'=> 1368,  // Make sure to set this
-  'height'=> 250, // Make sure to set this
+  'width'=> 1600,  // Make sure to set this
+  'height'=> 400, // Make sure to set this
   'flex-height'=> true,
   'flex-width'=> false,
   'default-text-color'=> 'ffffff',

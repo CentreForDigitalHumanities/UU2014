@@ -6516,33 +6516,37 @@ footer#colophon a {
  * --------------------------------------------------
  */
 /* line 6, ../scss/includes/_layout.scss */
+body {
+  background-color: #F6F6F6; }
+
+/* line 10, ../scss/includes/_layout.scss */
 #page {
   max-width: 1600px;
   margin: 0 auto; }
 
-/* line 11, ../scss/includes/_layout.scss */
+/* line 15, ../scss/includes/_layout.scss */
 .page-content {
   width: 855px;
   float: left;
   transition: width 0.5s ease 0s; }
   @media (max-width: 1170px) {
-    /* line 11, ../scss/includes/_layout.scss */
+    /* line 15, ../scss/includes/_layout.scss */
     .page-content {
       width: 60%; } }
   @media (max-width: 768px) {
-    /* line 11, ../scss/includes/_layout.scss */
+    /* line 15, ../scss/includes/_layout.scss */
     .page-content {
       width: 100%; } }
   @media (min-width: 1600px) {
-    /* line 11, ../scss/includes/_layout.scss */
+    /* line 15, ../scss/includes/_layout.scss */
     .page-content {
       width: 868px; } }
 
-/* line 31, ../scss/includes/_layout.scss */
+/* line 35, ../scss/includes/_layout.scss */
 #content-wrapper {
   padding: 0; }
 
-/* line 35, ../scss/includes/_layout.scss */
+/* line 39, ../scss/includes/_layout.scss */
 .sidebar-offcanvas {
   float: left;
   padding-top: 40px;
@@ -6550,18 +6554,18 @@ footer#colophon a {
   width: 300px;
   transition: width 0.5s ease 0s; }
   @media (max-width: 768px) {
-    /* line 35, ../scss/includes/_layout.scss */
+    /* line 39, ../scss/includes/_layout.scss */
     .sidebar-offcanvas {
       width: 200px; } }
   @media (max-width: 420px) {
-    /* line 35, ../scss/includes/_layout.scss */
+    /* line 39, ../scss/includes/_layout.scss */
     .sidebar-offcanvas {
       float: none;
       position: absolute;
       top: 0;
       width: 50%; } }
 
-/* line 52, ../scss/includes/_layout.scss */
+/* line 56, ../scss/includes/_layout.scss */
 .row-offcanvas, #content-wrapper {
   background: -moz-linear-gradient(left top, #efefef 0%, #efefef 300px, #ffffff 300px, #ffffff 100%);
   background: #ffffff;
@@ -6579,46 +6583,46 @@ footer#colophon a {
   /* IE10+ */
   filter: none; }
   @media (max-width: 768px) {
-    /* line 52, ../scss/includes/_layout.scss */
+    /* line 56, ../scss/includes/_layout.scss */
     .row-offcanvas, #content-wrapper {
       background: #fff; } }
-  /* line 68, ../scss/includes/_layout.scss */
+  /* line 72, ../scss/includes/_layout.scss */
   .page-template-page-full-width .row-offcanvas, .page-template-page-full-width #content-wrapper {
     background: #ffffff; }
 
 @media (max-width: 768px) {
-  /* line 74, ../scss/includes/_layout.scss */
+  /* line 78, ../scss/includes/_layout.scss */
   .row-offcanvas {
     position: relative;
     -webkit-transition: all 0.25s ease-out;
     -moz-transition: all 0.25s ease-out;
     transition: all 0.25s ease-out; }
 
-  /* line 81, ../scss/includes/_layout.scss */
+  /* line 85, ../scss/includes/_layout.scss */
   .row-offcanvas-left
   .sidebar-offcanvas {
     left: -50%; }
 
-  /* line 86, ../scss/includes/_layout.scss */
+  /* line 90, ../scss/includes/_layout.scss */
   .row-offcanvas-left.active {
     left: 50%; }
 
-  /* line 90, ../scss/includes/_layout.scss */
+  /* line 94, ../scss/includes/_layout.scss */
   .sidebar-offcanvas {
     float: none;
     position: absolute;
     top: 0;
     width: 50%; }
 
-  /* line 96, ../scss/includes/_layout.scss */
+  /* line 100, ../scss/includes/_layout.scss */
   .page-content {
     margin-left: 0; }
 
-  /* line 102, ../scss/includes/_layout.scss */
+  /* line 106, ../scss/includes/_layout.scss */
   .container {
     padding-left: 15px;
     padding-right: 15px; } }
-/* line 110, ../scss/includes/_layout.scss */
+/* line 114, ../scss/includes/_layout.scss */
 .row-offcanvas-left {
   margin-left: 0;
   margin-right: 0; }

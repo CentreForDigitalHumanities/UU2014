@@ -47,6 +47,20 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
+<!-- Open Graph Meta Tags for Facebook and LinkedIn Sharing !-->
+<meta property="og:title" content="<?php the_title(); ?>"/>
+<meta property="og:description" content="<?php if ( $site_description && ( is_home() || is_front_page() ) )
+   { echo " | $site_description"; } else { the_excerpt(); } ?>" />
+<meta property="og:url" content="<?php the_permalink(); ?>"/>
+<?php $fb_image = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'full'); ?>
+<?php if ($fb_image) : ?>
+	<meta property="og:image" content="<?php echo $fb_image[0]; ?>" />
+<?php endif; ?>
+<meta property="og:type" content="<?php
+	if (is_single() || is_page()) { echo "article"; } else { echo "website";} ?>" />
+<meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+<!-- End Open Graph Meta Tags !-->
+
 <!--[if lt IE 9]>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv-printshiv.min.js"></script>
