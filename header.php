@@ -51,14 +51,18 @@
 <meta property="og:title" content="<?php the_title(); ?>"/>
 <meta property="og:description" content="<?php if ( $site_description && ( is_home() || is_front_page() ) )
    { echo " | $site_description"; } else { the_excerpt(); } ?>" />
-<meta property="og:url" content="<?php the_permalink(); ?>"/>
-<?php $fb_image = wp_get_attachment_image_src(get_post_thumbnail_id( get_the_ID() ), 'full'); ?>
-<?php if ($fb_image) : ?>
-	<meta property="og:image" content="<?php echo $fb_image[0]; ?>" />
-<?php endif; ?>
+<meta property="og:url" content="<?php the_permalink(); ?>" />
+<?php 
+if(function_exists('get_field') && get_field('uu_options_site_share_image', 'options') )	{ 
+	$fb_image = get_field('uu_options_site_share_image', 'options');
+?>
+<meta property="og:image" content="<?php echo $fb_image['url']; ?>" />
+<?php } else { ?>
+<meta property="og:image" content="<?php header_image(); ?>" />
+<?php } ?>
 <meta property="og:type" content="<?php
 	if (is_single() || is_page()) { echo "article"; } else { echo "website";} ?>" />
-<meta property="og:site_name" content="<?php bloginfo('name'); ?>"/>
+<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 <!-- End Open Graph Meta Tags !-->
 
 <!--[if lt IE 9]>

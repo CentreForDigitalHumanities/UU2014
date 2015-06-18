@@ -404,6 +404,31 @@
             "placement": "top"
         },
         {
+            "key": "field_558283fd13755",
+            "label": "Site image",
+            "name": "uu_options_site_share_image",
+            "prefix": "",
+            "type": "image",
+            "instructions": "The image that is displayed when this site is added to Facebook, LinkedIn etc. Best is to choose a high resolution, Facebook recommends at least 1200 x 630px for high quality full size previews.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": 600,
+            "min_height": 315,
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_555ef2c98a269",
             "label": "Follow settings",
             "name": "",
@@ -602,5 +627,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1432646182
+    "modified": 1434617177
 }
