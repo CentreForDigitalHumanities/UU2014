@@ -17,7 +17,7 @@
 	<?php if(get_field('uu_options_custom_logo_url', 'options')) {
 		echo get_field('uu_options_custom_logo_url', 'options');
 	} else {
-		echo siteurl();
+		echo get_option('siteurl');
 	} ?>
 
 	">
