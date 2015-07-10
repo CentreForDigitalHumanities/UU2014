@@ -18,7 +18,8 @@ class uu_social_media_buttons_widget extends WP_Widget {
     /** @see WP_Widget::widget -- do not rename this */
     function widget($args, $instance) { 
         extract( $args );
-        $title    = apply_filters('widget_title', $instance['title']);
+          $title ='';
+          $title = apply_filters('widget_title', $instance['title']);
         // $amount   = $instance['amount'];
         ?>
               <?php echo $before_widget; ?>
@@ -79,7 +80,9 @@ class uu_social_media_buttons_widget extends WP_Widget {
     /** @see WP_Widget::form -- do not rename this */
     function form($instance) {  
         $title = '';
-        $title    = esc_attr($instance['title']);
+        if(isset($instance['title'])) {
+           $title = esc_attr($instance['title']);
+        }
         // $amount  = esc_attr($instance['amount']);
         ?>
       

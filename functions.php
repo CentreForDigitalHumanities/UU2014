@@ -88,6 +88,13 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-soci
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' );
 }
 
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' );
+}
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
+}
+
 // if ( file_exists( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' ) ) {
 //     require_once( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' );
 // }

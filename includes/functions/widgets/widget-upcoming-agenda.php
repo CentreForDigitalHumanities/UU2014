@@ -30,7 +30,7 @@ class uu_upcoming_agenda_widget extends WP_Widget {
 
 global $post;
 
-$todaysDate = strtotime(now);
+$todaysDate = strtotime('now');
 
 query_posts('showposts=' . $amount . '&post_type=agenda&meta_key=uu2014_agenda_startdate&meta_compare=>=&meta_value=' . $todaysDate . '&orderby=meta_value&order=ASC'); ?>
 
@@ -86,8 +86,16 @@ query_posts('showposts=' . $amount . '&post_type=agenda&meta_key=uu2014_agenda_s
     /** @see WP_Widget::form -- do not rename this */
     function form($instance) {  
  
-        $title    = esc_attr($instance['title']);
-        $amount  = esc_attr($instance['amount']);
+        if(isset($instance['title'])) {
+           $title = esc_attr($instance['title']);
+        } else {
+          $title = __( 'Upcoming events', 'uu2014' );
+        }
+        if(isset($instance['amount'])) {
+           $amount = esc_attr($instance['amount']);
+        } else {
+          $amount = 3;
+        }
         ?>
          <p>
           <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label> 
