@@ -5525,66 +5525,70 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 .single h1 {
   margin-top: 22px; }
 
+/* line 309, ../scss/includes/_typography.scss */
+.entry-content h2, .entry-content h3, .entry-content h4 {
+  margin: 2em 0 1em 0; }
+
 /******************************************************************
  TINYMCE STYLES DROPDOWN
 ******************************************************************/
-/* line 332, ../scss/includes/_typography.scss */
+/* line 338, ../scss/includes/_typography.scss */
 .underline {
   text-decoration: underline; }
 
-/* line 336, ../scss/includes/_typography.scss */
+/* line 342, ../scss/includes/_typography.scss */
 .italic {
   font-style: italic; }
 
-/* line 340, ../scss/includes/_typography.scss */
+/* line 346, ../scss/includes/_typography.scss */
 .bold {
   font-weight: bold; }
 
-/* line 344, ../scss/includes/_typography.scss */
+/* line 350, ../scss/includes/_typography.scss */
 .text-left {
   text-align: left; }
 
-/* line 348, ../scss/includes/_typography.scss */
+/* line 354, ../scss/includes/_typography.scss */
 .text-center {
   text-align: center; }
 
-/* line 352, ../scss/includes/_typography.scss */
+/* line 358, ../scss/includes/_typography.scss */
 .text-right {
   text-align: right; }
 
 /* image alignment */
-/* line 357, ../scss/includes/_typography.scss */
+/* line 363, ../scss/includes/_typography.scss */
 .alignleft, img.alignleft {
   float: left;
   margin: 0 15px 10px 0; }
 
-/* line 362, ../scss/includes/_typography.scss */
+/* line 368, ../scss/includes/_typography.scss */
 .alignright, img.alignright {
   float: right;
   margin: 0 0 10px 15px; }
 
-/* line 367, ../scss/includes/_typography.scss */
+/* line 373, ../scss/includes/_typography.scss */
 .aligncenter, img.aligncenter {
   display: block;
   margin: 0 auto 10px auto; }
 
-/* line 372, ../scss/includes/_typography.scss */
+/* line 378, ../scss/includes/_typography.scss */
 .alignnone, img.alignnone {
   display: block;
   margin: 0 0 10px 0; }
 
-/* line 377, ../scss/includes/_typography.scss */
+/* line 383, ../scss/includes/_typography.scss */
 .aligncenter, img.aligncenter,
 .alignnone, img.alignnone {
   clear: both; }
 
 /*Image Caption*/
-/* line 383, ../scss/includes/_typography.scss */
+/* line 389, ../scss/includes/_typography.scss */
 .wp-caption {
   max-width: 100% !important;
   padding: 5px;
   /* images inside wp-caption */ }
-  /* line 388, ../scss/includes/_typography.scss */
+  /* line 394, ../scss/includes/_typography.scss */
   .wp-caption img {
     margin-bottom: 0;
     width: 100%; }
@@ -5592,12 +5596,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 /* end .wp-caption */
 /*Core Media Player*/
 /*video player*/
-/* line 429, ../scss/includes/_typography.scss */
+/* line 435, ../scss/includes/_typography.scss */
 .mejs-video {
   width: 100% !important;
   height: auto !important;
   padding-top: 57%; }
-  /* line 438, ../scss/includes/_typography.scss */
+  /* line 444, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-mediaelement video {
     position: absolute;
     top: 0;
@@ -5606,24 +5610,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     bottom: 0;
     width: 100% !important;
     height: 100% !important; }
-  /* line 461, ../scss/includes/_typography.scss */
+  /* line 467, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-layers .mejs-poster {
     width: 100% !important;
     height: 100% !important; }
-  /* line 469, ../scss/includes/_typography.scss */
+  /* line 475, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-overlay-play {
     width: 100% !important;
     height: 100% !important; }
 
 /*audio player*/
 /* Audio Playlist */
-/* line 513, ../scss/includes/_typography.scss */
+/* line 519, ../scss/includes/_typography.scss */
 .wp-playlist {
   overflow: hidden; }
-  /* line 540, ../scss/includes/_typography.scss */
+  /* line 546, ../scss/includes/_typography.scss */
   .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption {
     display: block; }
-    /* line 543, ../scss/includes/_typography.scss */
+    /* line 549, ../scss/includes/_typography.scss */
     .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption .wp-playlist-item-title {
       overflow: hidden;
       white-space: nowrap;
@@ -5631,7 +5635,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 /*Block Quote Alignment*/
 /*Image Sizes*/
-/* line 561, ../scss/includes/_typography.scss */
+/* line 567, ../scss/includes/_typography.scss */
 .size-auto,
 .size-full,
 .size-large,
@@ -5642,7 +5646,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 /*Use this class for any Editor Specific Styles to help the user experience
  * set the max size of the content area in the editor to match the template*/
-/* line 580, ../scss/includes/_typography.scss */
+/* line 586, ../scss/includes/_typography.scss */
 .mceContentBody {
   background-color: #FDFDFD; }
 
@@ -6069,7 +6073,7 @@ footer#colophon a {
   background: transparent; }
 
 /* line 3, ../scss/includes/_buttons.scss */
-.button {
+.button, .button-primary {
   display: inline-block;
   padding: 0 19px;
   font-size: 15px;
@@ -6087,7 +6091,7 @@ footer#colophon a {
   border: 0;
   -moz-osx-font-smoothing: grayscale; }
   /* line 20, ../scss/includes/_buttons.scss */
-  .button:hover {
+  .button:hover, .button-primary:hover {
     text-decoration: none;
     color: #ffcd00;
     background-color: #000000; }
@@ -6510,6 +6514,10 @@ footer#colophon a {
 /* line 98, ../scss/includes/_navigation.scss */
 .navbar-nav > li > .dropdown-menu {
   border-radius: 0; }
+
+/* line 102, ../scss/includes/_navigation.scss */
+.page-template-page-full-width .toggle-btn-div {
+  display: none; }
 
 /*
  * Off Canvas
@@ -6963,6 +6971,11 @@ a .front-page-post-item-title {
   font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
   line-height: 24px; }
 
+/* line 1, ../scss/includes/_gallery.scss */
+.gallery-item {
+  float: left;
+  margin-right: 14px; }
+
 /* line 1, ../scss/includes/_shortcodes.scss */
 .featured-image-wrapper {
   margin-top: 20px;
@@ -7062,6 +7075,11 @@ a .front-page-post-item-title {
   /* line 115, ../scss/includes/_shortcodes.scss */
   .panel .panel-body {
     padding: 30px; }
+
+/* line 120, ../scss/includes/_shortcodes.scss */
+.well {
+  background-color: #dddddd;
+  padding: 1em; }
 
 /* line 1, ../scss/includes/cpt/_agenda.scss */
 .agenda-archive {
@@ -7230,7 +7248,7 @@ article.frontpage-news-item {
   width: 100%;
   height: auto; }
 
-/* line 16, ../scss/includes/widgets/_image.scss */
+/* line 15, ../scss/includes/widgets/_image.scss */
 .uu-image-blok-content {
   position: absolute;
   bottom: 60px;
@@ -7240,7 +7258,7 @@ article.frontpage-news-item {
   max-width: 80%;
   right: 20px; }
 
-/* line 26, ../scss/includes/widgets/_image.scss */
+/* line 25, ../scss/includes/widgets/_image.scss */
 .uu-image-blok-titel h4 {
   font-size: 16px;
   font-weight: bold;
@@ -7248,7 +7266,7 @@ article.frontpage-news-item {
   color: #fff;
   font-family: "Merriweather", serif; }
 
-/* line 34, ../scss/includes/widgets/_image.scss */
+/* line 33, ../scss/includes/widgets/_image.scss */
 .uu-image-blok-url {
   margin-bottom: -45px; }
 

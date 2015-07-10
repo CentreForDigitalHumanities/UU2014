@@ -78,7 +78,7 @@ if(function_exists('get_field') && get_field('uu_options_site_share_image', 'opt
      
 	<div id="page">
 		<?php if( get_field('uu_options_brandbar', 'option') ) {} else {get_template_part( 'parts/brandbar');} ?> 
-		<header id="masthead" class="header" role="banner">
+		<header id="masthead" class="header hidden-print" role="banner">
 
 			<div class="container">
 

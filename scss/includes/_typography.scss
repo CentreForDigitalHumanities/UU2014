@@ -305,6 +305,12 @@ h2, .h2 {
 	@extend .uu-content-h2;
 }
 
+.entry-content {
+	h2, h3, h4 {
+		margin: 2em 0 1em 0;
+	}
+}
+
 h3, .h3 {
 	@extend .uu-content-h3;
 }

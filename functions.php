@@ -117,8 +117,9 @@ function uu2014_scripts_and_styles() {
 	// wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
 
 	// register main stylesheet
-	wp_enqueue_style( 'uu2014-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'all' );	
 
+	wp_enqueue_style( 'uu2014-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'screen' );	
+	wp_enqueue_style( 'uu2014-print-stylesheet', get_template_directory_uri() . '/css/print.css', array(), '', 'print' );	
 	// ie-only style sheet
 	wp_enqueue_style( 'uu2014-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
 	$wp_styles->add_data( 'uu2014-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet

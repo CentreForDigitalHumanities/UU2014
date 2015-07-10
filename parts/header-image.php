@@ -1,4 +1,4 @@
-<header class="article-header">
+<header class="article-header hidden-print">
 
 	<div class="header-image">
 		

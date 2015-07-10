@@ -1,4 +1,4 @@
-<div id="left-sidebar" class="sidebar-offcanvas clearfix" role="complementary">
+<div id="left-sidebar" class="sidebar-offcanvas clearfix hidden-print" role="complementary">
 <?php if ( is_active_sidebar( 'left-sidebar' ) ) : ?>
 			
 				

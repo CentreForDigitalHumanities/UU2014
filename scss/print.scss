@@ -1,3 +1,13 @@
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap";
+// @import "includes/variables";
+// @import "includes/uu-huisstijl";
+// @import "includes/typography";
+@import "includes/print";
+
+// #content .page-title h1 {
+// 	margin: 2em 0;
+// }
