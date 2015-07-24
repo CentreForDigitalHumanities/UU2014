@@ -1,6 +1,6 @@
 <?php get_header(); 
 /**
- * Template Name: People page
+ * Template Name: People page 2 columns
  * Description: A template for displaying people
  *
  */ ?>
@@ -61,10 +61,13 @@
 												    <?php endif; ?>		
 												    <?php if( $omschrijving ): ?>
 														<div class="people-item-content-omschrijving">
-																<?php 
-																	
-																$trim = wp_trim_words( $omschrijving, 20, '...');  
-																echo $trim;
+																<?php
+																if( get_field('uu_options_trim_people_description_fields', 'option') ) { 
+																	$trim = wp_trim_words( $omschrijving, 20, '...');  
+																	echo $trim;
+																} else {
+																echo $omschrijving;
+																}
 																?>
 														</div>	
 													<?php endif; ?>	

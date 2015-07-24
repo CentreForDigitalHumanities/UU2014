@@ -61,11 +61,16 @@
 												    <?php endif; ?>		
 												    <?php if( $omschrijving ): ?>
 														<div class="people-item-content-omschrijving">
-																<?php 
-																	
-																$trim = wp_trim_words( $omschrijving, 20, '...');  
-																echo $trim;
-																?><?php if( $url ): ?>
+																<?php
+																if( get_field('uu_options_trim_people_description_fields', 'option') ) { 
+																	$trim = wp_trim_words( $omschrijving, 40, '...');  
+																	echo $trim;
+																} else {
+																echo $omschrijving;
+																}
+																?>
+
+																<?php if( $url ): ?>
 														
 																<a href="<?php echo $url; ?>"><?php _e('Read more','uu2014'); ?></a>
 													
