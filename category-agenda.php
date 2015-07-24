@@ -13,11 +13,12 @@ get_header(); ?>
 <div class="upcoming-events clearfix">
 	<h3><?php _e('Upcoming events', 'uu2014') ?></h3>
 		<?php 
-
+	$current_catid = get_query_var('cat');	
 	$today = date('Ymd');
 
 	$args = array(
 		'post_type'		=> 'post',
+		'category__in' => $current_catid,
 		'posts_per_page'	=> 10,
 		'meta_key'		=> 'uu_agenda_start_date',
 		'meta_query' => array(
@@ -50,12 +51,14 @@ get_header(); ?>
 		</div>
 		<?php endif; ?>
 </div>
+
 <div class="previous-events clearfix">
 	<h3><?php _e('Previous events', 'uu2014') ?></h3>
 	<?php
-
+	$current_catid = get_query_var('cat');
 	$args2 = array(
 		'post_type'		=> 'post',
+		'category__in' => $current_catid,
 		'posts_per_page'	=> 20,
 		'meta_key'		=> 'uu_agenda_start_date',
 		'meta_query' => array(

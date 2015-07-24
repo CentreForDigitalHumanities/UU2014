@@ -986,3 +986,30 @@ function uu_display_all_taxonomies() {
 
 }
 
+// Use a parent category slug if it exists   http://wordpress.stackexchange.com/questions/4557/how-can-i-make-all-subcategories-use-the-template-of-its-category-parent
+function child_force_category_template($template) {
+    $cat = get_query_var('cat');
+    $category = get_category($cat);
+
+    if ( file_exists(TEMPLATEPATH . '/category-' . $category->cat_ID . '.php') ) {
+        $cat_template = TEMPLATEPATH . '/category-' . $category ->cat_ID . '.php';
+    } elseif ( file_exists(TEMPLATEPATH . '/category-' . $category->slug . '.php') ) {
+        $cat_template = TEMPLATEPATH . '/category-' . $category ->slug . '.php';
+    } elseif ( file_exists(TEMPLATEPATH . '/category-' . $category->category_parent . '.php') ) {
+        $cat_template = TEMPLATEPATH . '/category-' . $category->category_parent . '.php';
+    } else {
+        // Get Parent Slug
+        $cat_parent = get_category($category->category_parent);
+
+        if ( file_exists(TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php') ) {
+            $cat_template = TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php';
+        } else {
+            $cat_template = $template;
+        }
+
+    }
+
+    return $cat_template;
+}
+add_action('category_template', 'child_force_category_template');
+
