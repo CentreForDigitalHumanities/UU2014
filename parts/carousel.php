@@ -104,7 +104,7 @@ if ($term !== 0 && $term !== null) : ?>
 </div><!-- #uu2014carousel -->
 
 <?php endif; ?>
-<a class="btn btn-large btn-primary" href="#" id="btnPause">Pause</a>
+<!-- <a class="btn btn-large btn-primary" href="#" id="btnPause">Pause</a>
 <a class="btn btn-large btn-primary" href="#" id="btnPlay">Play</a>
-
+ -->
 

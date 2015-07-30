@@ -7,24 +7,43 @@ body {
   background-color: #F6F6F6;
 }
 
+.container {
+  @media screen and (max-width: 930px) and (min-width: 870px) {
+    width:840px;
+   }
+  @media screen and (max-width: 1024px) and (min-width: 930px) {
+    width:870px;
+   } 
+}
+
 #page {
   max-width: 1600px;
   margin: 0 auto;
 }
 
 .page-content {
-  width: 855px;
-  float: left;
+ // width: 855px;
+  margin-left: 300px;
   transition: width 0.5s ease 0s;
-  @include bp(md) {
-    width: 60%;
-  }
-  @include bp(sm) {
-    width: 100%;
-  }
-  @include bp(lg) {
-    width: 868px;
-  }
+  
+  //  @media screen and (max-width: 768px) {
+  //   width: 100%;
+  // }
+
+  
+  // @media screen and (max-width: 870px) and (min-width: 768px) {
+  //    width: 60%;
+  // }
+  // @media screen and (max-width: 976px) and (min-width: 870px) {
+  //    width: 468px;
+  // }
+  //  @media screen and (max-width: 1024px) and (min-width: 976px) {
+  //    width: 69%;
+  // }
+  // @include bp(lg) {
+  //   width: 868px;
+  // }
+ 
 
 }
 
@@ -38,7 +57,7 @@ body {
 
 .sidebar-offcanvas {
     float: left;
-    padding-top: 40px;
+    padding-top: 80px;
     padding-left: 15px;
     width: 300px;
      transition: width 0.5s ease 0s;

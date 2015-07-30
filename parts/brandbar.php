@@ -53,11 +53,11 @@
 					
 				</div>
 			</div>
-			<div class="col-sm-3 col-xs-2 hidden-print>
+			<div class="col-sm-3 col-xs-2 hidden-print">
 				<div class="language-switch"><?php icl_language_link(); ?></div>
 			</div>
 		<?php else : ?>
-			<div class="col-sm-6 col-xs-4 hidden-print>
+			<div class="col-sm-6 col-xs-4 hidden-print">
 				
 					<div class="pull-right">
 						<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
