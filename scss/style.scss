@@ -12,35 +12,35 @@ Stylesheet: Main Stylesheet
 
 // STEP 2: Import all our resources
 
-@import "bower_components/compass-mixin/lib/compass/css3/box-shadow";
-@import "bower_components/compass-mixin/lib/compass/css3/box-sizing";
-@import "bower_components/compass-mixin/lib/compass/css3/border-radius";
+// @import "../bower_components/compass-mixin/lib/compass/css3/box-shadow";
+// @import "../bower_components/compass-mixin/lib/compass/css3/box-sizing";
+// @import "../bower_components/compass-mixin/lib/compass/css3/border-radius";
 
 // STEP 4: Import our grid
-// @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/mixins/grid";
-// @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
-// @import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/mixins";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/grid";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
+// @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 
 
 // Import Bootstrap elements
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap-compass";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/mixins/vendor-prefixes";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/variables";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/scaffolding.scss";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/carousel";
-//@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/glyphicons";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/dropdowns";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/navbar";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/navs";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/forms";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/utilities";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/component-animations";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/type";
-@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap/tables";
-//@import "bower_components/boostrap-sass/assets/stylesheets/bootstrap";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/vendor-prefixes";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+//@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+//@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 
 // STEP 3: Import all our libraries
 //@import "includes/gravity-forms"; /* gravity forms styles - uncheck box to NOT output default CSS */
@@ -78,6 +78,7 @@ Stylesheet: Main Stylesheet
 @import "includes/widgets/image";
 @import "includes/widgets/socialmedia";
 @import "includes/widgets/sidebarlogin";
+@import "includes/widgets/upcoming_agenda";
 
 @import "includes/plugins/breadcrumb-navxt";
 @import "includes/plugins/formidable";

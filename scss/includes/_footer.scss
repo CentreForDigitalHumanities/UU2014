@@ -53,7 +53,7 @@ footer#colophon {
 			background: #000;
 
 			@include transition(all 1s ease-in-out);
-			@include border-radius(500px);
+	
 
 			&:hover, &:focus {
 				color: #000;

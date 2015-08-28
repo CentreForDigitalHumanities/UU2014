@@ -1,0 +1,16 @@
+{
+  "name": "UU2014",
+  "version": "1.0.0",
+  "description": "Responsive Design Scaffolding for WordPress =======",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt": "^0.4.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

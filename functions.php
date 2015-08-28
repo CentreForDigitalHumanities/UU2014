@@ -986,10 +986,12 @@ function uu_display_all_taxonomies() {
 
 }
 
+// Fixes issue of agenda subcategories not loading category-agenda.php
 // Use a parent category slug if it exists   http://wordpress.stackexchange.com/questions/4557/how-can-i-make-all-subcategories-use-the-template-of-its-category-parent
 function child_force_category_template($template) {
     $cat = get_query_var('cat');
     $category = get_category($cat);
+    $cat_parent = '';
 
     if ( file_exists(TEMPLATEPATH . '/category-' . $category->cat_ID . '.php') ) {
         $cat_template = TEMPLATEPATH . '/category-' . $category ->cat_ID . '.php';

@@ -19,6 +19,7 @@
 
 .below-content-widget-area {
 		@extend .uu-quote;
+		float: left;
 		background-color:$uu-geel;
 	    bottom: 0px;
 	    padding: 100px;

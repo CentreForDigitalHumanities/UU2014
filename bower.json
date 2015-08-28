@@ -1,0 +1,25 @@
+{
+  "name": "UU2014",
+  "version": "1.0.0",
+  "authors": [
+    "Simon Welling <s.welling@uu.nl>"
+  ],
+  "description": "uu template",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "compass-mixins": "compass-mixin#~1.0.2",
+    "font-awesome": "~4.2.0",
+    "grunt": "~0.4.5",
+    "icomoon": "~0.0.1"
+  }
+}

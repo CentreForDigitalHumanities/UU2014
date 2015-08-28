@@ -30,45 +30,68 @@ class uu_upcoming_agenda_widget extends WP_Widget {
 
 global $post;
 
-$todaysDate = strtotime('now');
 
-query_posts('showposts=' . $amount . '&post_type=agenda&meta_key=uu2014_agenda_startdate&meta_compare=>=&meta_value=' . $todaysDate . '&orderby=meta_value&order=ASC'); ?>
+$today = date('Ymd');
+            $agenda_amount = get_field('uu_options_agenda_amount', 'option');
+            $args = array(
+              'post_type'   => 'post',
+              'category_name' => 'agenda',
+              'posts_per_page'  => $agenda_amount,
+              'meta_key'    => 'uu_agenda_start_date',
+              'meta_query' => array(
+                    array(
+                        'key' => 'uu_agenda_start_date',
+                        'value' => $today,
+                        'compare' => '>='
+                    )
+                ),
+              'orderby'   => 'meta_value_num',
+              'order'     => 'ASC',
+            );
+
+
+            $agenda_query = new WP_Query( $args );
+
+//query_posts('showposts=' . $amount . '&post_type=post&category_name=agenda,&meta_key=uu_agenda_start_date&meta_compare=>=&meta_value=' . $today . '&orderby=meta_value_num&order=ASC'); ?>
 
 <ul class="agenda_widget">  
-    <?php while (have_posts()) : the_post(); 
-                    $dateformat = get_option('date_format');
-                    $str = get_post_meta($post->ID, 'uu2014_agenda_startdate', true); 
-                    $str2 = get_post_meta($post->ID, 'uu2014_agenda_enddate', true); 
-                    $startdate = date( $dateformat , $str );
-                    $enddate = date( $dateformat , $str2 );
+    <?php 
+      if ( $agenda_query->have_posts() ) :
+          while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
+          <li>
+                    
+              <?php  if( get_field('uu_agenda_start_date') ) {
 
-    ?>
-  <li>
-    <div class="agenda-widget-date">
+                        $start_date_timestamp = strtotime(get_field('uu_agenda_start_date')); 
+                        $end_date_timestamp = strtotime(get_field('uu_agenda_end_date'));
+                        $startday = date_i18n('j', $start_date_timestamp);
+                        $endday = date_i18n('j', $end_date_timestamp);
+                        $startmonth = date_i18n('m', $start_date_timestamp);
+                        $endmonth = date_i18n('m', $end_date_timestamp);
+                        $startyear = date_i18n('Y', $start_date_timestamp);
+                        $endyear = date_i18n('Y', $end_date_timestamp);
+                        $sameday = false;
+                        $samemonth = false;
+                        $sameyear = false;
+                        if ($startday == $endday) {$sameday=true;} 
+                        if ($startmonth == $endmonth) {$samemonth=true;}
+                        if ($startyear == $endyear) {$sameyear=true;}
+
       
-      <?php 
-
-      // if( ! empty( $str2 ) ) : 
-      //           echo $startdate . ' - ' . $enddate;  
-      // else : 
-      //           echo $startdate; 
-      // endif; 
-
-      echo $startdate;
-
+      // $date_format = get_option('date_format'); 
       ?>
-
-
-             
+      <div class="widget-date">
+        <div class="home-agenda-date-day"><?php echo date_i18n('j', $start_date_timestamp); ?></div>
+        <div class="home-agenda-date-month"><?php echo date_i18n('M', $start_date_timestamp); ?></div>
       </div>
       <div class="agenda-widget-title">
              <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a>
       </div>    
-               
-                    
-               
-    </li>                
-  <?php endwhile; ?>
+                             
+    </li>   
+
+     <?php } ?>             
+  <?php endwhile; endif; ?>
 </ul>
 <?php wp_reset_query(); ?>
 <?php echo $after_widget; ?>
