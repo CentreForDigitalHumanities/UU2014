@@ -1,6 +1,6 @@
-<header class="article-header hidden-print">
+<header class="article-header article-header-main">
 
-	<div class="header-image">
+	<div class="header-image hidden-print">
 		
     <?php if(function_exists('bcn_display')) { ?>
        <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">

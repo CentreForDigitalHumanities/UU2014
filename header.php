@@ -37,10 +37,25 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
+
+
+
 <?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-icon-touch.png">
-<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
-<!--[if IE]><link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico"><![endif]-->
+<?php if(function_exists('get_field') && get_field('uu_options_custom_favicon', 'options') )	{ 
+	$favicon_image = get_field('uu_options_custom_favicon', 'options');
+	$favicon = $favicon_image['url']; 
+} else {
+	$favicon = get_template_directory_uri() . '/images/favicon.ico';
+} ?>
+<link rel="icon" href="<?php echo $favicon; ?>">
+
+<!--[if IE]--><link rel="shortcut icon" href="<?php echo $favicon; ?>">
+<!--[endif]-->
+
+
+
+
 <meta name="msapplication-TileColor" content="#f01d4f">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
 
@@ -49,8 +64,9 @@
 
 <!-- Open Graph Meta Tags for Facebook and LinkedIn Sharing !-->
 <meta property="og:title" content="<?php the_title(); ?>"/>
-<meta property="og:description" content="<?php if ( $site_description && ( is_home() || is_front_page() ) )
-   { echo " | $site_description"; } else { the_excerpt(); } ?>" />
+<?php if ( $site_description && ( is_home() || is_front_page() ) )
+   { $og_desc = ' | $site_description'; } else { $og_desc = the_excerpt(); } ?>
+<meta property="og:description" content="<?php echo $og_desc; ?>" />
 <meta property="og:url" content="<?php the_permalink(); ?>" />
 <?php 
 if(function_exists('get_field') && get_field('uu_options_site_share_image', 'options') )	{ 
@@ -78,7 +94,7 @@ if(function_exists('get_field') && get_field('uu_options_site_share_image', 'opt
      
 	<div id="page">
 		<?php if( get_field('uu_options_brandbar', 'option') ) {} else {get_template_part( 'parts/brandbar');} ?> 
-		<header id="masthead" class="header hidden-print" role="banner">
+		<header id="masthead" class="header hidden-print">
 
 			<div class="container">
 

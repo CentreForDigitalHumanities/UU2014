@@ -82,7 +82,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-				<?php get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
+				<?php //get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
 
 		<?php else : ?>
 		<div class="no-events">

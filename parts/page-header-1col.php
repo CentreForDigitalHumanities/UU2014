@@ -92,7 +92,7 @@
 					</div>
 
 		<div class="container">			
-					<div class="page-content-inner row">
+					<div class="page-content-inner">
 	    			<?php
 							// Show an optional term description.
 						$term_description = term_description();

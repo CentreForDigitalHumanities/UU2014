@@ -2,7 +2,7 @@
 		
 		<div class="col-sm-3">
 			<div class="archive-thumbnail"><?php if ( has_post_thumbnail() ) { the_post_thumbnail('uu-thumbnail', array( 'class' => 'img-responsive' )); } else {
-			?><img src="<?php echo get_template_directory_uri(); ?>/images/default-thumb.jpg" class="img-responsive" title="<?php _e('no image','uu2014'); ?>" /><?php }?></div>
+			?><img src="<?php echo get_template_directory_uri(); ?>/images/default-thumb.jpg" class="img-responsive default-image" title="<?php _e('no image','uu2014'); ?>" /><?php }?></div>
 		</div>
 
 		<div class="col-sm-9">

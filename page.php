@@ -3,7 +3,7 @@
 <?php get_template_part( 'parts/page-header-2col'); ?> 
 
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
+					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?>>
 						<section class="entry-content">
 							<?php the_content(); ?>
 							<?php wp_link_pages( array(

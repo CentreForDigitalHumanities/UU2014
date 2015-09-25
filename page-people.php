@@ -18,7 +18,7 @@
 
 									<?php
 
-
+									$i = 0;		
 
 									while( have_rows('persoon') ): the_row(); 
 
@@ -35,6 +35,7 @@
 
 								
 									if($type == 'Kop') {
+									$i = 0;	
 										?>
 									
 
@@ -44,10 +45,10 @@
 									<?php 
 
 									}  else {
-
+									$i++;			
 										?>
-
-											<div class="people-item col-sm-6">
+												
+											<div class="people-item col-sm-6 <?php if($i & 1) { echo 'block-left';}; ?>">
 
 												<div class="people-item-image col-sm-4">
 													<img class="img-responsive" src="<?php echo $thumb[0]; ?>" alt="<?php echo get_the_title(get_field('uu_people_image')) ?>" />

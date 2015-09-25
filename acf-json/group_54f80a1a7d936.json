@@ -177,7 +177,14 @@
             },
             "preview_size": "thumbnail",
             "library": "all",
-            "return_format": "array"
+            "return_format": "array",
+            "min_width": 0,
+            "min_height": 0,
+            "min_size": 0,
+            "max_width": 0,
+            "max_height": 0,
+            "max_size": 0,
+            "mime_types": ""
         }
     ],
     "location": [
@@ -200,5 +207,6 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1428936639
+    "modified": 1441031358,
+    "local": "json"
 }

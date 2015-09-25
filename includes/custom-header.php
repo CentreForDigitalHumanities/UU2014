@@ -10,8 +10,8 @@
 $defaults = array(
   'default-image'=> '%s/images/headers/default.jpg',
   'random-default'=> false,
-  'width'=> 1600,  // Make sure to set this
-  'height'=> 400, // Make sure to set this
+  'width'=> 1368,  // Make sure to set this
+  'height'=> 250, // Make sure to set this
   'flex-height'=> true,
   'flex-width'=> false,
   'default-text-color'=> 'ffffff',
@@ -63,7 +63,7 @@ function uu2014_header_image() {
               $header_image_height = HEADER_IMAGE_HEIGHT;
             }
             ?>
-          <img src="<?php header_image(); ?>" width="<?php echo $header_image_width; ?>" height="<?php echo $header_image_height; ?>" alt="" /> <?php
+          <img src="<?php header_image(); ?>" alt="" /> <?php
         endif; // end check for featured image or standard header
 
   endif; // end check for removed header image

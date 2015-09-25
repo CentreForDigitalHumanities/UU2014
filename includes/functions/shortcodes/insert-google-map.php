@@ -51,10 +51,12 @@ class GoogleMap_Shortcode {
 	}
 
 	static function enqueue_map_javascript() {
-		wp_enqueue_script( 'map-js', 
-			"https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false",
-			"jquery"
-		);
+		wp_register_script('googlemaps', ('http://maps.google.com/maps/api/js?sensor=false'), false, null, true);
+    	wp_enqueue_script('googlemaps');
+		// wp_enqueue_script( 'map-js', 
+		// 	"https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false",
+		// 	"jquery"
+		// );
 	}
 }
 

@@ -80,9 +80,9 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' );
 }
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' );
-}
+// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' );
+// }
 
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' );
@@ -147,7 +147,8 @@ function uu2014_scripts_and_styles() {
 
 	//Chosen - http://harvesthq.github.io/chosen/
     wp_enqueue_script( 'chosen-js', '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js', array( 'jquery' ), '1.1.0', true );
-
+    // Pull Masonry from the core of WordPress
+	wp_enqueue_script( 'masonry' );
 	// comment reply script for threaded comments
 	if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 		wp_enqueue_script( 'comment-reply' );
@@ -340,7 +341,7 @@ add_action( 'admin_menu', 'uu2014_change_post_menu_label' );
 
 function uu_main_navigation() {
     ?>
-    <nav id="#access" class="navbar navbar-default navbar-inverse" role="navigation">
+    <nav id="#access" class="navbar navbar-default navbar-inverse">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container">
             <div class="navbar-header">
@@ -761,7 +762,7 @@ function uu_excerpt($charlength) {
 		} else {
 			echo $subex;
 		}
-		echo '[...]';
+		echo __(', read more...', 'uu2014');
 	} else {
 		echo $excerpt;
 	}
@@ -991,7 +992,7 @@ function uu_display_all_taxonomies() {
 function child_force_category_template($template) {
     $cat = get_query_var('cat');
     $category = get_category($cat);
-    $cat_parent = '';
+    $cat_parent = get_category($category->category_parent);
 
     if ( file_exists(TEMPLATEPATH . '/category-' . $category->cat_ID . '.php') ) {
         $cat_template = TEMPLATEPATH . '/category-' . $category ->cat_ID . '.php';
@@ -1001,7 +1002,7 @@ function child_force_category_template($template) {
         $cat_template = TEMPLATEPATH . '/category-' . $category->category_parent . '.php';
     } else {
         // Get Parent Slug
-        $cat_parent = get_category($category->category_parent);
+        
 
         if ( file_exists(TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php') ) {
             $cat_template = TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php';

@@ -1,0 +1,47 @@
+#masonry {
+	.masonry-item {
+		padding-bottom: 10px;
+		border: 1px solid $light-grey;
+		margin: 0 -1px -1px 0;
+		img {
+			width: 100%;
+		}
+		.author_badge {
+			width: 80px;
+			height: 80px;
+			float: left;
+			margin-right: 10px;
+		}
+		.article-content {
+			margin: 0.5em;
+				
+		}
+		a {
+			text-decoration: none;
+		}
+		.author-name, .author-by {
+			font-family: $sans;
+			line-height: 150%;
+		}
+		.author-by {
+			font-size: 90%;
+		}
+		h1 {
+			font-size: 30px;
+			line-height: 123%;
+		}
+		p {
+			font-size: 16px;
+    		line-height: 180%;
+		}
+		@include bp(xs) {
+			margin-bottom: 2em;	
+		}
+	}
+}
+
+.home-news, .home-agenda {
+	.col-sm-8 {
+		 margin-left: 16.6667%;
+	}
+}

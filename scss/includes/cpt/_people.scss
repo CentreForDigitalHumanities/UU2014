@@ -1,7 +1,7 @@
 .people-item {
 	margin-bottom: 2em;
 }
-.people-item:nth-child(odd) {
+.people-item.col-sm-6:nth-child(odd) {
 	clear: left;
 }
 

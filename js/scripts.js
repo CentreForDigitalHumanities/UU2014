@@ -294,3 +294,19 @@ jQuery(window).resize(function(){
     }
 	
 });
+
+
+
+jQuery(window).load(function() {
+        
+      // MASSONRY Without jquery
+      var container = document.querySelector('#masonry');
+      var msnry = new Masonry( container, {
+        itemSelector: '.masonry-item',
+        columnWidth: '.masonry-item',                
+      });  
+      
+});
+
+      
+
