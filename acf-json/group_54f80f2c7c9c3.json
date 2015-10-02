@@ -144,7 +144,7 @@
         },
         {
             "key": "field_54f80f57662f3",
-            "label": "Post types",
+            "label": "Layout",
             "name": "uu_options_post_types",
             "prefix": "",
             "type": "radio",
@@ -159,7 +159,11 @@
             "choices": {
                 "news_agenda": "news and agenda",
                 "news": "news items only",
-                "agenda": "agenda items only"
+                "news2": "news items only with sidebar",
+                "agenda": "agenda items only",
+                "agenda2": "agenda items only with sidebar",
+                "blog": "Blogpage tiles",
+                "blog2": "Blogpage list with sidebar"
             },
             "other_choice": 0,
             "save_other_choice": 0,
@@ -178,8 +182,22 @@
                 [
                     {
                         "field": "field_54f80f57662f3",
-                        "operator": "!=",
-                        "value": "agenda"
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news2"
                     }
                 ]
             ],
@@ -191,10 +209,47 @@
             "taxonomy": "category",
             "field_type": "checkbox",
             "allow_null": 0,
+            "add_term": 1,
             "load_save_terms": 1,
             "return_format": "id",
-            "multiple": 0,
-            "add_term": 1
+            "multiple": 0
+        },
+        {
+            "key": "field_55f14f2d9ff78",
+            "label": "Categories blog",
+            "name": "uu_options_blog_frontpage_cat",
+            "prefix": "",
+            "type": "taxonomy",
+            "instructions": "Choose one or more categories to display on the homepage. You may need to create a category first (menuitem: posts > categories)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "blog"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "blog2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 1,
+            "load_save_terms": 1,
+            "return_format": "id",
+            "multiple": 0
         },
         {
             "key": "field_54f81046662f4",
@@ -208,8 +263,22 @@
                 [
                     {
                         "field": "field_54f80f57662f3",
-                        "operator": "!=",
-                        "value": "agenda"
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news2"
                     }
                 ]
             ],
@@ -240,8 +309,22 @@
                 [
                     {
                         "field": "field_54f80f57662f3",
-                        "operator": "!=",
-                        "value": "agenda"
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news2"
                     }
                 ]
             ],
@@ -259,19 +342,33 @@
             "disabled": 0
         },
         {
-            "key": "field_55e4562a9fdb1",
-            "label": "Categories agenda",
-            "name": "uu_options_agenda_frontpage_cat",
+            "key": "field_55014f8690c1a",
+            "label": "News show publication date",
+            "name": "uu_options_news_show_pubdate",
             "prefix": "",
-            "type": "taxonomy",
-            "instructions": "Choose one or more categories to display on the homepage. You may need to create a category first (menuitem: posts > categories)",
+            "type": "true_false",
+            "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_54f80f57662f3",
-                        "operator": "!=",
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
                         "value": "news"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news2"
                     }
                 ]
             ],
@@ -280,13 +377,8 @@
                 "class": "",
                 "id": ""
             },
-            "taxonomy": "category",
-            "field_type": "checkbox",
-            "allow_null": 0,
-            "add_term": 1,
-            "load_save_terms": 1,
-            "return_format": "id",
-            "multiple": 0
+            "message": "",
+            "default_value": 1
         },
         {
             "key": "field_54f810ef662f5",
@@ -300,8 +392,22 @@
                 [
                     {
                         "field": "field_54f80f57662f3",
-                        "operator": "!=",
-                        "value": "news"
+                        "operator": "==",
+                        "value": "agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "agenda2"
                     }
                 ]
             ],
@@ -332,8 +438,22 @@
                 [
                     {
                         "field": "field_54f80f57662f3",
-                        "operator": "!=",
-                        "value": "news"
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "agenda2"
                     }
                 ]
             ],
@@ -351,19 +471,26 @@
             "disabled": 0
         },
         {
-            "key": "field_55014f8690c1a",
-            "label": "News show publication date",
-            "name": "uu_options_news_show_pubdate",
+            "key": "field_55ffd77bbcae9",
+            "label": "Blog author options",
+            "name": "uu_options_blog_author_options",
             "prefix": "",
-            "type": "true_false",
+            "type": "checkbox",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
                 [
                     {
                         "field": "field_54f80f57662f3",
-                        "operator": "!=",
-                        "value": "agenda"
+                        "operator": "==",
+                        "value": "blog"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "blog2"
                     }
                 ]
             ],
@@ -372,8 +499,15 @@
                 "class": "",
                 "id": ""
             },
-            "message": "",
-            "default_value": 1
+            "choices": {
+                "name": "author name",
+                "photo": "author photo",
+                "link": "link to author page"
+            },
+            "default_value": {
+                "": ""
+            },
+            "layout": "vertical"
         },
         {
             "key": "field_5539ef695f800",
@@ -418,12 +552,12 @@
             "layout": "horizontal"
         },
         {
-            "key": "field_55b2224f922cc",
-            "label": "Trim people description fields",
-            "name": "uu_options_trim_people_description_fields",
+            "key": "field_55ae16a94de12",
+            "label": "People page trim description",
+            "name": "uu_options_people_page_trim_description",
             "prefix": "",
             "type": "true_false",
-            "instructions": "",
+            "instructions": "Trim the description field on the people page and people page large template.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -657,6 +791,132 @@
             "load_save_terms": 0,
             "return_format": "object",
             "multiple": 0
+        },
+        {
+            "key": "field_559fc1df2afb2",
+            "label": "Twitter timeline",
+            "name": "",
+            "prefix": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top"
+        },
+        {
+            "key": "field_559fc1ff2afb3",
+            "label": "Twitter username",
+            "name": "uu_options_twitter_username",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_559fc22d2afb4",
+            "label": "Twitter Consumer Key (API Key)",
+            "name": "uu_options_twitter_consumer_key",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_559fc2692afb5",
+            "label": "Twitter Consumer Secret (API Secret)",
+            "name": "uu_options_twitter_consumer_secret",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_559fc2a52afb6",
+            "label": "Twitter Access Token",
+            "name": "uu_options_twitter_access_token",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_559fc2c72afb7",
+            "label": "Twitter Access Token Secret",
+            "name": "uu_options_twitter_access_token_secret",
+            "prefix": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         }
     ],
     "location": [
@@ -674,5 +934,5 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1441027723
+    "modified": 1442836043
 }

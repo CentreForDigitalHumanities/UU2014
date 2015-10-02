@@ -262,8 +262,7 @@
         [
             {
                 "param": "page",
-                "operator": "==",
-                "value": "67"
+                "operator": "=="
             }
         ],
         [
@@ -289,6 +288,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1443184598,
-    "local": "json"
+    "modified": 1443184623
 }
