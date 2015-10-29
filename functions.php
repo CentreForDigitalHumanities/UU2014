@@ -80,9 +80,9 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' );
 }
-// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' );
-// }
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' );
+}
 
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' );
@@ -91,9 +91,9 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-soci
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' );
 }
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
-}
+// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
+// }
 
 // if ( file_exists( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' ) ) {
 //     require_once( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' );
@@ -147,6 +147,8 @@ function uu2014_scripts_and_styles() {
 
 	//Chosen - http://harvesthq.github.io/chosen/
     wp_enqueue_script( 'chosen-js', '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js', array( 'jquery' ), '1.1.0', true );
+   
+
     // Pull Masonry from the core of WordPress
 	wp_enqueue_script( 'masonry' );
 	// comment reply script for threaded comments
@@ -164,10 +166,9 @@ add_action('wp_enqueue_scripts', 'uu2014_scripts_and_styles', 20 );
 
 
 function load_fonts() {
-            wp_register_style('googleFonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,700,400italic');
+            wp_register_style('googleFonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,700,400italic&subset=latin,latin-ext');
             wp_enqueue_style( 'googleFonts');
         }
-    
  add_action('wp_print_styles', 'load_fonts');	
 
 /*********************
@@ -705,7 +706,7 @@ function uu2014_excerpt_more($more) {
   	else 
   	{
 	// edit here if you like
-	return '...  <a href="'. get_permalink($post->ID) . '" title="'. __('Read', 'uu2014') . get_the_title($post->ID).'" class="button icon" >'. __('Read more', 'uu2014') .'</a>';
+	return '...';
 	}
 }
 
@@ -762,7 +763,8 @@ function uu_excerpt($charlength) {
 		} else {
 			echo $subex;
 		}
-		echo __(', read more...', 'uu2014');
+
+		echo '...';
 	} else {
 		echo $excerpt;
 	}
@@ -990,29 +992,42 @@ function uu_display_all_taxonomies() {
 // Fixes issue of agenda subcategories not loading category-agenda.php
 // Use a parent category slug if it exists   http://wordpress.stackexchange.com/questions/4557/how-can-i-make-all-subcategories-use-the-template-of-its-category-parent
 function child_force_category_template($template) {
+
+
     $cat = get_query_var('cat');
     $category = get_category($cat);
-    $cat_parent = get_category($category->category_parent);
-
+    
     if ( file_exists(TEMPLATEPATH . '/category-' . $category->cat_ID . '.php') ) {
         $cat_template = TEMPLATEPATH . '/category-' . $category ->cat_ID . '.php';
     } elseif ( file_exists(TEMPLATEPATH . '/category-' . $category->slug . '.php') ) {
         $cat_template = TEMPLATEPATH . '/category-' . $category ->slug . '.php';
     } elseif ( file_exists(TEMPLATEPATH . '/category-' . $category->category_parent . '.php') ) {
         $cat_template = TEMPLATEPATH . '/category-' . $category->category_parent . '.php';
-    } else {
+    } elseif (!is_wp_error(get_category($category->category_parent))) {
+    
         // Get Parent Slug
-        
+		$cat_parent = get_category($category->category_parent);
 
         if ( file_exists(TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php') ) {
-            $cat_template = TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php';
-        } else {
-            $cat_template = $template;
+           $cat_template = TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php';
         }
-
+    } else {
+    	$cat_template = $template;
     }
 
     return $cat_template;
 }
 add_action('category_template', 'child_force_category_template');
+
+// fix email sender and address in multisite
+
+add_filter( 'wp_mail_from_name', function( $name ) {
+	$blog_title = get_bloginfo('name');
+	return $blog_title;
+});
+
+add_filter( 'wp_mail_from', function( $email ) {
+	$blog_email = get_bloginfo('admin_email');
+	return $blog_email;
+});
 

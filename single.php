@@ -61,7 +61,7 @@
 					<?php if( get_field('uu_agenda_start_time') ) { ?>
 						<div class="agenda-item">
 							<label class="agenda-item-label"><?php _e('Time', 'uu2014') ?>: </label>
-							<?php echo get_field('uu_agenda_start_time'); ?><?php if( get_field('uu_agenda_end_time') ) { ?> - <?php echo get_field('uu_agenda_end_time'); } ?>
+							<?php the_field('uu_agenda_start_time'); ?><?php if( get_field('uu_agenda_end_time') ) { ?> - <?php echo the_field('uu_agenda_end_time'); } ?>
 
 						</div>
 					<?php 	} ?>

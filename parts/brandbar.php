@@ -41,7 +41,7 @@
 			</div>
 
 <?php if ( function_exists('icl_object_id') ) :  //check if WPML is activated ?> 
-			<div class="col-sm-3 col-xs-2 hidden-print" role="search">
+			<div class="col-md-5 col-sm-4 col-xs-2 hidden-print" role="search">
 				<div class="brandbar-search">
 					
 						<form method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
@@ -52,7 +52,7 @@
 					
 				</div>
 			</div>
-			<div class="col-sm-3 col-xs-2 hidden-print">
+			<div class="col-md-1 col-sm-2 col-xs-2 hidden-print">
 				<div class="language-switch"><?php icl_language_link(); ?></div>
 			</div>
 		<?php else : ?>

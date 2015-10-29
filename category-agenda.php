@@ -19,7 +19,7 @@ get_header(); ?>
 	$args = array(
 		'post_type'		=> 'post',
 		'category__in' => $current_catid,
-		'posts_per_page'	=> 10,
+		'posts_per_page'	=> 50,
 		'meta_key'		=> 'uu_agenda_start_date',
 		'meta_query' => array(
 	        array(
@@ -69,7 +69,7 @@ get_header(); ?>
 	        )
 	    ),
 		'orderby'		=> 'meta_value_num',
-		'order'			=> 'ASC',
+		'order'			=> 'DESC',
 	);
 
 	$agenda_past_query = new WP_Query( $args2 );

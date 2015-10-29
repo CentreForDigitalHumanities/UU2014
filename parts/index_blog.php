@@ -1,4 +1,4 @@
-<div id="masonry" class="row" data-masonry-options="{ 'itemSelector': '.masonry-item', 'columWidth': '.masonry-item' }">
+<div id="masonry"  data-masonry-options="{ 'itemSelector': '.masonry-item', 'columWidth': '.masonry-item' }">
 	
 	<?php 
 

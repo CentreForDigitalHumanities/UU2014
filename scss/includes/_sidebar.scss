@@ -29,7 +29,9 @@
 				padding: 9px 0;
 				display: block;
 			}
-			
+			.icononly, .button {
+				padding: 0;
+			}
 		}
 		.current-menu-item > a {
 			font-weight: bold;

@@ -58,6 +58,7 @@
 		<div class="home-agenda-excerpt">
 			<?php uu_excerpt('160'); ?>
 		</div>
+		<!-- <span class="button icon small"><?php _e('Read more', 'uu2014'); ?></span> -->
 	</div>
 	<?php if ( has_post_thumbnail() ) : ?>
 	<div class="col-sm-3">

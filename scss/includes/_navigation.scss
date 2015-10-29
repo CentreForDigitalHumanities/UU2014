@@ -15,8 +15,7 @@
 
 .navbar-nav > li > a {
 	font-size: 16px;
-	padding-left: 15px;
-	padding-right: 15px;
+	padding: 15px 12px;
 	transition: 0.3s;
 	font-family: $sans;
 	text-decoration: none;
@@ -65,14 +64,14 @@
 }
 
 #home-icon {
-	@include bp(sm) {
+	@include bp(xs) {
 		display: none;
 	}
 }
 
 .menuitem-home {
 	display: none;
-	@include bp(sm) {
+	@include bp(xs) {
 		display: block;
 	}
 }	

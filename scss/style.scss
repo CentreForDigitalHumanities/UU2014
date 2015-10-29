@@ -74,12 +74,14 @@ Stylesheet: Main Stylesheet
 @import "includes/cpt/agenda";
 @import "includes/cpt/people";
 @import "includes/cpt/news";
+@import "includes/cpt/blog";
 
 @import "includes/widgets/wpml";
 @import "includes/widgets/image";
 @import "includes/widgets/socialmedia";
 @import "includes/widgets/sidebarlogin";
 @import "includes/widgets/upcoming_agenda";
+@import "includes/rss";
 
 @import "includes/plugins/breadcrumb-navxt";
 @import "includes/plugins/formidable";

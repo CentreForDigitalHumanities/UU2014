@@ -1,12 +1,11 @@
 {
     "key": "group_54f80a1a7d936",
-    "title": "Agenda",
+    "title": "Agenda en",
     "fields": [
         {
             "key": "field_54afc57a46488",
-            "label": "Start Datum",
+            "label": "Start Date",
             "name": "uu_agenda_start_date",
-            "prefix": "",
             "type": "date_picker",
             "instructions": "",
             "required": 1,
@@ -16,15 +15,14 @@
                 "class": "",
                 "id": ""
             },
-            "first_day": 1,
+            "display_format": "d\/m\/Y",
             "return_format": "Ymd",
-            "display_format": "d\/m\/Y"
+            "first_day": 1
         },
         {
             "key": "field_54afc5c646489",
-            "label": "Eind datum",
+            "label": "End date",
             "name": "uu_agenda_end_date",
-            "prefix": "",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
@@ -34,15 +32,14 @@
                 "class": "",
                 "id": ""
             },
-            "first_day": 1,
+            "display_format": "d\/m\/Y",
             "return_format": "Ymd",
-            "display_format": "d\/m\/Y"
+            "first_day": 1
         },
         {
             "key": "field_54afc6714648c",
-            "label": "Geen tijd",
+            "label": "All day",
             "name": "uu_agenda_all_day",
-            "prefix": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -57,9 +54,8 @@
         },
         {
             "key": "field_54afc5d94648a",
-            "label": "Start tijd",
+            "label": "Start time",
             "name": "uu_agenda_start_time",
-            "prefix": "",
             "type": "date_time_picker",
             "instructions": "",
             "required": 0,
@@ -82,14 +78,13 @@
             "time_format": "H:mm",
             "show_week_number": "false",
             "picker": "select",
-            "save_as_timestamp": "true",
+            "save_as_timestamp": "false",
             "get_as_timestamp": "false"
         },
         {
             "key": "field_54afc6414648b",
-            "label": "Eind tijd",
+            "label": "End time",
             "name": "uu_agenda_end_time",
-            "prefix": "",
             "type": "date_time_picker",
             "instructions": "",
             "required": 0,
@@ -112,14 +107,13 @@
             "time_format": "H:mm",
             "show_week_number": "false",
             "picker": "select",
-            "save_as_timestamp": "true",
+            "save_as_timestamp": "false",
             "get_as_timestamp": "false"
         },
         {
             "key": "field_54afc6bb4648d",
-            "label": "Locatie",
+            "label": "Location",
             "name": "uu_agenda_location",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -133,7 +127,6 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
             "maxlength": "",
             "readonly": 0,
             "disabled": 0
@@ -142,7 +135,6 @@
             "key": "field_54afc6d94648e",
             "label": "Url",
             "name": "uu_agenda_url",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -163,9 +155,8 @@
         },
         {
             "key": "field_54afc6fc4648f",
-            "label": "Afbeelding",
+            "label": "Image",
             "name": "uu_agenda_image",
-            "prefix": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -175,15 +166,15 @@
                 "class": "",
                 "id": ""
             },
+            "return_format": "array",
             "preview_size": "thumbnail",
             "library": "all",
-            "return_format": "array",
-            "min_width": 0,
-            "min_height": 0,
-            "min_size": 0,
-            "max_width": 0,
-            "max_height": 0,
-            "max_size": 0,
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
             "mime_types": ""
         }
     ],
@@ -207,6 +198,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1441031358,
-    "local": "json"
+    "active": 1,
+    "description": "",
+    "modified": 1443692018
 }

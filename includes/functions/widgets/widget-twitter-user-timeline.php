@@ -4,7 +4,6 @@
  */
 class uu_twitter_user_timeline_widget extends WP_Widget {
  
- 
     /** constructor -- name this the same as the class above */
     function __construct() {
     parent::__construct(
@@ -67,7 +66,7 @@ $cache_time = 2;
   //     'consumer_key' => $comsumer_key,
   //     'consumer_secret' => $comsumer_secret
   // );
-  $username = 'jahooris';
+  $username = 'pauwnl';
   $access_token = '1570191775-alRvnT9D0AtvOetDsGi1l2RCz2Hcy9a7x5VKWTO';
   $access_token_secret = 'wTTwU8XxEBvu7GRb0WZfT49vOaBEqjZJa0aRFmoJI3JLv';
   $consumer_key = 'dCAm2NrWFBwGW3Fb0ze9M7TX6';
@@ -78,11 +77,15 @@ $cache_time = 2;
       'consumer_key' => 'dCAm2NrWFBwGW3Fb0ze9M7TX6',
       'consumer_secret' => 'Knb2WxfR3VIh8gPxUYbj7sSMyMknGtL51ytIyuaj2FngSjBPEv'
   );
-         
- function ReadLatestUpdate(){
-    global $tweet_file;
+
+  function ReadLatestUpdate(){
+    $tweet_file = 'TweetCache.json';
     global $cache_time;
-    
+    $cache_time = 2;
+    if ($tweet_file == "") {
+      echo "<h1>no tweetfile</h1>";
+    }
+
     if(!file_exists($tweet_file)){
       UpdateTimeline();
       return;
@@ -102,41 +105,54 @@ $cache_time = 2;
       $minutes = $since->i;
       
       if($minutes > $cache_time){
+        echo "opniew laden";
         //reload feed
         UpdateTimeline();
       }
       else{
+        echo "cashed tweets lezen";
         //read cache
         ReadFromCache();
       }
       
     }
-   }
+  }
    
-   function ReadFromCache(){
-    global $tweet_file;
+  function ReadFromCache(){
+    $tweet_file = 'TweetCache.json';
     $handle = fopen($tweet_file,'r');
     $data = fgets($handle); //skip first line
     $data = '';
-    while(!feof($handle)){
-      $data.= fgets($handle);
-    }
     fclose($handle);
-    echo $data;
-   }
+    echo 'read from cache';
+  }
    
-   function UpdateCache($timeline){
+  function UpdateCache($timeline){
     $tweet_file = 'TweetCache.json';
     $handle = fopen($tweet_file,'w') or die ('Cannot open cache file');
-    $data = date('m/d/Y h:i:s a', time())."\r\n".$timeline;
+    $data = date('m/d/Y h:i:s a', time())."\r\n".print_r($timeline, true);
     fwrite($handle,$data);
     fclose($handle);
-   }
+  }
 
+  function DisplayTimeline($timeline) {
+
+    foreach($timeline as $items) {
+      echo "<img src='" . $items['user']['profile_image_url'] . "' />";
+      echo $items['created_at']."<br />";
+      echo "Tweet: ". $items['text']."<br />";
+      echo "Tweeted by: ". $items['user']['name']."<br /><br />";
+    }
+
+  }
   
   function UpdateTimeline(){
-    global $settings, $amount, $username, $user;
-    $username = 'jahooris';
+    global $settings, $amount;
+
+    if(function_exists('get_field') && get_field('uu_options_twitter_username', 'option')) {
+      $username = get_field('uu_options_twitter_username', 'option');
+    }
+
     $access_token = '1570191775-alRvnT9D0AtvOetDsGi1l2RCz2Hcy9a7x5VKWTO';
     $access_token_secret = 'wTTwU8XxEBvu7GRb0WZfT49vOaBEqjZJa0aRFmoJI3JLv';
     $consumer_key = 'dCAm2NrWFBwGW3Fb0ze9M7TX6';
@@ -148,7 +164,7 @@ $cache_time = 2;
         'consumer_secret' => 'Knb2WxfR3VIh8gPxUYbj7sSMyMknGtL51ytIyuaj2FngSjBPEv'
     );
      /** Perform a GET request and echo the response **/
-    $url = "https://api.twitter.com/1.1/statuses/home_timeline.json";
+    $url = "https://api.twitter.com/1.1/statuses/user_timeline.json";
     $requestMethod = "GET";
     if (isset($_GET['user'])) {
         $user = $_GET['user'];
@@ -160,10 +176,8 @@ $cache_time = 2;
     } else {
         $count = $amount;
     }
-    $user = 'jahooris';
-    $getfield = "?screen_name=jahooris&count=$count";
-    //print_r($settings);
-    // echo $username;
+    
+    $getfield = "?screen_name=$user&count=$count";
 
     $twitter = new TwitterAPIExchange($settings);
     
@@ -171,26 +185,17 @@ $cache_time = 2;
           ->buildOauth($url, $requestMethod)
           ->performRequest(),$assoc = TRUE);
            
-           //save to cache
-           UpdateCache($timeline);
-           
-           //echo results;
-           // print_r($timeline);
+          // save to cache
+          UpdateCache($timeline);
+          
+          DisplayTimeline($timeline);
      }
   
   ReadLatestUpdate();
+  
+  // UpdateTimeline($username);
 
-  // echo "<pre>";
-  // print_r($string);
-  // echo "</pre>";
-  foreach($timeline as $items)
-      {
-          echo "<img src='" . $items['user']['profile_image_url'] . "' />";
-          echo $items['created_at']."<br />";
-          echo "Tweet: ". $items['text']."<br />";
-          echo "Tweeted by: ". $items['user']['name']."<br /><br />";
-      }
-// }
+// } // if(!(isset($username))
 ?>
 <?php echo $after_widget; ?>
 <?php

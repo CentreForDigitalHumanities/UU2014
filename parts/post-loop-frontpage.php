@@ -17,7 +17,8 @@
 			<div class="entry-content clearfix">
 				<p><?php uu_excerpt('160'); ?></p>
 			</div>
-
+			<!-- <span class="button icon small hover"><?php _e('Read more', 'uu2014'); ?></span> -->
+	
 			</div>
 			</a>
 </article>

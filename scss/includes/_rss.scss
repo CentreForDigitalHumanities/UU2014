@@ -1,0 +1,21 @@
+.uu-rss-link {
+	color: #787878;
+    display: inline-block;
+    font-weight: 300;
+    font-family: $sans;
+    font-size: 14px;
+     text-decoration: none;
+     margin: 0 0 0 15px;
+    position: relative;
+    .icononly {
+	    display: inline-block;
+	    font-family: "icomoon";
+	    font-size: 0.9em;
+	    height: 30px;
+	    line-height: 42px !important;
+	    position: relative;
+	    text-align: left;
+	    text-decoration: none !important;
+	    width: 15px;
+    }
+}   

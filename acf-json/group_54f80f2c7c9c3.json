@@ -6,7 +6,6 @@
             "key": "field_5507ea155fbe0",
             "label": "Site info",
             "name": "",
-            "prefix": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -16,13 +15,13 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top"
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_55080ac123fd5",
             "label": "Site description",
             "name": "uu_siteoptions_description",
-            "prefix": "",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -44,7 +43,6 @@
             "key": "field_5507ea2a5fbe1",
             "label": "Owner",
             "name": "uu_siteoptions_owner",
-            "prefix": "",
             "type": "checkbox",
             "instructions": "",
             "required": 1,
@@ -68,13 +66,13 @@
             "default_value": {
                 "": ""
             },
-            "layout": "horizontal"
+            "layout": "horizontal",
+            "toggle": 0
         },
         {
             "key": "field_5507ee2eedc13",
             "label": "Other",
             "name": "uu_siteoptions_other",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -104,7 +102,6 @@
             "key": "field_5507eaf15fbe2",
             "label": "Type",
             "name": "uu_siteoptions_type",
-            "prefix": "",
             "type": "checkbox",
             "instructions": "",
             "required": 0,
@@ -124,13 +121,13 @@
             "default_value": {
                 "": ""
             },
-            "layout": "horizontal"
+            "layout": "horizontal",
+            "toggle": 0
         },
         {
             "key": "field_54f9b27dcd98d",
             "label": "Homepage",
             "name": "",
-            "prefix": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -140,13 +137,13 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top"
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_54f80f57662f3",
             "label": "Layout",
             "name": "uu_options_post_types",
-            "prefix": "",
             "type": "radio",
             "instructions": "",
             "required": 0,
@@ -174,33 +171,10 @@
             "key": "field_54f98aefba4de",
             "label": "Categories news",
             "name": "uu_options_news_frontpage_cat",
-            "prefix": "",
             "type": "taxonomy",
             "instructions": "Choose one or more categories to display on the homepage. You may need to create a category first (menuitem: posts > categories)",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news_agenda"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news2"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -210,44 +184,8 @@
             "field_type": "checkbox",
             "allow_null": 0,
             "add_term": 1,
-            "load_save_terms": 1,
-            "return_format": "id",
-            "multiple": 0
-        },
-        {
-            "key": "field_55f14f2d9ff78",
-            "label": "Categories blog",
-            "name": "uu_options_blog_frontpage_cat",
-            "prefix": "",
-            "type": "taxonomy",
-            "instructions": "Choose one or more categories to display on the homepage. You may need to create a category first (menuitem: posts > categories)",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "blog"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "blog2"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "category",
-            "field_type": "checkbox",
-            "allow_null": 0,
-            "add_term": 1,
-            "load_save_terms": 1,
+            "save_terms": 1,
+            "load_terms": 0,
             "return_format": "id",
             "multiple": 0
         },
@@ -255,33 +193,10 @@
             "key": "field_54f81046662f4",
             "label": "Number of news items",
             "name": "uu_options_news_amount",
-            "prefix": "",
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news_agenda"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news2"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": 50,
                 "class": "pull-right",
@@ -301,33 +216,10 @@
             "key": "field_54f98a7eba4dd",
             "label": "News alternative title",
             "name": "uu_options_alternative_title_news",
-            "prefix": "",
             "type": "text",
             "instructions": "Choose an alternative title for the items on the frontpage, i.e. \"Blog\".",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news_agenda"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news2"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -345,33 +237,10 @@
             "key": "field_55014f8690c1a",
             "label": "News show publication date",
             "name": "uu_options_news_show_pubdate",
-            "prefix": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news_agenda"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news2"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -384,33 +253,10 @@
             "key": "field_54f810ef662f5",
             "label": "Number of agenda items",
             "name": "uu_options_agenda_amount",
-            "prefix": "",
             "type": "number",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "agenda"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news_agenda"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "agenda2"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": 50,
                 "class": "pull-right",
@@ -430,33 +276,10 @@
             "key": "field_54f98a27ba4dc",
             "label": "Agenda alternative title",
             "name": "uu_options_alternative_title_agenda",
-            "prefix": "",
             "type": "text",
             "instructions": "Optionally choose an alternative title for Agenda, i.e. \"events\"",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "news_agenda"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "agenda"
-                    }
-                ],
-                [
-                    {
-                        "field": "field_54f80f57662f3",
-                        "operator": "==",
-                        "value": "agenda2"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -471,10 +294,31 @@
             "disabled": 0
         },
         {
+            "key": "field_55f14f2d9ff78",
+            "label": "Categories blog",
+            "name": "uu_options_blog_frontpage_cat",
+            "type": "taxonomy",
+            "instructions": "Choose one or more categories to display on the homepage. You may need to create a category first (menuitem: posts > categories)",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
             "key": "field_55ffd77bbcae9",
             "label": "Blog author options",
             "name": "uu_options_blog_author_options",
-            "prefix": "",
             "type": "checkbox",
             "instructions": "",
             "required": 0,
@@ -507,13 +351,13 @@
             "default_value": {
                 "": ""
             },
-            "layout": "vertical"
+            "layout": "vertical",
+            "toggle": 0
         },
         {
             "key": "field_5539ef695f800",
             "label": "Posts and pages",
             "name": "posts_and_pages",
-            "prefix": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -523,13 +367,13 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top"
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_5539ef7e5f801",
             "label": "Show Metadata",
             "name": "uu_options_posts_metadata",
-            "prefix": "",
             "type": "checkbox",
             "instructions": "",
             "required": 0,
@@ -549,13 +393,13 @@
                 "author": "author",
                 "taxonomy": "taxonomy"
             },
-            "layout": "horizontal"
+            "layout": "horizontal",
+            "toggle": 0
         },
         {
             "key": "field_55ae16a94de12",
             "label": "People page trim description",
             "name": "uu_options_people_page_trim_description",
-            "prefix": "",
             "type": "true_false",
             "instructions": "Trim the description field on the people page and people page large template.",
             "required": 0,
@@ -572,7 +416,6 @@
             "key": "field_555ef048d8d15",
             "label": "Social Media",
             "name": "",
-            "prefix": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -582,13 +425,13 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top"
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_558283fd13755",
             "label": "Site image",
             "name": "uu_options_site_share_image",
-            "prefix": "",
             "type": "image",
             "instructions": "The image that is displayed when this site is added to Facebook, LinkedIn etc. Best is to choose a high resolution, Facebook recommends at least 1200 x 630px for high quality full size previews.",
             "required": 0,
@@ -613,7 +456,6 @@
             "key": "field_555ef2c98a269",
             "label": "Follow settings",
             "name": "",
-            "prefix": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -630,7 +472,6 @@
             "key": "field_555ef11dd8d17",
             "label": "Facebook url",
             "name": "uu_options_facebook_url",
-            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -647,7 +488,6 @@
             "key": "field_555ef16fd8d18",
             "label": "Twitter url",
             "name": "uu_options_twitter_url",
-            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -664,7 +504,6 @@
             "key": "field_555ef179d8d19",
             "label": "Youtube url",
             "name": "uu_options_youtube_url",
-            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -681,7 +520,6 @@
             "key": "field_555ef186d8d1a",
             "label": "LinkedIn url",
             "name": "uu_options_linkedin_url",
-            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -698,7 +536,6 @@
             "key": "field_555ef195d8d1b",
             "label": "Pinterest url",
             "name": "uu_options_pinterest_url",
-            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -715,7 +552,6 @@
             "key": "field_555ef1add8d1c",
             "label": "Instagram url",
             "name": "uu_options_instagram_url",
-            "prefix": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -732,7 +568,6 @@
             "key": "field_555ef3d7d02e7",
             "label": "Share settings",
             "name": "",
-            "prefix": "",
             "type": "message",
             "instructions": "",
             "required": 0,
@@ -749,7 +584,6 @@
             "key": "field_555ef5703219f",
             "label": "Which buttons",
             "name": "uu_options_share_buttons_selection",
-            "prefix": "",
             "type": "checkbox",
             "instructions": "",
             "required": 0,
@@ -768,13 +602,13 @@
             "default_value": {
                 "": ""
             },
-            "layout": "vertical"
+            "layout": "vertical",
+            "toggle": 0
         },
         {
             "key": "field_555ef3e6d02e8",
             "label": "Location",
             "name": "uu_options_share_buttons_location",
-            "prefix": "",
             "type": "taxonomy",
             "instructions": "Where are the share buttons displayed?",
             "required": 0,
@@ -790,13 +624,14 @@
             "add_term": 1,
             "load_save_terms": 0,
             "return_format": "object",
-            "multiple": 0
+            "multiple": 0,
+            "load_terms": 0,
+            "save_terms": 0
         },
         {
             "key": "field_559fc1df2afb2",
             "label": "Twitter timeline",
             "name": "",
-            "prefix": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -806,13 +641,13 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top"
+            "placement": "top",
+            "endpoint": 0
         },
         {
             "key": "field_559fc1ff2afb3",
             "label": "Twitter username",
             "name": "uu_options_twitter_username",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -834,7 +669,6 @@
             "key": "field_559fc22d2afb4",
             "label": "Twitter Consumer Key (API Key)",
             "name": "uu_options_twitter_consumer_key",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -856,7 +690,6 @@
             "key": "field_559fc2692afb5",
             "label": "Twitter Consumer Secret (API Secret)",
             "name": "uu_options_twitter_consumer_secret",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -878,7 +711,6 @@
             "key": "field_559fc2a52afb6",
             "label": "Twitter Access Token",
             "name": "uu_options_twitter_access_token",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -900,7 +732,6 @@
             "key": "field_559fc2c72afb7",
             "label": "Twitter Access Token Secret",
             "name": "uu_options_twitter_access_token_secret",
-            "prefix": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -934,5 +765,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "modified": 1442836043
+    "active": 1,
+    "description": "",
+    "modified": 1444902923
 }

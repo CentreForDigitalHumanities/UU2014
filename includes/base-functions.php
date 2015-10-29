@@ -132,8 +132,7 @@ function uu2014_page_navi($before = '', $after = '') {
 		echo '<li class="bpn-first-page-link"><a rel="prev" href="'.get_pagenum_link().'" title="'.$first_page_text.'">'.$first_page_text.'</a></li>';
 	}
 	echo '<li>';
-	previous_posts_link('<span class="pager back"><svg version="1.1" class="arrow-left" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="7.777px" height="12.727px" viewBox="0 0 7.777 12.727" fill="#ffffff" enable-background="new 0 0 7.777 12.727" xml:space="preserve">
+	previous_posts_link('<span class="pager back"><svg class="arrow-left" fill="#ffffff" viewBox="-10 -15 30 30" height="30px" width="30px" y="0px" x="0px" version="1.1">
 <polygon points="1.414,4.949 6.363,0 7.778,1.414 2.827,6.365 7.778,11.313 6.363,12.727 1.414,7.778 0,6.365 "/>
 </svg></span>');
 	echo '</li>';
@@ -152,9 +151,8 @@ function uu2014_page_navi($before = '', $after = '') {
 		}
 	}
 	echo '<li>';
-	next_posts_link('<span class="pager next"><svg version="1.1" class="arrow-right" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="7.778px" height="12.727px" viewBox="0 0 7.778 12.727" fill="#ffffff" enable-background="new 0 0 7.778 12.727" xml:space="preserve">
-<polygon fill-rule="evenodd" clip-rule="evenodd" points="6.364,7.778 1.415,12.727 0,11.313 4.95,6.363 0,1.414 1.415,0 
+	next_posts_link('<span class="pager next"><svg class="arrow-left" fill="#ffffff" viewBox="-10 -15 30 30" height="30px" width="30px" y="0px" x="0px" version="1.1">
+<polygon points="6.364,7.778 1.415,12.727 0,11.313 4.95,6.363 0,1.414 1.415,0 
 	6.364,4.949 7.778,6.363 6.364,7.778 "/>
 </svg></span>');
 	echo '</li>';

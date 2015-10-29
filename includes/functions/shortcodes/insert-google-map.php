@@ -1,12 +1,18 @@
 <?php
 class GoogleMap_Shortcode {
 
+	static $add_google_map_script;
+
 	static function init() {
 		add_shortcode('insert_map', array(__CLASS__, 'render_shortcode'));
-		add_action('wp_footer', array(__CLASS__, 'enqueue_map_javascript'));
+		add_action('init', array(__CLASS__, 'register_google_map_script'));
+		add_action('wp_footer', array(__CLASS__, 'print_google_map_script'));
 	}
 
 	static function render_shortcode($atts) {
+		
+		self::$add_google_map_script = true;
+
 		extract( shortcode_atts( array(
 			'id' => 'map-canvas-1',
 			'class' => '',
@@ -50,14 +56,18 @@ class GoogleMap_Shortcode {
 
 	}
 
-	static function enqueue_map_javascript() {
-		wp_register_script('googlemaps', ('http://maps.google.com/maps/api/js?sensor=false'), false, null, true);
-    	wp_enqueue_script('googlemaps');
-		// wp_enqueue_script( 'map-js', 
-		// 	"https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false",
-		// 	"jquery"
-		// );
+	static function register_google_map_script() {
+		// wp_register_script('my-script', plugins_url('my-script.js', __FILE__), array('jquery'), '1.0', true);
+		wp_register_script('googlemaps', ('http://maps.google.com/maps/api/js?sensor=false'), array('jquery'), '1.0', true);
 	}
+
+	static function print_google_map_script() {
+		if ( ! self::$add_google_map_script )
+			return;
+
+		wp_print_scripts('googlemaps');
+	}
+
 }
 
 GoogleMap_Shortcode::init();

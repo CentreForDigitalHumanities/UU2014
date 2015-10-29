@@ -1,5 +1,6 @@
 <div class="col-sm-8">
-	<h2><?php _e('Agenda', 'uu2014') ?></h2>
+	<?php if(get_field('uu_options_alternative_title_agenda', 'option')) { $agenda_title = get_field('uu_options_alternative_title_agenda', 'option'); } else { $agenda_title = __('Agenda', 'uu2014'); } ?>
+	<h2><?php echo $agenda_title; ?></h2>
 	<div class="agenda-archive">
 		<?php 
 

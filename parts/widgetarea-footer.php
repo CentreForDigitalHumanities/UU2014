@@ -1,6 +1,6 @@
 <?php 
        	if(is_active_sidebar( 'footer-widget-area-1' ) && is_active_sidebar( 'footer-widget-area-2' ) && is_active_sidebar( 'footer-widget-area-3' ) && is_active_sidebar( 'footer-widget-area-4' )) { ?>
-			<div id="footer-widget-area hidden-print">
+			<div id="footer-widget-area" class="hidden-print">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3 col-sm-6">
@@ -21,7 +21,7 @@
 		<?php	}
 
 		elseif(is_active_sidebar( 'footer-widget-area-1' ) && is_active_sidebar( 'footer-widget-area-2' ) && is_active_sidebar( 'footer-widget-area-3' )) { ?>
-			<div id="footer-widget-area hidden-print">
+			<div id="footer-widget-area" class="hidden-print">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-3 col-sm-6">
@@ -40,7 +40,7 @@
 
 		<?php	}
 		 elseif(is_active_sidebar( 'footer-widget-area-1' ) && is_active_sidebar( 'footer-widget-area-2' )) {  ?>
-			<div id="footer-widget-area hidden-print">
+			<div id="footer-widget-area" class="hidden-print">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6 col-sm-6">
@@ -54,7 +54,7 @@
 			</div>		
 		<?php } 		 
        	elseif(is_active_sidebar( 'footer-widget-area-1' )) {  ?>
-			<div id="footer-widget-area hidden-print">
+			<div id="footer-widget-area" class="hidden-print">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">

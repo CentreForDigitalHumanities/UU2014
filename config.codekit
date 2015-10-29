@@ -11,6 +11,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/acf-json\/en\/group_54e72fcf83820.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/en\/group_54e72fcf83820.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/en\/group_54e72fcf83820-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
 	"\/acf-json\/en\/group_54f80a1a7d936.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -33,13 +44,13 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
-	"\/acf-json\/en\/group_55e464f07a49d.json": {
+	"\/acf-json\/en\/group_552fb3bb348fb.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/acf-json\/en\/group_55e464f07a49d.json",
+		"inputAbbreviatedPath": "\/acf-json\/en\/group_552fb3bb348fb.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/acf-json\/en\/group_55e464f07a49d-min.json",
+		"outputAbbreviatedPath": "\/acf-json\/en\/group_552fb3bb348fb-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
@@ -51,6 +62,17 @@
 		"inputAbbreviatedPath": "\/acf-json\/en\/group_55ffd6c059957.json",
 		"orderOutput": 0,
 		"outputAbbreviatedPath": "\/acf-json\/en\/group_55ffd6c059957-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/acf-json\/en\/group_5605401dec197.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/en\/group_5605401dec197.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/en\/group_5605401dec197-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
@@ -108,13 +130,57 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/acf-json\/nl\/group_55e464f07a49d.json": {
+	"\/acf-json\/nl\/group_54e72fcf83820.json": {
 		"fileType": 524288,
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/acf-json\/nl\/group_55e464f07a49d.json",
+		"inputAbbreviatedPath": "\/acf-json\/nl\/group_54e72fcf83820.json",
 		"orderOutput": 0,
-		"outputAbbreviatedPath": "\/acf-json\/nl\/group_55e464f07a49d-min.json",
+		"outputAbbreviatedPath": "\/acf-json\/nl\/group_54e72fcf83820-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/acf-json\/nl\/group_54f80f2c7c9c3.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/nl\/group_54f80f2c7c9c3.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/nl\/group_54f80f2c7c9c3-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/acf-json\/nl\/group_552fb3bb348fb.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/nl\/group_552fb3bb348fb.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/nl\/group_552fb3bb348fb-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/acf-json\/nl\/group_55ffd6c059957.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/nl\/group_55ffd6c059957.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/nl\/group_55ffd6c059957-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/acf-json\/nl\/group_5605401dec197.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/acf-json\/nl\/group_5605401dec197.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/acf-json\/nl\/group_5605401dec197-min.json",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
@@ -195,7 +261,7 @@
 		"syntaxCheckerStyle": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/_bootstrap-compass.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -208,10 +274,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/_bootstrap-mincer.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -224,10 +290,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/_bootstrap-sprockets.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -240,10 +306,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/_bootstrap.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -256,10 +322,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_alerts.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -272,10 +338,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_badges.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -288,10 +354,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_breadcrumbs.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -304,10 +370,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_button-groups.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -320,10 +386,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_buttons.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -336,10 +402,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_carousel.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -352,10 +418,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_close.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -368,10 +434,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_code.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -384,10 +450,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_component-animations.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -400,10 +466,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_dropdowns.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -416,10 +482,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_forms.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -432,10 +498,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_glyphicons.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -448,10 +514,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_grid.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -464,10 +530,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_input-groups.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -480,10 +546,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_jumbotron.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -496,10 +562,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_labels.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -512,10 +578,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_list-group.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -528,10 +594,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_media.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -544,10 +610,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_mixins.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -560,10 +626,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_modals.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -576,10 +642,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navbar.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -592,10 +658,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_navs.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -608,10 +674,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_normalize.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -624,10 +690,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_pager.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -640,10 +706,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_pagination.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -656,10 +722,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_panels.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -672,10 +738,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_popovers.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -688,10 +754,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_print.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -704,10 +770,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_progress-bars.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -720,10 +786,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_responsive-embed.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -736,10 +802,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_responsive-utilities.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -752,10 +818,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_scaffolding.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -768,10 +834,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_tables.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -784,10 +850,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_theme.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -800,10 +866,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_thumbnails.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -816,10 +882,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_tooltip.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -832,10 +898,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_type.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -848,10 +914,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_utilities.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -864,10 +930,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_variables.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -880,10 +946,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/_wells.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -896,10 +962,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_alerts.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -912,10 +978,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_background-variant.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -928,10 +994,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_border-radius.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -944,10 +1010,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_buttons.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -960,10 +1026,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_center-block.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -976,10 +1042,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_clearfix.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -992,10 +1058,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_forms.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1008,10 +1074,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_gradients.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1024,10 +1090,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_grid-framework.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1040,10 +1106,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_grid.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1056,10 +1122,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_hide-text.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1072,10 +1138,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_image.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1088,10 +1154,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_labels.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1104,10 +1170,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_list-group.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1120,10 +1186,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_nav-divider.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1136,10 +1202,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_nav-vertical-align.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1152,10 +1218,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_opacity.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1168,10 +1234,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_pagination.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1184,10 +1250,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_panels.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1200,10 +1266,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_progress-bar.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1216,10 +1282,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_reset-filter.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1232,10 +1298,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_reset-text.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1248,10 +1314,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_resize.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1264,10 +1330,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_responsive-visibility.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1280,10 +1346,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_size.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1296,10 +1362,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_tab-focus.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1312,10 +1378,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_table-row.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1328,10 +1394,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_text-emphasis.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1344,10 +1410,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_text-overflow.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1360,10 +1426,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/assets\/stylesheets\/bootstrap\/mixins\/_vendor-prefixes.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1376,7 +1442,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/bootstrap-sass\/CHANGELOG.md": {
 		"criticStyle": 0,
@@ -1751,7 +1817,7 @@
 		"strictUnits": 0
 		},
 	"\/bower_components\/font-awesome\/scss\/_bordered-pulled.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1764,10 +1830,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_core.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1780,10 +1846,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_extras.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1796,10 +1862,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_fixed-width.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1812,10 +1878,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_icons.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1828,10 +1894,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_larger.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1844,10 +1910,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_list.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1860,10 +1926,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_mixins.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1876,10 +1942,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_path.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1892,10 +1958,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_rotated-flipped.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1908,10 +1974,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_spinning.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1924,10 +1990,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_stacked.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1940,10 +2006,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/_variables.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1956,10 +2022,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/font-awesome\/scss\/font-awesome.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -1972,7 +2038,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/bower_components\/grunt\/CONTRIBUTING.md": {
 		"criticStyle": 0,
@@ -2746,6 +2812,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/css\/bower_components\/boostrap-sass\/assets\/stylesheets\/bootstrap\/bootstrap.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/css\/buttons.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/css\/buttons.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -14236,6 +14311,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1
 		},
+	"\/page-blog.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/page-blog.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/page-full-width.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -14539,7 +14623,7 @@
 		"processed": 0
 		},
 	"\/scss\/_people.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14552,7 +14636,23 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
+		},
+	"\/scss\/buttons.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 1,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/buttons.scss",
+		"outputAbbreviatedPath": "\/css\/buttons.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 1
 		},
 	"\/scss\/codekit-config.json": {
 		"fileType": 524288,
@@ -14575,7 +14675,7 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/scss\/editor-styles.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14588,7 +14688,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/ie.css": {
 		"fileType": 16,
@@ -14600,7 +14700,7 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/scss\/ie.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14613,10 +14713,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_archive.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14629,10 +14729,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_base_comments.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14645,10 +14745,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_brandbar.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14661,10 +14761,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_buttons.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14677,10 +14777,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_carousel.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14693,10 +14793,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_content.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14709,10 +14809,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_fixes.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14725,10 +14825,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_footer.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14741,10 +14841,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_forms.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14757,10 +14857,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_gallery.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14773,10 +14873,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_gravity-forms.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14789,10 +14889,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_header.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14805,10 +14905,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_home-blog.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14821,10 +14921,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_layout.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14837,10 +14937,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_mixins.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14853,10 +14953,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_navigation.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14869,10 +14969,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_offcanvas-nav.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14885,10 +14985,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_print.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14901,10 +15001,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_retina.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14917,10 +15017,26 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
+		},
+	"\/scss\/includes\/_rss.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 1,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/includes\/_rss.scss",
+		"outputAbbreviatedPath": "\/css\/_rss.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_search.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14933,10 +15049,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_shortcodes.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14949,10 +15065,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_sidebar.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14965,10 +15081,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_typography.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14981,10 +15097,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_uu-huisstijl.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -14997,10 +15113,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_variables.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15013,10 +15129,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/_widgetareas.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15029,10 +15145,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/cpt\/_agenda.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15045,10 +15161,26 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
+		},
+	"\/scss\/includes\/cpt\/_blog.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 1,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/includes\/cpt\/_blog.scss",
+		"outputAbbreviatedPath": "\/css\/_blog.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/cpt\/_news.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15061,10 +15193,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/cpt\/_people.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15077,10 +15209,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/gform_styles\/_credit_cards.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15093,10 +15225,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/gform_styles\/_other_fields.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15109,10 +15241,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/gform_styles\/_ready_classes.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15125,10 +15257,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/gform_styles\/_submission_and_errors.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15141,10 +15273,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/plugins\/_breadcrumb-navxt.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15157,10 +15289,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/plugins\/_formidable.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15173,10 +15305,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/widgets\/_image.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15189,10 +15321,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/widgets\/_sidebarlogin.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15205,10 +15337,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/widgets\/_socialmedia.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15221,10 +15353,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/widgets\/_upcoming_agenda.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15237,10 +15369,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/includes\/widgets\/_wpml.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15253,10 +15385,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/_chosenjs.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15269,10 +15401,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/_icheck.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15285,10 +15417,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/_iconizr-svg-sprite.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15301,10 +15433,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/_magnific-popup.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15317,10 +15449,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/_normalize.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15333,10 +15465,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/_all.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15349,10 +15481,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_aero.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15365,10 +15497,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_all.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15381,10 +15513,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_blue.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15397,10 +15529,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_flat.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15413,10 +15545,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_green.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15429,10 +15561,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_grey.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15445,10 +15577,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_orange.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15461,10 +15593,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_pink.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15477,10 +15609,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_purple.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15493,10 +15625,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_red.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15509,10 +15641,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/flat\/_yellow.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15525,10 +15657,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/futurico\/_futurico.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15541,10 +15673,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_aero.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15557,10 +15689,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_all.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15573,10 +15705,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_blue.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15589,10 +15721,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_green.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15605,10 +15737,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_grey.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15621,10 +15753,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_line.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15637,10 +15769,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_orange.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15653,10 +15785,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_pink.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15669,10 +15801,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_purple.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15685,10 +15817,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_red.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15701,10 +15833,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/line\/_yellow.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15717,10 +15849,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_aero.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15733,10 +15865,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_all.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15749,10 +15881,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_blue.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15765,10 +15897,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_green.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15781,10 +15913,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_grey.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15797,10 +15929,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_minimal.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15813,10 +15945,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_orange.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15829,10 +15961,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_pink.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15845,10 +15977,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_purple.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15861,10 +15993,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_red.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15877,10 +16009,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/minimal\/_yellow.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15893,10 +16025,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/polaris\/_polaris.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15909,10 +16041,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_aero.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15925,10 +16057,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_all.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15941,10 +16073,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_blue.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15957,10 +16089,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_green.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15973,10 +16105,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_grey.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -15989,10 +16121,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_orange.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16005,10 +16137,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_pink.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16021,10 +16153,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_purple.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16037,10 +16169,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_red.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16053,10 +16185,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_square.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16069,10 +16201,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icheck_skins\/square\/_yellow.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16085,7 +16217,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/libs\/icons\/icons.png": {
 		"fileType": 32768,
@@ -16108,7 +16240,7 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/scss\/login.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16121,10 +16253,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/people-admin.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16137,10 +16269,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/print.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16153,10 +16285,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/responsive-styles\/_lg.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16169,10 +16301,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/responsive-styles\/_md.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16185,10 +16317,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/responsive-styles\/_sm.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16201,10 +16333,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/responsive-styles\/_xs.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16217,10 +16349,10 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/screen.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16233,7 +16365,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/scss\/style copy.css": {
 		"fileType": 16,
@@ -16245,7 +16377,7 @@
 		"outputPathIsSetByUser": 0
 		},
 	"\/scss\/style.scss": {
-		"createSourceMap": 1,
+		"createSourceMap": 0,
 		"debugStyle": 1,
 		"decimalPrecision": 5,
 		"fileType": 4,
@@ -16258,7 +16390,7 @@
 		"outputStyle": 3,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
-		"useLibsass": 0
+		"useLibsass": 1
 		},
 	"\/search.php": {
 		"fileType": 8192,
@@ -16337,7 +16469,7 @@
 	},
 "hooks": [
 	],
-"lastSavedByUser": "Welling, S.F. (Simon)",
+"lastSavedByUser": "Simon Welling",
 "manualImportLinks": {
 	},
 "projectAttributes": {
@@ -16925,7 +17057,7 @@
 	"sassAutoOutputPathReplace1": "sass",
 	"sassAutoOutputPathReplace2": "css",
 	"sassAutoOutputPathStyle": 2,
-	"sassCreateSourceMap": 1,
+	"sassCreateSourceMap": 0,
 	"sassDebugStyle": 1,
 	"sassDecimalPrecision": 5,
 	"sassOutputStyle": 3,

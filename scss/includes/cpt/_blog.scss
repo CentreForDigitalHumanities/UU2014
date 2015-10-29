@@ -1,0 +1,13 @@
+.page-template-page-blog {
+	.col-lg-3 {
+		
+    	width: 33%;
+    
+		@include bp(md) {
+    		width: 50%;
+    	}
+		@include bp(sm) {
+    		width: 50%;
+    	}
+	}
+}

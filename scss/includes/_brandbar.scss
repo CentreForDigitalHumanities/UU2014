@@ -104,11 +104,9 @@ input[type="submit"].searchbutton, .searchbutton {
 
 .logodiv {
 	padding-bottom: 10px;
-    padding-left: 6px;
     padding-top: 10px;
     @include bp(sm) {
 		padding-bottom: 5px;
-    	padding-left: 6px;
     	padding-top: 5px;
     	min-width: 194px;
     	display: inline-block;

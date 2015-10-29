@@ -1,5 +1,7 @@
 <div class="col-sm-8">
-	<h2><?php if(get_field('uu_options_alternative_title_news', 'option')) { the_field('uu_options_alternative_title_news', 'option'); } else { _e('News', 'uu2014'); } ?></h2>
+<?php if(get_field('uu_options_alternative_title_news', 'option')) { $news_title = get_field('uu_options_alternative_title_news', 'option'); } else { $news_title = __('News', 'uu2014'); } ?>
+
+	<h2><?php echo $news_title; ?></h2>
 	<?php 
 
 		$newsamount = get_field('uu_options_news_amount', 'option');
@@ -27,7 +29,12 @@
 	get_template_part( 'parts/post-loop-frontpage'); ?> 
 	
 
-	<?php } } else { ?>
+	<?php } ?>
+		<a class="uu-rss-link" href="/?feed=rss&cat=<?php echo $agendaterms; ?>"><span class="icononly rss"></span>RSS</a>		
+		<?php if(get_field('uu_options_frontpage_read_more_links', 'option')) { ?>
+		<a class="button icon frontpage-read-more" href="/?cat=<?php echo $terms; ?>"><?php echo __('More', 'uu2014') . ' ' . $news_title; ?></a>		
+		<?php } ?>	
+	<?php } else { ?>
 
 	<?php get_template_part('includes/template','error'); // WordPress template error message ?>
 

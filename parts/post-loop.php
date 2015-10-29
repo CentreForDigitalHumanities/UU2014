@@ -15,6 +15,7 @@
 
 						<section class="entry-content clearfix">
 							<?php the_excerpt(); ?>
+							<?php echo '<a href="' . get_permalink($post->ID) . '" title="'. __('Read', 'uu2014') . get_the_title($post->ID).'" class="button icon" >'. __('Read more', 'uu2014') .'</a>'; ?>
 							<?php wp_link_pages( array(
 								'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'uu2014' ) . '</span>',
 								'after'       => '</div>',
