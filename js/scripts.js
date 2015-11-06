@@ -296,7 +296,6 @@ jQuery(window).resize(function(){
 });
 
 
-
 jQuery(window).load(function() {
     if(document.querySelector('#masonry')) { 
       // MASSONRY Without jquery
@@ -308,19 +307,19 @@ jQuery(window).load(function() {
     } 
 });
 
+/* Play and pause button for Bootstrap Carousel */
+
 jQuery('.carousel-pause-btn').click(function() {
   jQuery('#uu2014carousel').carousel('pause');
 });
 
 jQuery('.carousel-play-btn').click(function() {
-  //jQuery('#uu2014carousel').data('bs.carousel').options.interval=1000;
   jQuery('#uu2014carousel').carousel('cycle');
 });
+
+/* Enable deep linking to Bootstrap Collapsibles content */
 
 jQuery(document).ready(function() {
   var anchor = window.location.hash;
   jQuery(anchor).collapse('toggle');
 });
-
-      
-
