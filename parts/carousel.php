@@ -33,6 +33,10 @@ if ($term !== 0 && $term !== null) : ?>
 	<?php } 
 	?>
     </ol>
+	<div class="carousel-controls" style="position: absolute; bottom: 10px; left: 47%; z-index:15;">
+		<a class="carousel-play-btn" style="color:#fff;" href="#" id="carousel-play">play</a>
+		<a class="carousel-pause-btn" style="color:#fff;" href="#" id="carousel-pause">pause</a>
+	</div>
 	<div class="carousel-inner" role="listbox">
 		<?php 
 		$the_query = new WP_Query(array(
@@ -102,7 +106,6 @@ if ($term !== 0 && $term !== null) : ?>
 	<a class="left carousel-control" title="<?php _e('Previous slide', 'uu2014'); ?>" href="#uu2014carousel" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span><span class="sr-only"><?php _e('Previous slide', 'uu2014'); ?></span></a>
     <a class="right carousel-control" title="<?php _e('Next slide', 'uu2014'); ?>" href="#uu2014carousel" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><span class="sr-only"><?php _e('Next slide', 'uu2014'); ?></span></a>
 </div><!-- #uu2014carousel -->
-
 <?php endif; ?>
 <!-- <a class="btn btn-large btn-primary" href="#" id="btnPause">Pause</a>
 <a class="btn btn-large btn-primary" href="#" id="btnPlay">Play</a>
