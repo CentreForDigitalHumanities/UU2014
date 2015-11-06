@@ -1,9 +1,13 @@
+<div class="category-description"><?php 
+$blogcats = get_field('uu_options_blog_frontpage_cat', 'option');
+echo category_description($blogcats); ?></div>
+
 <div id="masonry"  data-masonry-options="{ 'itemSelector': '.masonry-item', 'columWidth': '.masonry-item' }">
 	
 	<?php 
 
 		//$newsamount = get_field('uu_options_news_amount', 'option');
-		$blogcats = get_field('uu_options_blog_frontpage_cat', 'option');
+		
 		if ($blogcats) { 
 			$terms = implode(', ', $blogcats);	
 		} else {
@@ -49,13 +53,13 @@
 				$author_options = get_field('uu_options_blog_author_options' , 'options' );
 				$author_id = get_the_author_meta('ID');
 				$author_badge = get_field('author_image', 'user_'. $author_id );
-
-			if( !empty($author_badge) ) {	 
+				$size = '';
+			 
 				$size = 'thumbnail';
 				$attr = array(
 					'class'	=> "author_badge"
-					);
-				}
+				);
+			
 
 			if( !empty($author_options) ) {	
 				

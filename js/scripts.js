@@ -308,5 +308,19 @@ jQuery(window).load(function() {
     } 
 });
 
+jQuery('.carousel-pause-btn').click(function() {
+  jQuery('#uu2014carousel').carousel('pause');
+});
+
+jQuery('.carousel-play-btn').click(function() {
+  //jQuery('#uu2014carousel').data('bs.carousel').options.interval=1000;
+  jQuery('#uu2014carousel').carousel('cycle');
+});
+
+jQuery(document).ready(function() {
+  var anchor = window.location.hash;
+  jQuery(anchor).collapse('toggle');
+});
+
       
 

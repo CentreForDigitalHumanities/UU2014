@@ -91,9 +91,9 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-soci
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' );
 }
-// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
-// }
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
+}
 
 // if ( file_exists( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' ) ) {
 //     require_once( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' );
@@ -163,6 +163,18 @@ function uu2014_scripts_and_styles() {
 
 add_action('wp_enqueue_scripts', 'uu2014_scripts_and_styles', 20 );
 
+
+// ui-datepicker z-index bug
+add_action('admin_head', 'my_custom_admin_css');
+
+function my_custom_admin_css() {
+  echo '<style>
+    .ui-widget {
+    	position: relative;
+    	z-index: 2000 !important;
+    }
+  </style>';
+}
 
 
 function load_fonts() {

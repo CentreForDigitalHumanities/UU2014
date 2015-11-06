@@ -50,8 +50,8 @@
 } ?>
 <link rel="icon" href="<?php echo $favicon; ?>">
 
-<!--[if IE]--><link rel="shortcut icon" href="<?php echo $favicon; ?>">
-<!--[endif]-->
+<!--[if IE]><link rel="shortcut icon" href="<?php echo $favicon; ?>">
+<![endif]-->
 
 
 
@@ -81,10 +81,7 @@ if(function_exists('get_field') && get_field('uu_options_site_share_image', 'opt
 <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 <!-- End Open Graph Meta Tags !-->
 
-<!--[if lt IE 9]>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv-printshiv.min.js"></script>
-<![endif]-->
+
 
 <?php wp_head(); ?>
 
