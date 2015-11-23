@@ -50,7 +50,15 @@
 				 	echo date_i18n('j F Y', $start_date_timestamp);	
 				 } 
 				
-			} ?>
+			} 
+			if(get_field('uu_agenda_start_time')) {
+				echo ' ' . get_field('uu_agenda_start_time');
+				if(get_field('uu_agenda_end_time'))	{
+					echo ' - ' . get_field('uu_agenda_end_time');
+				}
+			}
+			?> 
+
 		</div>
 		<div class="home-agenda-title">
 			<h1><?php the_title(); ?></h1>

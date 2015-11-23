@@ -14,7 +14,8 @@ get_header(); ?>
 	<h3><?php _e('Upcoming events', 'uu2014') ?></h3>
 		<?php 
 	$current_catid = get_query_var('cat');	
-	$today = date('Ymd');
+	$todaydate = date('Ymd');
+	$todaytime = date('H:i');
 
 	$args = array(
 		'post_type'		=> 'post',
@@ -22,14 +23,21 @@ get_header(); ?>
 		'posts_per_page'	=> 50,
 		'meta_key'		=> 'uu_agenda_start_date',
 		'meta_query' => array(
-	        array(
+	        'eventdate' => array(
 	            'key' => 'uu_agenda_start_date',
-	            'value' => $today,
-	            'compare' => '>='
-	        )
+	            'value' => $todaydate,
+	            'compare' => '>=',
+	        ),
+	        'eventtime' => array(
+	            'key' => 'uu_agenda_start_time',
+	           
+	        ),
 	    ),
-		'orderby'		=> 'meta_value_num',
-		'order'			=> 'ASC',
+	    'orderby'		=> array(
+	    		'eventdate' => 'ASC',
+	    		'eventtime' => 'ASC',
+	    ),
+	    
 	);
 
 
@@ -64,7 +72,7 @@ get_header(); ?>
 		'meta_query' => array(
 	        array(
 	            'key' => 'uu_agenda_start_date',
-	            'value' => $today,
+	            'value' => $todaydate,
 	            'compare' => '<'
 	        )
 	    ),
