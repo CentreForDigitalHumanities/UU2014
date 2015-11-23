@@ -36,7 +36,7 @@
 <?php } ?>
 
 		<div class="visible-print-block">	
-			<h1 class="col-sm-8"><?php bloginfo('name'); ?></h1>
+			<h1><?php bloginfo('name'); ?></h1>
 		</div>	
 			</div>
 
