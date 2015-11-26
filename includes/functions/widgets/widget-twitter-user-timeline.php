@@ -75,21 +75,22 @@ if(!(isset($username)) || !(isset($comsumer_key)) || !(isset($comsumer_secret)) 
 
   } // end function UU_Twitter_API_request()
 
+
+
   function JSON_cached_API_results( $settings, $amount, $username, $cache_file = NULL, $expires = NULL ) {
-      global $request_type, $purge_cache, $limit_reached, $request_limit;
+      $cache_path = WP_CONTENT_DIR . '/cache/widget-twitter-user-timeline';
+     
+      if( !is_dir( $cache_path ) ) {
+        mkdir($cache_path, 0777);
+      }
 
-      if( !$cache_file ) $cache_file = dirname(__FILE__) . '/api-cache-' .$username. '.json';
-      if( !$expires) $expires = time() - 1*60;
-      // $request_limit = 10;
-
-      // file_put_contents($cache_file, $json_results);
+      if( !$cache_file ) $cache_file = $cache_path . '/api-cache-' .$username. '.json';
+      if( !$expires) $expires = time() - 10;
 
       if( !file_exists($cache_file) ) {
           fopen("$cache_file", "w");
       }
 
-      // Check that the file is older than the expire time and that it's not empty
-      // if ( filectime($cache_file) < $expires || file_get_contents($cache_file)  == '' || $purge_cache && intval($_SESSION['views']) <= $request_limit ) {
       if ( filectime($cache_file) < $expires || file_get_contents($cache_file)  == '' ) {
 
           // File is too old, refresh cache
@@ -103,24 +104,24 @@ if(!(isset($username)) || !(isset($comsumer_key)) || !(isset($comsumer_secret)) 
               unlink($cache_file);
           }
       } else {
-          // Check for the number of purge cache requests to avoid abuse
-          // if( intval($_SESSION['views']) >= $request_limit ) 
-          //     $limit_reached = " <span class='error'>Request limit reached ($request_limit). Please try purging the cache later.</span>";
+          echo 'cache';
           // Fetch cache
           $json_results = file_get_contents($cache_file);
-          $request_type = 'JSON';
       }
       
       // return json_decode($json_results);
       $timeline = json_decode($json_results);
 
       foreach($timeline as $tweet) {
-          echo '<div style="display:block;margin:1em 0;">';
+          echo '<div class="uutw_tweet">';
           echo '<img src="' . $tweet->user->profile_image_url . '" />';
-          echo '<span style="margin-left: 1em;"><small>' . $tweet->created_at . '</small></span>';
-          echo '<p style="margin: 0.5em 0 0 0;">' . $tweet->text . '</p>';
-          echo '<span style=""><small>Tweeted by: '. $tweet->user->name . '</small></span>';
+          $tweet_date = strtotime($tweet->created_at);
+          $friendly_tweet_date = date_i18n( 'D j M Y - H:i', $tweet_date );
+          echo '<div class="uutw_created_at">' . $friendly_tweet_date . '</div>';
+          echo '<p class="uutw_body">' . $tweet->text . '</p>';
+          echo '<span class="uutw_footer">' . __('Tweeted by:', 'uu2014') . ' ' . $tweet->user->name . '</span>';
           echo '</div>';
+     
       }
   }
 

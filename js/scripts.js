@@ -323,3 +323,12 @@ jQuery(document).ready(function() {
   var anchor = window.location.hash;
   jQuery(anchor).collapse('toggle');
 });
+
+jQuery(window).on('hashchange', function() {
+	var anchor = window.location.hash;
+	if (jQuery(anchor).hasClass('panel-collapse')){
+        jQuery(anchor).collapse('toggle');
+	}
+});
+      
+

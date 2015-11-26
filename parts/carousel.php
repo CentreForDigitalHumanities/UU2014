@@ -10,32 +10,34 @@ if ($term !== 0 && $term !== null) : ?>
 	$category = get_category_by_slug('slider');
 	$count = $category->category_count;
 	?>
-	<ol class="carousel-indicators" >
-	<li data-target="#uu2014carousel" data-slide-to="0" class="active"></li>
-	<?php
-	if( $count > 1 ) { ?>
-    	<li data-target="#uu2014carousel" data-slide-to="1"></li>
-	<?php } 
-	?>
-	<?php
-	if( $count > 2 ) { ?>
-    	<li data-target="#uu2014carousel" data-slide-to="2"></li>
-	<?php } 
-	?>
-	<?php
-	if( $count > 3 ) { ?>
-    	<li data-target="#uu2014carousel" data-slide-to="3"></li>
-	<?php } 
-	?>
-	<?php
-	if( $count > 4 ) { ?>
-    	<li data-target="#uu2014carousel" data-slide-to="4"></li>
-	<?php } 
-	?>
-    </ol>
-	<div class="carousel-controls" style="position: absolute; bottom: 10px; left: 47%; z-index:15;">
-		<a class="carousel-play-btn" style="color:#fff;" href="#" id="carousel-play">play</a>
-		<a class="carousel-pause-btn" style="color:#fff;" href="#" id="carousel-pause">pause</a>
+	<div class="carousel-controls">
+		<div class="carousel-buttons">
+			<a class="carousel-play-btn icononly play" style="color:#fff;" href="#" id="carousel-play"></a>
+			<a class="carousel-pause-btn icononly pause" style="color:#fff;" href="#" id="carousel-pause"></a>
+		</div>
+		<ol class="carousel-indicators" >
+		<li data-target="#uu2014carousel" data-slide-to="0" class="active"></li>
+		<?php
+		if( $count > 1 ) { ?>
+	    	<li data-target="#uu2014carousel" data-slide-to="1"></li>
+		<?php } 
+		?>
+		<?php
+		if( $count > 2 ) { ?>
+	    	<li data-target="#uu2014carousel" data-slide-to="2"></li>
+		<?php } 
+		?>
+		<?php
+		if( $count > 3 ) { ?>
+	    	<li data-target="#uu2014carousel" data-slide-to="3"></li>
+		<?php } 
+		?>
+		<?php
+		if( $count > 4 ) { ?>
+	    	<li data-target="#uu2014carousel" data-slide-to="4"></li>
+		<?php } 
+		?>
+	    </ol>
 	</div>
 	<div class="carousel-inner" role="listbox">
 		<?php 

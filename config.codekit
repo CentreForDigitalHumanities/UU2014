@@ -5294,6 +5294,22 @@
 		"shouldRunBless": 0,
 		"useLibsass": 1
 		},
+	"\/scss\/includes\/widgets\/_twitter_widget_user_timeline.scss": {
+		"createSourceMap": 0,
+		"debugStyle": 1,
+		"decimalPrecision": 5,
+		"fileType": 4,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/scss\/includes\/widgets\/_twitter_widget_user_timeline.scss",
+		"outputAbbreviatedPath": "\/css\/_twitter_widget_user_timeline.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 3,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 0,
+		"useLibsass": 1
+		},
 	"\/scss\/includes\/widgets\/_upcoming_agenda.scss": {
 		"createSourceMap": 0,
 		"debugStyle": 1,
