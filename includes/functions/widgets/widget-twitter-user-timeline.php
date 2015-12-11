@@ -104,7 +104,7 @@ if(!(isset($username)) || !(isset($comsumer_key)) || !(isset($comsumer_secret)) 
               unlink($cache_file);
           }
       } else {
-          echo 'cache';
+         
           // Fetch cache
           $json_results = file_get_contents($cache_file);
       }
@@ -117,9 +117,9 @@ if(!(isset($username)) || !(isset($comsumer_key)) || !(isset($comsumer_secret)) 
           echo '<img src="' . $tweet->user->profile_image_url . '" />';
           $tweet_date = strtotime($tweet->created_at);
           $friendly_tweet_date = date_i18n( 'D j M Y - H:i', $tweet_date );
-          echo '<div class="uutw_created_at">' . $friendly_tweet_date . '</div>';
+          echo '<div class="uutw_user"><a href="http://twitter.com/'. $username .'">' . $tweet->user->name.'</a>';
+          echo '<div class="uutw_created_at">' . $friendly_tweet_date . '</div></div>';
           echo '<p class="uutw_body">' . $tweet->text . '</p>';
-          echo '<span class="uutw_footer">' . __('Tweeted by:', 'uu2014') . ' ' . $tweet->user->name . '</span>';
           echo '</div>';
      
       }
