@@ -29,8 +29,15 @@ get_header(); ?>
 	            'compare' => '>=',
 	        ),
 	        'eventtime' => array(
-	            'key' => 'uu_agenda_start_time',
-	           
+	        	'relation' => 'OR',
+	        	array(
+	        		'key' => 'uu_agenda_start_time',	
+	        		),
+	            array(
+	        		'key' => 'uu_agenda_start_time',
+	        		'value' => date('H:i'),
+	        		'compare' => 'NOT EXISTS',	
+	        		),
 	        ),
 	    ),
 	    'orderby'		=> array(

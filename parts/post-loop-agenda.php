@@ -52,10 +52,12 @@
 				
 			} 
 			if(get_field('uu_agenda_start_time')) {
-				echo ' ' . get_field('uu_agenda_start_time');
+				echo ', ' . get_field('uu_agenda_start_time');
 				if(get_field('uu_agenda_end_time'))	{
 					echo ' - ' . get_field('uu_agenda_end_time');
 				}
+			} else {
+				echo ', ' . __('All day', 'uu2014');
 			}
 			?> 
 
