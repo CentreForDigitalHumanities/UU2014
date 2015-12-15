@@ -32,7 +32,13 @@
 
 				<?php endwhile; ?>
 
-					<?php get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
+					<a class="uu-rss-link" href="/?feed=rss&cat=<?php echo $agendaterms; ?>"><span class="icononly rss"></span>RSS</a>		
+							<?php if(get_field('uu_options_alternative_read_more_title_agenda', 'option')) { $agenda_readmore_title = get_field('uu_options_alternative_read_more_title_agenda', 'option'); } else { $agenda_readmore_title = __('Agenda', 'uu2014'); } ?>
+							<?php if(get_field('uu_options_frontpage_read_more_links', 'option')) { ?>
+								
+								<a class="button icon frontpage-read-more" href="<?php if ( function_exists('icl_object_id') ) { echo icl_get_home_url(); } ?>?cat=<?php echo $agendaterms; ?>"><?php echo __('More', 'uu2014') . ' ' . $agenda_readmore_title; ?></a>		
+								
+							<?php } ?>	
 
 			<?php else : ?>
 			<div class="no-events">

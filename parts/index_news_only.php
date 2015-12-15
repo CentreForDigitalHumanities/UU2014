@@ -32,7 +32,7 @@
 	<?php } ?>
 		<a class="uu-rss-link" href="/?feed=rss&cat=<?php echo $agendaterms; ?>"><span class="icononly rss"></span>RSS</a>		
 		<?php if(get_field('uu_options_frontpage_read_more_links', 'option')) { ?>
-		<a class="button icon frontpage-read-more" href="/?cat=<?php echo $terms; ?>"><?php echo __('More', 'uu2014') . ' ' . $news_title; ?></a>		
+		<a class="button icon frontpage-read-more" href="<?php if ( function_exists('icl_object_id') ) { echo icl_get_home_url(); } ?>?cat=<?php echo $terms; ?>"><?php echo __('More', 'uu2014') . ' ' . $news_title; ?></a>		
 		<?php } ?>	
 	<?php } else { ?>
 
