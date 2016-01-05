@@ -17,6 +17,7 @@ get_header(); ?>
 	$todaydate = date('Ymd');
 	$todaytime = date('H:i');
 
+
 	$args = array(
 		'post_type'		=> 'post',
 		'category__in' => $current_catid,
@@ -24,9 +25,27 @@ get_header(); ?>
 		'meta_key'		=> 'uu_agenda_start_date',
 		'meta_query' => array(
 	        'eventdate' => array(
-	            'key' => 'uu_agenda_start_date',
-	            'value' => $todaydate,
-	            'compare' => '>=',
+	        	'relation' => 'OR',
+	        	array(
+	        		'key' => 'uu_agenda_start_date',
+	            	'value' => $todaydate,
+	            	'compare' => '>=',	
+	        	),
+	        	array(
+	        		'relation' => 'AND',
+	        		array(
+	        			'key' => 'uu_agenda_start_date',
+		            	'value' => $todaydate,
+		            	'compare' => '<',
+	        		),
+	        		array(
+	        			'key' => 'uu_agenda_end_date',
+		            	'value' => $todaydate,
+		            	'compare' => '>=',
+	        		),
+	        			
+	        	),
+	            
 	        ),
 	        'eventtime' => array(
 	        	'relation' => 'OR',
@@ -67,8 +86,7 @@ get_header(); ?>
 		<?php endif; ?>
 </div>
 
-<div class="previous-events clearfix">
-	<h3><?php _e('Previous events', 'uu2014') ?></h3>
+
 	<?php
 	$current_catid = get_query_var('cat');
 	$args2 = array(
@@ -78,9 +96,17 @@ get_header(); ?>
 		'meta_key'		=> 'uu_agenda_start_date',
 		'meta_query' => array(
 	        array(
-	            'key' => 'uu_agenda_start_date',
-	            'value' => $todaydate,
-	            'compare' => '<'
+	        	'relation' => 'AND',
+	        	array(
+	        		'key' => 'uu_agenda_start_date',
+		            'value' => $todaydate,
+		            'compare' => '<'
+	        	),
+	            array(
+	        		'key' => 'uu_agenda_end_date',
+		            'value' => $todaydate,
+		            'compare' => '<'
+	        	),
 	        )
 	    ),
 		'orderby'		=> 'meta_value_num',
@@ -90,7 +116,8 @@ get_header(); ?>
 	$agenda_past_query = new WP_Query( $args2 );
 
 	if ( $agenda_past_query->have_posts() ) : ?>
-
+<div class="previous-events clearfix">
+	<h3><?php _e('Previous events', 'uu2014') ?></h3>
 			<?php while ($agenda_past_query->have_posts()) : $agenda_past_query->the_post(); ?>
 
 				<?php get_template_part( 'parts/post-loop-agenda-previous'); ?> 
@@ -99,12 +126,9 @@ get_header(); ?>
 
 				<?php //get_template_part('includes/template','pager'); //wordpress template pager/pagination ?>
 
-		<?php else : ?>
-		<div class="no-events">
-			<?php _e('No previous events', 'uu2014') ?>
-		</div>
+</div>		
 		<?php endif; ?>
-</div>
+
 
 
 <?php get_template_part( 'parts/page-footer-2col'); ?> 

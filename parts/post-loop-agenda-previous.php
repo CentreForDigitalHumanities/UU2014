@@ -14,7 +14,7 @@
 				 } ?>
 				
 				<?php if( get_field('uu_agenda_end_date') && $start_date!=$end_date) { ?>
-				- <?php echo $start_date->format($date_format);
+				- <br /><?php echo $end_date->format($date_format);
 			} ?>
 		</div>
 		<div class="col-sm-9">
