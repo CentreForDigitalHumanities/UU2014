@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-sm-6 col-xs-8 logodiv">
+			<div class="col-sm-4 col-xs-8 logodiv">
 				<button type="button" class="navbar-toggle hidden-print" data-toggle="collapse" data-target="#main-menu-collapse">
                     <span class="sr-only">Navigation</span>
                     <span class="icon-bar"></span>
@@ -41,7 +41,7 @@
 			</div>
 
 <?php if ( function_exists('icl_object_id') ) :  //check if WPML is activated ?> 
-			<div class="col-md-5 col-sm-4 col-xs-2 hidden-print" role="search">
+			<div class="col-md-3 col-sm-5 col-xs-2 hidden-print" role="search">
 				<div class="brandbar-search">
 					
 						<form method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
@@ -52,7 +52,7 @@
 					
 				</div>
 			</div>
-			<div class="col-md-1 col-sm-2 col-xs-2 hidden-print">
+			<div class="col-md-3 col-sm-3 col-xs-2 hidden-print">
 				<div class="language-switch"><?php icl_language_link(); ?></div>
 			</div>
 		<?php else : ?>
