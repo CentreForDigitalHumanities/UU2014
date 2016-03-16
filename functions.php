@@ -947,7 +947,7 @@ function uu_sharebuttons() {
 		$content = '';
 		if( !empty($sharebuttons) ) {
 			$shortURL = get_permalink();
-			$siteTitle = bloginfo('name');
+			$siteTitle = get_bloginfo('name');
 			$shortTitle = get_the_title();
 			$twitterURL = 'https://twitter.com/intent/tweet?text='.$shortTitle.'&amp;url='.$shortURL.'&amp';
 			$facebookURL = 'https://www.facebook.com/sharer/sharer.php?u='.$shortURL;
