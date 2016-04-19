@@ -1,0 +1,78 @@
+.author_badge {
+	border: 1px solid $light-grey;
+	padding: 1em;
+	float: right;
+	margin-left: 30px;
+	margin-top: 68px;
+	font-family: $sans;
+	font-weight: 300;
+	a {
+		text-decoration: none;
+	}
+	.author-by {
+		font-size: 80%;
+		line-height: 18px;
+	}
+	.author-name {
+		text-decoration: none;
+	
+	}
+	.author_bio & {
+		float: left;
+		margin: 0 30px 30px 0;
+	}
+	.page-template-page-blog & {
+		border: 0;
+		padding: 0;
+		
+	    margin: 0;
+	    img {
+	    	height: 80px;
+	    	width: 80px;
+	    	
+	    }
+	    .author-name {
+			text-decoration: none;
+			//margin-left: 90px;
+			line-height: 25px;
+		}
+	}
+	.author.archive & {
+		.author-by {
+			display: none;
+		}
+		.author-name {
+			display: none;
+		}
+	}
+	.blog & {
+		width: 100px;
+		border: 0;
+		padding: 0;
+	    margin: 0;
+	    float: left;
+	    img {
+	    	height: 100px;
+	    	width: 100px;
+	    	float:left;
+	    	bottom: 0;
+	    	
+	    }
+	  
+	    .author-name {
+			padding: 8px 0;
+			line-height: 25px;
+			bottom: 0;
+		}
+		@include bp(sm) {
+    			float: left;
+    			width: 100%;
+    		}
+	}
+}
+
+.author_bio {
+	margin: 0 0 30px 0;
+	border-bottom: 1px solid $light-grey;
+	padding: 0 0 30px 0;
+}

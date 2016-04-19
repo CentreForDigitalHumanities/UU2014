@@ -1,4 +1,4 @@
-#masonry {
+
 	.masonry-item {
 		padding-bottom: 10px;
 		border: 1px solid $light-grey;
@@ -6,12 +6,7 @@
 		img {
 			width: 100%;
 		}
-		.author_badge {
-			width: 80px;
-			height: 80px;
-			float: left;
-			margin-right: 10px;
-		}
+		
 		.article-content {
 			margin: 0.5em;
 				
@@ -19,13 +14,7 @@
 		a {
 			text-decoration: none;
 		}
-		.author-name, .author-by {
-			font-family: $sans;
-			line-height: 150%;
-		}
-		.author-by {
-			font-size: 90%;
-		}
+		
 		h1 {
 			font-size: 30px;
 			line-height: 123%;
@@ -37,11 +26,84 @@
 		@include bp(xs) {
 			margin-bottom: 2em;	
 		}
+
+		.date {
+			color: #787878;
+		    font-family: $sans;
+		    font-size: 12px;
+		    font-weight: 300;
+		    line-height: 12px;
+		    text-transform: uppercase;
+		    margin-bottom: 4px;
+		}
 	}
-}
+
 
 .home-news, .home-agenda {
 	.col-sm-8 {
 		 margin-left: 16.6667%;
+	}
+}
+
+.blog-item {
+	margin-bottom: 30px;
+	min-height: 390px;
+	.blog-item-image .size-large {
+
+		position: relative;
+		width: 100%;
+		height: 390px;
+		overflow: hidden;
+		display: block;
+		@include bp(md) {
+    		height: 300px;
+    	}
+		@include bp(sm) {
+    		height: 250px;
+    	}
+	}
+	.author-aside { 
+	}
+	.date {
+		font-family: $sans;
+	font-weight: 300;
+	font-size:  80%;
+    line-height: 18px; 
+   
+	}
+	.blog-link {
+		font-family: $sans;
+		background: $uu-foto-blok;
+		color: #fff;
+		padding: 1em;
+		position: absolute;
+		bottom: 0;
+		margin: 0;
+		max-width: 100%;
+		text-decoration: none;
+		left: 15px;
+		right: 15px;
+	}
+	h1 {
+		color: #fff;
+		
+		
+		font-size: 26px;
+		line-height: 40px;
+		@include bp(md) {
+    		max-width: 80%;
+    		font-size: 110%;
+    	}
+		@include bp(sm) {
+    		max-width: 100%;
+    		font-size: 100%;
+    	}
+	}
+	p {
+		font-size:16px;
+		line-height: 24px;
+		color: #ffffff;
+		font-family: $sans;
+		font-weight: 300;
 	}
 }

@@ -30,6 +30,7 @@ Stylesheet: Main Stylesheet
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/modals";
 //@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
@@ -71,6 +72,7 @@ Stylesheet: Main Stylesheet
 @import "includes/shortcodes";
 @import "includes/home-blog";
 @import "includes/discussion";
+@import "includes/author-badge";
 
 @import "includes/cpt/agenda";
 @import "includes/cpt/people";

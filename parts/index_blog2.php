@@ -24,60 +24,29 @@
 			while ( $blogquery->have_posts() ) {
 					$blogquery->the_post(); ?>
 	
-<article id="post-<?php the_ID(); ?>" role="article">
-	<a href="<?php the_permalink(); ?>">
+<article id="post-<?php the_ID(); ?>" role="article" class="blog-item row">
+	<div class="author-aside col-sm-3 col-md-2 col-xs-12">
+        	<?php get_template_part( 'parts/author_badge'); ?> 
+        	<?php if(get_field('uu_options_news_show_pubdate', 'option')) { ?>
+
+				<div class="date"><?php _e('on', 'uu2014'); ?><br /><?php the_date('d M Y'); ?></div>	
+			<?php } ?>
+    </div>
+
+	<div class="blog-item-image col-sm-9 col-md-10 col-xs-12">
 		<?php if (has_post_thumbnail()) { ?>      
             <figure class="article-preview-image"> 
                 <?php the_post_thumbnail('large'); ?>    
             </figure>
         <?php } ?>
+        
+        <a class="blog-link" href="<?php the_permalink(); ?>">
+			<h1><?php the_title(); ?></h1>
+			<?php the_excerpt(); ?>
+		</a>
+	</div>	
+		
 	
-
-		<div class="article-content">
-
-			<header class="article-header">
-				<?php if(get_field('uu_options_news_show_pubdate', 'option')) { ?>
-				<div class="date"><?php the_date('d F Y'); ?></div>	
-				<?php } ?>
-				<h1 class="entry-header"><?php the_title(); ?></h1>
-
-			</header>
-
-			<section class="entry-content clearfix">
-			<p><?php uu_excerpt('160'); ?></p>
-			<?php
-				$author_options = get_field('uu_options_blog_author_options' , 'options' );
-				$author_id = get_the_author_meta('ID');
-				$author_badge = get_field('author_image', 'user_'. $author_id );
-
-			if( !empty($author_badge) ) {	 
-				$size = 'thumbnail';
-				$attr = array(
-					'class'	=> "author_badge"
-					);
-				}
-
-			if( !empty($author_options) ) {	
-				
-				if ( in_array( 'link', $author_options ) ) { ?>
-					<a href="<?php echo get_author_posts_url( $author_id ); ?>">
-		  	<?php } ?>
-
-		  	<?php if ( in_array( 'photo', $author_options ) ) { ?>
-					<?php echo wp_get_attachment_image( $author_badge, $size, FALSE, $attr ); ?>
-		    <?php } ?>
-			<?php if ( in_array( 'name', $author_options ) ) { ?>
-					<div class="author-name"><?php echo get_the_author_meta('display_name'); ?></div>
-			<?php } ?>
-			<?php if ( in_array( 'link', $author_options ) ) { ?>
-					</a>
-				<?php } 
-			} ?>	
-				
-			</section>
-
-		</div>
-	</a>
 </article>
 		
 
