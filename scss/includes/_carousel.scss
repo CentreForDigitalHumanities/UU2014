@@ -1,11 +1,13 @@
-.carousel-inner {
+.home {
+
+	.carousel-inner {
 	.item {
 		max-height: 400px;
 		overflow: none;
 		&.active {
 			display: block;
 		}
-	
+
 		.carousel-caption {
 			left: 50%;
 			right: 12%;
@@ -39,34 +41,36 @@
 	}
 
 
-}
-
-.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-	max-width: auto;
-	width: 100%;
-}
-.carousel-controls {
-	width: 180px;
-	position: absolute;
-	bottom: 20px;
-	left: 50%;
-	margin-left: -90px;
-	z-index:1001;
-}
-.carousel-buttons {
-	width: 70px;
-	float: left;
-	margin: -11px 0 0 5px;
-}
-.carousel-indicators {
-	width: 105px;
-	position: relative;
-	margin: 0;
-	bottom: 0;
-	left: 0;
-	float: left;
-	li, li.active {
-		width: 20px;
-		height: 20px;
 	}
+
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+		max-width: auto;
+		width: 100%;
+	}
+	.carousel-controls {
+		width: 180px;
+		position: absolute;
+		bottom: 20px;
+		left: 50%;
+		margin-left: -90px;
+		z-index:1001;
+	}
+	.carousel-buttons {
+		width: 70px;
+		float: left;
+		margin: -11px 0 0 5px;
+	}
+	.carousel-indicators {
+		width: 105px;
+		position: relative;
+		margin: 0;
+		bottom: 0;
+		left: 0;
+		float: left;
+		li, li.active {
+			width: 20px;
+			height: 20px;
+		}
+	}
+
 }

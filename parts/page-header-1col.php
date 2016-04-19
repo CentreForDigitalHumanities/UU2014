@@ -87,10 +87,6 @@
 					<?php } ?>
 
 
-					<div class="toggle-btn-div visible-xs clearfix">
-	    			 	<button type="button" class="toggle-btn button icon left arrow-left" data-toggle="offcanvas"><?php _e('Show sidebar', 'uu2014'); ?></button>
-					</div>
-
 		<div class="container">			
 					<div class="page-content-inner">
 	    			<?php

@@ -24,5 +24,4 @@
 	<?php 
 	 	endif;	
 	?>
-
 </header>

@@ -21,9 +21,15 @@
 }
 
 
-.header-image img {
+.header-image {
+	img {
 	width: 100%;
 	height: auto;
+	}
+	.widget img {
+		width: inherit;
+		height: inherit;
+	}
 }
 
 .banner-widget-area .textwidget {

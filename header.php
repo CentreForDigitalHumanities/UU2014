@@ -33,6 +33,8 @@
 
   ?></title>
 
+<base href="<?php get_site_url(); ?>">
+
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -56,7 +58,7 @@
 
 
 
-<meta name="msapplication-TileColor" content="#f01d4f">
+<meta name="msapplication-TileColor" content="#ffcd00">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
@@ -65,7 +67,7 @@
 <!-- Open Graph Meta Tags for Facebook and LinkedIn Sharing !-->
 <meta property="og:title" content="<?php the_title(); ?>"/>
 <?php if ( $site_description && ( is_home() || is_front_page() ) )
-   { $og_desc = ' | $site_description'; } else { $og_desc = the_excerpt(); } ?>
+   { $og_desc = ' | $site_description'; } else { $og_desc = get_the_excerpt(); } ?>
 <meta property="og:description" content="<?php echo $og_desc; ?>" />
 <meta property="og:url" content="<?php the_permalink(); ?>" />
 <?php 

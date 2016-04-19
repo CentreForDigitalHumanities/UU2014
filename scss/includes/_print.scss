@@ -75,7 +75,8 @@ though, go for it.
     .page-navigation,
     .wp-prev-next,
     .respond-form,
-    nav {
+    nav,
+    .hidden-print {
       display: none;
     }
     

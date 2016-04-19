@@ -8,7 +8,7 @@
 
 			<div class="article-header">
 				<?php if(get_field('uu_options_news_show_pubdate', 'option')) { ?>
-				<div class="date"><?php the_date('d F Y'); ?></div>	
+				<div class="date"><?php echo get_the_date('d F Y'); ?></div>	
 				<?php } ?>
 				<h1 class="entry-header"><?php the_title(); ?></h1>
 

@@ -90,6 +90,19 @@
 
 			 		}  
 			 	} ?>
+
+			 	<?php 
+			 	$blogcats = get_field('uu_options_blog_frontpage_cat', 'option');
+			 	if ($blogcats) { 
+					
+					$terms = implode(', ', $blogcats);	
+				 
+				 	if(in_category($terms) && get_field('uu_options_posts_blog_author', 'options')) {
+				 		get_template_part( 'parts/author_badge');
+				 	} 
+
+			 	} ?>
+
 				<h1><?php the_title(); ?></h1>	
 				<?php the_content(); ?>
 

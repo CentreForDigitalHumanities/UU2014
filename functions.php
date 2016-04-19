@@ -61,9 +61,9 @@ require_once(SCAFFOLDING_INCLUDE_PATH.'base-functions.php');
 //     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' );
 // }
 
-// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' );
-// }
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' );
+}
 
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/lecturenet.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/lecturenet.php' );
@@ -1043,3 +1043,54 @@ add_filter( 'wp_mail_from', function( $email ) {
 	return $blog_email;
 });
 
+// Only load Masonry script when Masonry layout is used.
+
+// add_action('wp_footer', 'uu_print_masonry_script');
+
+// function uu_print_masonry_script() {
+// 		if ( $uu_load_masonry_script = 1 ){
+// 			wp_print_scripts('masonry');
+// 		}
+// 	}
+
+
+// custom order for agenda posts
+// https://wordpress.org/support/topic/order-posts-on-meta_query-with-relation?replies=2#post-5615286
+function get_meta_sql_date( $pieces ) {
+	global $wpdb;
+
+	$query = " AND $wpdb->postmeta.meta_key = 'uu_agenda_start_date'
+		AND (mt1.meta_key = 'uu_agenda_start_date' OR mt1.meta_key = 'uu_agenda_end_date')
+		AND CAST(mt1.meta_value AS DATE) >= %s";
+
+	$pieces['where'] = $wpdb->prepare( $query, date( 'Ymd' ) );
+
+	return $pieces;
+}
+
+function uu_agenda_end_date_not_empty() {
+	
+		global $post;
+		$end_date = '';
+	if(get_field('uu_agenda_end_date', $post->ID)) {
+		$end_date = get_field('uu_agenda_end_date', $post->ID);
+	}
+	if($end_date) {
+		return;
+	} else {
+		$start_date = get_field('uu_agenda_start_date', $post->ID);
+		update_field( 'uu_agenda_end_date', $start_date );
+	}
+}
+
+add_action( 'save_post', 'uu_agenda_end_date_not_empty' );
+
+
+// https://formidablepro.com/help-desk/downloading-csv-file-that-can-be-directly-opened-by-excel/
+add_action('frm_csv_headers', 'add_sep_to_frm_csv');
+
+function add_sep_to_frm_csv($atts) {
+  
+    echo 'sep=,'."\n";
+  
+}

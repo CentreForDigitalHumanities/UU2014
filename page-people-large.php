@@ -46,11 +46,14 @@
 									}  else {
 
 										?>
+										<?php if($thumb) { ?>
 
 											<div class="people-item people-item-large row">
 
 												<div class="people-item-image col-sm-6">
+												
 													<img class="img-responsive" src="<?php echo $large[0]; ?>" alt="" />
+												
 												</div>
 
 												<div class="people-item-content col-sm-6">	
@@ -73,6 +76,7 @@
 																<?php if( $url ): ?>
 														
 																<a href="<?php echo $url; ?>"><?php _e('Read more','uu2014'); ?></a>
+														
 													
 													<?php endif; ?>
 														</div>	
@@ -90,6 +94,14 @@
 
 											</div>
 
+											<?php } else { ?>
+												<div class="people-item-content-naam-geen-foto">
+												<?php if( $url ) { ?><a href="<?php echo $url; ?>"><?php } ?>			
+														<?php echo $naam; ?>
+												<?php if( $url ) { ?></a><?php } ?>			
+												</div>
+
+											<?php } ?>	
 								
 
 										<?php 

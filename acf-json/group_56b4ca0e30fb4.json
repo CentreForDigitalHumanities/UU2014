@@ -1,0 +1,214 @@
+{
+    "key": "group_56b4ca0e30fb4",
+    "title": "flex",
+    "fields": [
+        {
+            "key": "field_56b4ca155b969",
+            "label": "Blok",
+            "name": "main_blok",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "56b4ca1c3d9f2",
+                    "name": "block",
+                    "label": "Paragraaf",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_56b4ca405b96a",
+                            "label": "Paragraaf",
+                            "name": "blok_paragraaf",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56b8552f4fa66",
+                    "name": "",
+                    "label": "",
+                    "display": "row",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56b855434fa67",
+                    "name": "3_plaatjes",
+                    "label": "3 plaatjes",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_56b855564fa68",
+                            "label": "Plaatje links",
+                            "name": "plaatje_links",
+                            "type": "image_crop",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "crop_type": "hard",
+                            "target_size": "custom",
+                            "width": 800,
+                            "height": 600,
+                            "preview_size": "medium",
+                            "force_crop": "yes",
+                            "save_in_media_library": "yes",
+                            "retina_mode": "no",
+                            "save_format": "id",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_56b857054fa69",
+                            "label": "Plaatje midden",
+                            "name": "plaatje_midden",
+                            "type": "image_crop",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "crop_type": "hard",
+                            "target_size": "custom",
+                            "width": 800,
+                            "height": 600,
+                            "preview_size": "medium",
+                            "force_crop": "no",
+                            "save_in_media_library": "yes",
+                            "retina_mode": "no",
+                            "save_format": "id",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_56b8571b4fa6a",
+                            "label": "Plaatje rechts",
+                            "name": "plaatje_rechts",
+                            "type": "image_crop",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "crop_type": "hard",
+                            "target_size": "custom",
+                            "width": 800,
+                            "height": 600,
+                            "preview_size": "medium",
+                            "force_crop": "no",
+                            "save_in_media_library": "yes",
+                            "retina_mode": "no",
+                            "save_format": "id",
+                            "library": "all"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56b4caf0e39ce",
+                    "name": "paragraaf_plaatje_links",
+                    "label": "Paragraaf, plaatje links",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_56b4cb1be39cf",
+                            "label": "Plaatje",
+                            "name": "plaatje",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_56b4cb46e39d0",
+                            "label": "Paragraaf",
+                            "name": "paragraaf",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 1
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1454934895
+}

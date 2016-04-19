@@ -10,8 +10,12 @@
 		height: 48px;
 		width: 179px;
         @include bp(sm) {
-            width: 140px;
-            height: 37px;
+            width: 139px;
+            height: auto;
+        }
+        @include bp(xs) {
+            width: 128px;
+            height: auto;
         }
     }    
     img.alternative-logo {
@@ -100,6 +104,12 @@ input[type="submit"].searchbutton, .searchbutton {
     @include bp(sm) {
 		line-height: 50px;	
 	}
+    @include bp(xs) {
+        .visible-xs {
+            display: inline-block !important;
+        }    
+    }
+    
 }
 
 .logodiv {

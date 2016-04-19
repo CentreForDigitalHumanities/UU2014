@@ -88,11 +88,14 @@
 }
 
 .uu-caption-main {
-	font-family: $sans;
+	font-family: $uu-serif;
 	font-weight: 400;
-	font-size: 20px;
+	font-size: 14px;
 	line-height: 30px;
-	color: $grey;
+	margin-top: -1px;
+	color: $darker-grey;
+	 padding: 10px 20px;
+	 border: 1px solid #ccc;
 }
 
 .uu-caption-sub {
@@ -100,5 +103,5 @@
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 26px;
-	color: $grey;
+	color: $dark-grey;
 }
