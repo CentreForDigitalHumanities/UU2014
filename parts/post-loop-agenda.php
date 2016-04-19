@@ -4,8 +4,7 @@
 		<?php 
 
 			if( get_field('uu_agenda_start_date') ) {
-
-			$start_date_timestamp = strtotime(get_field('uu_agenda_start_date')); 
+			$start_date_timestamp = strtotime(get_field('uu_agenda_start_date'));
 			$end_date_timestamp = strtotime(get_field('uu_agenda_end_date'));
 			$startday = date_i18n('j', $start_date_timestamp);
 			$endday = date_i18n('j', $end_date_timestamp);

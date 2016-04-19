@@ -20,7 +20,7 @@
 
 		elseif ($post_type == 'news2') { ?>
 			<?php get_template_part( 'parts/page-header-2col'); ?> 
-			<div class="container home-blog">	
+			<div class="home-blog">	
 				<?php get_template_part( 'parts/index_news_only'); ?> 
 			</div>
 			<?php get_template_part( 'parts/page-footer-2col'); ?> 		
@@ -36,7 +36,7 @@
 
 		elseif ($post_type == 'agenda2') { ?>
 			<?php get_template_part( 'parts/page-header-2col'); ?>
-			<div class="container home-blog">	 
+			<div class="home-blog">	 
 				<?php get_template_part( 'parts/index_agenda_only'); ?> 
 			</div>
 			<?php get_template_part( 'parts/page-footer-2col'); ?> 	
@@ -52,7 +52,7 @@
 
 		elseif ($post_type == 'blog2') { ?>
 			<?php get_template_part( 'parts/page-header-2col'); ?>
-			<div class="container home-blog">	 
+			<div class="home-blog">	 
 				<?php get_template_part( 'parts/index_blog2'); ?> 
 			</div>
 			<?php get_template_part( 'parts/page-footer-2col'); ?> 	

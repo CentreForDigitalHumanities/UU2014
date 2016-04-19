@@ -31,22 +31,54 @@ class uu_upcoming_agenda_widget extends WP_Widget {
 global $post;
 
 
-$today = date('Ymd');
+            $today = date('Ymd');
             $agenda_amount = get_field('uu_options_agenda_amount', 'option');
+            $todaydate = date('Ymd');
+            $todaytime = date('H:i');
+            //add_filter( 'get_meta_sql', 'get_meta_sql_date' );
             $args = array(
               'post_type'   => 'post',
               'category_name' => 'agenda',
               'posts_per_page'  => $agenda_amount,
               'meta_key'    => 'uu_agenda_start_date',
+              'orderby'             => 'meta_value',
+              'order'               => 'ASC',
               'meta_query' => array(
-                    array(
+                    'eventdate' => array(
+                      'relation' => 'OR',
+                      array(
                         'key' => 'uu_agenda_start_date',
-                        'value' => $today,
-                        'compare' => '>='
-                    )
+                          'value' => $todaydate,
+                          'compare' => '>=',  
+                      ),
+                      array(
+                        'relation' => 'AND',
+                        array(
+                          'key' => 'uu_agenda_start_date',
+                            'value' => $todaydate,
+                            'compare' => '<',
+                        ),
+                        array(
+                          'key' => 'uu_agenda_end_date',
+                            'value' => $todaydate,
+                            'compare' => '>=',
+                        ),
+                          
+                      ),
+                        
+                    ),
+                    'eventtime' => array(
+                      'relation' => 'OR',
+                      array(
+                        'key' => 'uu_agenda_start_time',  
+                        ),
+                        array(
+                        'key' => 'uu_agenda_start_time',
+                        'value' => date('H:i'),
+                        'compare' => 'NOT EXISTS',  
+                        ),
+                    ),
                 ),
-              'orderby'   => 'meta_value_num',
-              'order'     => 'ASC',
             );
 
 
@@ -58,7 +90,7 @@ $today = date('Ymd');
     <?php 
       if ( $agenda_query->have_posts() ) :
           while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
-          <li>
+          <li class="clearfix">
                     
               <?php  if( get_field('uu_agenda_start_date') ) {
 
@@ -81,8 +113,8 @@ $today = date('Ymd');
       // $date_format = get_option('date_format'); 
       ?>
       <div class="widget-date">
-        <div class="home-agenda-date-day"><?php echo date_i18n('j', $start_date_timestamp); ?></div>
-        <div class="home-agenda-date-month"><?php echo date_i18n('M', $start_date_timestamp); ?></div>
+        <span class="home-agenda-date-day"><?php echo date_i18n('j', $start_date_timestamp); ?></span>
+        <span class="home-agenda-date-month"><?php echo date_i18n('M', $start_date_timestamp); ?></span>
       </div>
       <div class="agenda-widget-title">
              <a href="<?php the_permalink(); ?>" title="<?php the_title();?>"><?php the_title();?></a>

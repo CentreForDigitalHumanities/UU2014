@@ -51,7 +51,7 @@ the_field('uu_options_alternative_title_news');
 
 					<div class="agenda-archive">
 						<?php 
-						
+						//add_filter( 'get_meta_sql', 'get_meta_sql_date' );
 						$today = date('Ymd');
 						$agendacats = get_field('uu_options_agenda_frontpage_cat', 'option');
 						if ($agendacats) { 
@@ -61,20 +61,55 @@ the_field('uu_options_alternative_title_news');
 						}
 					
 						$agenda_amount = get_field('uu_options_agenda_amount', 'option');
+						$todaydate = date('Ymd');
+						$todaytime = date('H:i');
 						$args2 = array(
 							'post_type'		=> 'post',
 							'cat' => $agendaterms,
 							'posts_per_page'	=> $agenda_amount,
 							'meta_key'		=> 'uu_agenda_start_date',
+							'orderby'             => 'meta_value',
+							'order'               => 'ASC',
 							'meta_query' => array(
-						        array(
-						            'key' => 'uu_agenda_start_date',
-						            'value' => $today,
-						            'compare' => '>='
-						        )
-						    ),
-							'orderby'		=> 'meta_value_num',
-							'order'			=> 'ASC',
+						        'eventdate' => array(
+						        	'relation' => 'OR',
+						        	array(
+						        		'key' => 'uu_agenda_start_date',
+						            	'value' => $todaydate,
+						            	'compare' => '>=',	
+						        	),
+						        	array(
+						        		'relation' => 'AND',
+						        		array(
+						        			'key' => 'uu_agenda_start_date',
+							            	'value' => $todaydate,
+							            	'compare' => '<',
+						        		),
+						        		array(
+						        			'key' => 'uu_agenda_end_date',
+							            	'value' => $todaydate,
+							            	'compare' => '>=',
+						        		),
+						        			
+						        	),
+						            
+						        ),
+						        'eventtime' => array(
+						        	'relation' => 'OR',
+						        	array(
+						        		'key' => 'uu_agenda_start_time',	
+						        		),
+						            array(
+						        		'key' => 'uu_agenda_start_time',
+						        		'value' => date('H:i'),
+						        		'compare' => 'NOT EXISTS',	
+						        		),
+						        ),
+	    					),
+						    // 'orderby'		=> array(
+						    // 		'eventdate' => 'ASC',
+						    // 		'eventtime' => 'ASC',
+						    // ),
 						);
 
 

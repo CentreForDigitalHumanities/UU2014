@@ -16,58 +16,29 @@ get_header(); ?>
 	$current_catid = get_query_var('cat');	
 	$todaydate = date('Ymd');
 	$todaytime = date('H:i');
-	add_filter( 'get_meta_sql', 'get_meta_sql_date' );
+	// add_filter( 'get_meta_sql', 'get_meta_sql_date' );
 
 	$args = array(
-		'post_type'		=> 'post',
-		'category__in' => $current_catid,
+		'post_type'			=> 'agenda',
 		'posts_per_page'	=> 50,
-		'meta_key'		=> 'uu_agenda_start_date',
-		'orderby'             => 'meta_value',
-		'order'               => 'ASC',
-		'meta_query' => array(
-                    'eventdate' => array(
-                      'relation' => 'OR',
-                      array(
-                        'key' => 'uu_agenda_start_date',
-                          'value' => $todaydate,
-                          'compare' => '>=',  
-                      ),
-                      array(
-                        'relation' => 'AND',
-                        array(
-                          'key' => 'uu_agenda_start_date',
-                            'value' => $todaydate,
-                            'compare' => '<',
-                        ),
-                        array(
-                          'key' => 'uu_agenda_end_date',
-                            'value' => $todaydate,
-                            'compare' => '>=',
-                        ),
-                          
-                      ),
-                        
-                    ),
-                    'eventtime' => array(
-                      'relation' => 'OR',
-                      array(
-                        'key' => 'uu_agenda_start_time',  
-                        ),
-                        array(
-                        'key' => 'uu_agenda_start_time',
-                        'value' => date('H:i'),
-                        'compare' => 'NOT EXISTS',  
-                        ),
-                    ),
-                ),
-	    
+		'meta_key'			=> 'unix_start',
+		'orderby'           => 'meta_value',
+		'order'             => 'ASC',
+		'meta_query' 		=> array(
+			                      array(
+			                        'key' => 'uu_agenda_end_date',
+			                        'value' => $todaydate,
+			                        'compare' => '>=',  
+			                      ),
+		                		),
 	);
 
 
 	$agenda_query = new WP_Query( $args );
 
-	echo $GLOBALS['wp_query']->request;
+	echo '<pre>';
+	echo $agenda_query->request;
+	echo '</pre>';
 
 		if ( $agenda_query->have_posts() ) : ?>
 
@@ -97,12 +68,12 @@ get_header(); ?>
 		<?php endif; ?>
 </div>
 
-<?php remove_filter( 'get_meta_sql', 'get_meta_sql_date' ); ?>
+<?php // remove_filter( 'get_meta_sql', 'get_meta_sql_date' ); ?>
 
 	<?php
 	$current_catid = get_query_var('cat');
 	$args2 = array(
-		'post_type'		=> 'agenda',
+		'post_type'		=> 'post',
 		'category__in' => $current_catid,
 		'posts_per_page'	=> 20,
 		'meta_key'		=> 'uu_agenda_start_date',

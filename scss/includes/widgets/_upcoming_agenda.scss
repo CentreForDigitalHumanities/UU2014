@@ -1,4 +1,26 @@
-.widget-date {
-	float: left;
-	margin-right: 10px;
+#left-sidebar {
+	 ul.agenda_widget li {
+		
+		.widget-date {
+			float: left;
+			margin-right: 10px;
+			width: 65px;
+			.home-agenda-date-day, .home-agenda-date-month {
+				font-size: 18px;
+			}
+		}
+
+
+
+		.agenda-widget-title {
+		 	display: inline-block;
+		 	float: left;
+		 	padding-right: 10px;
+			a {
+				font-size: 15px;
+				line-height: 25px;
+				padding: 4px 0 0 0;
+			}
+		}
+	}
 }

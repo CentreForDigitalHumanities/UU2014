@@ -294,6 +294,152 @@
             "disabled": 0
         },
         {
+            "key": "field_56a9e01628d89",
+            "label": "Categories agenda",
+            "name": "uu_options_agenda_frontpage_cat",
+            "type": "taxonomy",
+            "instructions": "Choose one or more categories to display on the homepage. You may need to create a category first (menuitem: posts > categories)",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "agenda2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "category",
+            "field_type": "checkbox",
+            "allow_null": 0,
+            "add_term": 1,
+            "save_terms": 1,
+            "load_terms": 0,
+            "return_format": "id",
+            "multiple": 0
+        },
+        {
+            "key": "field_56700a47fef82",
+            "label": "Read more buttons?",
+            "name": "uu_options_frontpage_read_more_links",
+            "type": "true_false",
+            "instructions": "Display \"read more\" buttons below the news and agenda item blocks",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1
+        },
+        {
+            "key": "field_56700ad3fef83",
+            "label": "Read more button news alternative title",
+            "name": "uu_options_alternative_read_more_title_news",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56700fc65e349",
+            "label": "Read more button agenda alternative title",
+            "name": "uu_options_alternative_read_more_title_agenda",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "news_agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "agenda"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_54f80f57662f3",
+                        "operator": "==",
+                        "value": "agenda2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
             "key": "field_55f14f2d9ff78",
             "label": "Categories blog",
             "name": "uu_options_blog_frontpage_cat",
@@ -397,6 +543,22 @@
             "toggle": 0
         },
         {
+            "key": "field_56bd937a31583",
+            "label": "Show Blog Author",
+            "name": "uu_options_posts_blog_author",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0
+        },
+        {
             "key": "field_55ae16a94de12",
             "label": "People page trim description",
             "name": "uu_options_people_page_trim_description",
@@ -466,7 +628,8 @@
                 "id": ""
             },
             "message": "",
-            "esc_html": 0
+            "esc_html": 0,
+            "new_lines": "wpautop"
         },
         {
             "key": "field_555ef11dd8d17",
@@ -578,7 +741,8 @@
                 "id": ""
             },
             "message": "",
-            "esc_html": 0
+            "esc_html": 0,
+            "new_lines": "wpautop"
         },
         {
             "key": "field_555ef5703219f",
@@ -767,5 +931,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1444902923
+    "modified": 1455264672
 }
