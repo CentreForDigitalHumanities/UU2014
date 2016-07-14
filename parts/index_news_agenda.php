@@ -3,15 +3,6 @@
 
 					<h2><?php echo $news_title; ?></h2>
 					<?php 
-						$args_sticky = array(
-							'post_type' => 'post',
-							'post__in'  => get_option( 'sticky_posts' ),
-							'ignore_sticky_posts' => 1
-
-						);
-						$newsquery_sticky = new WP_Query( $args_sticky );
-
-
 
 						$newsamount = get_field('uu_options_news_amount', 'option');
 						$newscats = get_field('uu_options_news_frontpage_cat', 'option');
@@ -20,6 +11,19 @@
 						} else {
 							$terms='news';
 						}
+
+						$args_sticky = array(
+							'post_type' => 'post',
+							'post__in'  => get_option( 'sticky_posts' ),
+							'ignore_sticky_posts' => 1,
+							'cat' => $terms,
+
+						);
+						$newsquery_sticky = new WP_Query( $args_sticky );
+
+
+
+						
 					
 						$args = array(
 							'post_type' => 'post',
@@ -62,7 +66,7 @@ the_field('uu_options_alternative_title_news');
 
 					<?php } ?>
 					
-</div>
+				</div>
 
 				<div class="col-sm-6">
 				<?php if(get_field('uu_options_alternative_title_agenda', 'option')) { $agenda_title = get_field('uu_options_alternative_title_agenda', 'option'); } else { $agenda_title = __('Agenda', 'uu2014'); } ?>
