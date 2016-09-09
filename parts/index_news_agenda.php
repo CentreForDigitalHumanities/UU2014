@@ -3,6 +3,7 @@
 
 					<h2><?php echo $news_title; ?></h2>
 					<?php 
+						
 
 						$newsamount = get_field('uu_options_news_amount', 'option');
 						$newscats = get_field('uu_options_news_frontpage_cat', 'option');
@@ -11,10 +12,10 @@
 						} else {
 							$terms='news';
 						}
-
+						$sticky = get_option( 'sticky_posts' );	
 						$args_sticky = array(
 							'post_type' => 'post',
-							'post__in'  => get_option( 'sticky_posts' ),
+							'post__in'  => $sticky,
 							'ignore_sticky_posts' => 1,
 							'cat' => $terms,
 
@@ -27,24 +28,26 @@
 					
 						$args = array(
 							'post_type' => 'post',
-							'pagination'    => true,
 							'posts_per_page' => $newsamount,
 							'cat' => $terms,
 							'post__not_in'  => get_option( 'sticky_posts' ),
 
 						);
-the_field('uu_options_alternative_title_news');
-					$newsquery = new WP_Query( $args );
+
+					
+					 
 					if ( $newsquery_sticky->have_posts() ) {
 							while ( $newsquery_sticky->have_posts() ) {
 									$newsquery_sticky->the_post(); 
-					
+								if ( isset($sticky[0]) ) {
 									get_template_part( 'parts/post-loop-frontpage');
-					
+								}
 
 				 			} 
+				 		wp_reset_postdata();
 				 	}
-
+				 	
+$newsquery = new WP_Query( $args );
 					if ( $newsquery->have_posts() ) {
 							while ( $newsquery->have_posts() ) {
 									$newsquery->the_post(); 
@@ -58,6 +61,7 @@ the_field('uu_options_alternative_title_news');
 					<?php if(get_field('uu_options_frontpage_read_more_links', 'option')) { ?>
 						<a class="button icon frontpage-read-more" href="<?php if ( function_exists('icl_object_id') ) { echo icl_get_home_url(); } ?>?cat=<?php echo $terms; ?>"><?php echo __('More', 'uu2014') . ' ' . $news_readmore_title; ?></a>		
 					<?php 
+						wp_reset_postdata();
 							}
 
 					} else { ?>
@@ -82,14 +86,22 @@ the_field('uu_options_alternative_title_news');
 						} else {
 							$agendaterms = 'agenda';
 						}
-					
+
 						$agenda_amount = get_field('uu_options_agenda_amount', 'option');
+						if ($agenda_amount) { 
+
+							$amount = (int)get_field('uu_options_agenda_amount', 'option');	
+						} else {
+							$amount = 3;
+						}
+				
+						
 						$todaydate = date('Ymd');
 						$todaytime = date('H:i');
 						$args2 = array(
 							'post_type'		=> 'post',
 							'cat' => $agendaterms,
-							'posts_per_page'	=> $agenda_amount,
+							'posts_per_page'	=> $amount,
 							'meta_key'		=> 'uu_agenda_start_date',
 							'orderby'             => 'meta_value',
 							'order'               => 'ASC',
@@ -158,6 +170,8 @@ the_field('uu_options_alternative_title_news');
 							<div class="no-events">
 								<?php _e('No upcoming events', 'uu2014') ?>
 							</div>
-							<?php endif; ?>
+							<?php 
+							wp_reset_postdata();	
+							endif; ?>
 					</div>
 				</div>
