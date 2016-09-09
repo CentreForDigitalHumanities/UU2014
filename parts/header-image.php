@@ -14,15 +14,20 @@
 				get_template_part( 'parts/carousel', '' ); ?>
 
 		<?php	} else { 
-				uu2014_header_image();
-			}
-		?>
-		<?php  if (is_home() || is_front_page() ) { ?>
-		<div class="banner-widget-area">
-    			<?php get_template_part( 'parts/widgetarea', 'banner' ); ?>
-    	</div>
-		<?php } ?>
+				uu2014_header_image(); 
+					if( function_exists('get_field') && get_field('uu_options_banner_widget_on_all_pages', 'options') || is_front_page() )	{ 
+						?>
 
+							<div class="banner-widget-area">
+			    				<?php get_template_part( 'parts/widgetarea', 'banner' ); ?>
+			    			</div>
+
+			<?php 
+						} 
+					} ?>
+
+			
+		
     	<div class="page-header-placeholder"></div>	
 
 	</div>
