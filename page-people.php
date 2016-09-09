@@ -47,8 +47,9 @@
 									}  else {
 									$i++;			
 										?>
-												
-											<div class="people-item col-sm-6 <?php if($i & 1) { echo 'block-left';}; ?>">
+										<?php if(($i & 1) && ($i > 0)) { ?></div><?php } ?>
+										<?php if($i & 1) { ?><div class="row"><?php } ?>
+											<div class="people-item col-sm-6 ">
 
 												<div class="people-item-image col-sm-4">
 													<img class="img-responsive" src="<?php echo $thumb[0]; ?>" alt="<?php echo get_the_title(get_field('uu_people_image')) ?>" />
@@ -88,7 +89,7 @@
 												</div>
 
 											</div>
-
+												
 								
 
 										<?php 
