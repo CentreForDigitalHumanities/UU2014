@@ -10,16 +10,24 @@
 						if ($agendacats) { 
 							$agendaterms = implode(',', $agendacats);	
 						} else {
-							$agendaterms = 'agenda';
+							$agendaterms = get_term_by( 'slug', 'agenda', 'category');
+							$agendaterms = $agendaterms->term_id;
 						}
 					
 						$agenda_amount = get_field('uu_options_agenda_amount', 'option');
+						if ($agenda_amount) { 
+
+							$amount = (int)get_field('uu_options_agenda_amount', 'option');	
+						} else {
+							$amount = 3;
+						}
+				
 						$todaydate = date('Ymd');
 						$todaytime = date('H:i');
 						$args = array(
 							'post_type'		=> 'post',
 							'cat' => $agendaterms,
-							'posts_per_page'	=> $agenda_amount,
+							'posts_per_page'	=> $amount,
 							'meta_key'		=> 'uu_agenda_start_date',
 							'orderby'             => 'meta_value',
 							'order'               => 'ASC',

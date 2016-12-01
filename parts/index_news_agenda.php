@@ -84,7 +84,8 @@ $newsquery = new WP_Query( $args );
 						if ($agendacats) { 
 							$agendaterms = implode(',', $agendacats);	
 						} else {
-							$agendaterms = 'agenda';
+							$agendaterms = get_term_by( 'slug', 'agenda', 'category');
+							$agendaterms = $agendaterms->term_id;
 						}
 
 						$agenda_amount = get_field('uu_options_agenda_amount', 'option');
