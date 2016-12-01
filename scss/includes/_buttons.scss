@@ -234,7 +234,7 @@
 }
 
 .linkedin {
-	background-color: #0274B3;
+	background-color: #0274B3 !important;
 	&:before {
 		color: white;
 	    content: "";
@@ -246,7 +246,7 @@
 }
 
 .facebook {
-	background-color: #3B5997;
+	background-color: #3B5997 !important;
 	&:before {
 		content: "";
 		color: white;
@@ -254,7 +254,7 @@
 }
 
 .twitter {
-	background-color: #01ACEC;
+	background-color: #01ACEC !important;
 	&:before {
 		content: "";
 		color: white;
@@ -283,7 +283,7 @@
 }
 
 .instagram {
-	background-color: #246087;
+	background-color: #246087 !important;
 	&:before {
 		content: "";
     	font-size: 31px;

@@ -22,7 +22,8 @@ Stylesheet: Main Stylesheet
 // @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/grid";
-
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/modals";
+@import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
 
 // Import Bootstrap elements
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap-compass";
@@ -86,6 +87,7 @@ Stylesheet: Main Stylesheet
 @import "includes/widgets/upcoming_agenda";
 @import "includes/widgets/twitter_widget_user_timeline";
 @import "includes/rss";
+@import "includes/sitelist";
 
 @import "includes/plugins/breadcrumb-navxt";
 @import "includes/plugins/formidable";

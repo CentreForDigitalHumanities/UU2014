@@ -577,6 +577,10 @@ blockquote.right {}
 .size-thumbnail {
 	max-width: 100%;
 	height: auto;
+	@include bp(xs) {
+		width: 100%;
+		float: none;
+	}
 }
 
 .size-full {}

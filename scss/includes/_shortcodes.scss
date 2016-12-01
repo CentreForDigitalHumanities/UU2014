@@ -121,3 +121,8 @@
     background-color: $light-grey;
     padding: 1em;
 }
+
+.bs-tooltip {
+    border-bottom: 1px dotted #000;
+    text-decoration: none;
+}

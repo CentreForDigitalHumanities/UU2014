@@ -21,12 +21,7 @@
 	text-decoration: none;
 }
 
-.navbar-nav > li.first-item > a {
-	
-	@include bp(sm) {
-		padding-left: 20px;
-	}
-}
+
 
 .navbar-toggle {
 	float: left;
@@ -65,15 +60,12 @@
 
 #home-icon {
 	@include bp(xs) {
-		display: none;
+		display: block;
 	}
 }
 
 .menuitem-home {
 	display: none;
-	@include bp(xs) {
-		display: block;
-	}
 }	
 
 .current-menu-item .home-icon,

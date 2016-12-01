@@ -43,7 +43,29 @@
 	.col-sm-8 {
 		 margin-left: 16.6667%;
 	}
+	
 }
+
+.home-blog {
+	article {
+		a {
+			text-decoration: none;
+		}
+		div {
+			@include bp(xs) {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+	.archive-thumbnail {
+		@include bp(xs) {
+			margin-bottom: 15px;
+		}
+	}
+}
+
+
 
 .blog-item {
 	margin-bottom: 30px;

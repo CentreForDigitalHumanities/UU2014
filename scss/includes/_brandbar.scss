@@ -123,6 +123,7 @@ input[type="submit"].searchbutton, .searchbutton {
     }
     @include bp(xs) {
         min-width: auto;
+        margin-left: -10px;
     }
 }
 

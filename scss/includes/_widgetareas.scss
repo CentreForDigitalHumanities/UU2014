@@ -6,11 +6,24 @@
     	line-height: 28px;
     	font-weight: 400;
 	}
+	.widget {
+		@include bp(xs) {
+			margin-bottom: 15px;
+		}
+		p {
+
+		}
+	}
 }
 
 #footer-widget-area {
 	background-color: $uu-sub-footer;
 	color: $uu-sub-color;
+	.widget {
+		@include bp(xs) {
+			margin-bottom: 15px;
+		}
+	}	
 }
 
 #footer-widget-area .widgettitle {
@@ -50,6 +63,10 @@
 	padding: 2em 0 1em 0;
 	@include bp(sm) {
 		width: 80%;
+	}
+	@include bp(xs) {
+		width: 100%;
+		padding: 15px;
 	}
 }
 

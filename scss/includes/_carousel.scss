@@ -7,14 +7,26 @@
 		&.active {
 			display: block;
 		}
-
+		@include bp(sm) {
+			min-height: 400px;
+		}
+		@include bp(xs) {
+			min-height: 300px;
+		}
 		.carousel-caption {
 			left: 50%;
 			right: 12%;
 			padding-bottom: 50px;
+			z-index: 100;
 			@include bp(sm) {
-				left: 12%;
-				right: 12%;
+				top: 90px;
+        		bottom: auto;
+        		left: 15px;
+        		right: 15px;
+			}
+			@include bp(xs) {
+				top: 50px;
+        		bottom: auto;
 			}
 			.carousel-caption-text {
 				background-color: $uu-foto-blok;
@@ -26,8 +38,19 @@
 					font-weight: 300;
 					margin: 0;
 					color: #fff;
-
+					@include bp(sm) {
+						font-size: 20px;
+				        font-weight: 300;
+				        margin: 0;
+				        width: 100%;
+				        text-shadow: 0 0;
+				        color: #333;
+					}
 				}
+				@include bp(sm) {
+        			background-color: #ffffff;
+        			color: #333;
+   				}
 			}
 			.carousel-caption-link {
 				position: absolute;
@@ -61,7 +84,7 @@
 		margin: -11px 0 0 5px;
 	}
 	.carousel-indicators {
-		width: 105px;
+		width: auto;
 		position: relative;
 		margin: 0;
 		bottom: 0;

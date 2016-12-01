@@ -9,6 +9,12 @@ footer#colophon {
 	a {
 		color: #eee;
 	}
+	img {
+		@include bp(xs) {
+			width: 100%;
+			margin-bottom: 10px;
+		}
+	}
 }
 
 #footer-widget-area {
@@ -17,7 +23,7 @@ footer#colophon {
 			font-weight: 300;
 			font-size: 21px;
 			color: #fff;
-			height: 50px;
+			
 			margin: 0;
 		}
 	}
