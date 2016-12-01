@@ -59,3 +59,15 @@
 .frm_required {
     color: $uu-rood !important;
 }
+
+.frm_style_formidable-style.with_frm_style input[type="text"], .frm_style_formidable-style.with_frm_style input[type="password"], .frm_style_formidable-style.with_frm_style input[type="email"], .frm_style_formidable-style.with_frm_style input[type="number"], .frm_style_formidable-style.with_frm_style input[type="url"], .frm_style_formidable-style.with_frm_style input[type="tel"], .frm_style_formidable-style.with_frm_style input[type="file"], .frm_style_formidable-style.with_frm_style input[type="search"], .frm_style_formidable-style.with_frm_style select {
+    border: 1px solid #ffcd00;
+    border-radius: 0;
+    box-shadow: 0 0;
+    height: 32px;
+    line-height: 1.3;
+}
+
+.frm_style_formidable-style.with_frm_style input[type="submit"], .frm_style_formidable-style.with_frm_style .frm_submit input[type="button"], .frm_form_submit_style, .frm_style_formidable-style.with_frm_style.frm_login_form input[type="submit"] {
+
+}

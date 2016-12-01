@@ -58,7 +58,7 @@
 
 
 
-<meta name="msapplication-TileColor" content="#ffcd00">
+<meta name="msapplication-TileColor" content="#f01d4f">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
 
 <link rel="profile" href="http://gmpg.org/xfn/11">

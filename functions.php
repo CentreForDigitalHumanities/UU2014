@@ -61,9 +61,9 @@ require_once(SCAFFOLDING_INCLUDE_PATH.'base-functions.php');
 //     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' );
 // }
 
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' );
-}
+// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' );
+// }
 
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/lecturenet.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/lecturenet.php' );
@@ -75,6 +75,10 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/iframe.p
 
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured-image-text.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured-image-text.php' );
+}
+
+if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/grid.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/grid.php' );
 }
 
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' ) ) {
@@ -161,8 +165,20 @@ function uu2014_scripts_and_styles() {
 	
 }
 
+
 add_action('wp_enqueue_scripts', 'uu2014_scripts_and_styles', 20 );
 
+
+
+
+// function datatables_bootstrap() {
+// 	wp_enqueue_script('datatables-js', get_stylesheet_directory_uri().'/js/datatables/jquery.dataTables.min.js', array( 'jquery' ) );
+// 	wp_enqueue_script('datatables-bootstrap-js', get_stylesheet_directory_uri().'/js/datatables/dataTables.bootstrap.min.js', array( 'jquery' ) );
+// 	wp_enqueue_script('datatables-yadcf-js', get_stylesheet_directory_uri().'/js/datatables/jquery.dataTables.yadcf.js', array( 'jquery' ) );
+// }
+// if(get_current_blog_id() == 1) {
+// 	add_action( 'wp_enqueue_scripts', 'datatables_bootstrap' );
+// }
 
 // ui-datepicker z-index bug
 add_action('admin_head', 'my_custom_admin_css');
@@ -1094,3 +1110,20 @@ function add_sep_to_frm_csv($atts) {
     echo 'sep=,'."\n";
   
 }
+
+// Force use of category-agenda.php template on tag archive when category is agenda
+
+function agenda_template_override($template) {
+
+	global $wp_query;
+
+	$category = get_query_var('category_name');
+
+	if( $category == 'Agenda' ) {
+		return locate_template('category-agenda.php');
+	}
+
+	return $template;
+
+}
+add_filter('template_include', 'agenda_template_override');

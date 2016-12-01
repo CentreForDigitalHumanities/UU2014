@@ -1,0 +1,60 @@
+#sitelist {
+	border-collapse: collapse;
+	h2 {
+		margin: 0 !important;
+	}
+	p {
+		font-size: 16px;
+		margin: 0;
+	}
+	.sitelist-type, .sitelist-fac {
+		font-size: 16px;
+		font-family: $sans;
+		line-height: 140%;
+	}
+	tr {
+		padding: 10px 0;
+		border-bottom: 1px solid $light-grey;
+	}
+	.site_thumb {
+		margin: 10px 0;
+	}
+}
+
+.dataTables_paginate {
+	font-family: $sans;
+	ul {
+		display: inline-block;
+    	margin: 0 auto;
+	}
+	li {
+		
+	    
+	    
+	    display: inline-block;	
+	    //padding: 0 0 0 3px !important;
+	    margin-left: 5px;
+	    a {
+	    	display: inline-block;	
+	    	background-color: $uu-geel;
+			color: black;
+			height: 42px;
+		    line-height: 42px;
+		    text-align: center;
+		    vertical-align: top;
+		    width: 42px;
+		    
+	    }
+	}
+	li.active {
+		font-weight: bold;
+	}
+	li.previous a, li.next a {
+		width: auto;
+		padding: 0 10px;
+	}
+	li.disabled a {
+		opacity: 0.3;
+	}
+
+}

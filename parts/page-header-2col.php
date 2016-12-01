@@ -108,7 +108,7 @@
 	    			<div class="toggle-btn-div visible-xs clearfix">
 	    			 	<button type="button" class="toggle-btn white button icon left arrow-right" data-toggle="offcanvas"><?php _e('Show sidebar', 'uu2014'); ?></button>
 					</div>
-			<div class="page-content-inner">	
+			<div class="page-content-inner facetwp-template">	
 	    			
 	    			<?php
 							// Show an optional term description.

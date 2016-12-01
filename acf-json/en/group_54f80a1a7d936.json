@@ -1,10 +1,10 @@
 {
     "key": "group_54f80a1a7d936",
-    "title": "Agenda en",
+    "title": "Agenda",
     "fields": [
         {
             "key": "field_54afc57a46488",
-            "label": "Start Date",
+            "label": "Startdatum",
             "name": "uu_agenda_start_date",
             "type": "date_picker",
             "instructions": "",
@@ -56,7 +56,7 @@
             "key": "field_54afc5d94648a",
             "label": "Start time",
             "name": "uu_agenda_start_time",
-            "type": "date_time_picker",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -73,19 +73,19 @@
                 "class": "",
                 "id": ""
             },
-            "show_date": "false",
-            "date_format": "m\/d\/y",
-            "time_format": "H:mm",
-            "show_week_number": "false",
-            "picker": "select",
-            "save_as_timestamp": "false",
-            "get_as_timestamp": "false"
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         },
         {
             "key": "field_54afc6414648b",
             "label": "End time",
             "name": "uu_agenda_end_time",
-            "type": "date_time_picker",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": [
@@ -102,13 +102,13 @@
                 "class": "",
                 "id": ""
             },
-            "show_date": "false",
-            "date_format": "m\/d\/y",
-            "time_format": "H:mm",
-            "show_week_number": "false",
-            "picker": "select",
-            "save_as_timestamp": "false",
-            "get_as_timestamp": "false"
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
         },
         {
             "key": "field_54afc6bb4648d",
@@ -155,7 +155,7 @@
         },
         {
             "key": "field_54afc6fc4648f",
-            "label": "Image",
+            "label": "Afbeelding",
             "name": "uu_agenda_image",
             "type": "image",
             "instructions": "",
@@ -190,6 +190,18 @@
                 "operator": "==",
                 "value": "category:agenda"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            },
+            {
+                "param": "post_category",
+                "operator": "==",
+                "value": "category:agenda-en"
+            }
         ]
     ],
     "menu_order": 0,
@@ -200,5 +212,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1443692018
+    "modified": 1461830562
 }

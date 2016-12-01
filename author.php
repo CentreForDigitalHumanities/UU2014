@@ -10,8 +10,7 @@ get_header(); ?>
 <?php get_template_part( 'parts/page-header-2col'); ?> 
 
 <div class="author_bio clearfix">
-	<?php get_template_part( 'parts/author_badge'); ?> 	
-	<div class="author_page_url"><a href="<?php the_author_meta('user_url'); ?>" target="_blank">Website</a></div>
+	<?php get_template_part( 'parts/author_badge'); ?> 
 	 <?php the_author_meta('user_description'); ?> 
 </div>
 
