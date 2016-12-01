@@ -4,11 +4,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uu2014\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-07-19 13:16+0200\n"
-"PO-Revision-Date: 2016-07-19 13:16+0200\n"
-"Last-Translator: \n"
-"Language-Team: ictenmedia <ictenmedia@uu.nl>\n"
-"Language: nl_NL\n"
+"POT-Creation-Date: 2016-09-29 13:32+0200\n"
+"PO-Revision-Date: 2016-09-29 13:33+0200\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,246 +17,247 @@ msgstr ""
 "esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: \n"
+"Language: de\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
 #: ../header.php:32
 #, php-format
 msgid "Page %s"
-msgstr "Pagina %s"
+msgstr ""
 
 #: ../header.php:117
 msgid "Skip to content"
-msgstr "Direct naar het inhoud"
+msgstr ""
 
 #: ../page-home-agenda.php:37 ../parts/index_agenda_only.php:2
 #: ../parts/index_news_agenda.php:40 ../includes/custom-post-type.php:60
 #: ../includes/functions/custom-post-type-agenda.php:8
 msgid "Agenda"
-msgstr "Agenda"
+msgstr ""
 
 #: ../page-home-agenda.php:73 ../category-agenda.php:50
 #: ../parts/index_agenda_only.php:38 ../parts/index_news_agenda.php:85
 msgid "No upcoming events"
-msgstr "Geen items"
+msgstr ""
 
 #: ../single.php:40 ../includes/functions/metabox-agenda.php:56
 msgid "Date"
-msgstr "Datum"
+msgstr ""
 
 #: ../single.php:63 ../includes/functions/metabox-agenda.php:63
 msgid "Time"
-msgstr "Tijd"
+msgstr ""
 
 #: ../single.php:71
 msgid "Location"
-msgstr "Locatie"
+msgstr ""
 
 #: ../single.php:77 ../includes/functions/metabox-agenda.php:72
 msgid "Url"
-msgstr "Url"
+msgstr ""
 
 #: ../single.php:100 ../single-agenda.php:63 ../page.php:10 ../page-test.php:51
 #: ../page-full-width.php:17 ../parts/post-loop.php:19
 msgid "Pages:"
-msgstr "Pagina's:"
+msgstr ""
 
 #: ../functions.php:246
 msgid "Main Menu"
-msgstr "Hoofdmenu"
+msgstr ""
 
 #: ../functions.php:247
 msgid "Footer Menu"
-msgstr "Footer menu"
+msgstr ""
 
 #: ../functions.php:265
 msgid "default"
-msgstr "standaard"
+msgstr ""
 
 #: ../functions.php:299
 msgid "Small Thumbnail"
-msgstr "Kleine thumbnail"
+msgstr ""
 
 #: ../functions.php:419
 msgid "Left Sidebar"
-msgstr "Linker sidebar"
+msgstr ""
 
 #: ../functions.php:420
 msgid "The Left (primary) sidebar used for the interior menu."
-msgstr "De linker sidebar, wordt o.a. gebruikt voor submenus."
+msgstr ""
 
 #: ../functions.php:428
 msgid "Below Content"
-msgstr "Onder content"
+msgstr ""
 
 #: ../functions.php:429
 msgid "Below Content used for the call to actions."
-msgstr "Wordt gebruikt voor \"call to actions\" of andere quotes."
+msgstr ""
 
 #: ../functions.php:437
 msgid "Banner Widget Area"
-msgstr "Banner Widget Gebied"
+msgstr ""
 
 #: ../functions.php:438
 msgid "Banner widget area"
-msgstr "Banner widget gebied"
+msgstr ""
 
 #: ../functions.php:446
 msgid "Home Widget Area 0"
-msgstr "Home Widget gebied 0"
+msgstr ""
 
 #: ../functions.php:447
 msgid "Full-width area above home widget areas 1,2 and 3"
-msgstr "Volledige breedte gebied boven home widget gebieden 1, 2 en 3."
+msgstr ""
 
 #: ../functions.php:455
 msgid "Home Widget Area 1"
-msgstr "Home Widget gebied 1"
+msgstr ""
 
 #: ../functions.php:456
 msgid "First column in home widget area"
-msgstr "Eerste kolom in home widget gebied"
+msgstr ""
 
 #: ../functions.php:464
 msgid "Home Widget Area 2"
-msgstr "Home Widget gebied 2"
+msgstr ""
 
 #: ../functions.php:465
 msgid "Second column in home widget area"
-msgstr "Tweede kolom in home widget gebied"
+msgstr ""
 
 #: ../functions.php:473
 msgid "Home Widget Area 3"
-msgstr "Home Widget gebied 3"
+msgstr ""
 
 #: ../functions.php:474
 msgid "Last column in home widget area"
-msgstr "Derde kolom in home widget gebied"
+msgstr ""
 
 #: ../functions.php:482
 msgid "footer Widget Area 1"
-msgstr "Footer Widget kolom 1"
+msgstr ""
 
 #: ../functions.php:483
 msgid "First column in footer widget area"
-msgstr "Eerste kolom in footer widget gebied"
+msgstr ""
 
 #: ../functions.php:491
 msgid "footer Widget Area 2"
-msgstr "Footer Widget kolom 2"
+msgstr ""
 
 #: ../functions.php:492
 msgid "Second column in footer widget area"
-msgstr "Tweede kolom in footer widget gebied"
+msgstr ""
 
 #: ../functions.php:500
 msgid "footer Widget Area 3"
-msgstr "Footer Widget kolom 3"
+msgstr ""
 
 #: ../functions.php:501
 msgid "Third column in footer widget area"
-msgstr "Derde kolom in footer widget gebied"
+msgstr ""
 
 #: ../functions.php:509
 msgid "footer Widget Area 4"
-msgstr "Footer Widget kolom 4"
+msgstr ""
 
 #: ../functions.php:510
 msgid "Last column in footer widget area"
-msgstr "Laatste kolom in footer widget gebied"
+msgstr ""
 
 #: ../functions.php:518
 msgid "Colofon Widget Area"
-msgstr "Colofon widget gebied"
+msgstr ""
 
 #: ../functions.php:519
 msgid "Bottom area full width"
-msgstr "Gebied helemaal onderaan de pagina, volledige content breedte."
+msgstr ""
 
 #: ../functions.php:558
 msgid "No Related Posts Yet!"
-msgstr "Geen gerelateerde berichten gevonden."
+msgstr ""
 
 #: ../functions.php:589
 #, php-format
 msgid "<cite class=\"fn\">%s</cite>"
-msgstr "<cite class=\"fn\">%s</cite>"
+msgstr ""
 
 #: ../functions.php:590
 msgid "F jS, Y"
-msgstr "F jS, Y"
+msgstr ""
 
 #: ../functions.php:591
 msgid "(Edit)"
-msgstr "(Edit)"
+msgstr ""
 
 #: ../functions.php:595
 msgid "Your comment is awaiting moderation."
-msgstr "Uw reactie wacht op goedkeuring."
+msgstr ""
 
 #: ../functions.php:616 ../parts/brandbar.php:48 ../parts/brandbar.php:64
 msgid "Search for:"
-msgstr "Zoek:"
+msgstr ""
 
 #: ../functions.php:617 ../parts/brandbar.php:49 ../parts/brandbar.php:65
 msgid "Search the Site..."
-msgstr "Zoek in deze site"
+msgstr ""
 
 #: ../functions.php:618
 msgid "Search"
-msgstr "Zoek"
+msgstr ""
 
 #: ../functions.php:708
 msgid "Read"
-msgstr "Lees"
+msgstr ""
 
 #: ../functions.php:708 ../page-people.php:77 ../page-people-large.php:75
 #: ../simple-image-widget/widget.php:35 ../parts/carousel.php:55
 #: ../parts/carousel.php:86
 msgid "Read more"
-msgstr "Lees meer"
+msgstr ""
 
 #: ../functions.php:727
 #, php-format
 msgid "Posts by %s"
-msgstr "Berichten door %s"
+msgstr ""
 
 #: ../functions.php:766
 msgid ", read more..."
-msgstr "lees meer…"
+msgstr ""
 
 #: ../functions.php:845
 msgid "UU Site Options"
-msgstr "UU Site Opties"
+msgstr ""
 
 #: ../functions.php:846
 msgid "UU Options"
-msgstr "UU Opties"
+msgstr ""
 
 #: ../functions.php:854
 msgid "UU Advanced Options"
-msgstr "UU Geavanceerde instellingen"
+msgstr ""
 
 #: ../functions.php:855
 msgid "UU Advanced"
-msgstr "UU Geavanceerd"
+msgstr ""
 
 #: ../functions.php:915
 msgid "Posted"
-msgstr "Geplaatst"
+msgstr ""
 
 #: ../functions.php:917
 msgid "on"
-msgstr "op"
+msgstr ""
 
 #: ../functions.php:920 ../parts/index_blog.php:70
 msgid "by"
-msgstr "door"
+msgstr ""
 
 #: ../functions.php:923
 msgid "<br />in: "
-msgstr "<br />in:"
+msgstr ""
 
 #: ../functions.php:945
 msgid "Share"
@@ -267,40 +266,38 @@ msgstr ""
 #: ../search.php:8 ../parts/page-header-1col.php:76
 #, php-format
 msgid "Search Results for: %s"
-msgstr "Zoek resultaten voor: %s"
+msgstr ""
 
 #: ../comments.php:21
 msgid "This post is password protected. Enter the password to view comments."
 msgstr ""
-"Dit bericht is beveiligd met een wachtwoord, voer het wachtwoord in om de "
-"reacties te tonen."
 
 #: ../comments.php:32
 msgid "<span>No</span> Responses"
-msgstr "<span>Geen</span> reacties"
+msgstr ""
 
 #: ../comments.php:32
 msgid "<span>One</span> Response"
-msgstr "<span>Een</span> reactie"
+msgstr ""
 
 #: ../comments.php:32
 msgid "<span>%</span> Response"
 msgid_plural "<span>%</span> Responses"
-msgstr[0] "<span>%</span> reactie"
-msgstr[1] "<span>%</span> reacties"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../comments.php:61
 msgid "Comments are closed."
-msgstr "Geen reacties mogelijk."
+msgstr ""
 
 #: ../comments.php:75
 #, php-format
 msgid "You must be %1$slogged in%2$s to post a comment."
-msgstr "U moet %1$singelogd%2$s zijn om een reactie te kunnen plaatsen"
+msgstr ""
 
 #: ../page-people.php:82 ../page-people-large.php:83
 msgid "Mail"
-msgstr "E-mailadres"
+msgstr ""
 
 #: ../single-agenda.php:17
 #, php-format
@@ -309,26 +306,23 @@ msgid ""
 "<span class=\"author\">%3$s</span> <span class=\"amp\">&amp;</span> filed "
 "under %4$s."
 msgstr ""
-"Geplaatst op <time class=\"updated\" datetime=\"%1$s\" pubdate>%2$s</time> "
-"door <span class=\"author\">%3$s</span> <span class=\"amp\">&amp;</span> in "
-"%4$s."
 
 #: ../category-agenda.php:14
 #: ../includes/functions/widgets/widget-upcoming-agenda.php:115
 msgid "Upcoming events"
-msgstr "Agenda items"
+msgstr ""
 
 #: ../category-agenda.php:56
 msgid "Previous events"
-msgstr "Agenda archief"
+msgstr ""
 
 #: ../category-agenda.php:89
 msgid "No previous events"
-msgstr "Geen items"
+msgstr ""
 
 #: ../404.php:15
 msgid "That page can&rsquo;t be found."
-msgstr "Pagina niet gevonden."
+msgstr ""
 
 #: ../404.php:20
 msgid ""
@@ -338,402 +332,396 @@ msgid ""
 "<a href=\"/site-map/\" title=\"Site Map Page\">Site Map</a> page</li><li>Try "
 "using the Search below.</li></ul>"
 msgstr ""
-"<ul><li>Kijk of de URL klopt</li><li>Zoek de pagina hierboven in het menu of "
-"op de <a href=\"/site-map/\" title=\"Site Map Page\">Site Map</a> pagina</"
-"li><li>Probeer de zoekmachine hieronder</li></ul>"
 
 #: ../page-test.php:20
 msgid "Site"
-msgstr "Website"
+msgstr ""
 
 #: ../page-test.php:21
 msgid "Type"
-msgstr "Type"
+msgstr ""
 
 #: ../page-test.php:22
 msgid "Owner"
-msgstr "Eigenaar"
+msgstr ""
 
 #: ../index.php:64 ../parts/index_news_only.php:2
 #: ../parts/index_news_agenda.php:2
 msgid "News"
-msgstr "Nieuws"
+msgstr ""
 
 #: ../parts/index_news_agenda.php:35
 msgid "More"
-msgstr "Meer"
+msgstr ""
 
 #: ../parts/colofon.php:20 ../parts/brandbar.php:34
 msgid "Logo Utrecht University"
-msgstr "Logo Universiteit Utrecht"
+msgstr ""
 
 #: ../parts/colofon.php:26
 msgid "Utrecht University"
-msgstr "Universiteit Utrecht"
+msgstr ""
 
 #: ../parts/colofon.php:32
 msgid "disclaimer"
-msgstr "disclaimer"
+msgstr ""
 
 #: ../parts/page-header-2col.php:40 ../parts/page-header-1col.php:31
 #, php-format
 msgid "Author Archive: %s"
-msgstr "Auteur archief: %s"
+msgstr ""
 
 #: ../parts/page-header-2col.php:43 ../parts/page-header-1col.php:34
 #, php-format
 msgid "Daily Archives: %s"
-msgstr "Archief per dag: %s"
+msgstr ""
 
 #: ../parts/page-header-2col.php:46 ../parts/page-header-1col.php:37
 #, php-format
 msgid "Monthly Archives: %s"
-msgstr "Archief per maand: %s"
+msgstr ""
 
 #: ../parts/page-header-2col.php:46 ../parts/page-header-1col.php:37
 msgctxt "monthly archives date format"
 msgid "F Y"
-msgstr "F Y"
+msgstr ""
 
 #: ../parts/page-header-2col.php:49 ../parts/page-header-1col.php:40
 #, php-format
 msgid "Yearly Archives: %s"
-msgstr "Archief per jaar: %s"
+msgstr ""
 
 #: ../parts/page-header-2col.php:49 ../parts/page-header-1col.php:40
 msgctxt "yearly archives date format"
 msgid "Y"
-msgstr "Y"
+msgstr ""
 
 #: ../parts/page-header-2col.php:52 ../parts/page-header-1col.php:43
 msgid "Asides"
-msgstr "Asides"
+msgstr ""
 
 #: ../parts/page-header-2col.php:55 ../parts/page-header-1col.php:46
 msgid "Galleries"
-msgstr "Gallerijen"
+msgstr ""
 
 #: ../parts/page-header-2col.php:58 ../parts/page-header-1col.php:49
 msgid "Images"
-msgstr "Afbeeldingen"
+msgstr ""
 
 #: ../parts/page-header-2col.php:61 ../parts/page-header-1col.php:52
 msgid "Videos"
-msgstr "Videos"
+msgstr ""
 
 #: ../parts/page-header-2col.php:64 ../parts/page-header-1col.php:55
 msgid "Quotes"
-msgstr "Quotes"
+msgstr ""
 
 #: ../parts/page-header-2col.php:67 ../parts/page-header-1col.php:58
 msgid "Links"
-msgstr "Links"
+msgstr ""
 
 #: ../parts/page-header-2col.php:70 ../parts/page-header-1col.php:61
 msgid "Statuses"
-msgstr "Statussen"
+msgstr ""
 
 #: ../parts/page-header-2col.php:73 ../parts/page-header-1col.php:64
 msgid "Audios"
-msgstr "Audio bestanden"
+msgstr ""
 
 #: ../parts/page-header-2col.php:76 ../parts/page-header-1col.php:67
 msgid "Chats"
-msgstr "Discussies"
+msgstr ""
 
 #: ../parts/page-header-2col.php:85
 msgctxt "label"
 msgid "Search"
-msgstr "Zoek"
+msgstr "Suche"
 
 #: ../parts/page-header-2col.php:98
 msgctxt "placeholder"
 msgid "Search"
-msgstr "Zoek"
+msgstr ""
 
 #: ../parts/page-header-2col.php:98
 msgctxt "label"
 msgid "Search for:"
-msgstr "Zoeken naar:"
+msgstr ""
 
 #: ../parts/page-header-2col.php:99
 msgctxt "submit button"
 msgid "Search"
-msgstr "Zoek"
+msgstr ""
 
 #: ../parts/page-header-2col.php:106 ../parts/page-header-1col.php:91
 msgid "Show sidebar"
-msgstr "Bekijk sidebar"
+msgstr ""
 
 #: ../parts/carousel.php:102
 msgid "Previous slide"
-msgstr "Vorige slide"
+msgstr ""
 
 #: ../parts/carousel.php:103
 msgid "Next slide"
-msgstr "Volgende Slide"
+msgstr ""
 
 #: ../parts/post-loop.php:5
 msgid "no image"
-msgstr "Geen afbeelding"
+msgstr ""
 
 #: ../includes/template-error.php:5
 msgid "No items found"
-msgstr "Niets gevonden."
+msgstr ""
 
 #: ../includes/template-error.php:11
 msgid ""
 "Sorry, but nothing matched your search terms. Please try again with some "
 "different keywords."
 msgstr ""
-"Sorry, niets gevonden voor uw zoektermen. Probeer het nogmaals met andere "
-"termen."
 
 #: ../includes/base-functions.php:131
 msgid "First"
-msgstr "Eerste"
+msgstr ""
 
 #: ../includes/base-functions.php:162
 msgid "Last"
-msgstr "Laatste"
+msgstr ""
 
 #: ../includes/custom-post-type.php:9
 #: ../includes/functions/custom-post-type-people.php:9
 msgctxt "Post Type General Name"
 msgid "People"
-msgstr "Personen"
+msgstr ""
 
 #: ../includes/custom-post-type.php:10
 #: ../includes/functions/custom-post-type-people.php:10
 msgctxt "Post Type Singular Name"
 msgid "Person"
-msgstr "Persoon"
+msgstr ""
 
 #: ../includes/custom-post-type.php:11
 #: ../includes/functions/custom-post-type-people.php:11
 msgid "People"
-msgstr "Personen"
+msgstr ""
 
 #: ../includes/custom-post-type.php:12 ../includes/custom-post-type.php:61
 #: ../includes/functions/custom-post-type-agenda.php:9
 #: ../includes/functions/custom-post-type-people.php:12
 msgid "Parent:"
-msgstr "Ouder:"
+msgstr ""
 
 #: ../includes/custom-post-type.php:13
 #: ../includes/functions/custom-post-type-people.php:13
 msgid "All people"
-msgstr "Alle personen"
+msgstr ""
 
 #: ../includes/custom-post-type.php:14
 #: ../includes/functions/custom-post-type-people.php:14
 msgid "View Person"
-msgstr "Bekijk persoon"
+msgstr ""
 
 #: ../includes/custom-post-type.php:15
 #: ../includes/functions/custom-post-type-people.php:15
 msgid "Add New Person"
-msgstr "Voeg nieuwe persoon toe"
+msgstr ""
 
 #: ../includes/custom-post-type.php:16
 #: ../includes/functions/custom-post-type-people.php:16
 msgid "New Person"
-msgstr "Nieuw persoon"
+msgstr ""
 
 #: ../includes/custom-post-type.php:17
 #: ../includes/functions/custom-post-type-people.php:17
 msgid "Edit Person"
-msgstr "Persoon aanpassen"
+msgstr ""
 
 #: ../includes/custom-post-type.php:18
 #: ../includes/functions/custom-post-type-people.php:18
 msgid "Update Person"
-msgstr "Persoon bijwerken"
+msgstr ""
 
 #: ../includes/custom-post-type.php:19
 #: ../includes/functions/custom-post-type-people.php:19
 msgid "Search persons"
-msgstr "Zoek persoon"
+msgstr ""
 
 #: ../includes/custom-post-type.php:20
 #: ../includes/functions/custom-post-type-people.php:20
 msgid "No persons found"
-msgstr "Geen personen gevonden"
+msgstr ""
 
 #: ../includes/custom-post-type.php:21
 #: ../includes/functions/custom-post-type-people.php:21
 msgid "No persons found in Trash"
-msgstr "Geen personen gevonden in prullenbak"
+msgstr ""
 
 #: ../includes/custom-post-type.php:24
 #: ../includes/functions/custom-post-type-people.php:24
 msgid "people"
-msgstr "personen"
+msgstr ""
 
 #: ../includes/custom-post-type.php:25
 #: ../includes/functions/custom-post-type-people.php:25
 msgid "post type for making people listing pages"
-msgstr "Content type om overzicht van personen te maken"
+msgstr ""
 
 #: ../includes/custom-post-type.php:58
 #: ../includes/functions/custom-post-type-agenda.php:6
 msgctxt "Post Type General Name"
 msgid "Agenda"
-msgstr "Agenda"
+msgstr ""
 
 #: ../includes/custom-post-type.php:59
 #: ../includes/functions/custom-post-type-agenda.php:7
 msgctxt "Post Type Singular Name"
 msgid "Agenda"
-msgstr "Agenda"
+msgstr ""
 
 #: ../includes/custom-post-type.php:62
 #: ../includes/functions/custom-post-type-agenda.php:10
 msgid "All Agenda items"
-msgstr "Alle agenda items"
+msgstr ""
 
 #: ../includes/custom-post-type.php:63
 #: ../includes/functions/custom-post-type-agenda.php:11
 msgid "View Agenda item"
-msgstr "Bekijk agenda items"
+msgstr ""
 
 #: ../includes/custom-post-type.php:64
 #: ../includes/functions/custom-post-type-agenda.php:12
 msgid "Add New Agenda item"
-msgstr "Voeg nieuwe agenda item toe"
+msgstr ""
 
 #: ../includes/custom-post-type.php:65
 #: ../includes/functions/custom-post-type-agenda.php:13
 msgid "New Agenda item"
-msgstr "Nieuw agenda item"
+msgstr ""
 
 #: ../includes/custom-post-type.php:66
 #: ../includes/functions/custom-post-type-agenda.php:14
 msgid "Edit Agenda item"
-msgstr "Pas agenda item aan"
+msgstr ""
 
 #: ../includes/custom-post-type.php:67
 #: ../includes/functions/custom-post-type-agenda.php:15
 msgid "Update Agenda item"
-msgstr "Agenda item bijwerken"
+msgstr ""
 
 #: ../includes/custom-post-type.php:68
 #: ../includes/functions/custom-post-type-agenda.php:16
 msgid "Search Agenda"
-msgstr "Zoek agenda item"
+msgstr ""
 
 #: ../includes/custom-post-type.php:69
 #: ../includes/functions/custom-post-type-agenda.php:17
 msgid "Nothing found"
-msgstr "Niets gevonden"
+msgstr ""
 
 #: ../includes/custom-post-type.php:70
 #: ../includes/functions/custom-post-type-agenda.php:18
 msgid "Nothing found in Trash"
-msgstr "Niets gevonden in prullenbak"
+msgstr ""
 
 #: ../includes/custom-post-type.php:73
 #: ../includes/functions/custom-post-type-agenda.php:26
 msgid "agenda"
-msgstr "agenda"
+msgstr ""
 
 #: ../includes/custom-post-type.php:74
 #: ../includes/functions/custom-post-type-agenda.php:27
 msgid "post type for making events"
-msgstr "content type om agenda berichten aan te maken"
+msgstr ""
 
 #: ../includes/template-pager.php:8
 msgid "&laquo; Older Entries"
-msgstr "&laquo; Oudere items"
+msgstr ""
 
 #: ../includes/template-pager.php:9
 msgid "Newer Entries &raquo;"
-msgstr "Nieuwere items &raquo;"
+msgstr ""
 
 #: ../includes/functions/metabox-people.php:18
 msgid "Personalia"
-msgstr "Personalia"
+msgstr ""
 
 #: ../includes/functions/metabox-people.php:39
 #: ../includes/functions/metabox-people.php:79
 msgid "Choose or Upload an Image"
-msgstr "Kies of upload een afbeelding"
+msgstr ""
 
 #: ../includes/functions/metabox-people.php:44
 msgid "Title / short description"
-msgstr "Titel / korte omschrijving"
+msgstr ""
 
 #: ../includes/functions/metabox-people.php:49
 msgid "Institution"
-msgstr "Organisatie"
+msgstr ""
 
 #: ../includes/functions/metabox-people.php:54
 msgid "Biography / about"
-msgstr "Biography / over de auteur"
+msgstr ""
 
 #: ../includes/functions/metabox-people.php:59
 msgid "Website"
-msgstr "Website"
+msgstr ""
 
 #: ../includes/functions/metabox-people.php:80
 msgid "Use this image"
-msgstr "Gebruik deze afbeelding"
+msgstr ""
 
 #: ../includes/functions/metabox-agenda.php:47
 msgid "Agenda details"
-msgstr "Agenda details"
+msgstr ""
 
 #: ../includes/functions/metabox-agenda.php:58
 #: ../includes/functions/metabox-agenda.php:65
 msgid "From"
-msgstr "Van"
+msgstr ""
 
 #: ../includes/functions/metabox-agenda.php:60
 #: ../includes/functions/metabox-agenda.php:67
 msgid "till"
-msgstr "tot"
+msgstr ""
 
 #: ../includes/functions/shortcodes/featured-image-text.php:8
 msgctxt "uu2014"
 msgid "read more"
-msgstr "lees meer"
+msgstr ""
 
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:12
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:113
 #: ../includes/functions/widgets/widget-twitter-user-timeline.php:12
 #: ../includes/functions/widgets/widget-twitter-user-timeline.php:213
 msgid "Latest tweets"
-msgstr "Laatste tweets"
+msgstr ""
 
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:13
 #: ../includes/functions/widgets/widget-twitter-user-timeline.php:13
 msgid "display latest tweets"
-msgstr "toon laatste tweets"
+msgstr ""
 
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:122
 #: ../includes/functions/widgets/widget-upcoming-agenda.php:124
 #: ../includes/functions/widgets/widget-socialmedia-buttons.php:90
 #: ../includes/functions/widgets/widget-twitter-user-timeline.php:222
 msgid "Title:"
-msgstr "Titel:"
+msgstr ""
 
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:126
 #: ../includes/functions/widgets/widget-twitter-user-timeline.php:226
-#, fuzzy
 msgid "Amount of tweets to show"
-msgstr "Aantal te tonen items:"
+msgstr ""
 
 #: ../includes/functions/widgets/widget-upcoming-agenda.php:12
 msgid "Upcoming Agenda items"
-msgstr "Aankomende Agenda Items"
+msgstr ""
 
 #: ../includes/functions/widgets/widget-upcoming-agenda.php:13
 msgid "display a list of upcoming items"
-msgstr "toon een lijst met aankomende agenda items"
+msgstr ""
 
 #: ../includes/functions/widgets/widget-upcoming-agenda.php:128
 msgid "Amount of items to show"
-msgstr "Aantal items te tonen"
+msgstr ""
 
 #: ../includes/functions/widgets/widget-socialmedia-buttons.php:12
 msgid "Social media follow buttons"
@@ -745,82 +733,48 @@ msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:47
 msgid "Button"
-msgstr "Knop"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:53
 msgid "Lead Paragraph"
-msgstr "Intro paragraaf (large breaker)"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:58
 msgid "Label"
-msgstr "Label"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:63
 msgid "Panel"
-msgstr "Panel"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:69
 msgid "Panel callout"
-msgstr "Panel callout"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:76
 msgid "Radius (Panel, Label, Button)"
-msgstr "Radius (Panel, Label, Button)"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:82
 msgid "Round (Label, Button)"
-msgstr "Round (Label, Button)"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:88
 msgid "Alert (Label, Button)"
-msgstr "Alert (Label, Button)"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:93
 msgid "Success (Label, Button)"
-msgstr "Success (Label, Button)"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:98
 msgid "Secondary (Label, Button)"
-msgstr "Secondary (Label, Button)"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:103
 msgid "Subheader (Headings)"
-msgstr "Subheader (Headings)"
+msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:108
 msgid "Keyboard CMD"
-msgstr "Keyboard CMD"
-
-#~ msgid "Read more &raquo;"
-#~ msgstr "Lees meer &raquo;"
-
-#~ msgctxt "placeholder"
-#~ msgid "Search …"
-#~ msgstr "Zoek ..."
-
-#~ msgid "Widget 2 Column"
-#~ msgstr "2 koloms widget"
-
-#~ msgid "Thumbnail for overview pages"
-#~ msgstr "Thumbnail voor overzichtspagina's"
-
-#~ msgid "Archives"
-#~ msgstr "Archief"
-
-#~ msgid "Oops, Post Not Found!"
-#~ msgstr "Bericht niet gevonden."
-
-#~ msgid "It seems we can&rsquo;t find what you&rsquo;re looking for."
-#~ msgstr "Niets gevonden"
-
-#~ msgid ""
-#~ "Posted <time class=\"updated\" datetime=\"%1$s\" pubdate><a href=\"%5$s\">"
-#~ "%2$s</a></time> by <span class=\"author\">%3$s</span> <span class=\"amp"
-#~ "\">&</span> filed under %4$s."
-#~ msgstr ""
-#~ "Geplaatst op <time class=\"updated\" datetime=\"%1$s\" pubdate><a href="
-#~ "\"%5$s\">%2$s</a></time> door <span class=\"author\">%3$s</span> <span "
-#~ "class=\"amp\">&</span> in %4$s."
-
-#~ msgid "Tags:"
-#~ msgstr "Tags:"
+msgstr ""
