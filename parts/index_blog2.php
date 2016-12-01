@@ -24,7 +24,7 @@
 			while ( $blogquery->have_posts() ) {
 					$blogquery->the_post(); ?>
 	
-<article id="post-<?php the_ID(); ?>" role="article" class="blog-item row">
+<article id="post-<?php the_ID(); ?>" role="article" class="blog-item clearfix">
 	<div class="author-aside col-sm-3 col-md-2 col-xs-12">
         	<?php get_template_part( 'parts/author_badge'); ?> 
         	<?php if(get_field('uu_options_news_show_pubdate', 'option')) { ?>
@@ -40,9 +40,8 @@
             </figure>
         <?php } ?>
         
-        <a class="blog-link" href="<?php the_permalink(); ?>">
-			<h1><?php the_title(); ?></h1>
-			<?php the_excerpt(); ?>
+        <a href="<?php the_permalink(); ?>">
+			<h1 class="entry-header"><?php the_title(); ?></h1>
 		</a>
 	</div>	
 		

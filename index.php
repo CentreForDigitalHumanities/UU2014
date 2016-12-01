@@ -4,7 +4,7 @@
 	<?php $post_type = get_field('uu_options_post_types', 'option');  
 		if ($post_type == 'news_agenda') { ?>
 			<?php get_template_part( 'parts/page-header-1col'); ?> 
-			<div class="container home-blog home-news-agenda">
+			<div class="home-blog home-news-agenda">
 				<?php get_template_part( 'parts/index_news_agenda'); ?> 
 			</div>
 			<?php get_template_part( 'parts/page-footer-1col'); ?> 		
@@ -12,7 +12,7 @@
 
 		elseif ($post_type == 'news') { ?>
 			<?php get_template_part( 'parts/page-header-1col'); ?> 
-			<div class="container home-blog home-news">	
+			<div class="home-blog home-news">	
 				<?php get_template_part( 'parts/index_news_only'); ?> 
 			</div>
 			<?php get_template_part( 'parts/page-footer-1col'); ?> 		
@@ -28,7 +28,7 @@
 
 		elseif ($post_type == 'agenda') { ?>
 			<?php get_template_part( 'parts/page-header-1col'); ?>
-			<div class="container home-blog home-agenda">	 
+			<div class="home-blog home-agenda">	 
 				<?php get_template_part( 'parts/index_agenda_only'); ?> 
 			</div>
 			<?php get_template_part( 'parts/page-footer-1col'); ?> 	
@@ -44,7 +44,7 @@
 
 		elseif ($post_type == 'blog') { ?>
 			<?php get_template_part( 'parts/page-header-1col'); ?>
-			<div class="container home-blog">	 
+			<div class="home-blog">	 
 				<?php get_template_part( 'parts/index_blog'); ?> 
 			</div>
 			<?php get_template_part( 'parts/page-footer-1col'); ?> 	
@@ -59,7 +59,7 @@
 		<?php }
 
 		else { ?>
-			<div class="container home-blog">
+			<div class="home-blog">
 				<div class="col-sm-8 col-sm-offset-2">
 					<h2><?php _e('News', 'uu2014') ?></h2>
 					<?php 
