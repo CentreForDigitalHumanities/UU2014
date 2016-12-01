@@ -67,24 +67,11 @@ get_header(); ?>
 
 	$agenda_query = new WP_Query( $args );
 
-	echo $GLOBALS['wp_query']->request;
-
 		if ( $agenda_query->have_posts() ) : ?>
 
 			<?php while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
 
-				<?php get_template_part( 'parts/post-loop-agenda'); ?>
-
-				<?php
-					$acf_start_date = get_field('uu_agenda_start_date');
-					$acf_start_time = get_field('uu_agenda_start_time');
-					$acf_start_date_time = $acf_start_date . ' ' . $acf_start_time;
-					$uts_start = strtotime($acf_start_date_time);
-					$acf_uts_start = date('m/d/y H:i', $uts_start);
-					$field_key = "field_56b46fd3a2868";
-					$value = $acf_uts_start;
-					update_field( $field_key, $value );
-				?>
+				<?php get_template_part( 'parts/post-loop-agenda'); ?> 
 
 			<?php endwhile; ?>
 
@@ -102,7 +89,7 @@ get_header(); ?>
 	<?php
 	$current_catid = get_query_var('cat');
 	$args2 = array(
-		'post_type'		=> 'agenda',
+		'post_type'		=> 'post',
 		'category__in' => $current_catid,
 		'posts_per_page'	=> 20,
 		'meta_key'		=> 'uu_agenda_start_date',
