@@ -3,7 +3,7 @@
 	<div class="header-image hidden-print">
 		
     <?php if(function_exists('bcn_display')) { ?>
-       <div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#">
+       <div class="breadcrumbs" xmlns:v="https://rdf.data-vocabulary.org/#">
        	  <div class="container">	 
           	<?php bcn_display(); ?>
           </div>	
@@ -18,9 +18,9 @@
 					if( function_exists('get_field') && get_field('uu_options_banner_widget_on_all_pages', 'options') || is_front_page() )	{ 
 						?>
 
-							<div class="banner-widget-area">
+							
 			    				<?php get_template_part( 'parts/widgetarea', 'banner' ); ?>
-			    			</div>
+			    		
 
 			<?php 
 						} 

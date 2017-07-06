@@ -1,8 +1,8 @@
 <header class="article-header">
 <?php if(is_active_sidebar( 'banner-widget-area' )) {  ?>
-	<div class="banner-widget-area">
+	
 				<?php dynamic_sidebar( 'banner-widget-area' ); ?>
-			</div>	
+			
 <?php } ?>			
 	<?php if ( is_home() || is_front_page() ) :
 

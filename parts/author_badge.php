@@ -4,7 +4,7 @@
 		$author_id = get_the_author_meta('ID');
 		$author_badge = get_field('author_image', 'user_'. $author_id );
 		$size = '';
-	 
+	
 		$size = 'thumbnail';
 		$attr = array(
 			'class'	=> ""

@@ -15,18 +15,20 @@
   /*
    * Print the <title> tag based on what is being viewed.
    */
-  global $page, $paged;
-
-  wp_title( '|', true, 'right' );
+  global $post, $page, $paged;
+  $site_description = get_bloginfo( 'description', 'display' );
 
   // Add the blog name.
   bloginfo( 'name' );
 
   // Add the blog description for the home/front page.
-  $site_description = get_bloginfo( 'description', 'display' );
+  
   if ( $site_description && ( is_home() || is_front_page() ) )
-    echo " | $site_description";
+    echo " | " . $site_description;
 
+  if (is_singular()) {
+  	echo " | " . $post->post_title;
+  }	
   // Add a page number if necessary:
   if ( $paged >= 2 || $page >= 2 )
     echo ' | ' . sprintf( __( 'Page %s', 'uu-template' ), max( $paged, $page ) );
@@ -42,7 +44,7 @@
 
 
 
-<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
+<?php // icons & favicons (for more: https://www.jonathantneal.com/blog/understand-the-favicon/) ?>
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-icon-touch.png">
 <?php if(function_exists('get_field') && get_field('uu_options_custom_favicon', 'options') )	{ 
 	$favicon_image = get_field('uu_options_custom_favicon', 'options');
@@ -61,13 +63,13 @@
 <meta name="msapplication-TileColor" content="#f01d4f">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
 
-<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="profile" href="https://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 <!-- Open Graph Meta Tags for Facebook and LinkedIn Sharing !-->
 <meta property="og:title" content="<?php the_title(); ?>"/>
 <?php if ( $site_description && ( is_home() || is_front_page() ) )
-   { $og_desc = ' | $site_description'; } else { $og_desc = get_the_excerpt(); } ?>
+   { $og_desc = ' | ' . $site_description; } else { $og_desc = get_the_excerpt(); } ?>
 <meta property="og:description" content="<?php echo $og_desc; ?>" />
 <meta property="og:url" content="<?php the_permalink(); ?>" />
 <?php 
@@ -92,7 +94,15 @@ if(function_exists('get_field') && get_field('uu_options_site_share_image', 'opt
 <body <?php body_class(); ?> data-spy="scroll" data-target="#sidebarnav">
      
 	<div id="page">
-		<?php if( get_field('uu_options_brandbar', 'option') ) {} else {get_template_part( 'parts/brandbar');} ?> 
+		<?php if( get_field('uu_options_brandbar', 'option') ) { ?>
+			<button type="button" class="navbar-toggle hidden-print no-brandbar" data-toggle="collapse" data-target="#main-menu-collapse">
+                    <span class="sr-only">Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </button>
+
+		<?php	} else {get_template_part( 'parts/brandbar');} ?> 
 		<header id="masthead" class="header hidden-print">
 
 			<div class="container">

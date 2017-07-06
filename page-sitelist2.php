@@ -2,7 +2,7 @@
 
 <?php get_template_part( 'parts/page-header-1col'); ?> 
 
-
+test
 
 <?php the_content(); ?>
 
@@ -21,6 +21,7 @@ $current_blog = get_current_blog_id(); ?>
 	<th><?php echo __('Title', 'uu2014'); ?></th>
 	<th><?php echo __('Type', 'uu2014'); ?></th>
 	<th><?php echo __('Faculty', 'uu2014'); ?></th>
+<th><?php echo __('Users', 'uu2014'); ?></th>
 
 </tr>
 </thead>
@@ -81,6 +82,35 @@ $current_blog = get_current_blog_id(); ?>
 		
 	<?php } ?>	
 	</td>	
+	<td>
+		<?php $args = array(
+	'blog_id'      => $site->blog_id,
+	'role'         => 'administrator',
+	'role__in'     => array(),
+	'role__not_in' => array(),
+	'meta_key'     => '',
+	'meta_value'   => '',
+	'meta_compare' => '',
+	'meta_query'   => array(),
+	'date_query'   => array(),        
+	'include'      => array(),
+	'exclude'      => array(1),
+	'orderby'      => 'login',
+	'order'        => 'ASC',
+	'offset'       => '',
+	'search'       => '',
+	'number'       => '',
+	'count_total'  => false,
+	'fields'       => 'all',
+	'who'          => ''
+ ); 
+$blogusers = get_users( $args ); 
+// Array of stdClass objects.
+foreach ( $blogusers as $user ) {
+	echo esc_html( $user->display_name ) . ', ';
+}
+?>
+	</td>
 </tr>
 	
 <?php } ?>

@@ -58,7 +58,7 @@ class GoogleMap_Shortcode {
 
 	static function register_google_map_script() {
 		// wp_register_script('my-script', plugins_url('my-script.js', __FILE__), array('jquery'), '1.0', true);
-		wp_register_script('googlemaps', ('http://maps.google.com/maps/api/js?sensor=false'), array('jquery'), '1.0', true);
+		wp_register_script('googlemaps', ('https://maps.google.com/maps/api/js?key=AIzaSyCorPl7qKNl89fNKaU-71S7VXV8RCg-6mY'), array('jquery'), '1.0', true);
 	}
 
 	static function print_google_map_script() {

@@ -6203,7 +6203,7 @@ input[type="submit"].searchbutton, .searchbutton {
   font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif; }
 
 /* line 9, ../scss/includes/_footer.scss */
-footer#colophon a {
+footer#colophon a, footer#colophon a:visited {
   color: #eee; }
 @media (max-width: 420px) {
   /* line 12, ../scss/includes/_footer.scss */
@@ -6211,36 +6211,39 @@ footer#colophon a {
     width: 100%;
     margin-bottom: 10px; } }
 
-/* line 22, ../scss/includes/_footer.scss */
+/* line 21, ../scss/includes/_footer.scss */
+#footer-widget-area a, #footer-widget-area a:visited {
+  color: #fff; }
+/* line 25, ../scss/includes/_footer.scss */
 #footer-widget-area .widget h4 {
   font-weight: 300;
   font-size: 21px;
   color: #fff;
   margin: 0; }
-/* line 30, ../scss/includes/_footer.scss */
+/* line 33, ../scss/includes/_footer.scss */
 #footer-widget-area .widget ul {
   margin: 0;
   padding: 0; }
-/* line 34, ../scss/includes/_footer.scss */
+/* line 37, ../scss/includes/_footer.scss */
 #footer-widget-area .widget ul li {
   list-style: none outside none;
   margin-left: 0;
   position: relative; }
-  /* line 38, ../scss/includes/_footer.scss */
-  #footer-widget-area .widget ul li a {
+  /* line 41, ../scss/includes/_footer.scss */
+  #footer-widget-area .widget ul li a, #footer-widget-area .widget ul li a:visited {
     color: #aeaeae;
     font-size: 16px;
     text-decoration: none;
     line-height: 20px; }
 
-/* line 47, ../scss/includes/_footer.scss */
+/* line 51, ../scss/includes/_footer.scss */
 #back-top {
   position: fixed;
   bottom: 10px;
   margin-right: 30px;
   right: 0;
   z-index: 9999; }
-  /* line 54, ../scss/includes/_footer.scss */
+  /* line 58, ../scss/includes/_footer.scss */
   #back-top a {
     width: 40px;
     display: block;
@@ -6253,11 +6256,11 @@ footer#colophon a {
     -o-transition: all 1s ease-in-out;
     -transition: all 1s ease-in-out;
     transition: all 1s ease-in-out; }
-    /* line 64, ../scss/includes/_footer.scss */
+    /* line 68, ../scss/includes/_footer.scss */
     #back-top a:hover, #back-top a:focus {
       color: #000;
       opacity: 1; }
-  /* line 70, ../scss/includes/_footer.scss */
+  /* line 74, ../scss/includes/_footer.scss */
   #back-top i {
     width: 40px;
     height: 40px;
@@ -6266,7 +6269,7 @@ footer#colophon a {
     font-style: normal;
     color: #FFF;
     text-align: center; }
-    /* line 79, ../scss/includes/_footer.scss */
+    /* line 83, ../scss/includes/_footer.scss */
     #back-top i:before {
       content: "";
       font-family: "icomoon";
@@ -7601,8 +7604,9 @@ a .front-page-post-item-title {
 /* line 70, ../scss/includes/_home-blog.scss */
 .blog-item {
   margin-bottom: 30px;
-  min-height: 390px; }
-  /* line 73, ../scss/includes/_home-blog.scss */
+  min-height: 390px;
+  position: relative; }
+  /* line 75, ../scss/includes/_home-blog.scss */
   .blog-item .blog-item-image .size-large {
     position: relative;
     width: 100%;
@@ -7610,20 +7614,20 @@ a .front-page-post-item-title {
     overflow: hidden;
     display: block; }
     @media (max-width: 1170px) {
-      /* line 73, ../scss/includes/_home-blog.scss */
+      /* line 75, ../scss/includes/_home-blog.scss */
       .blog-item .blog-item-image .size-large {
         height: 300px; } }
     @media (max-width: 768px) {
-      /* line 73, ../scss/includes/_home-blog.scss */
+      /* line 75, ../scss/includes/_home-blog.scss */
       .blog-item .blog-item-image .size-large {
         height: 250px; } }
-  /* line 89, ../scss/includes/_home-blog.scss */
+  /* line 92, ../scss/includes/_home-blog.scss */
   .blog-item .date {
     font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
     font-weight: 300;
     font-size: 80%;
     line-height: 18px; }
-  /* line 96, ../scss/includes/_home-blog.scss */
+  /* line 99, ../scss/includes/_home-blog.scss */
   .blog-item .blog-link {
     font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
     background: rgba(0, 0, 0, 0.5);
@@ -7636,22 +7640,33 @@ a .front-page-post-item-title {
     text-decoration: none;
     left: 15px;
     right: 15px; }
-  /* line 109, ../scss/includes/_home-blog.scss */
+  /* line 112, ../scss/includes/_home-blog.scss */
+  .blog-item .article-preview-image {
+    margin-right: -15px; }
+  /* line 118, ../scss/includes/_home-blog.scss */
+  .blog-item a {
+    position: absolute;
+    bottom: 0;
+    text-decoration: none; }
+  /* line 123, ../scss/includes/_home-blog.scss */
   .blog-item h1 {
     color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    margin: 0;
     font-size: 26px;
-    line-height: 40px; }
+    line-height: 150%; }
     @media (max-width: 1170px) {
-      /* line 109, ../scss/includes/_home-blog.scss */
+      /* line 123, ../scss/includes/_home-blog.scss */
       .blog-item h1 {
         max-width: 80%;
         font-size: 110%; } }
     @media (max-width: 768px) {
-      /* line 109, ../scss/includes/_home-blog.scss */
+      /* line 123, ../scss/includes/_home-blog.scss */
       .blog-item h1 {
         max-width: 100%;
         font-size: 100%; } }
-  /* line 124, ../scss/includes/_home-blog.scss */
+  /* line 141, ../scss/includes/_home-blog.scss */
   .blog-item p {
     font-size: 16px;
     line-height: 24px;
@@ -7678,62 +7693,63 @@ a .front-page-post-item-title {
   font-weight: 300; }
   /* line 9, ../scss/includes/_author-badge.scss */
   .author_badge a {
-    text-decoration: none; }
-  /* line 12, ../scss/includes/_author-badge.scss */
+    text-decoration: none;
+    position: inherit; }
+  /* line 13, ../scss/includes/_author-badge.scss */
   .author_badge .author-by {
     font-size: 80%;
     line-height: 18px; }
-  /* line 16, ../scss/includes/_author-badge.scss */
+  /* line 17, ../scss/includes/_author-badge.scss */
   .author_badge .author-name {
     text-decoration: none; }
-  /* line 20, ../scss/includes/_author-badge.scss */
+  /* line 21, ../scss/includes/_author-badge.scss */
   .author_bio .author_badge {
     float: left;
     margin: 0 30px 30px 0; }
-  /* line 24, ../scss/includes/_author-badge.scss */
+  /* line 25, ../scss/includes/_author-badge.scss */
   .page-template-page-blog .author_badge {
     border: 0;
     padding: 0;
     margin: 0; }
-    /* line 29, ../scss/includes/_author-badge.scss */
+    /* line 30, ../scss/includes/_author-badge.scss */
     .page-template-page-blog .author_badge img {
       height: 80px;
       width: 80px; }
-    /* line 34, ../scss/includes/_author-badge.scss */
+    /* line 35, ../scss/includes/_author-badge.scss */
     .page-template-page-blog .author_badge .author-name {
       text-decoration: none;
       line-height: 25px; }
-  /* line 41, ../scss/includes/_author-badge.scss */
+  /* line 42, ../scss/includes/_author-badge.scss */
   .author.archive .author_badge .author-by {
     display: none; }
-  /* line 44, ../scss/includes/_author-badge.scss */
+  /* line 45, ../scss/includes/_author-badge.scss */
   .author.archive .author_badge .author-name {
     display: none; }
-  /* line 48, ../scss/includes/_author-badge.scss */
-  .blog .author_badge {
+  /* line 49, ../scss/includes/_author-badge.scss */
+  .blog .author_badge, .author-aside .author_badge {
     width: 100px;
     border: 0;
     padding: 0;
     margin: 0;
     float: left; }
-    /* line 54, ../scss/includes/_author-badge.scss */
-    .blog .author_badge img {
+    /* line 55, ../scss/includes/_author-badge.scss */
+    .blog .author_badge img, .author-aside .author_badge img {
       height: 100px;
       width: 100px;
       float: left;
       bottom: 0; }
-    /* line 62, ../scss/includes/_author-badge.scss */
-    .blog .author_badge .author-name {
+    /* line 63, ../scss/includes/_author-badge.scss */
+    .blog .author_badge .author-name, .author-aside .author_badge .author-name {
       padding: 8px 0;
       line-height: 25px;
       bottom: 0; }
     @media (max-width: 768px) {
-      /* line 48, ../scss/includes/_author-badge.scss */
-      .blog .author_badge {
+      /* line 49, ../scss/includes/_author-badge.scss */
+      .blog .author_badge, .author-aside .author_badge {
         float: left;
         width: 100%; } }
 
-/* line 74, ../scss/includes/_author-badge.scss */
+/* line 75, ../scss/includes/_author-badge.scss */
 .author_bio {
   margin: 0 0 30px 0;
   border-bottom: 1px solid #dddddd;

@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: uu2014\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/_s\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
 "POT-Creation-Date: 2015-09-25 13:56+0100\n"
 "PO-Revision-Date: 2015-09-25 13:56+0100\n"
 "Last-Translator: \n"

@@ -27,9 +27,9 @@
 		<a href="
 				<?php $mylocale = get_bloginfo('language');
 										if($mylocale == 'en-US') {
-										echo 'http://www.uu.nl/en';
+										echo 'https://www.uu.nl/en';
 										} else {
-										echo 'http://www.uu.nl';
+										echo 'https://www.uu.nl';
 										} ?>
 				"><img src="<?php echo get_template_directory_uri() ?>/images/uu-logo.svg" alt="<?php _e('Logo Utrecht University', 'uu2014'); ?>" /></a>
 			

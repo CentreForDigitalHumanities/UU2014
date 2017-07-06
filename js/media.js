@@ -4,7 +4,7 @@
 
 <!DOCTYPE html>
 <html lang="en" class="">
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
+  <head prefix="og: https://ogp.me/ns# fb: https://ogp.me/ns/fb# object: https://ogp.me/ns/object# article: https://ogp.me/ns/article# profile: https://ogp.me/ns/profile#">
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
@@ -118,7 +118,7 @@
 
 
       <div id="start-of-content" class="accessibility-aid"></div>
-          <div class="site" itemscope itemtype="http://schema.org/WebPage">
+          <div class="site" itemscope itemtype="https://schema.org/WebPage">
     <div id="js-flash-container">
       
     </div>
@@ -155,7 +155,7 @@
     </li>
 </ul>
 
-        <h1 itemscope itemtype="http://data-vocabulary.org/Breadcrumb" class="entry-title public">
+        <h1 itemscope itemtype="https://data-vocabulary.org/Breadcrumb" class="entry-title public">
           <span class="mega-octicon octicon-repo"></span>
           <span class="author"><a href="/thomasgriffin" class="url fn" itemprop="url" rel="author"><span itemprop="title">thomasgriffin</span></a></span><!--
        --><span class="path-divider">/</span><!--
@@ -257,7 +257,7 @@
   </a>
 </p>
 
-  <a href="http://mac.github.com" data-url="github-mac://openRepo/https://github.com/thomasgriffin/New-Media-Image-Uploader" class="minibutton sidebar-button js-conduit-rewrite-url" title="Save thomasgriffin/New-Media-Image-Uploader to your computer and use it in GitHub Desktop." aria-label="Save thomasgriffin/New-Media-Image-Uploader to your computer and use it in GitHub Desktop.">
+  <a href="https://mac.github.com" data-url="github-mac://openRepo/https://github.com/thomasgriffin/New-Media-Image-Uploader" class="minibutton sidebar-button js-conduit-rewrite-url" title="Save thomasgriffin/New-Media-Image-Uploader to your computer and use it in GitHub Desktop." aria-label="Save thomasgriffin/New-Media-Image-Uploader to your computer and use it in GitHub Desktop.">
     <span class="octicon octicon-device-desktop"></span>
     Clone in Desktop
   </a>
@@ -367,7 +367,7 @@
   </div>
 
   <div class="breadcrumb">
-    <span class='repo-root js-repo-root'><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/thomasgriffin/New-Media-Image-Uploader" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">New-Media-Image-Uploader</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/thomasgriffin/New-Media-Image-Uploader/tree/master/js" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">js</span></a></span><span class="separator"> / </span><strong class="final-path">media.js</strong>
+    <span class='repo-root js-repo-root'><span itemscope="" itemtype="https://data-vocabulary.org/Breadcrumb"><a href="/thomasgriffin/New-Media-Image-Uploader" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">New-Media-Image-Uploader</span></a></span></span><span class="separator"> / </span><span itemscope="" itemtype="https://data-vocabulary.org/Breadcrumb"><a href="/thomasgriffin/New-Media-Image-Uploader/tree/master/js" class="" data-branch="master" data-direction="back" data-pjax="true" itemscope="url"><span itemprop="title">js</span></a></span><span class="separator"> / </span><strong class="final-path">media.js</strong>
   </div>
 </div>
 
@@ -418,7 +418,7 @@
         </div><!-- /.button-group -->
 
           <a class="octicon-button tooltipped tooltipped-nw js-conduit-openfile-check"
-             href="http://mac.github.com"
+             href="https://mac.github.com"
              data-url="github-mac://openRepo/https://github.com/thomasgriffin/New-Media-Image-Uploader?branch=master&amp;filepath=js%2Fmedia.js"
              aria-label="Open this file in GitHub for Mac"
              data-failed-title="Your version of GitHub for Mac is too old to open this file. Try checking for updates.">
@@ -1033,9 +1033,9 @@
   <div class="site-footer">
     <ul class="site-footer-links right">
       <li><a href="https://status.github.com/">Status</a></li>
-      <li><a href="http://developer.github.com">API</a></li>
-      <li><a href="http://training.github.com">Training</a></li>
-      <li><a href="http://shop.github.com">Shop</a></li>
+      <li><a href="https://developer.github.com">API</a></li>
+      <li><a href="https://training.github.com">Training</a></li>
+      <li><a href="https://shop.github.com">Shop</a></li>
       <li><a href="/blog">Blog</a></li>
       <li><a href="/about">About</a></li>
 

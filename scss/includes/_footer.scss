@@ -6,7 +6,7 @@
 }
 
 footer#colophon {
-	a {
+	a, a:visited {
 		color: #eee;
 	}
 	img {
@@ -18,6 +18,9 @@ footer#colophon {
 }
 
 #footer-widget-area {
+	a, a:visited {
+	 	color: #fff;
+	 }
 	.widget {
 		h4 {
 			font-weight: 300;
@@ -35,13 +38,14 @@ footer#colophon {
 	    list-style: none outside none;
 	    margin-left: 0;
 	    position: relative;
-	    a {
+	    a, a:visited {
 			color: #aeaeae;
 			font-size: 16px;
 			text-decoration: none;
 			line-height: 20px;
 		}
 	}
+
 }
 
 #back-top {

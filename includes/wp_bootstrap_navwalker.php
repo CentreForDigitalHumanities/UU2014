@@ -7,7 +7,7 @@
  * Version: 2.0.4
  * Author: Edward McIntyre - @twittem
  * License: GPL-2.0+
- * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
  */
 
 class wp_bootstrap_navwalker extends Walker_Nav_Menu {
@@ -121,7 +121,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
 <path class="home-icon" fill="#FFFFFF" d="M23.632,16.018l-6.982-6.989c-0.356-0.371-0.94-0.371-1.297,0l-6.984,6.989
 	c-0.358,0.369-0.225,0.672,0.296,0.672h1.456v5.367c0,0.389,0.017,0.705,0.717,0.705h3.39v-5.385h3.546v5.385h3.558
-	c0.534,0,0.549-0.316,0.549-0.705v-5.367h1.455C23.855,16.689,23.988,16.387,23.632,16.018z"/>
+	c0.534,0,0.549-0.316,0.549-0.705v-5.367h1.455C23.855,16.689,23.988,16.387,23.632,16.018z"></path>
 </svg><span class="menuitem-home">' . apply_filters( 'the_title', $item->title, $item->ID ) . '</span>';
 			else :
 			$item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after . $item->attr_title;

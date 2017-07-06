@@ -10,7 +10,7 @@
  * @author   James Mallison <me@j7mbo.co.uk>
  * @license  MIT License
  * @version  1.0.4
- * @link     http://github.com/j7mbo/twitter-api-php
+ * @link     https://github.com/j7mbo/twitter-api-php
  */
 class TwitterAPIExchange
 {
@@ -73,7 +73,7 @@ class TwitterAPIExchange
     {
         if (!in_array('curl', get_loaded_extensions())) 
         {
-            throw new Exception('You need to install cURL, see: http://curl.haxx.se/docs/install.html');
+            throw new Exception('You need to install cURL, see: https://curl.haxx.se/docs/install.html');
         }
         
         if (!isset($settings['oauth_access_token'])

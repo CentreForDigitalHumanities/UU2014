@@ -4,7 +4,7 @@
 
 <?php get_template_part( 'parts/page-header-2col'); ?> 
 
-		<div itemscope itemtype="http://schema.org/SearchResultsPage">
+		<div itemscope itemtype="https://schema.org/SearchResultsPage">
 			<h2 class="searchpage"><?php printf( __( 'Search Results for: %s', 'uu2014' ), esc_attr(get_search_query()) ); ?></h2>	
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			

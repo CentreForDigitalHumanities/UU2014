@@ -66,14 +66,14 @@ jQuery(document).ready(function($) {
 	//ChosenJs Select Input - https://github.com/harvesthq/chosen for more info
 	$("select").chosen({no_results_text: "Oops, nothing found!", width: "99.5%"});
 
-	//Lightbox - http://dimsemenov.com/plugins/magnific-popup/
+	//Lightbox - https://dimsemenov.com/plugins/magnific-popup/
 	// if($.fn.magnificPopup) {
 	// 	$('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').magnificPopup({
 	// 		type: 'image'
 	// 	});
 	// }
 
-	//iCheck - http://fronteed.com/iCheck/
+	//iCheck - https://fronteed.com/iCheck/
 	if($.fn.iCheck) {
 		$('input').iCheck({
 			checkboxClass: 'icheckbox_square',
@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
 		});
 	}
 
-	//Responsive iFrames, Embeds and Objects - http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
+	//Responsive iFrames, Embeds and Objects - https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 	var $allVideos = $("iframe[src*='youtube'], iframe[src*='hulu'], iframe[src*='revision3'], iframe[src*='vimeo'], iframe[src*='blip'], iframe[src*='dailymotion'], iframe[src*='funnyordie'], object, embed").wrap( "<figure></figure>" ),
 	$fluidEl = $("figure");
 
@@ -199,7 +199,7 @@ jQuery(document).ready(function($) {
 	});
 
 
-/*  // Released under MIT license: http://www.opensource.org/licenses/mit-license.php
+/*  // Released under MIT license: https://www.opensource.org/licenses/mit-license.php
 	$('[placeholder]').focus(function() {
 		var input = $(this);
 		if (input.val() == input.attr('placeholder')) {

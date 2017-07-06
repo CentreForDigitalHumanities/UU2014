@@ -87,7 +87,7 @@
 				Type:				String
 				Default value:		undefined
 				Possible values:	data-filter / data-search / anything that is supported by datatables
-				Description:		Allows to filter based on data-filter / data-search attributes of the <td> element, read more: http://www.datatables.net/examples/advanced_init/html5-data-attributes.html
+				Description:		Allows to filter based on data-filter / data-search attributes of the <td> element, read more: https://www.datatables.net/examples/advanced_init/html5-data-attributes.html
 				
 * filter_container_id
 				Required:			false

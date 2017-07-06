@@ -48,65 +48,15 @@ add_action( 'template_redirect', 'uu2014_content_width' );
 define('SCAFFOLDING_INCLUDE_PATH', dirname(__FILE__).'/includes/');
 require_once(SCAFFOLDING_INCLUDE_PATH.'base-functions.php');
 
-
-// if ( !class_exists( 'ReduxFramework' ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/ReduxCore/framework.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/ReduxCore/framework.php' );
-// }
-
-// if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config.php' );
-// }
-
-// if ( !isset( $redux_demo ) && file_exists( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/libraries/ReduxFramework/uu/uu-config2.php' );
-// }
-
-// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/functions/custom-post-type-agenda.php' );
-// }
-
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/lecturenet.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/lecturenet.php' );
-}
-
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/iframe.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/iframe.php' );
-}
-
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured-image-text.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/featured-image-text.php' );
-}
-
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/grid.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/grid.php' );
-}
-
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/scroll-menu.php' );
-}
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/shortcodes/insert-google-map.php' );
-}
-
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-socialmedia-buttons.php' );
 }
-
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' );
 }
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
 }
-
-// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/functions/metabox-agenda.php' );
-// }
-
-// if ( file_exists( dirname( __FILE__ ) . '/includes/acf.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/acf.php' );
-// }
-
 
 
 
@@ -149,7 +99,7 @@ function uu2014_scripts_and_styles() {
 	// iCheck (better radio and checkbox inputs)
 	// wp_enqueue_script( 'uu2014-icheck', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.1/icheck.min.js', array( 'jquery' ), '1.0.1', true );
 
-	//Chosen - http://harvesthq.github.io/chosen/
+	//Chosen - https://harvesthq.github.io/chosen/
     wp_enqueue_script( 'chosen-js', '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js', array( 'jquery' ), '1.1.0', true );
    
 
@@ -228,7 +178,7 @@ function uu2014_theme_support() {
 
 	add_theme_support( 'automatic-feed-links' ); // rss thingy
 
-	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
+	// to add header image support go here: https://themble.com/support/adding-header-background-image-support/
 	//adding custome header suport
 
 	require_once(SCAFFOLDING_INCLUDE_PATH.'custom-header.php');
@@ -613,7 +563,7 @@ function uu2014_comments($comment, $args, $depth) {
 					// create variable
 					$bgauthemail = get_comment_author_email();
 				?>
-				<img data-gravatar="http://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/images/nothing.gif" />
+				<img data-gravatar="https://www.gravatar.com/avatar/<?php echo md5($bgauthemail); ?>?s=32" class="load-gravatar avatar avatar-48 photo" height="32" width="32" src="<?php echo get_template_directory_uri(); ?>/images/nothing.gif" />
 				<!-- end custom gravatar call -->
 				<?php printf(__('<cite class="fn">%s</cite>', 'uu2014'), get_comment_author_link()) ?>
 				<time datetime="<?php echo comment_time('Y-m-j'); ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php comment_time(__('F jS, Y', 'uu2014')); ?> </a></time>
@@ -810,15 +760,9 @@ function icl_language_link(){
   }
 }
 
-// http://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/
-// allow svg in media uploader
-function uu2014_mime_types($mimes) {
-  $mimes['svg'] = 'image/svg+xml';
-  return $mimes;
-}
-add_filter('upload_mimes', 'uu2014_mime_types');
 
-// http://wordpress.stackexchange.com/questions/6731/if-is-custom-post-type
+
+// https://wordpress.stackexchange.com/questions/6731/if-is-custom-post-type
 function is_custom_post_type( $post = NULL )
 {
     $all_custom_post_types = get_post_types( array ( '_builtin' => FALSE ) );
@@ -837,16 +781,7 @@ function is_custom_post_type( $post = NULL )
     return in_array( $current_post_type, $custom_types );
 }
 
-// set default display name http://drzdigital.com/setting-a-default-display-name-in-wordpress/
-function change_display_name( $user_id ) {
-    $info = get_userdata( $user_id );
-    $args = array(
-        'ID' => $user_id,
-        'display_name' => $info->first_name . ' ' . $info->last_name
-    );
-    wp_update_user( $args );
-}
-add_action('user_register','change_display_name');
+
 
 // custom excerpt 
 
@@ -870,71 +805,23 @@ function uu2014_custom_excerpts($limit) {
 
 if( function_exists('acf_add_options_page') ) {
 	
-	acf_add_options_page(array(
-		'page_title' 	=> __('UU Site Options', 'uu2014'),
-		'menu_title'	=> __('UU Options', 'uu2014'),
-		'menu_slug' 	=> 'uu-site-options',
-		'capability'	=> 'manage_options',
-		'icon_url'		=> get_template_directory_uri().'/images/uu-dashboard-icon.svg',
-		'redirect'		=> false
-	));
-
-	acf_add_options_page(array(
-		'page_title' 	=> __('UU Advanced Options', 'uu2014'),
-		'menu_title'	=> __('UU Advanced', 'uu2014'),
-		'menu_slug' 	=> 'uu-advanced-options',
-		'capability'	=> 'manage_sites',
-		'icon_url'		=> get_template_directory_uri().'/images/uu-dashboard-icon.svg',
-		'redirect'		=> false
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Options',
+		'menu_title'	=> __('UU Theme Options', 'uu2014'),
+		'menu_slug' 	=> 'uu-theme-options',
+		'parent_slug'	=> 'uu-options',
 	));
 	
-	// acf_add_options_sub_page(array(
-	// 	'page_title' 	=> 'Theme Header Settings',
-	// 	'menu_title'	=> 'Header',
-	// 	'parent_slug'	=> 'theme-general-settings',
-	// ));
-	
-	// acf_add_options_sub_page(array(
-	// 	'page_title' 	=> 'Theme Footer Settings',
-	// 	'menu_title'	=> 'Footer',
-	// 	'parent_slug'	=> 'theme-general-settings',
-	// ));
-	
-}
-
-add_filter('acf/settings/load_json', 'my_acf_json_load_point');
-
-function my_acf_json_load_point( $paths ) {
-    
-    // remove original path (optional)
-    unset($paths[0]);
-    
-    
-    // append path
-    $paths[] = get_template_directory() . '/acf-json';
-    
-    
-    // return
-    return $paths;
-    
 }
 
 
-/* ACF Options enqueue custom CSS  */ 
-
-function uu_enqueue_custom_styles() {
-$css = get_field('uu_options_custom_css', 'option');  
-
-	wp_enqueue_style(
-			'custom-style',
-			get_template_directory_uri() . '/css/custom.css'
-	);
-
-	if( !empty( $css ) ) {
-	wp_add_inline_style( 'custom-style', $css );
-	} 
+if ( file_exists( dirname( __FILE__ ) . '/includes/acf-theme-options.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/acf-theme-options.php' );
 }
-add_action( 'wp_enqueue_scripts', 'uu_enqueue_custom_styles', 30 ); 
+
+
+
+
 
 
 function uu_metadata() {
@@ -1018,7 +905,7 @@ function uu_display_all_taxonomies() {
 }
 
 // Fixes issue of agenda subcategories not loading category-agenda.php
-// Use a parent category slug if it exists   http://wordpress.stackexchange.com/questions/4557/how-can-i-make-all-subcategories-use-the-template-of-its-category-parent
+// Use a parent category slug if it exists   https://wordpress.stackexchange.com/questions/4557/how-can-i-make-all-subcategories-use-the-template-of-its-category-parent
 function child_force_category_template($template) {
 
 
@@ -1114,16 +1001,16 @@ function add_sep_to_frm_csv($atts) {
 // Force use of category-agenda.php template on tag archive when category is agenda
 
 function agenda_template_override($template) {
+	
+		global $wp_query;
 
-	global $wp_query;
+		$category = get_query_var('category_name');
 
-	$category = get_query_var('category_name');
+		if( $category == 'Agenda' ) {
+			return locate_template('category-agenda.php');
+		}
 
-	if( $category == 'Agenda' ) {
-		return locate_template('category-agenda.php');
-	}
-
-	return $template;
+		return $template;
 
 }
 add_filter('template_include', 'agenda_template_override');

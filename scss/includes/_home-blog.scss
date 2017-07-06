@@ -70,6 +70,8 @@
 .blog-item {
 	margin-bottom: 30px;
 	min-height: 390px;
+	position: relative;
+
 	.blog-item-image .size-large {
 
 		position: relative;
@@ -77,6 +79,7 @@
 		height: 390px;
 		overflow: hidden;
 		display: block;
+		
 		@include bp(md) {
     		height: 300px;
     	}
@@ -106,12 +109,25 @@
 		left: 15px;
 		right: 15px;
 	}
+	.article-preview-image {
+		// position: absolute;
+		// bottom: 0;
+		margin-right: -15px;
+
+	}
+	a {
+    		position: absolute;
+		bottom: 0;
+		text-decoration: none;
+    	}
 	h1 {
 		color: #fff;
-		
-		
+		background: $uu-foto-blok;
+		padding: 5px;
+		margin: 0;
 		font-size: 26px;
-		line-height: 40px;
+		line-height: 150%;
+		
 		@include bp(md) {
     		max-width: 80%;
     		font-size: 110%;
@@ -120,6 +136,7 @@
     		max-width: 100%;
     		font-size: 100%;
     	}
+    	
 	}
 	p {
 		font-size:16px;

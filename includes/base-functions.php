@@ -230,7 +230,7 @@ function uu2014_wp_list_pages_filter($output) {
 }
 add_filter('wp_list_pages', 'uu2014_wp_list_pages_filter');
 
-//return the search results page even if the query is empty - http://vinayp.com.np/how-to-show-blank-search-on-wordpress/
+//return the search results page even if the query is empty - https://vinayp.com.np/how-to-show-blank-search-on-wordpress/
 function uu2014_make_blank_search ($query){
 	global $wp_query;
 	if (isset($_GET['s']) && $_GET['s']==''){  //if search parameter is blank, do not return false
@@ -241,24 +241,7 @@ function uu2014_make_blank_search ($query){
 }
 add_action('pre_get_posts','uu2014_make_blank_search');
 
-/*********************
-DASHBOARD WIDGETS
-*********************/
-// disable default dashboard widgets
-function uu2014_disable_default_dashboard_widgets() {
-	//remove_meta_box('dashboard_right_now', 'dashboard', 'core');// Right Now Widget
-	//remove_meta_box('dashboard_recent_comments', 'dashboard', 'core');// Comments Widget
-	remove_meta_box('dashboard_incoming_links', 'dashboard', 'core');// Incoming Links Widget
-	remove_meta_box('dashboard_plugins', 'dashboard', 'core');// Plugins Widget
-	remove_meta_box('dashboard_quick_press', 'dashboard', 'core');// Quick Press Widget
-	remove_meta_box('dashboard_recent_drafts', 'dashboard', 'core');// Recent Drafts Widget
-	//remove_meta_box('dashboard_primary', 'dashboard', 'core');//1st blog feed
-	remove_meta_box('dashboard_secondary', 'dashboard', 'core');//2nd blog feed
-	// removing plugin dashboard boxes
-	//remove_meta_box('yoast_db_widget', 'dashboard', 'normal');		 // Yoast's SEO Plugin Widget
-}
-// removing the dashboard widgets
-add_action('admin_menu', 'uu2014_disable_default_dashboard_widgets');
+
 
 /*********************
 VISITOR/USER UX FUNCTIONS
@@ -292,12 +275,12 @@ add_filter('post_thumbnail_html', 'uu2014_remove_img_dimensions', 10);
 //add_filter('the_content', 'uu2014_remove_img_dimensions', 10); //Options - This has been removed from the content filter so that clients can still edit image sizes in the editor
 add_filter('get_avatar','uu2014_remove_img_dimensions', 10);
 
-// remove the p from around imgs (http://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
+// remove the p from around imgs (https://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 function uu2014_filter_ptags_on_images($content){
 	return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
 }
 
-// Fix Gravity Form Tabindex Conflicts - http://gravitywiz.com/2013/01/28/fix-gravity-form-tabindex-conflicts/
+// Fix Gravity Form Tabindex Conflicts - https://gravitywiz.com/2013/01/28/fix-gravity-form-tabindex-conflicts/
 function uu2014_gform_tabindexer() {
 	$starting_index = 1000; // if you need a higher tabindex, update this number
 	return GFCommon::$tab_index >= $starting_index ? GFCommon::$tab_index : $starting_index;

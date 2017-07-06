@@ -8,6 +8,7 @@
 	font-weight: 300;
 	a {
 		text-decoration: none;
+		position: inherit;
 	}
 	.author-by {
 		font-size: 80%;
@@ -45,7 +46,7 @@
 			display: none;
 		}
 	}
-	.blog & {
+	.blog &, .author-aside & {
 		width: 100px;
 		border: 0;
 		padding: 0;

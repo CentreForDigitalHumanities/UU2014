@@ -65,8 +65,9 @@
 												    <?php if( $omschrijving ): ?>
 														<div class="people-item-content-omschrijving">
 																<?php
-																if( get_field('uu_options_trim_people_description_fields', 'option') ) { 
+																if( get_field('uu_options_people_page_trim_description', 'option') ) { 
 																	$trim = wp_trim_words( $omschrijving, 40, '...');  
+																	
 																	echo $trim;
 																} else {
 																echo $omschrijving;
