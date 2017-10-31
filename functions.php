@@ -819,6 +819,9 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/acf-theme-options.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/acf-theme-options.php' );
 }
 
+if ( file_exists( dirname( __FILE__ ) . '/includes/acf.php' ) ) {
+    require_once( dirname( __FILE__ ) . '/includes/acf.php' );
+}
 
 
 
@@ -882,26 +885,7 @@ function uu_sharebuttons() {
 function uu_display_all_taxonomies() {
 	global $post;
 	$args=array('public'   => true); 
-	$output = 'names';
-	$operator = 'and';
-	$taxonomies=get_taxonomies($args,$output,$operator); 
-
-	if  ($taxonomies) {
-	    foreach ($taxonomies  as $taxonomy ) {
-
-	        $terms = get_terms($taxonomy);
-	        $count = count($terms);
-
-	        if ( $count > 0 ){
-	        	
-	            echo $taxonomy. ': ';
-	          	echo get_the_term_list( $post->ID, $taxonomy, '', ', ', '' );
-	        
-	        
-			}
-	    }
-	}
-
+	the_taxonomies( $args );
 }
 
 // Fixes issue of agenda subcategories not loading category-agenda.php
@@ -1014,3 +998,20 @@ function agenda_template_override($template) {
 
 }
 add_filter('template_include', 'agenda_template_override');
+
+
+/* ACF Options enqueue custom CSS  */ 
+
+function uu_enqueue_custom_styles() {
+$css = get_field('uu_options_custom_css', 'option');  
+
+	wp_enqueue_style(
+			'custom-style',
+			get_template_directory_uri() . '/css/custom.css'
+	);
+
+	if( !empty( $css ) ) {
+	wp_add_inline_style( 'custom-style', $css );
+	} 
+}
+add_action( 'wp_enqueue_scripts', 'uu_enqueue_custom_styles', 30 ); 
