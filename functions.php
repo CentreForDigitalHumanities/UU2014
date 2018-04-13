@@ -831,7 +831,7 @@ function uu_metadata() {
 	global $post;
 	$metadata = get_field('uu_options_posts_metadata' , 'options' );
 	if( !empty($metadata) ) {
-		echo '<div class="metadata">' . __('Posted') . ' ';
+		echo '<div class="metadata">' . __('Posted', 'uu2014') . ' ';
 		if ( in_array( 'date', $metadata ) ) {
 			echo __('on', 'uu2014') . ' ' . get_the_date() . ' ';
 		}
@@ -1015,3 +1015,22 @@ $css = get_field('uu_options_custom_css', 'option');
 	} 
 }
 add_action( 'wp_enqueue_scripts', 'uu_enqueue_custom_styles', 30 ); 
+
+
+if(!function_exists('wpmu_get_mapped_domain_link')){
+
+	function wpmu_get_mapped_domain_link($blog_id){
+		global $wpdb;
+		$data = $wpdb->get_row( $wpdb->prepare( 'SELECT * FROM '.$wpdb->prefix.'domain_mapping WHERE blog_id = %d ', $blog_id ) );
+
+		if(!$data) return get_site_url( $blog_id );
+
+		if($data->scheme == 1){
+			$schem = 'https://';
+		}else{
+			$schem = 'http://';
+		}
+		return print_r($data);
+ 		//return $schem.$data->domain;
+ 	}
+}

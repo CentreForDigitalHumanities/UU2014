@@ -24,7 +24,9 @@
 						</div>
 						<div class="col-sm-6">
 							<p class="source-org copyright pull-right">&copy; <?php echo date('Y'); ?> <?php _e('Utrecht University', 'uu2014'); ?>, <a href="
-								<?php $mylocale = get_bloginfo('language');
+								<?php 
+								$mylocale = 'en-US';
+								$mylocale = get_bloginfo('language');
 										if($mylocale == 'en-US') {
 										echo 'https://www.uu.nl/en/organisation/contact/disclaimer';
 										} else {

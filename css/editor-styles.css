@@ -1096,13 +1096,13 @@ span.amp {
   font-style: italic; }
 
 /* line 73, ../scss/includes/_mixins.scss */
-.alert-help, .alert-info, .alert-error, .alert-success {
+.alert-help, .alert-warning, .alert-info, .alert-error, .alert-danger, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid; }
 
 /* line 79, ../scss/includes/_mixins.scss */
-.alert-help {
+.alert-help, .alert-warning {
   border-color: #e8dc59;
   background: #ebe16f; }
 
@@ -1112,7 +1112,7 @@ span.amp {
   background: #d5edf8; }
 
 /* line 91, ../scss/includes/_mixins.scss */
-.alert-error {
+.alert-error, .alert-danger {
   border-color: #f8cdce;
   background: #fbe3e4; }
 
@@ -1654,7 +1654,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 /*Image Caption*/
 /* line 395, ../scss/includes/_typography.scss */
 .wp-caption {
-  max-width: 100% !important;
   /* images inside wp-caption */ }
   /* line 400, ../scss/includes/_typography.scss */
   .wp-caption img {

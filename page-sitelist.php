@@ -10,7 +10,9 @@
 <?php 
 
 $args = array(
-		"public" => 1	
+		"public" => 1,
+		"number" => 500,
+		"orderby" => 'domain'		
 	);
 
 $sites_list = get_sites ($args); 
@@ -47,8 +49,13 @@ $current_blog = get_current_blog_id(); ?>
 	<div class="col-sm-10">
 		<h2><?php echo $site->blogname; ?></h2>
 		<p>
-		<?php echo get_field('uu_siteoptions_description', 'option'); ?>
+		<?php echo get_field('uu_siteoptions_description', 'option');
+
+		echo wpmu_get_mapped_domain_link($site->blog_id);	
+		
+		 ?>
 		</p>
+		
 	</div>
 	</a>
 	

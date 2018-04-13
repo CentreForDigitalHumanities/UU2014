@@ -1991,6 +1991,87 @@ hr {
   /* line 266, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_carousel.scss */
   .carousel-indicators {
     bottom: 20px; } }
+/* line 9, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 0px; }
+  /* line 16, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+  .alert h4 {
+    margin-top: 0;
+    color: inherit; }
+  /* line 23, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+  .alert .alert-link {
+    font-weight: bold; }
+  /* line 28, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+  .alert > p,
+  .alert > ul {
+    margin-bottom: 0; }
+  /* line 33, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+  .alert > p + p {
+    margin-top: 5px; }
+
+/* line 42, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-dismissable,
+.alert-dismissible {
+  padding-right: 35px; }
+  /* line 47, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+  .alert-dismissable .close,
+  .alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit; }
+
+/* line 59, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-success {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #3c763d; }
+  /* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+  .alert-success hr {
+    border-top-color: #c9e2b3; }
+  /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+  .alert-success .alert-link {
+    color: #2b542c; }
+
+/* line 63, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-info {
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+  color: #31708f; }
+  /* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+  .alert-info hr {
+    border-top-color: #a6e1ec; }
+  /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+  .alert-info .alert-link {
+    color: #245269; }
+
+/* line 67, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-warning {
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+  color: #8a6d3b; }
+  /* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+  .alert-warning hr {
+    border-top-color: #f7e1b5; }
+  /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+  .alert-warning .alert-link {
+    color: #66512c; }
+
+/* line 71, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_alerts.scss */
+.alert-danger {
+  background-color: #f2dede;
+  border-color: #ebccd1;
+  color: #a94442; }
+  /* line 8, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+  .alert-danger hr {
+    border-top-color: #e4b9c0; }
+  /* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_alerts.scss */
+  .alert-danger .alert-link {
+    color: #843534; }
+
 /* line 7, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_dropdowns.scss */
 .caret {
   display: inline-block;
@@ -5386,13 +5467,13 @@ span.amp {
   font-style: italic; }
 
 /* line 73, ../scss/includes/_mixins.scss */
-.alert-help, .alert-info, .alert-error, .alert-success {
+.alert-help, .alert-warning, .alert-info, .alert-error, .alert-danger, .alert-success {
   margin: 10px;
   padding: 5px 18px;
   border: 1px solid; }
 
 /* line 79, ../scss/includes/_mixins.scss */
-.alert-help {
+.alert-help, .alert-warning {
   border-color: #e8dc59;
   background: #ebe16f; }
 
@@ -5402,7 +5483,7 @@ span.amp {
   background: #d5edf8; }
 
 /* line 91, ../scss/includes/_mixins.scss */
-.alert-error {
+.alert-error, .alert-danger {
   border-color: #f8cdce;
   background: #fbe3e4; }
 
@@ -5944,7 +6025,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 /*Image Caption*/
 /* line 395, ../scss/includes/_typography.scss */
 .wp-caption {
-  max-width: 100% !important;
   /* images inside wp-caption */ }
   /* line 400, ../scss/includes/_typography.scss */
   .wp-caption img {

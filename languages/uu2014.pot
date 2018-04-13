@@ -1,10 +1,11 @@
 # Copyright (C) 2014 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: uu2014\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2015-09-25 13:56+0100\n"
+"POT-Creation-Date: 2018-01-23 13:13+0100\n"
 "PO-Revision-Date: 2015-09-25 13:56+0100\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Textdomain-Support: yes\n"
-"X-Generator: Poedit 1.5.7\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
 "esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
@@ -22,250 +23,31 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPath-1: ..\n"
 
-#: ../header.php:32
-#, php-format
-msgid "Page %s"
+#: ../404.php:7
+msgid "That page can&rsquo;t be found."
 msgstr ""
 
-#: ../header.php:117
-msgid "Skip to content"
+#: ../404.php:12
+msgid ""
+"It looks like nothing was found at this location. This may be due to the "
+"page being moved, renamed or deleted.<ul><li>Check the URL in the address "
+"bar above</li><li>Look for the page in the main navigation above or on the "
+"<a href=\"/site-map/\" title=\"Site Map Page\">Site Map</a> page</li><li>Try "
+"using the Search below.</li></ul>"
 msgstr ""
 
-#: ../page-home-agenda.php:37 ../parts/index_agenda_only.php:2
-#: ../parts/index_news_agenda.php:40 ../includes/custom-post-type.php:60
-#: ../includes/functions/custom-post-type-agenda.php:8
-msgid "Agenda"
+#: ../category-agenda.php:14
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:147
+msgid "Upcoming events"
 msgstr ""
 
-#: ../page-home-agenda.php:73 ../category-agenda.php:50
-#: ../parts/index_agenda_only.php:38 ../parts/index_news_agenda.php:85
+#: ../category-agenda.php:82 ../page-home-agenda.php:73
+#: ../parts/index_agenda_only.php:97 ../parts/index_news_agenda.php:172
 msgid "No upcoming events"
 msgstr ""
 
-#: ../single.php:40 ../includes/functions/metabox-agenda.php:56
-msgid "Date"
-msgstr ""
-
-#: ../single.php:63 ../includes/functions/metabox-agenda.php:63
-msgid "Time"
-msgstr ""
-
-#: ../single.php:71
-msgid "Location"
-msgstr ""
-
-#: ../single.php:77 ../includes/functions/metabox-agenda.php:72
-msgid "Url"
-msgstr ""
-
-#: ../single.php:100 ../single-agenda.php:63 ../page.php:10
-#: ../page-test.php:51 ../page-full-width.php:17 ../parts/post-loop.php:19
-msgid "Pages:"
-msgstr ""
-
-#: ../functions.php:246
-msgid "Main Menu"
-msgstr ""
-
-#: ../functions.php:247
-msgid "Footer Menu"
-msgstr ""
-
-#: ../functions.php:265
-msgid "default"
-msgstr ""
-
-#: ../functions.php:299
-msgid "Small Thumbnail"
-msgstr ""
-
-#: ../functions.php:419
-msgid "Left Sidebar"
-msgstr ""
-
-#: ../functions.php:420
-msgid "The Left (primary) sidebar used for the interior menu."
-msgstr ""
-
-#: ../functions.php:428
-msgid "Below Content"
-msgstr ""
-
-#: ../functions.php:429
-msgid "Below Content used for the call to actions."
-msgstr ""
-
-#: ../functions.php:437
-msgid "Banner Widget Area"
-msgstr ""
-
-#: ../functions.php:438
-msgid "Banner widget area"
-msgstr ""
-
-#: ../functions.php:446
-msgid "Home Widget Area 0"
-msgstr ""
-
-#: ../functions.php:447
-msgid "Full-width area above home widget areas 1,2 and 3"
-msgstr ""
-
-#: ../functions.php:455
-msgid "Home Widget Area 1"
-msgstr ""
-
-#: ../functions.php:456
-msgid "First column in home widget area"
-msgstr ""
-
-#: ../functions.php:464
-msgid "Home Widget Area 2"
-msgstr ""
-
-#: ../functions.php:465
-msgid "Second column in home widget area"
-msgstr ""
-
-#: ../functions.php:473
-msgid "Home Widget Area 3"
-msgstr ""
-
-#: ../functions.php:474
-msgid "Last column in home widget area"
-msgstr ""
-
-#: ../functions.php:482
-msgid "footer Widget Area 1"
-msgstr ""
-
-#: ../functions.php:483
-msgid "First column in footer widget area"
-msgstr ""
-
-#: ../functions.php:491
-msgid "footer Widget Area 2"
-msgstr ""
-
-#: ../functions.php:492
-msgid "Second column in footer widget area"
-msgstr ""
-
-#: ../functions.php:500
-msgid "footer Widget Area 3"
-msgstr ""
-
-#: ../functions.php:501
-msgid "Third column in footer widget area"
-msgstr ""
-
-#: ../functions.php:509
-msgid "footer Widget Area 4"
-msgstr ""
-
-#: ../functions.php:510
-msgid "Last column in footer widget area"
-msgstr ""
-
-#: ../functions.php:518
-msgid "Colofon Widget Area"
-msgstr ""
-
-#: ../functions.php:519
-msgid "Bottom area full width"
-msgstr ""
-
-#: ../functions.php:558
-msgid "No Related Posts Yet!"
-msgstr ""
-
-#: ../functions.php:589
-#, php-format
-msgid "<cite class=\"fn\">%s</cite>"
-msgstr ""
-
-#: ../functions.php:590
-msgid "F jS, Y"
-msgstr ""
-
-#: ../functions.php:591
-msgid "(Edit)"
-msgstr ""
-
-#: ../functions.php:595
-msgid "Your comment is awaiting moderation."
-msgstr ""
-
-#: ../functions.php:616 ../parts/brandbar.php:48 ../parts/brandbar.php:64
-msgid "Search for:"
-msgstr ""
-
-#: ../functions.php:617 ../parts/brandbar.php:49 ../parts/brandbar.php:65
-msgid "Search the Site..."
-msgstr ""
-
-#: ../functions.php:618
-msgid "Search"
-msgstr ""
-
-#: ../functions.php:708
-msgid "Read"
-msgstr ""
-
-#: ../functions.php:708 ../page-people.php:77 ../page-people-large.php:75
-#: ../simple-image-widget/widget.php:35 ../parts/carousel.php:55
-#: ../parts/carousel.php:86
-msgid "Read more"
-msgstr ""
-
-#: ../functions.php:727
-#, php-format
-msgid "Posts by %s"
-msgstr ""
-
-#: ../functions.php:766
-msgid ", read more..."
-msgstr ""
-
-#: ../functions.php:845
-msgid "UU Site Options"
-msgstr ""
-
-#: ../functions.php:846
-msgid "UU Options"
-msgstr ""
-
-#: ../functions.php:854
-msgid "UU Advanced Options"
-msgstr ""
-
-#: ../functions.php:855
-msgid "UU Advanced"
-msgstr ""
-
-#: ../functions.php:915
-msgid "Posted"
-msgstr ""
-
-#: ../functions.php:917
-msgid "on"
-msgstr ""
-
-#: ../functions.php:920 ../parts/index_blog.php:70
-msgid "by"
-msgstr ""
-
-#: ../functions.php:923
-msgid "<br />in: "
-msgstr ""
-
-#: ../functions.php:945
-msgid "Share"
-msgstr ""
-
-#: ../search.php:8 ../parts/page-header-1col.php:76
-#, php-format
-msgid "Search Results for: %s"
+#: ../category-agenda.php:119
+msgid "Previous events"
 msgstr ""
 
 #: ../comments.php:21
@@ -295,194 +77,195 @@ msgstr ""
 msgid "You must be %1$slogged in%2$s to post a comment."
 msgstr ""
 
-#: ../page-people.php:82 ../page-people-large.php:83
-msgid "Mail"
+#: ../functions.php:225
+msgid "Main Menu"
 msgstr ""
 
-#: ../single-agenda.php:17
+#: ../functions.php:226
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:244
+msgid "default"
+msgstr ""
+
+#: ../functions.php:278
+msgid "Small Thumbnail"
+msgstr ""
+
+#: ../functions.php:398
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../functions.php:399
+msgid "The Left (primary) sidebar used for the interior menu."
+msgstr ""
+
+#: ../functions.php:407
+msgid "Below Content"
+msgstr ""
+
+#: ../functions.php:408
+msgid "Below Content used for the call to actions."
+msgstr ""
+
+#: ../functions.php:416
+msgid "Banner Widget Area"
+msgstr ""
+
+#: ../functions.php:417
+msgid "Banner widget area"
+msgstr ""
+
+#: ../functions.php:425
+msgid "Home Widget Area 0"
+msgstr ""
+
+#: ../functions.php:426
+msgid "Full-width area above home widget areas 1,2 and 3"
+msgstr ""
+
+#: ../functions.php:434
+msgid "Home Widget Area 1"
+msgstr ""
+
+#: ../functions.php:435
+msgid "First column in home widget area"
+msgstr ""
+
+#: ../functions.php:443
+msgid "Home Widget Area 2"
+msgstr ""
+
+#: ../functions.php:444
+msgid "Second column in home widget area"
+msgstr ""
+
+#: ../functions.php:452
+msgid "Home Widget Area 3"
+msgstr ""
+
+#: ../functions.php:453
+msgid "Last column in home widget area"
+msgstr ""
+
+#: ../functions.php:461
+msgid "footer Widget Area 1"
+msgstr ""
+
+#: ../functions.php:462
+msgid "First column in footer widget area"
+msgstr ""
+
+#: ../functions.php:470
+msgid "footer Widget Area 2"
+msgstr ""
+
+#: ../functions.php:471
+msgid "Second column in footer widget area"
+msgstr ""
+
+#: ../functions.php:479
+msgid "footer Widget Area 3"
+msgstr ""
+
+#: ../functions.php:480
+msgid "Third column in footer widget area"
+msgstr ""
+
+#: ../functions.php:488
+msgid "footer Widget Area 4"
+msgstr ""
+
+#: ../functions.php:489
+msgid "Last column in footer widget area"
+msgstr ""
+
+#: ../functions.php:497
+msgid "Colofon Widget Area"
+msgstr ""
+
+#: ../functions.php:498
+msgid "Bottom area full width"
+msgstr ""
+
+#: ../functions.php:537
+msgid "No Related Posts Yet!"
+msgstr ""
+
+#: ../functions.php:568
 #, php-format
-msgid ""
-"Posted <time class=\"updated\" datetime=\"%1$s\" pubdate>%2$s</time> by "
-"<span class=\"author\">%3$s</span> <span class=\"amp\">&amp;</span> filed "
-"under %4$s."
+msgid "<cite class=\"fn\">%s</cite>"
 msgstr ""
 
-#: ../category-agenda.php:14
-#: ../includes/functions/widgets/widget-upcoming-agenda.php:115
-msgid "Upcoming events"
+#: ../functions.php:569
+msgid "F jS, Y"
 msgstr ""
 
-#: ../category-agenda.php:56
-msgid "Previous events"
+#: ../functions.php:570
+msgid "(Edit)"
 msgstr ""
 
-#: ../category-agenda.php:89
-msgid "No previous events"
+#: ../functions.php:574
+msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../404.php:15
-msgid "That page can&rsquo;t be found."
-msgstr ""
-
-#: ../404.php:20
-msgid ""
-"It looks like nothing was found at this location. This may be due to the "
-"page being moved, renamed or deleted.<ul><li>Check the URL in the address "
-"bar above</li><li>Look for the page in the main navigation above or on the "
-"<a href=\"/site-map/\" title=\"Site Map Page\">Site Map</a> page</li><li>Try "
-"using the Search below.</li></ul>"
-msgstr ""
-
-#: ../page-test.php:20
-msgid "Site"
-msgstr ""
-
-#: ../page-test.php:21
-msgid "Type"
-msgstr ""
-
-#: ../page-test.php:22
-msgid "Owner"
-msgstr ""
-
-#: ../index.php:64 ../parts/index_news_only.php:2
-#: ../parts/index_news_agenda.php:2
-msgid "News"
-msgstr ""
-
-#: ../parts/index_news_agenda.php:35
-msgid "More"
-msgstr ""
-
-#: ../parts/colofon.php:20 ../parts/brandbar.php:34
-msgid "Logo Utrecht University"
-msgstr ""
-
-#: ../parts/colofon.php:26
-msgid "Utrecht University"
-msgstr ""
-
-#: ../parts/colofon.php:32
-msgid "disclaimer"
-msgstr ""
-
-#: ../parts/page-header-2col.php:40 ../parts/page-header-1col.php:31
-#, php-format
-msgid "Author Archive: %s"
-msgstr ""
-
-#: ../parts/page-header-2col.php:43 ../parts/page-header-1col.php:34
-#, php-format
-msgid "Daily Archives: %s"
-msgstr ""
-
-#: ../parts/page-header-2col.php:46 ../parts/page-header-1col.php:37
-#, php-format
-msgid "Monthly Archives: %s"
-msgstr ""
-
-#: ../parts/page-header-2col.php:46 ../parts/page-header-1col.php:37
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr ""
-
-#: ../parts/page-header-2col.php:49 ../parts/page-header-1col.php:40
-#, php-format
-msgid "Yearly Archives: %s"
-msgstr ""
-
-#: ../parts/page-header-2col.php:49 ../parts/page-header-1col.php:40
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr ""
-
-#: ../parts/page-header-2col.php:52 ../parts/page-header-1col.php:43
-msgid "Asides"
-msgstr ""
-
-#: ../parts/page-header-2col.php:55 ../parts/page-header-1col.php:46
-msgid "Galleries"
-msgstr ""
-
-#: ../parts/page-header-2col.php:58 ../parts/page-header-1col.php:49
-msgid "Images"
-msgstr ""
-
-#: ../parts/page-header-2col.php:61 ../parts/page-header-1col.php:52
-msgid "Videos"
-msgstr ""
-
-#: ../parts/page-header-2col.php:64 ../parts/page-header-1col.php:55
-msgid "Quotes"
-msgstr ""
-
-#: ../parts/page-header-2col.php:67 ../parts/page-header-1col.php:58
-msgid "Links"
-msgstr ""
-
-#: ../parts/page-header-2col.php:70 ../parts/page-header-1col.php:61
-msgid "Statuses"
-msgstr ""
-
-#: ../parts/page-header-2col.php:73 ../parts/page-header-1col.php:64
-msgid "Audios"
-msgstr ""
-
-#: ../parts/page-header-2col.php:76 ../parts/page-header-1col.php:67
-msgid "Chats"
-msgstr ""
-
-#: ../parts/page-header-2col.php:85
-msgctxt "label"
-msgid "Search"
-msgstr ""
-
-#: ../parts/page-header-2col.php:98
-msgctxt "placeholder"
-msgid "Search"
-msgstr ""
-
-#: ../parts/page-header-2col.php:98
-msgctxt "label"
+#: ../functions.php:595 ../parts/brandbar.php:48 ../parts/brandbar.php:64
 msgid "Search for:"
 msgstr ""
 
-#: ../parts/page-header-2col.php:99
-msgctxt "submit button"
+#: ../functions.php:596 ../parts/brandbar.php:49 ../parts/brandbar.php:65
+msgid "Search the Site..."
+msgstr ""
+
+#: ../functions.php:597
 msgid "Search"
 msgstr ""
 
-#: ../parts/page-header-2col.php:106 ../parts/page-header-1col.php:91
-msgid "Show sidebar"
+#: ../functions.php:706
+#, php-format
+msgid "Posts by %s"
 msgstr ""
 
-#: ../parts/carousel.php:102
-msgid "Previous slide"
+#: ../functions.php:810
+msgid "UU Theme Options"
 msgstr ""
 
-#: ../parts/carousel.php:103
-msgid "Next slide"
+#: ../functions.php:834
+msgid "Posted"
 msgstr ""
 
-#: ../parts/post-loop.php:5
-msgid "no image"
+#: ../functions.php:836 ../parts/index_blog2.php:32
+msgid "on"
 msgstr ""
 
-#: ../includes/template-error.php:5
-msgid "No items found"
+#: ../functions.php:839 ../parts/author_badge.php:26
+#: ../parts/author_field.php:24
+msgid "by"
 msgstr ""
 
-#: ../includes/template-error.php:11
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+#: ../functions.php:842
+msgid "<br />in: "
+msgstr ""
+
+#: ../functions.php:864
+msgid "Share"
+msgstr ""
+
+#: ../header.php:34
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../header.php:126
+msgid "Skip to content"
 msgstr ""
 
 #: ../includes/base-functions.php:131
 msgid "First"
 msgstr ""
 
-#: ../includes/base-functions.php:162
+#: ../includes/base-functions.php:160
 msgid "Last"
 msgstr ""
 
@@ -576,6 +359,14 @@ msgctxt "Post Type Singular Name"
 msgid "Agenda"
 msgstr ""
 
+#: ../includes/custom-post-type.php:60
+#: ../includes/functions/custom-post-type-agenda.php:8
+#: ../page-home-agenda.php:37 ../parts/index_agenda_only.php:2
+#: ../parts/index_agenda_only.php:88 ../parts/index_news_agenda.php:76
+#: ../parts/index_news_agenda.php:163
+msgid "Agenda"
+msgstr ""
+
 #: ../includes/custom-post-type.php:62
 #: ../includes/functions/custom-post-type-agenda.php:10
 msgid "All Agenda items"
@@ -631,12 +422,30 @@ msgstr ""
 msgid "post type for making events"
 msgstr ""
 
-#: ../includes/template-pager.php:8
-msgid "&laquo; Older Entries"
+#: ../includes/functions/metabox-agenda.php:47
+msgid "Agenda details"
 msgstr ""
 
-#: ../includes/template-pager.php:9
-msgid "Newer Entries &raquo;"
+#: ../includes/functions/metabox-agenda.php:56 ../single.php:40
+msgid "Date"
+msgstr ""
+
+#: ../includes/functions/metabox-agenda.php:58
+#: ../includes/functions/metabox-agenda.php:65
+msgid "From"
+msgstr ""
+
+#: ../includes/functions/metabox-agenda.php:60
+#: ../includes/functions/metabox-agenda.php:67
+msgid "till"
+msgstr ""
+
+#: ../includes/functions/metabox-agenda.php:63 ../single.php:63
+msgid "Time"
+msgstr ""
+
+#: ../includes/functions/metabox-agenda.php:72 ../single.php:77
+msgid "Url"
 msgstr ""
 
 #: ../includes/functions/metabox-people.php:18
@@ -668,46 +477,40 @@ msgstr ""
 msgid "Use this image"
 msgstr ""
 
-#: ../includes/functions/metabox-agenda.php:47
-msgid "Agenda details"
-msgstr ""
-
-#: ../includes/functions/metabox-agenda.php:58
-#: ../includes/functions/metabox-agenda.php:65
-msgid "From"
-msgstr ""
-
-#: ../includes/functions/metabox-agenda.php:60
-#: ../includes/functions/metabox-agenda.php:67
-msgid "till"
-msgstr ""
-
 #: ../includes/functions/shortcodes/featured-image-text.php:8
 msgctxt "uu2014"
 msgid "read more"
 msgstr ""
 
+#: ../includes/functions/widgets/widget-socialmedia-buttons.php:12
+msgid "Social media follow buttons"
+msgstr ""
+
+#: ../includes/functions/widgets/widget-socialmedia-buttons.php:13
+msgid "Display the social media follow buttons as setup in UU Options"
+msgstr ""
+
+#: ../includes/functions/widgets/widget-socialmedia-buttons.php:90
+#: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:122
+#: ../includes/functions/widgets/widget-twitter-user-timeline.php:159
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:156
+msgid "Title:"
+msgstr ""
+
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:12
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:113
-#: ../includes/functions/widgets/widget-twitter-user-timeline.php:12
-#: ../includes/functions/widgets/widget-twitter-user-timeline.php:213
+#: ../includes/functions/widgets/widget-twitter-user-timeline.php:11
+#: ../includes/functions/widgets/widget-twitter-user-timeline.php:150
 msgid "Latest tweets"
 msgstr ""
 
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:13
-#: ../includes/functions/widgets/widget-twitter-user-timeline.php:13
+#: ../includes/functions/widgets/widget-twitter-user-timeline.php:12
 msgid "display latest tweets"
 msgstr ""
 
-#: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:122
-#: ../includes/functions/widgets/widget-upcoming-agenda.php:124
-#: ../includes/functions/widgets/widget-socialmedia-buttons.php:90
-#: ../includes/functions/widgets/widget-twitter-user-timeline.php:222
-msgid "Title:"
-msgstr ""
-
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:126
-#: ../includes/functions/widgets/widget-twitter-user-timeline.php:226
+#: ../includes/functions/widgets/widget-twitter-user-timeline.php:163
 msgid "Amount of tweets to show"
 msgstr ""
 
@@ -719,16 +522,26 @@ msgstr ""
 msgid "display a list of upcoming items"
 msgstr ""
 
-#: ../includes/functions/widgets/widget-upcoming-agenda.php:128
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:160
 msgid "Amount of items to show"
 msgstr ""
 
-#: ../includes/functions/widgets/widget-socialmedia-buttons.php:12
-msgid "Social media follow buttons"
+#: ../includes/template-error.php:5
+msgid "No items found"
 msgstr ""
 
-#: ../includes/functions/widgets/widget-socialmedia-buttons.php:13
-msgid "Display the social media follow buttons as setup in UU Options"
+#: ../includes/template-error.php:11
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../includes/template-pager.php:8
+msgid "&laquo; Older Entries"
+msgstr ""
+
+#: ../includes/template-pager.php:9
+msgid "Newer Entries &raquo;"
 msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:47
@@ -777,4 +590,229 @@ msgstr ""
 
 #: ../includes/tinymce/styles-dropdown.php:108
 msgid "Keyboard CMD"
+msgstr ""
+
+#: ../index.php:64 ../parts/index_news_agenda.php:2
+#: ../parts/index_news_agenda.php:60 ../parts/index_news_only.php:2
+msgid "News"
+msgstr ""
+
+#: ../page-full-width.php:17 ../page-test.php:51 ../page.php:10
+#: ../parts/post-loop.php:20 ../single-agenda.php:63 ../single.php:113
+msgid "Pages:"
+msgstr ""
+
+#: ../page-people-large.php:79 ../page-people.php:78 ../parts/carousel.php:61
+#: ../parts/carousel.php:92 ../parts/post-loop-agenda.php:70
+#: ../parts/post-loop-frontpage.php:20 ../parts/post-loop.php:18
+#: ../simple-image-widget/widget.php:35
+msgid "Read more"
+msgstr ""
+
+#: ../page-people-large.php:88 ../page-people.php:83
+msgid "Mail"
+msgstr ""
+
+#: ../page-sitelist.php:21 ../page-sitelist2.php:21
+msgid "Title"
+msgstr ""
+
+#: ../page-sitelist.php:22 ../page-sitelist2.php:22 ../page-test.php:21
+msgid "Type"
+msgstr ""
+
+#: ../page-sitelist.php:23 ../page-sitelist2.php:23
+msgid "Faculty"
+msgstr ""
+
+#: ../page-sitelist2.php:24
+msgid "Users"
+msgstr ""
+
+#: ../page-test.php:20
+msgid "Site"
+msgstr ""
+
+#: ../page-test.php:22
+msgid "Owner"
+msgstr ""
+
+#: ../parts/brandbar.php:34 ../parts/colofon.php:20
+msgid "Logo Utrecht University"
+msgstr ""
+
+#: ../parts/carousel.php:108
+msgid "Previous slide"
+msgstr ""
+
+#: ../parts/carousel.php:109
+msgid "Next slide"
+msgstr ""
+
+#: ../parts/colofon.php:26
+msgid "Utrecht University"
+msgstr ""
+
+#: ../parts/colofon.php:32
+msgid "disclaimer"
+msgstr ""
+
+#: ../parts/index_agenda_only.php:91 ../parts/index_news_agenda.php:62
+#: ../parts/index_news_agenda.php:166 ../parts/index_news_only.php:60
+msgid "More"
+msgstr ""
+
+#: ../parts/page-header-1col.php:31 ../parts/page-header-2col.php:40
+#, php-format
+msgid "Author Archive: %s"
+msgstr ""
+
+#: ../parts/page-header-1col.php:34 ../parts/page-header-2col.php:43
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../parts/page-header-1col.php:37 ../parts/page-header-2col.php:46
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../parts/page-header-1col.php:37 ../parts/page-header-2col.php:46
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: ../parts/page-header-1col.php:40 ../parts/page-header-2col.php:49
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../parts/page-header-1col.php:40 ../parts/page-header-2col.php:49
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: ../parts/page-header-1col.php:43 ../parts/page-header-2col.php:52
+msgid "Asides"
+msgstr ""
+
+#: ../parts/page-header-1col.php:46 ../parts/page-header-2col.php:55
+msgid "Galleries"
+msgstr ""
+
+#: ../parts/page-header-1col.php:49 ../parts/page-header-2col.php:58
+msgid "Images"
+msgstr ""
+
+#: ../parts/page-header-1col.php:52 ../parts/page-header-2col.php:61
+msgid "Videos"
+msgstr ""
+
+#: ../parts/page-header-1col.php:55 ../parts/page-header-2col.php:64
+msgid "Quotes"
+msgstr ""
+
+#: ../parts/page-header-1col.php:58 ../parts/page-header-2col.php:67
+msgid "Links"
+msgstr ""
+
+#: ../parts/page-header-1col.php:61 ../parts/page-header-2col.php:70
+msgid "Statuses"
+msgstr ""
+
+#: ../parts/page-header-1col.php:64 ../parts/page-header-2col.php:73
+msgid "Audios"
+msgstr ""
+
+#: ../parts/page-header-1col.php:67 ../parts/page-header-2col.php:76
+msgid "Chats"
+msgstr ""
+
+#: ../parts/page-header-1col.php:76 ../search.php:8
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../parts/page-header-2col.php:85
+msgctxt "label"
+msgid "Search"
+msgstr ""
+
+#: ../parts/page-header-2col.php:89
+msgid "404 Not found"
+msgstr ""
+
+#: ../parts/page-header-2col.php:101
+msgctxt "placeholder"
+msgid "Search"
+msgstr ""
+
+#: ../parts/page-header-2col.php:101
+msgctxt "label"
+msgid "Search for:"
+msgstr ""
+
+#: ../parts/page-header-2col.php:102
+msgctxt "submit button"
+msgid "Search"
+msgstr ""
+
+#: ../parts/page-header-2col.php:109
+msgid "Show sidebar"
+msgstr ""
+
+#: ../parts/post-loop-agenda.php:59
+msgid "All day"
+msgstr ""
+
+#: ../parts/post-loop.php:5
+msgid "no image"
+msgstr ""
+
+#: ../parts/post-loop.php:18
+msgid "Read"
+msgstr ""
+
+#: ../plugins/events-manager/forms/bookingform/login.php:8
+msgid "Log in with your solis-id."
+msgstr ""
+
+#: ../plugins/events-manager/forms/bookingform/login.php:10
+msgid "Username"
+msgstr ""
+
+#: ../plugins/events-manager/forms/bookingform/login.php:14
+msgid "Password"
+msgstr ""
+
+#: ../plugins/events-manager/forms/bookingform/login.php:18
+msgid "Log In"
+msgstr ""
+
+#: ../plugins/events-manager/forms/bookingform/login.php:19
+msgid "Remember Me"
+msgstr ""
+
+#: ../plugins/events-manager/forms/bookingform/login.php:34
+msgid "Sign Up"
+msgstr ""
+
+#: ../plugins/events-manager/forms/bookingform/login.php:38
+msgid "Password Lost and Found"
+msgstr ""
+
+#: ../plugins/events-manager/forms/bookingform/login.php:38
+msgid "Lost your password?"
+msgstr ""
+
+#: ../single-agenda.php:17
+#, php-format
+msgid ""
+"Posted <time class=\"updated\" datetime=\"%1$s\" pubdate>%2$s</time> by "
+"<span class=\"author\">%3$s</span> <span class=\"amp\">&amp;</span> filed "
+"under %4$s."
+msgstr ""
+
+#: ../single.php:71
+msgid "Location"
 msgstr ""

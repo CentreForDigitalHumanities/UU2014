@@ -190,6 +190,18 @@ acf_add_local_field_group(array (
 				'value' => 'category:agenda',
 			),
 		),
+		array (
+			array (
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'post',
+			),
+			array (
+				'param' => 'post_category',
+				'operator' => '==',
+				'value' => 'category:agenda-en',
+			),
+		),
 	),
 	'menu_order' => 0,
 	'position' => 'acf_after_title',

@@ -10,7 +10,9 @@ test
 <?php 
 
 $args = array(
-		"public" => 1	
+		"public" => 1,
+		"number" => 500,
+		"orderby" => 'domain'	
 	);
 
 $sites_list = get_sites ($args); 
@@ -48,6 +50,9 @@ $current_blog = get_current_blog_id(); ?>
 	<div class="col-sm-10">
 		<h2><?php echo $site->blogname; ?></h2>
 		<p>
+			(<?php 
+				$blog_details = get_blog_details($site->blog_id);
+				echo $blog_details->domain; ?>)
 		<?php echo get_field('uu_siteoptions_description', 'option'); ?>
 		</p>
 	</div>

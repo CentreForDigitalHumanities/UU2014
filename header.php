@@ -74,9 +74,10 @@
 <meta property="og:url" content="<?php the_permalink(); ?>" />
 <?php 
 if(function_exists('get_field') && get_field('uu_options_site_share_image', 'options') )	{ 
-	$fb_image = get_field('uu_options_site_share_image', 'options');
+	$fb_image_id = get_field('uu_options_site_share_image', 'options');
+	$fb_image_url = wp_get_attachment_image_url($fb_image_id, 'full');
 ?>
-<meta property="og:image" content="<?php echo $fb_image['url']; ?>" />
+<meta property="og:image" content="<?php echo $fb_image_url; ?>" />
 <?php } else { ?>
 <meta property="og:image" content="<?php header_image(); ?>" />
 <?php } ?>
