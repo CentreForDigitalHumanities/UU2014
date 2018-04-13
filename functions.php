@@ -79,7 +79,7 @@ function uu2014_scripts_and_styles() {
 
 	// register main stylesheet
 
-	wp_enqueue_style( 'uu2014-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'screen' );	
+	wp_enqueue_style( 'uu2014-stylesheet', get_template_directory_uri() . '/css/production/style.css', array(), '', 'screen' );	
 	wp_enqueue_style( 'uu2014-print-stylesheet', get_template_directory_uri() . '/css/print.css', array(), '', 'print' );	
 	// ie-only style sheet
 	wp_enqueue_style( 'uu2014-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
@@ -100,7 +100,7 @@ function uu2014_scripts_and_styles() {
 	// wp_enqueue_script( 'uu2014-icheck', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.1/icheck.min.js', array( 'jquery' ), '1.0.1', true );
 
 	//Chosen - https://harvesthq.github.io/chosen/
-    wp_enqueue_script( 'chosen-js', '//cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js', array( 'jquery' ), '1.1.0', true );
+    //wp_enqueue_script( 'chosen-js', 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js', array( 'jquery' ), '1.1.0', true );
    
 
     // Pull Masonry from the core of WordPress
@@ -144,10 +144,10 @@ function my_custom_admin_css() {
 
 
 function load_fonts() {
-            wp_register_style('googleFonts', '//fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,700,400italic&subset=latin,latin-ext');
+            wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,700,400italic&subset=latin,latin-ext');
             wp_enqueue_style( 'googleFonts');
         }
- add_action('wp_print_styles', 'load_fonts');	
+ //add_action('wp_print_styles', 'load_fonts');	
 
 /*********************
 3. THEME SUPPORT

@@ -21,10 +21,55 @@ body {
 }
 
 @font-face {
+	font-family: 'Open Sans';
+	src: 
+		 url('../../fonts/OpenSans-Regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: 
+		 url('../../fonts/OpenSans-Light-webfont.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	src: 
+		 url('../../fonts/OpenSans-Bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	src: 
+		 url('../../fonts/merriweather-regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	src: 
+		 url('../../fonts/merriweather-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
     font-family: "icomoon";
+    
+    src: 
+    	local(icomoon), local(Icomoon),
+    	url("../../fonts/icomoon.ttf?6tvktt") format("truetype"), 
+    	url("../../fonts/icomoon.woff?6tvktt") format("woff"), 
+    	url("../../fonts/icomoon.svg?6tvktt#icomoon") format("svg");
     font-style: normal;
     font-weight: normal;
-    src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("application/font-woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
 }
 
 .page-content, .page-content-inner, .mce-content-body  {
