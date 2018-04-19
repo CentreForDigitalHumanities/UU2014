@@ -95,13 +95,13 @@ $current_blog = get_current_blog_id(); ?>
 </table>
 <?php get_template_part( 'parts/page-footer-1col'); ?> 
 <script type="text/javascript">
-	jQuery(document).ready(function($) {
-	    $('#sitelist').dataTable({
-                        "aaSorting":[],
-                        "bSortClasses":false,
-                        "asStripeClasses":['even','odd'],
-                        "bSort":true
-                    });
-	} );
+	// jQuery(document).ready(function($) {
+	//     $('#sitelist').dataTable({
+ //                        "aaSorting":[],
+ //                        "bSortClasses":false,
+ //                        "asStripeClasses":['even','odd'],
+ //                        "bSort":true
+ //                    });
+	// } );
 </script>
 <?php get_footer();

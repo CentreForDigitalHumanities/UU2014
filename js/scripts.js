@@ -63,25 +63,6 @@ function getScrollBarWidth () {
 // as the page loads, call these scripts
 jQuery(document).ready(function($) {
 
-	//ChosenJs Select Input - https://github.com/harvesthq/chosen for more info
-	//$("select").chosen({no_results_text: "Oops, nothing found!", width: "99.5%"});
-
-	//Lightbox - https://dimsemenov.com/plugins/magnific-popup/
-	// if($.fn.magnificPopup) {
-	// 	$('a[href*=".jpg"], a[href*=".jpeg"], a[href*=".png"], a[href*=".gif"]').magnificPopup({
-	// 		type: 'image'
-	// 	});
-	// }
-
-	//iCheck - https://fronteed.com/iCheck/
-	// if($.fn.iCheck) {
-	// 	$('input').iCheck({
-	// 		checkboxClass: 'icheckbox_square',
-	// 		radioClass: 'iradio_square',
-	// 		increaseArea: '20%' // optional
-	// 	});
-	// }
-
 	//Responsive iFrames, Embeds and Objects - https://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php
 	var $allVideos = $("iframe[src*='youtube'], iframe[src*='hulu'], iframe[src*='revision3'], iframe[src*='vimeo'], iframe[src*='blip'], iframe[src*='dailymotion'], iframe[src*='funnyordie'], object, embed").wrap( "<figure></figure>" ),
 	$fluidEl = $("figure");
