@@ -58,24 +58,12 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twit
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
 }
 
-if ( file_exists( dirname( __FILE__ ) . '/includes/remove-emoji.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/remove-emoji.php' );
-}
-
 
 
 
 /*********************
 2. SCRIPTS & ENQUEUEING
 *********************/
-
-
-// remove jquery-migrate
-add_action( 'wp_default_scripts', function( $scripts ) {
-    if ( ! empty( $scripts->registered['jquery'] ) ) {
-        $scripts->registered['jquery']->deps = array_diff( $scripts->registered['jquery']->deps, array( 'jquery-migrate' ) );
-    }
-} );
 
 function uu2014_scripts_and_styles() {
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
@@ -116,7 +104,12 @@ function uu2014_scripts_and_styles() {
    
 
     // Pull Masonry from the core of WordPress
+   echo '<pre>';
+   print_r(get_page_template_slug( get_the_ID()) );
+   	echo '</pre>';
+   	if( is_page_template('page-blog.php') || (is_front_page() && get_field('uu_options_post_types', 'option') == 'blog') ) {
 	wp_enqueue_script( 'masonry' );
+	}
 	// comment reply script for threaded comments
 	if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 		wp_enqueue_script( 'comment-reply' );

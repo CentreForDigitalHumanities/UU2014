@@ -371,22 +371,6 @@ acf_add_local_field_group(array (
 			'type' => 'checkbox',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => array (
-				array (
-					array (
-						'field' => 'field_54f80f57662f3',
-						'operator' => '==',
-						'value' => 'blog',
-					),
-				),
-				array (
-					array (
-						'field' => 'field_54f80f57662f3',
-						'operator' => '==',
-						'value' => 'blog2',
-					),
-				),
-			),
 			'wrapper' => array (
 				'width' => '',
 				'class' => '',
