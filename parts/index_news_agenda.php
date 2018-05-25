@@ -78,8 +78,12 @@ $newsquery = new WP_Query( $args );
 
 					<div class="agenda-archive">
 						<?php 
+
+					if ( false === ( $agenda_posts = get_transient( 'home_agenda_posts' ) ) ) {
+
 						//add_filter( 'get_meta_sql', 'get_meta_sql_date' );
 						$today = date('Ymd');
+						$agendaterms = '';
 						$agendacats = get_field('uu_options_agenda_frontpage_cat', 'option');
 						if ($agendacats) { 
 							$agendaterms = implode(',', $agendacats);	
@@ -130,17 +134,17 @@ $newsquery = new WP_Query( $args );
 						        	),
 						            
 						        ),
-						        'eventtime' => array(
-						        	'relation' => 'OR',
-						        	array(
-						        		'key' => 'uu_agenda_start_time',	
-						        		),
-						            array(
-						        		'key' => 'uu_agenda_start_time',
-						        		'value' => date('H:i'),
-						        		'compare' => 'NOT EXISTS',	
-						        		),
-						        ),
+						        // 'eventtime' => array(
+						        // 	'relation' => 'OR',
+						        // 	array(
+						        // 		'key' => 'uu_agenda_start_time',	
+						        // 		),
+						        //     array(
+						        // 		'key' => 'uu_agenda_start_time',
+						        // 		'value' => date('H:i'),
+						        // 		'compare' => 'NOT EXISTS',	
+						        // 		),
+						        // ),
 	    					),
 						    // 'orderby'		=> array(
 						    // 		'eventdate' => 'ASC',
@@ -151,9 +155,13 @@ $newsquery = new WP_Query( $args );
 
 						$agenda_query = new WP_Query( $args2 );
 
-							if ( $agenda_query->have_posts() ) : ?>
+						// Put the results in a transient. Expire after 12 hours.
+						set_transient( 'home_agenda_posts', $agenda_query, 12 * HOUR_IN_SECONDS );
+					}
 
-								<?php while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
+							if ( $agenda_posts->have_posts() ) : ?>
+
+								<?php while ($agenda_posts->have_posts()) : $agenda_posts->the_post(); ?>
 
 									<?php get_template_part( 'parts/post-loop-agenda'); ?> 
 
