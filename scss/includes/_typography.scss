@@ -55,6 +55,14 @@ body {
 @font-face {
 	font-family: 'Merriweather';
 	src: 
+		 url('../../fonts/merriweather-LightItalic-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	src: 
 		 url('../../fonts/merriweather-bold-webfont.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;

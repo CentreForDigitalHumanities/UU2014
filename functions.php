@@ -69,10 +69,10 @@ function uu2014_scripts_and_styles() {
 	global $wp_styles; // call global $wp_styles variable to add conditional wrapper around ie stylesheet the WordPress way
 
 	// modernizr (without media query polyfill)
-	wp_enqueue_script( 'uu2014-modernizr', '//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js', false, null );
+	wp_enqueue_script( 'uu2014-modernizr', get_template_directory_uri() . '/js/modernizr.min.js', false, null );
 
 	// respondjs
-	wp_enqueue_script( 'uu2014-respondjs', '//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.js', false, null );
+	wp_enqueue_script( 'uu2014-respondjs', get_template_directory_uri() . '/js/respond.min.js', false, null );
 
 	// Boostrap CSS
 	// wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css');
@@ -100,7 +100,7 @@ function uu2014_scripts_and_styles() {
 	// wp_enqueue_script( 'uu2014-icheck', '//cdnjs.cloudflare.com/ajax/libs/iCheck/1.0.1/icheck.min.js', array( 'jquery' ), '1.0.1', true );
 
 	//Chosen - https://harvesthq.github.io/chosen/
-    //wp_enqueue_script( 'chosen-js', 'https://cdnjs.cloudflare.com/ajax/libs/chosen/1.1.0/chosen.jquery.min.js', array( 'jquery' ), '1.1.0', true );
+    wp_enqueue_script( 'chosen-js', get_template_directory_uri() . '/js/chosen.jquery.min.js', array( 'jquery' ), '1.1.0', true );
    
 
     // Pull Masonry from the core of WordPress
@@ -111,7 +111,7 @@ function uu2014_scripts_and_styles() {
 	}
 
 	//adding scripts file in the footer
-	wp_enqueue_script( 'uu2014-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '', true );
+	wp_enqueue_script( 'uu2014-js', get_template_directory_uri() . '/js/scripts.js', array( 'jquery' ), '1.0.1', true );
 	
 }
 
@@ -143,11 +143,6 @@ function my_custom_admin_css() {
 }
 
 
-function load_fonts() {
-            wp_register_style('googleFonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Merriweather:400,700,400italic&subset=latin,latin-ext');
-            wp_enqueue_style( 'googleFonts');
-        }
- //add_action('wp_print_styles', 'load_fonts');	
 
 /*********************
 3. THEME SUPPORT
