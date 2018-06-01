@@ -324,7 +324,6 @@ function uu_main_navigation() {
         <?php
             echo  wp_nav_menu(
                 array(
-                    'menu'              => 'main-nav',
                     'theme_location'    => 'main-nav',
                     'depth'             => 2,
                     'container'         => 'div',
