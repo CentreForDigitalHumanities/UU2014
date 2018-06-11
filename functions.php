@@ -1028,3 +1028,13 @@ if(!function_exists('wpmu_get_mapped_domain_link')){
  		//return $schem.$data->domain;
  	}
 }
+
+/* refresh transients after post save    */
+
+function uu_delete_agenda_transients() {
+	global $post;
+	if( $post->post_type == 'post' ) {
+		delete_transient( 'home_agenda_posts' );
+	}
+}
+add_action( 'save_post', 'uu_delete_agenda_transients' );
