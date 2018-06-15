@@ -79,7 +79,7 @@ $newsquery = new WP_Query( $args );
 					<div class="agenda-archive">
 						<?php 
 
-					if ( false === ( $agenda_posts = get_transient( 'home_agenda_posts' ) ) ) {
+					
 
 						//add_filter( 'get_meta_sql', 'get_meta_sql_date' );
 						$today = date('Ymd');
@@ -99,8 +99,8 @@ $newsquery = new WP_Query( $args );
 						} else {
 							$amount = 3;
 						}
-				
-						
+					
+						if ( false === ( $agenda_posts = get_transient( 'home_agenda_posts' ) ) ) {
 						$todaydate = date('Ymd');
 						$todaytime = date('H:i');
 						$args2 = array(
@@ -156,7 +156,7 @@ $newsquery = new WP_Query( $args );
 						$agenda_query = new WP_Query( $args2 );
 
 						// Put the results in a transient. Expire after 12 hours.
-						set_transient( 'home_agenda_posts', $agenda_query, 12 * HOUR_IN_SECONDS );
+						set_transient( 'home_agenda_posts', $agenda_query, 1 * HOUR_IN_SECONDS );
 					}
 
 							if ( $agenda_posts->have_posts() ) : ?>
