@@ -9,6 +9,8 @@
 
 <?php 
 
+if ( false === ( $sites_list = get_transient( 'sites_list_query_results' ) ) ) {
+
 $args = array(
 		"public" => 1,
 		"number" => 500,
@@ -16,6 +18,9 @@ $args = array(
 	);
 
 $sites_list = get_sites ($args); 
+
+set_transient( 'sites_list_query_results', $sites_list, 12 * HOUR_IN_SECONDS );
+}
 $current_blog = get_current_blog_id(); ?>
 <table id="sitelist">
 <thead>
@@ -50,8 +55,11 @@ $current_blog = get_current_blog_id(); ?>
 		<h2><?php echo $site->blogname; ?></h2>
 		<p>
 		<?php echo get_field('uu_siteoptions_description', 'option');
-
-		echo wpmu_get_mapped_domain_link($site->blog_id);	
+		if(wpmu_get_mapped_domain_link($site->blog_id)) {
+			echo wpmu_get_mapped_domain_link($site->blog_id);
+		} else {
+			echo get_site_url($site->blog_id);
+		}	
 		
 		 ?>
 		</p>
@@ -89,19 +97,10 @@ $current_blog = get_current_blog_id(); ?>
 	<?php } ?>	
 	</td>	
 </tr>
-	
+<?php restore_current_blog(); ?>	
 <?php } ?>
-<?php restore_current_blog(); ?>
+
 </table>
 <?php get_template_part( 'parts/page-footer-1col'); ?> 
-<script type="text/javascript">
-	// jQuery(document).ready(function($) {
-	//     $('#sitelist').dataTable({
- //                        "aaSorting":[],
- //                        "bSortClasses":false,
- //                        "asStripeClasses":['even','odd'],
- //                        "bSort":true
- //                    });
-	// } );
-</script>
+
 <?php get_footer();
