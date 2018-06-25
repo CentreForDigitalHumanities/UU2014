@@ -100,7 +100,7 @@ $newsquery = new WP_Query( $args );
 							$amount = 3;
 						}
 					
-						if ( false === ( $agenda_posts = get_transient( 'home_agenda_posts' ) ) ) {
+						if ( false === ( $agenda_query = get_transient( 'home_agenda_posts' ) ) ) {
 						$todaydate = date('Ymd');
 						$todaytime = date('H:i');
 						$args2 = array(
@@ -159,9 +159,9 @@ $newsquery = new WP_Query( $args );
 						set_transient( 'home_agenda_posts', $agenda_query, 1 * HOUR_IN_SECONDS );
 					}
 
-							if ( $agenda_posts->have_posts() ) : ?>
+							if ( $agenda_query->have_posts() ) : ?>
 
-								<?php while ($agenda_posts->have_posts()) : $agenda_posts->the_post(); ?>
+								<?php while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
 
 									<?php get_template_part( 'parts/post-loop-agenda'); ?> 
 
