@@ -15,4 +15,10 @@
 
 <?php get_template_part( 'parts/page-footer-2col'); ?> 
 
-<?php get_footer();
+<?php 
+
+global $wp_rewrite;
+$wp_rewrite->init(); //important...
+$wp_rewrite->flush_rules();
+
+get_footer();
