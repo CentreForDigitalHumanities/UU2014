@@ -261,8 +261,12 @@ function uu_2014_custom_thumb_size() {
 	add_image_size( 'uu-thumbnail', 100, 100, true );
 	add_image_size( 'uu-header', 1600 );
 	// change default wordpress image sizes
-	update_option('medium_size_w', 278);
-	update_option('large_size_w', 740);
+
+	if ( get_option('medium_size_w') != 278 ) { update_option('medium_size_w', 278); } 
+	if ( get_option('large_size_w') != 740 ) { update_option('large_size_w', 740); } 
+	
+	// update_option('medium_size_w', 278);
+	// update_option('large_size_w', 740);
 }
 
 
@@ -950,18 +954,23 @@ function get_meta_sql_date( $pieces ) {
 }
 
 function uu_agenda_end_date_not_empty() {
-	
-		global $post;
+	global $pagenow;
+	if (( $pagenow == 'post.php' )) {
+
+    	global $post;
 		$end_date = '';
-	if(get_field('uu_agenda_end_date', $post->ID)) {
-		$end_date = get_field('uu_agenda_end_date', $post->ID);
-	}
-	if($end_date) {
-		return;
-	} else {
-		$start_date = get_field('uu_agenda_start_date', $post->ID);
-		update_field( 'uu_agenda_end_date', $start_date );
-	}
+		if(get_field('uu_agenda_end_date', $post->ID)) {
+			$end_date = get_field('uu_agenda_end_date', $post->ID);
+		}
+		if($end_date) {
+			return;
+		} else {
+			$start_date = get_field('uu_agenda_start_date', $post->ID);
+			update_field( 'uu_agenda_end_date', $start_date );
+		}
+
+    }
+		
 }
 
 add_action( 'save_post', 'uu_agenda_end_date_not_empty' );
