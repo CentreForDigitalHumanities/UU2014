@@ -21,3 +21,27 @@ This stylesheet is only for the wysiwyg editor.
 // Import Typography Styles
 @import "includes/uu-huisstijl";
 @import "includes/typography";
+
+@font-face {
+	font-family: 'Merriweather';
+	src: 
+		 url('/wp-content/themes/UU2014/fonts/merriweather-regular-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	src: 
+		 url('/wp-content/themes/UU2014/fonts/merriweather-LightItalic-webfont.woff') format('woff');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Merriweather';
+	src: 
+		 url('/wp-content/themes/UU2014/fonts/merriweather-bold-webfont.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+}

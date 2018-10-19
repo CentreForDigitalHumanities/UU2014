@@ -1361,14 +1361,44 @@ USAGE: @include css-gradient(#dfdfdf,#f8f8f8);
 CUSTOMIZED RESET VALUES
 *********************/
 @font-face {
+  font-family: 'Open Sans';
+  src: url("../../fonts/OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../../fonts/OpenSans-Light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../../fonts/OpenSans-Bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../fonts/merriweather-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../fonts/merriweather-LightItalic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("../../fonts/merriweather-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
   font-family: "icomoon";
+  src: local(icomoon), local(Icomoon), url("../../fonts/icomoon.ttf?6tvktt") format("truetype"), url("../../fonts/icomoon.woff?6tvktt") format("woff"), url("../../fonts/icomoon.svg?6tvktt#icomoon") format("svg");
   font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("application/font-woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg"); }
-/* line 30, ../scss/includes/_typography.scss */
+  font-weight: normal; }
+/* line 83, ../scss/includes/_typography.scss */
 .page-content, .page-content-inner, .mce-content-body {
   font-family: "Merriweather", serif; }
-  /* line 32, ../scss/includes/_typography.scss */
+  /* line 85, ../scss/includes/_typography.scss */
   .page-content a[target="_blank"]:after, .page-content-inner a[target="_blank"]:after, .mce-content-body a[target="_blank"]:after {
     font-family: "icomoon";
     content: "";
@@ -1378,11 +1408,11 @@ CUSTOMIZED RESET VALUES
     padding: 0 0 0 7px;
     text-decoration: none; }
 
-/* line 43, ../scss/includes/_typography.scss */
+/* line 96, ../scss/includes/_typography.scss */
 .page-content li {
   margin-bottom: 1em; }
 
-/* line 47, ../scss/includes/_typography.scss */
+/* line 100, ../scss/includes/_typography.scss */
 p {
   -webkit-hyphens: manual;
   -epub-hyphens: manual;
@@ -1390,74 +1420,74 @@ p {
   hyphens: manual;
   margin: 0 0 1em 0; }
 
-/* line 54, ../scss/includes/_typography.scss */
+/* line 107, ../scss/includes/_typography.scss */
 ul, ol {
   margin: 1em 2em; }
 
-/* line 57, ../scss/includes/_typography.scss */
+/* line 110, ../scss/includes/_typography.scss */
 ul {
   list-style-type: disc; }
 
-/* line 60, ../scss/includes/_typography.scss */
+/* line 113, ../scss/includes/_typography.scss */
 ol {
   list-style-type: decimal; }
 
-/* line 92, ../scss/includes/_typography.scss */
+/* line 145, ../scss/includes/_typography.scss */
 b, strong, .strong {
   font-weight: bold; }
 
-/* line 96, ../scss/includes/_typography.scss */
+/* line 149, ../scss/includes/_typography.scss */
 cite, dfn, em, i, .em {
   font-style: italic; }
 
-/* line 100, ../scss/includes/_typography.scss */
+/* line 153, ../scss/includes/_typography.scss */
 small, .small {
   font-size: 75%; }
 
-/* line 104, ../scss/includes/_typography.scss */
+/* line 157, ../scss/includes/_typography.scss */
 hr {
   clear: both; }
 
-/* line 112, ../scss/includes/_typography.scss */
+/* line 165, ../scss/includes/_typography.scss */
 video {
   width: 100% !important;
   height: auto !important; }
 
-/* line 117, ../scss/includes/_typography.scss */
+/* line 170, ../scss/includes/_typography.scss */
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
   border-bottom: 1px dotted #999999; }
 
-/* line 123, ../scss/includes/_typography.scss */
+/* line 176, ../scss/includes/_typography.scss */
 blockquote {
   border-left: 0; }
 
-/* line 132, ../scss/includes/_typography.scss */
+/* line 185, ../scss/includes/_typography.scss */
 blockquote small {
   display: block;
   line-height: 20px;
   color: #999999; }
 
-/* line 138, ../scss/includes/_typography.scss */
+/* line 191, ../scss/includes/_typography.scss */
 blockquote small:before {
   content: '\2014 \00A0'; }
 
-/* line 142, ../scss/includes/_typography.scss */
+/* line 195, ../scss/includes/_typography.scss */
 q:before,
 q:after,
 blockquote:before,
 blockquote:after {
   content: ""; }
 
-/* line 149, ../scss/includes/_typography.scss */
+/* line 202, ../scss/includes/_typography.scss */
 address {
   display: block;
   margin-bottom: 20px;
   font-style: normal;
   line-height: 20px; }
 
-/* line 156, ../scss/includes/_typography.scss */
+/* line 209, ../scss/includes/_typography.scss */
 code,
 pre {
   padding: 0 3px 2px;
@@ -1466,7 +1496,7 @@ pre {
   color: #333333;
   border-radius: 0; }
 
-/* line 165, ../scss/includes/_typography.scss */
+/* line 218, ../scss/includes/_typography.scss */
 code {
   padding: 2px 4px;
   color: #d14;
@@ -1475,7 +1505,7 @@ code {
   border: 1px solid #e1e1e8;
   display: inline-block; }
 
-/* line 174, ../scss/includes/_typography.scss */
+/* line 227, ../scss/includes/_typography.scss */
 pre {
   display: block;
   padding: 9.5px;
@@ -1491,7 +1521,7 @@ pre {
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0; }
 
-/* line 190, ../scss/includes/_typography.scss */
+/* line 243, ../scss/includes/_typography.scss */
 pre code {
   padding: 0;
   color: inherit;
@@ -1500,78 +1530,78 @@ pre code {
   background-color: transparent;
   border: 0; }
 
-/* line 199, ../scss/includes/_typography.scss */
+/* line 252, ../scss/includes/_typography.scss */
 hr {
   margin: 1.429em 0;
   border: 0;
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #ffffff; }
 
-/* line 206, ../scss/includes/_typography.scss */
+/* line 259, ../scss/includes/_typography.scss */
 .screen-reader-text {
   display: none; }
 
 /*********************
 * TABLE STYLES
 *********************/
-/* line 213, ../scss/includes/_typography.scss */
+/* line 266, ../scss/includes/_typography.scss */
 table {
   border-collapse: separate;
   border-spacing: 0px;
   margin: 10px 0px 15px 0px;
   width: 100%;
   text-align: left; }
-  /* line 220, ../scss/includes/_typography.scss */
+  /* line 273, ../scss/includes/_typography.scss */
   table thead {
     text-align: center; }
-  /* line 224, ../scss/includes/_typography.scss */
+  /* line 277, ../scss/includes/_typography.scss */
   table th {
     background-color: #ffcd00;
     border: 0px solid #FFFFFF;
     padding: 10px 15px;
     color: #3D3D3D;
     text-align: center; }
-  /* line 232, ../scss/includes/_typography.scss */
+  /* line 285, ../scss/includes/_typography.scss */
   table td {
     border: 0px;
     color: #3D3D3D;
     padding: 5px 15px;
     vertical-align: top; }
-  /* line 239, ../scss/includes/_typography.scss */
+  /* line 292, ../scss/includes/_typography.scss */
   table tr.even {
     background-color: #FFFFFF; }
-  /* line 243, ../scss/includes/_typography.scss */
+  /* line 296, ../scss/includes/_typography.scss */
   table tr.odd {
     background-color: #F0F0F0; }
 
 /*********************
 LINK STYLES
 *********************/
-/* line 254, ../scss/includes/_typography.scss */
+/* line 307, ../scss/includes/_typography.scss */
 a, a:visited {
   color: #262626; }
 
-/* line 257, ../scss/includes/_typography.scss */
+/* line 310, ../scss/includes/_typography.scss */
 a:hover, a:focus {
   color: #787878;
   transition: color 0.5s ease 0s; }
 
-/* line 262, ../scss/includes/_typography.scss */
+/* line 315, ../scss/includes/_typography.scss */
 .page-content,
 article {
   /* on hover */
   /* on click */ }
-  /* line 264, ../scss/includes/_typography.scss */
+  /* line 317, ../scss/includes/_typography.scss */
   .page-content a, .page-content a:visited,
   article a,
   article a:visited {
     text-decoration: underline; }
-  /* line 270, ../scss/includes/_typography.scss */
+  /* line 323, ../scss/includes/_typography.scss */
   .page-content a:hover, .page-content a:focus,
   article a:hover,
   article a:focus {
     text-decoration: underline; }
-  /* line 278, ../scss/includes/_typography.scss */
+  /* line 331, ../scss/includes/_typography.scss */
   .page-content a:link,
   article a:link {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
@@ -1579,84 +1609,84 @@ article {
 /******************************************************************
 H1, H2, H3, H4, H5 STYLES
 ******************************************************************/
-/* line 287, ../scss/includes/_typography.scss */
+/* line 340, ../scss/includes/_typography.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   text-rendering: optimizelegibility; }
-  /* line 291, ../scss/includes/_typography.scss */
+  /* line 344, ../scss/includes/_typography.scss */
   h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
     text-decoration: none; }
 
-/* line 300, ../scss/includes/_typography.scss */
+/* line 353, ../scss/includes/_typography.scss */
 .single h1 {
   margin-top: 22px; }
 
-/* line 309, ../scss/includes/_typography.scss */
+/* line 362, ../scss/includes/_typography.scss */
 .entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4 {
   margin: 2em 0 1em 0; }
 
-/* line 315, ../scss/includes/_typography.scss */
+/* line 368, ../scss/includes/_typography.scss */
 .page-content-inner h1:first-child, .page-content-inner h2:first-child, .page-content-inner h3:first-child, .page-content-inner h4:first-child {
   margin-top: 0; }
 
 /******************************************************************
  TINYMCE STYLES DROPDOWN
 ******************************************************************/
-/* line 344, ../scss/includes/_typography.scss */
+/* line 397, ../scss/includes/_typography.scss */
 .underline {
   text-decoration: underline; }
 
-/* line 348, ../scss/includes/_typography.scss */
+/* line 401, ../scss/includes/_typography.scss */
 .italic {
   font-style: italic; }
 
-/* line 352, ../scss/includes/_typography.scss */
+/* line 405, ../scss/includes/_typography.scss */
 .bold {
   font-weight: bold; }
 
-/* line 356, ../scss/includes/_typography.scss */
+/* line 409, ../scss/includes/_typography.scss */
 .text-left {
   text-align: left; }
 
-/* line 360, ../scss/includes/_typography.scss */
+/* line 413, ../scss/includes/_typography.scss */
 .text-center {
   text-align: center; }
 
-/* line 364, ../scss/includes/_typography.scss */
+/* line 417, ../scss/includes/_typography.scss */
 .text-right {
   text-align: right; }
 
 /* image alignment */
-/* line 369, ../scss/includes/_typography.scss */
+/* line 422, ../scss/includes/_typography.scss */
 .alignleft, img.alignleft {
   float: left;
   margin: 0 15px 10px 0; }
 
-/* line 374, ../scss/includes/_typography.scss */
+/* line 427, ../scss/includes/_typography.scss */
 .alignright, img.alignright {
   float: right;
   margin: 0 0 10px 15px; }
 
-/* line 379, ../scss/includes/_typography.scss */
+/* line 432, ../scss/includes/_typography.scss */
 .aligncenter, img.aligncenter {
   display: block;
   margin: 0 auto 10px auto; }
 
-/* line 384, ../scss/includes/_typography.scss */
+/* line 437, ../scss/includes/_typography.scss */
 .alignnone, img.alignnone {
   display: block;
   margin: 0 0 10px 0; }
 
-/* line 389, ../scss/includes/_typography.scss */
+/* line 442, ../scss/includes/_typography.scss */
 .aligncenter, img.aligncenter,
 .alignnone, img.alignnone {
   clear: both; }
 
 /*Image Caption*/
-/* line 395, ../scss/includes/_typography.scss */
+/* line 448, ../scss/includes/_typography.scss */
 .wp-caption {
   max-width: 100% !important;
   /* images inside wp-caption */ }
-  /* line 400, ../scss/includes/_typography.scss */
+  /* line 453, ../scss/includes/_typography.scss */
   .wp-caption img {
     margin-bottom: 0;
     width: 100%; }
@@ -1664,12 +1694,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 /* end .wp-caption */
 /*Core Media Player*/
 /*video player*/
-/* line 441, ../scss/includes/_typography.scss */
+/* line 494, ../scss/includes/_typography.scss */
 .mejs-video {
   width: 100% !important;
   height: auto !important;
   padding-top: 57%; }
-  /* line 450, ../scss/includes/_typography.scss */
+  /* line 503, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-mediaelement video {
     position: absolute;
     top: 0;
@@ -1678,24 +1708,24 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     bottom: 0;
     width: 100% !important;
     height: 100% !important; }
-  /* line 473, ../scss/includes/_typography.scss */
+  /* line 526, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-layers .mejs-poster {
     width: 100% !important;
     height: 100% !important; }
-  /* line 481, ../scss/includes/_typography.scss */
+  /* line 534, ../scss/includes/_typography.scss */
   .mejs-video .mejs-inner .mejs-overlay-play {
     width: 100% !important;
     height: 100% !important; }
 
 /*audio player*/
 /* Audio Playlist */
-/* line 525, ../scss/includes/_typography.scss */
+/* line 578, ../scss/includes/_typography.scss */
 .wp-playlist {
   overflow: hidden; }
-  /* line 552, ../scss/includes/_typography.scss */
+  /* line 605, ../scss/includes/_typography.scss */
   .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption {
     display: block; }
-    /* line 555, ../scss/includes/_typography.scss */
+    /* line 608, ../scss/includes/_typography.scss */
     .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption .wp-playlist-item-title {
       overflow: hidden;
       white-space: nowrap;
@@ -1703,7 +1733,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 /*Block Quote Alignment*/
 /*Image Sizes*/
-/* line 573, ../scss/includes/_typography.scss */
+/* line 626, ../scss/includes/_typography.scss */
 .size-auto,
 .size-full,
 .size-large,
@@ -1712,7 +1742,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   max-width: 100%;
   height: auto; }
   @media (max-width: 420px) {
-    /* line 573, ../scss/includes/_typography.scss */
+    /* line 626, ../scss/includes/_typography.scss */
     .size-auto,
     .size-full,
     .size-large,
@@ -1723,6 +1753,22 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 
 /*Use this class for any Editor Specific Styles to help the user experience
  * set the max size of the content area in the editor to match the template*/
-/* line 596, ../scss/includes/_typography.scss */
+/* line 649, ../scss/includes/_typography.scss */
 .mceContentBody {
   background-color: #FDFDFD; }
+
+@font-face {
+  font-family: 'Merriweather';
+  src: url("/wp-content/themes/UU2014/fonts/merriweather-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("/wp-content/themes/UU2014/fonts/merriweather-LightItalic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("/wp-content/themes/UU2014/fonts/merriweather-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }

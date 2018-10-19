@@ -105,9 +105,11 @@
 	    			
 	    			</div> 
 	    			<?php } ?>
+	    			<?php if ( is_active_sidebar( 'left-sidebar' ) ) { ?>
 	    			<div class="toggle-btn-div visible-xs clearfix">
 	    			 	<button type="button" class="toggle-btn white button icon left arrow-right" data-toggle="offcanvas"><?php _e('Show sidebar', 'uu2014'); ?></button>
 					</div>
+					<?php } ?>
 			<div class="page-content-inner facetwp-template">	
 	    			
 	    			<?php
