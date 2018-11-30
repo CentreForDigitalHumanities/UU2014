@@ -23,7 +23,7 @@ body {
 @font-face {
 	font-family: 'Open Sans';
 	src: 
-		 url('../../fonts/OpenSans-Regular-webfont.woff') format('woff');
+		 url('/wp-content/themes/UU2014/fonts//OpenSans-Regular-webfont.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -31,7 +31,7 @@ body {
 @font-face {
 	font-family: 'Open Sans';
 	src: 
-		 url('../../fonts/OpenSans-Light-webfont.woff') format('woff');
+		 url('/wp-content/themes/UU2014/fonts/OpenSans-Light-webfont.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
 }
@@ -39,7 +39,7 @@ body {
 @font-face {
 	font-family: 'Open Sans';
 	src: 
-		 url('../../fonts/OpenSans-Bold-webfont.woff') format('woff');
+		 url('/wp-content/themes/UU2014/fonts/OpenSans-Bold-webfont.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 }
@@ -47,7 +47,7 @@ body {
 @font-face {
 	font-family: 'Merriweather';
 	src: 
-		 url('../../fonts/merriweather-regular-webfont.woff') format('woff');
+		 url('/wp-content/themes/UU2014/fonts/merriweather-regular-webfont.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -55,7 +55,7 @@ body {
 @font-face {
 	font-family: 'Merriweather';
 	src: 
-		 url('../../fonts/merriweather-LightItalic-webfont.woff') format('woff');
+		 url('/wp-content/themes/UU2014/fonts/merriweather-LightItalic-webfont.woff') format('woff');
 	font-weight: 400;
 	font-style: italic;
 }
@@ -63,7 +63,7 @@ body {
 @font-face {
 	font-family: 'Merriweather';
 	src: 
-		 url('../../fonts/merriweather-bold-webfont.woff') format('woff');
+		 url('/wp-content/themes/UU2014/fonts/merriweather-bold-webfont.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 }
@@ -73,9 +73,9 @@ body {
     
     src: 
     	local(icomoon), local(Icomoon),
-    	url("../../fonts/icomoon.ttf?6tvktt") format("truetype"), 
-    	url("../../fonts/icomoon.woff?6tvktt") format("woff"), 
-    	url("../../fonts/icomoon.svg?6tvktt#icomoon") format("svg");
+    	url("/wp-content/themes/UU2014/fonts/icomoon.ttf?6tvktt") format("truetype"), 
+    	url("/wp-content/themes/UU2014/fonts/icomoon.woff?6tvktt") format("woff"), 
+    	url("/wp-content/themes/UU2014/fonts/icomoon.svg?6tvktt#icomoon") format("svg");
     font-style: normal;
     font-weight: normal;
 }
