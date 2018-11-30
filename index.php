@@ -58,6 +58,11 @@
 			<?php get_template_part( 'parts/page-footer-2col'); ?> 	
 		<?php }
 
+		elseif ($post_type == 'none') { ?>
+			<?php get_template_part( 'parts/page-header-1col'); ?>
+			<?php get_template_part( 'parts/page-footer-1col'); ?> 	
+		<?php }
+
 		else { ?>
 			<div class="home-blog">
 				<div class="col-sm-8 col-sm-offset-2">
@@ -70,10 +75,10 @@
 
 						);
 
-					$newsquery = new WP_Query( $args );
-					if ( $newsquery->have_posts() ) {
-							while ( $newsquery->have_posts() ) {
-									$newsquery->the_post(); 
+					
+					if ( have_posts() ) {
+							while ( have_posts() ) {
+									the_post(); 
 					
 					get_template_part( 'parts/post-loop-frontpage'); ?> 
 					

@@ -32,6 +32,7 @@ acf_add_local_field_group(array (
 				'agenda2' => 'agenda items only with sidebar',
 				'blog' => 'Blogpage tiles',
 				'blog2' => 'Blogpage list with sidebar',
+				'none' => 'None',
 			),
 			'default_value' => 'news_agenda',
 			'other_choice' => 0,
