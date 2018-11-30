@@ -1756,19 +1756,3 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
 /* line 649, ../scss/includes/_typography.scss */
 .mceContentBody {
   background-color: #FDFDFD; }
-
-@font-face {
-  font-family: 'Merriweather';
-  src: url("/wp-content/themes/UU2014/fonts/merriweather-regular-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: 'Merriweather';
-  src: url("/wp-content/themes/UU2014/fonts/merriweather-LightItalic-webfont.woff") format("woff");
-  font-weight: 400;
-  font-style: italic; }
-@font-face {
-  font-family: 'Merriweather';
-  src: url("/wp-content/themes/UU2014/fonts/merriweather-bold-webfont.woff") format("woff");
-  font-weight: 700;
-  font-style: normal; }

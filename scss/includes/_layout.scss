@@ -58,7 +58,7 @@ body {
 .sidebar-offcanvas {
     float: left;
     padding-top: 50px;
-    padding-left: 15px;
+    padding-right: 15px;
     width: 300px;
      transition: width 0.5s ease 0s;
      @include bp(sm) {
