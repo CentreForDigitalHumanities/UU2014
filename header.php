@@ -75,9 +75,16 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 <!-- Open Graph Meta Tags for Facebook and LinkedIn Sharing !-->
-<meta property="og:title" content="<?php the_title(); ?>"/>
+<?php if ( is_home() || is_front_page() ) 
+   { $og_title = get_bloginfo( 'name' ) . ' | ' . get_bloginfo( 'description', 'display' ); } else { $og_title = get_the_title(); } ?>
+<meta property="og:title" content="<?php echo $og_title; ?>"/>
 <?php if ( $site_description && ( is_home() || is_front_page() ) )
-   { $og_desc = $site_description; } else { $og_desc = get_the_excerpt(); } ?>
+   { $og_desc = $site_description; } else { $og_desc = apply_filters('get_the_excerpt', get_post_field('post_excerpt', $post->ID));  } 
+   if ( $og_desc == '' ) {
+    $og_desc = wp_trim_words( $post->post_content, 70 );
+	}
+
+   ?>
 <meta property="og:description" content="<?php echo $og_desc; ?>" />
 <?php if ( is_home() || is_front_page() ) 
    { $og_url = get_home_url(); } else { $og_url = get_the_permalink(); } ?>
