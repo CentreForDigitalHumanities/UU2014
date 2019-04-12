@@ -27,11 +27,11 @@
 								<?php 
 								$mylocale = 'en-US';
 								$mylocale = get_bloginfo('language');
-										if($mylocale == 'en-US') {
-										echo 'https://www.uu.nl/en/organisation/contact/disclaimer';
+										if($mylocale == 'en-US' || $mylocale == 'en-GB') {
+										echo 'https://www.uu.nl/en/organisation/privacy-statement-utrecht-university';
 										} else {
-										echo 'https://www.uu.nl/organisatie/contact/disclaimer';
-										} ?>"><?php _e('disclaimer', 'uu2014'); ?></a></p>
+										echo 'https://www.uu.nl/organisatie/privacyverklaring-universiteit-utrecht';
+										} ?>"><?php _e('Privacy statement', 'uu2014'); ?></a></p>
 						</div>
 					</div>
 					

@@ -319,6 +319,16 @@ add_action( 'admin_menu', 'uu2014_change_post_menu_label' );
 
 function uu_main_navigation() {
     ?>
+
+    <?php if( get_field('uu_options_brandbar', 'option') ) { ?>
+			<button type="button" class="navbar-toggle hidden-print no-brandbar" style="float: none; padding-bottom: 13px;" data-toggle="collapse" data-target="#main-menu-collapse">
+                    <span class="sr-only">Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+            </button>
+
+		<?php	} ?> 
     <nav id="#access" class="navbar navbar-default navbar-inverse">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container">
@@ -894,19 +904,19 @@ function child_force_category_template($template) {
     $cat = get_query_var('cat');
     $category = get_category($cat);
     
-    if ( file_exists(TEMPLATEPATH . '/category-' . $category->cat_ID . '.php') ) {
-        $cat_template = TEMPLATEPATH . '/category-' . $category ->cat_ID . '.php';
-    } elseif ( file_exists(TEMPLATEPATH . '/category-' . $category->slug . '.php') ) {
-        $cat_template = TEMPLATEPATH . '/category-' . $category ->slug . '.php';
-    } elseif ( file_exists(TEMPLATEPATH . '/category-' . $category->category_parent . '.php') ) {
-        $cat_template = TEMPLATEPATH . '/category-' . $category->category_parent . '.php';
+    if ( file_exists(STYLESHEETPATH . '/category-' . $category->cat_ID . '.php') ) {
+        $cat_template = STYLESHEETPATH . '/category-' . $category ->cat_ID . '.php';
+    } elseif ( file_exists(STYLESHEETPATH . '/category-' . $category->slug . '.php') ) {
+        $cat_template = STYLESHEETPATH . '/category-' . $category ->slug . '.php';
+    } elseif ( file_exists(STYLESHEETPATH . '/category-' . $category->category_parent . '.php') ) {
+        $cat_template = STYLESHEETPATH . '/category-' . $category->category_parent . '.php';
     } elseif (!is_wp_error(get_category($category->category_parent))) {
     
         // Get Parent Slug
 		$cat_parent = get_category($category->category_parent);
 
-        if ( file_exists(TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php') ) {
-           $cat_template = TEMPLATEPATH . '/category-' . $cat_parent->slug . '.php';
+        if ( file_exists(STYLESHEETPATH . '/category-' . $cat_parent->slug . '.php') ) {
+           $cat_template = STYLESHEETPATH . '/category-' . $cat_parent->slug . '.php';
         }
     } else {
     	$cat_template = $template;

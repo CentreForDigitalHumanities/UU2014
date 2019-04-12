@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: uu2014\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2018-01-23 13:06+0100\n"
-"PO-Revision-Date: 2018-01-23 13:11+0100\n"
+"POT-Creation-Date: 2019-02-14 13:44+0100\n"
+"PO-Revision-Date: 2019-02-14 13:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: ictenmedia <ictenmedia@uu.nl>\n"
 "Language: nl_NL\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Textdomain-Support: yes\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_ex:1,2c;"
 "esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
@@ -39,17 +39,18 @@ msgstr ""
 "op de <a href=\"/site-map/\" title=\"Site Map Page\">Site Map</a> pagina</"
 "li><li>Probeer de zoekmachine hieronder</li></ul>"
 
-#: ../category-agenda.php:14
-#: ../includes/functions/widgets/widget-upcoming-agenda.php:147
+#: ../archive-agenda.php:14 ../category-agenda.php:14
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:148
 msgid "Upcoming events"
 msgstr "Agenda items"
 
-#: ../category-agenda.php:82 ../page-home-agenda.php:73
-#: ../parts/index_agenda_only.php:97 ../parts/index_news_agenda.php:172
+#: ../archive-agenda.php:66 ../category-agenda.php:82
+#: ../index_news_agenda.php:155 ../page-home-agenda.php:73
+#: ../parts/index_agenda_only.php:97 ../parts/index_news_agenda.php:207
 msgid "No upcoming events"
 msgstr "Geen items"
 
-#: ../category-agenda.php:119
+#: ../archive-agenda.php:103 ../category-agenda.php:119
 msgid "Previous events"
 msgstr "Agenda archief"
 
@@ -82,187 +83,187 @@ msgstr "Geen reacties mogelijk."
 msgid "You must be %1$slogged in%2$s to post a comment."
 msgstr "U moet %1$singelogd%2$s zijn om een reactie te kunnen plaatsen."
 
-#: ../functions.php:225
+#: ../functions.php:220
 msgid "Main Menu"
 msgstr "Hoofdmenu"
 
-#: ../functions.php:226
+#: ../functions.php:221
 msgid "Footer Menu"
 msgstr "Footer menu"
 
-#: ../functions.php:244
+#: ../functions.php:239
 msgid "default"
 msgstr "standaard"
 
-#: ../functions.php:278
+#: ../functions.php:277
 msgid "Small Thumbnail"
 msgstr "Kleine thumbnail"
 
-#: ../functions.php:398
+#: ../functions.php:406
 msgid "Left Sidebar"
 msgstr "Linker sidebar"
 
-#: ../functions.php:399
+#: ../functions.php:407
 msgid "The Left (primary) sidebar used for the interior menu."
 msgstr "De linker sidebar, wordt o.a. gebruikt voor submenus."
 
-#: ../functions.php:407
+#: ../functions.php:415
 msgid "Below Content"
 msgstr "Onder content"
 
-#: ../functions.php:408
+#: ../functions.php:416
 msgid "Below Content used for the call to actions."
 msgstr "Wordt gebruikt voor \"call to actions\" of andere quotes."
 
-#: ../functions.php:416
+#: ../functions.php:424
 msgid "Banner Widget Area"
 msgstr "Banner Widget Gebied"
 
-#: ../functions.php:417
+#: ../functions.php:425
 msgid "Banner widget area"
 msgstr "Banner widget gebied"
 
-#: ../functions.php:425
+#: ../functions.php:433
 msgid "Home Widget Area 0"
 msgstr "Home Widget gebied 0"
 
-#: ../functions.php:426
+#: ../functions.php:434
 msgid "Full-width area above home widget areas 1,2 and 3"
 msgstr "Volledige breedte gebied boven home widget gebieden 1, 2 en 3"
 
-#: ../functions.php:434
+#: ../functions.php:442
 msgid "Home Widget Area 1"
 msgstr "Home Widget gebied 1"
 
-#: ../functions.php:435
+#: ../functions.php:443
 msgid "First column in home widget area"
 msgstr "Eerste kolom in home widget gebied"
 
-#: ../functions.php:443
+#: ../functions.php:451
 msgid "Home Widget Area 2"
 msgstr "Home Widget gebied 2"
 
-#: ../functions.php:444
+#: ../functions.php:452
 msgid "Second column in home widget area"
 msgstr "Tweede kolom in home widget gebied"
 
-#: ../functions.php:452
+#: ../functions.php:460
 msgid "Home Widget Area 3"
 msgstr "Home Widget gebied 3"
 
-#: ../functions.php:453
+#: ../functions.php:461
 msgid "Last column in home widget area"
 msgstr "Derde kolom in home widget gebied"
 
-#: ../functions.php:461
+#: ../functions.php:469
 msgid "footer Widget Area 1"
 msgstr "footer Widget kolom 1"
 
-#: ../functions.php:462
+#: ../functions.php:470
 msgid "First column in footer widget area"
 msgstr "Eerste kolom in footer widget gebied"
 
-#: ../functions.php:470
+#: ../functions.php:478
 msgid "footer Widget Area 2"
 msgstr "Footer Widget kolom 2"
 
-#: ../functions.php:471
+#: ../functions.php:479
 msgid "Second column in footer widget area"
 msgstr "Tweede kolom in footer widget gebied"
 
-#: ../functions.php:479
+#: ../functions.php:487
 msgid "footer Widget Area 3"
 msgstr "Footer Widget kolom 3"
 
-#: ../functions.php:480
+#: ../functions.php:488
 msgid "Third column in footer widget area"
 msgstr "Derde kolom in footer widget gebied"
 
-#: ../functions.php:488
+#: ../functions.php:496
 msgid "footer Widget Area 4"
 msgstr "Footer Widget kolom 4"
 
-#: ../functions.php:489
+#: ../functions.php:497
 msgid "Last column in footer widget area"
 msgstr "Laatste kolom in footer widget gebied"
 
-#: ../functions.php:497
+#: ../functions.php:505
 msgid "Colofon Widget Area"
 msgstr "Colofon widget gebied"
 
-#: ../functions.php:498
+#: ../functions.php:506
 msgid "Bottom area full width"
 msgstr "Gebied helemaal onderaan de pagina, volledige content breedte."
 
-#: ../functions.php:537
+#: ../functions.php:545
 msgid "No Related Posts Yet!"
 msgstr "Geen gerelateerde berichten gevonden."
 
-#: ../functions.php:568
+#: ../functions.php:576
 #, php-format
 msgid "<cite class=\"fn\">%s</cite>"
 msgstr "<cite class=\"fn\">%s</cite>"
 
-#: ../functions.php:569
+#: ../functions.php:577
 msgid "F jS, Y"
 msgstr "F jS, Y"
 
-#: ../functions.php:570
+#: ../functions.php:578
 msgid "(Edit)"
 msgstr "(Edit)"
 
-#: ../functions.php:574
+#: ../functions.php:582
 msgid "Your comment is awaiting moderation."
 msgstr "Uw reactie wacht op goedkeuring."
 
-#: ../functions.php:595 ../parts/brandbar.php:48 ../parts/brandbar.php:64
+#: ../functions.php:603 ../parts/brandbar.php:48 ../parts/brandbar.php:64
 msgid "Search for:"
 msgstr "Zoek:"
 
-#: ../functions.php:596 ../parts/brandbar.php:49 ../parts/brandbar.php:65
+#: ../functions.php:604 ../parts/brandbar.php:49 ../parts/brandbar.php:65
 msgid "Search the Site..."
 msgstr "Zoek in deze site"
 
-#: ../functions.php:597
+#: ../functions.php:605
 msgid "Search"
 msgstr "Zoek"
 
-#: ../functions.php:706
+#: ../functions.php:714
 #, php-format
 msgid "Posts by %s"
 msgstr "Berichten door %s"
 
-#: ../functions.php:810
+#: ../functions.php:818
 msgid "UU Theme Options"
 msgstr "UU Thema opties"
 
-#: ../functions.php:834
+#: ../functions.php:842
 msgid "Posted"
 msgstr "Geplaatst"
 
-#: ../functions.php:836 ../parts/index_blog2.php:32
+#: ../functions.php:844 ../parts/index_blog2.php:32
 msgid "on"
 msgstr "op"
 
-#: ../functions.php:839 ../parts/author_badge.php:26
+#: ../functions.php:847 ../parts/author_badge.php:26
 #: ../parts/author_field.php:24
 msgid "by"
 msgstr "door"
 
-#: ../functions.php:842
+#: ../functions.php:850
 msgid "<br />in: "
 msgstr "<br />in "
 
-#: ../functions.php:864
+#: ../functions.php:872
 msgid "Share"
-msgstr ""
+msgstr "Deel"
 
 #: ../header.php:34
 #, php-format
 msgid "Page %s"
 msgstr "Pagina %s"
 
-#: ../header.php:126
+#: ../header.php:124
 msgid "Skip to content"
 msgstr "Direct naar het inhoud"
 
@@ -366,9 +367,10 @@ msgstr "Agenda"
 
 #: ../includes/custom-post-type.php:60
 #: ../includes/functions/custom-post-type-agenda.php:8
+#: ../index_news_agenda.php:68 ../index_news_agenda.php:146
 #: ../page-home-agenda.php:37 ../parts/index_agenda_only.php:2
-#: ../parts/index_agenda_only.php:88 ../parts/index_news_agenda.php:76
-#: ../parts/index_news_agenda.php:163
+#: ../parts/index_agenda_only.php:88 ../parts/index_news_agenda.php:103
+#: ../parts/index_news_agenda.php:198
 msgid "Agenda"
 msgstr "Agenda"
 
@@ -498,7 +500,7 @@ msgstr ""
 #: ../includes/functions/widgets/widget-socialmedia-buttons.php:90
 #: ../includes/functions/widgets/widget-twitter-user-timeline-copy.php:122
 #: ../includes/functions/widgets/widget-twitter-user-timeline.php:159
-#: ../includes/functions/widgets/widget-upcoming-agenda.php:156
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:157
 msgid "Title:"
 msgstr "Titel:"
 
@@ -527,7 +529,7 @@ msgstr "Aankomende Agenda Items"
 msgid "display a list of upcoming items"
 msgstr "toon een lijst met aankomende agenda items"
 
-#: ../includes/functions/widgets/widget-upcoming-agenda.php:160
+#: ../includes/functions/widgets/widget-upcoming-agenda.php:161
 msgid "Amount of items to show"
 msgstr "Aantal items te tonen"
 
@@ -599,10 +601,17 @@ msgstr "Subheader (Headings)"
 msgid "Keyboard CMD"
 msgstr "Keyboard CMD"
 
-#: ../index.php:64 ../parts/index_news_agenda.php:2
-#: ../parts/index_news_agenda.php:60 ../parts/index_news_only.php:2
+#: ../index.php:69 ../index_news_agenda.php:2 ../index_news_agenda.php:53
+#: ../parts/index_news_agenda.php:2 ../parts/index_news_agenda.php:84
+#: ../parts/index_news_only.php:2
 msgid "News"
 msgstr "Nieuws"
+
+#: ../index_news_agenda.php:55 ../index_news_agenda.php:149
+#: ../parts/index_agenda_only.php:91 ../parts/index_news_agenda.php:86
+#: ../parts/index_news_agenda.php:201 ../parts/index_news_only.php:60
+msgid "More"
+msgstr "Meer"
 
 #: ../page-full-width.php:17 ../page-test.php:51 ../page.php:10
 #: ../parts/post-loop.php:20 ../single-agenda.php:63 ../single.php:113
@@ -620,19 +629,19 @@ msgstr "Lees meer"
 msgid "Mail"
 msgstr "E-mailadres"
 
-#: ../page-sitelist.php:21 ../page-sitelist2.php:21
+#: ../page-sitelist.php:28 ../page-sitelist2.php:23
 msgid "Title"
 msgstr "Titel"
 
-#: ../page-sitelist.php:22 ../page-sitelist2.php:22 ../page-test.php:21
+#: ../page-sitelist.php:29 ../page-sitelist2.php:24 ../page-test.php:21
 msgid "Type"
 msgstr "Type"
 
-#: ../page-sitelist.php:23 ../page-sitelist2.php:23
+#: ../page-sitelist.php:30 ../page-sitelist2.php:25
 msgid "Faculty"
 msgstr "Faculteit"
 
-#: ../page-sitelist2.php:24
+#: ../page-sitelist2.php:26
 msgid "Users"
 msgstr "Gebruikers"
 
@@ -660,14 +669,9 @@ msgstr "Volgende Slide"
 msgid "Utrecht University"
 msgstr "Universiteit Utrecht"
 
-#: ../parts/colofon.php:32
-msgid "disclaimer"
-msgstr "disclaimer"
-
-#: ../parts/index_agenda_only.php:91 ../parts/index_news_agenda.php:62
-#: ../parts/index_news_agenda.php:166 ../parts/index_news_only.php:60
-msgid "More"
-msgstr "Meer"
+#: ../parts/colofon.php:34
+msgid "Privacy statement"
+msgstr "Privacy verklaring"
 
 #: ../parts/page-header-1col.php:31 ../parts/page-header-2col.php:40
 #, php-format
@@ -764,7 +768,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "Zoek"
 
-#: ../parts/page-header-2col.php:109
+#: ../parts/page-header-2col.php:110
 msgid "Show sidebar"
 msgstr "Bekijk sidebar"
 
@@ -782,27 +786,27 @@ msgstr "Lees"
 
 #: ../plugins/events-manager/forms/bookingform/login.php:8
 msgid "Log in with your solis-id."
-msgstr ""
+msgstr "Log in met uw solis-id."
 
 #: ../plugins/events-manager/forms/bookingform/login.php:10
 msgid "Username"
-msgstr ""
+msgstr "Gebruikersnaam"
 
 #: ../plugins/events-manager/forms/bookingform/login.php:14
 msgid "Password"
-msgstr ""
+msgstr "Wachtwoord"
 
 #: ../plugins/events-manager/forms/bookingform/login.php:18
 msgid "Log In"
-msgstr ""
+msgstr "Inloggen"
 
 #: ../plugins/events-manager/forms/bookingform/login.php:19
 msgid "Remember Me"
-msgstr ""
+msgstr "Log automatisch in"
 
 #: ../plugins/events-manager/forms/bookingform/login.php:34
 msgid "Sign Up"
-msgstr ""
+msgstr "Aanmelden"
 
 #: ../plugins/events-manager/forms/bookingform/login.php:38
 msgid "Password Lost and Found"
@@ -826,6 +830,9 @@ msgstr ""
 #: ../single.php:71
 msgid "Location"
 msgstr "Locatie"
+
+#~ msgid "disclaimer"
+#~ msgstr "disclaimer"
 
 #~ msgid ", read more..."
 #~ msgstr "lees meer…"

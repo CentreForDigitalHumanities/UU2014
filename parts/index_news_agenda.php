@@ -4,6 +4,50 @@
 					<h2><?php echo $news_title; ?></h2>
 					<?php 
 						
+				
+
+					// if ( false === ( $newsquery_sticky = get_transient( 'home_news_sticky_posts' ) ) ) {	
+					// 	$newsamount = get_field('uu_options_news_amount', 'option');
+					// 	$newscats = get_field('uu_options_news_frontpage_cat', 'option');
+					// 	if ($newscats) { 
+					// 		$terms = implode(',', $newscats);	
+					// 	} else {
+					// 		$terms='news';
+					// 	}
+					// 	$sticky = get_option( 'sticky_posts' );		
+					// 	$args_sticky = array(
+					// 		'post_type' => 'post',
+					// 		'post__in'  => $sticky,
+					// 		'ignore_sticky_posts' => 1,
+					// 		'cat' => $terms,
+
+					// 	);
+					// 	$newsquery_sticky = new WP_Query( $args_sticky );
+
+					// 		// Put the results in a transient. Expire after 12 hours.
+					// 	set_transient( 'home_news_sticky_posts', $newsquery_sticky, 1 * HOUR_IN_SECONDS );
+					// }
+					
+						
+					
+						
+
+					
+					 
+					// if ( $newsquery_sticky->have_posts() ) {
+					// 		while ( $newsquery_sticky->have_posts() ) {
+					// 				$newsquery_sticky->the_post(); 
+					// 			if ( isset($sticky[0]) ) {
+					// 				get_template_part( 'parts/post-loop-frontpage');
+					// 			}
+
+				 // 			} 
+				 // 		wp_reset_postdata();
+				 // 	}
+				 
+				
+
+				if ( false === ( $newsquery = get_transient( 'home_news_posts2' ) ) ) {	
 
 						$newsamount = get_field('uu_options_news_amount', 'option');
 						$newscats = get_field('uu_options_news_frontpage_cat', 'option');
@@ -12,20 +56,9 @@
 						} else {
 							$terms='news';
 						}
+
 						$sticky = get_option( 'sticky_posts' );	
-						$args_sticky = array(
-							'post_type' => 'post',
-							'post__in'  => $sticky,
-							'ignore_sticky_posts' => 1,
-							'cat' => $terms,
 
-						);
-						$newsquery_sticky = new WP_Query( $args_sticky );
-
-
-
-						
-					
 						$args = array(
 							'post_type' => 'post',
 							'posts_per_page' => $newsamount,
@@ -34,24 +67,21 @@
 
 						);
 
-					
-					 
-					if ( $newsquery_sticky->have_posts() ) {
-							while ( $newsquery_sticky->have_posts() ) {
-									$newsquery_sticky->the_post(); 
-								if ( isset($sticky[0]) ) {
-									get_template_part( 'parts/post-loop-frontpage');
-								}
+					$newsquery = new WP_Query( $args );
 
-				 			} 
-				 		wp_reset_postdata();
-				 	}
-				 	
-$newsquery = new WP_Query( $args );
+				// Put the results in a transient. Expire after 12 hours.
+					set_transient( 'home_news_posts2', $newsquery, 1 * HOUR_IN_SECONDS );
+				}	
 					if ( $newsquery->have_posts() ) {
 							while ( $newsquery->have_posts() ) {
 									$newsquery->the_post(); 
-					
+									$newsamount = get_field('uu_options_news_amount', 'option');
+									$newscats = get_field('uu_options_news_frontpage_cat', 'option');
+									if ($newscats) { 
+										$terms = implode(',', $newscats);	
+									} else {
+										$terms='news';
+									}	
 									get_template_part( 'parts/post-loop-frontpage');
 					
 
@@ -68,7 +98,10 @@ $newsquery = new WP_Query( $args );
 
 					<?php get_template_part('includes/template','error'); // WordPress template error message ?>
 
-					<?php } ?>
+					<?php } 
+
+					
+					?>
 					
 				</div>
 
@@ -79,7 +112,7 @@ $newsquery = new WP_Query( $args );
 					<div class="agenda-archive">
 						<?php 
 
-					
+						if ( false === ( $agenda_query = get_transient( 'home_agenda_posts' ) ) ) {
 
 						//add_filter( 'get_meta_sql', 'get_meta_sql_date' );
 						$today = date('Ymd');
@@ -100,7 +133,7 @@ $newsquery = new WP_Query( $args );
 							$amount = 3;
 						}
 					
-						if ( false === ( $agenda_query = get_transient( 'home_agenda_posts' ) ) ) {
+						
 						$todaydate = date('Ymd');
 						$todaytime = date('H:i');
 						$args2 = array(
@@ -161,7 +194,19 @@ $newsquery = new WP_Query( $args );
 
 							if ( $agenda_query->have_posts() ) : ?>
 
-								<?php while ($agenda_query->have_posts()) : $agenda_query->the_post(); ?>
+								<?php while ($agenda_query->have_posts()) : $agenda_query->the_post(); 
+									$agendaterms = '';
+									$agendacats = get_field('uu_options_agenda_frontpage_cat', 'option');
+									if ($agendacats) { 
+										$agendaterms = implode(',', $agendacats);	
+									} else {
+										$agendaterms = get_term_by( 'slug', 'agenda', 'category');
+										if($agendaterms) {
+											$agendaterms = $agendaterms->term_id;
+										}
+									}
+
+									?>
 
 									<?php get_template_part( 'parts/post-loop-agenda'); ?> 
 

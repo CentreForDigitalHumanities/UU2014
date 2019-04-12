@@ -16,15 +16,20 @@
    * Print the <title> tag based on what is being viewed.
    */
   global $post, $page, $paged;
-  $site_description = get_bloginfo( 'description', 'display' );
+   if( function_exists('get_field') && get_field('uu_siteoptions_description', 'options') ) { 
+   		$site_description = get_field('uu_siteoptions_description', 'options');
+   } else {
+   		 $site_description = get_bloginfo( 'description', 'display' );
+   }
+ 
 
   // Add the blog name.
   bloginfo( 'name' );
 
   // Add the blog description for the home/front page.
   
-  if ( $site_description && ( is_home() || is_front_page() ) )
-    echo " | " . $site_description;
+  if ( get_bloginfo( 'description', 'display' ) && ( is_home() || is_front_page() ) )
+    echo " | " . get_bloginfo( 'description', 'display' );
 
   if (is_singular()) {
   	echo " | " . $post->post_title;
@@ -45,14 +50,17 @@
 
 
 <?php // icons & favicons (for more: https://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-icon-touch.png">
 <?php if(function_exists('get_field') && get_field('uu_options_custom_favicon', 'options') )	{ 
 	$favicon_image = get_field('uu_options_custom_favicon', 'options');
 	$favicon = $favicon_image['url']; 
+	$custom_icon = $favicon_image['url'];
 } else {
 	$favicon = get_template_directory_uri() . '/images/favicon.ico';
+	$custom_icon = get_template_directory_uri() . '/images/apple-icon-touch.png';
 } ?>
 <link rel="icon" href="<?php echo $favicon; ?>">
+<link rel="apple-touch-icon" href="<?php echo $custom_icon; ?>">
+
 
 <!--[if IE]><link rel="shortcut icon" href="<?php echo $favicon; ?>">
 <![endif]-->
@@ -69,9 +77,11 @@
 <!-- Open Graph Meta Tags for Facebook and LinkedIn Sharing !-->
 <meta property="og:title" content="<?php the_title(); ?>"/>
 <?php if ( $site_description && ( is_home() || is_front_page() ) )
-   { $og_desc = ' | ' . $site_description; } else { $og_desc = get_the_excerpt(); } ?>
+   { $og_desc = $site_description; } else { $og_desc = get_the_excerpt(); } ?>
 <meta property="og:description" content="<?php echo $og_desc; ?>" />
-<meta property="og:url" content="<?php the_permalink(); ?>" />
+<?php if ( is_home() || is_front_page() ) 
+   { $og_url = get_home_url(); } else { $og_url = get_the_permalink(); } ?>
+<meta property="og:url" content="<?php echo $og_url; ?>" />
 <?php 
 if(function_exists('get_field') && get_field('uu_options_site_share_image', 'options') )	{ 
 	$fb_image_id = get_field('uu_options_site_share_image', 'options');
@@ -96,13 +106,7 @@ if(function_exists('get_field') && get_field('uu_options_site_share_image', 'opt
      
 	<div id="page">
 		<?php if( get_field('uu_options_brandbar', 'option') ) { ?>
-			<button type="button" class="navbar-toggle hidden-print no-brandbar" data-toggle="collapse" data-target="#main-menu-collapse">
-                    <span class="sr-only">Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-            </button>
-
+			
 		<?php	} else {get_template_part( 'parts/brandbar');} ?> 
 		<header id="masthead" class="header hidden-print">
 
