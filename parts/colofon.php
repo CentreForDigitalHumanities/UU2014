@@ -17,7 +17,18 @@
 				<div id="inner-footer" class="container clearfix">
 					<div class="row">
 						<div class="col-sm-6">
-							<img alt="<?php _e('Logo Utrecht University', 'uu2014'); ?>" src="<?php echo get_template_directory_uri() ?>/images/uu-logo-footer.svg">
+							<?php 
+
+							$mylocale = 'en-US';
+							$mylocale = get_bloginfo('language');
+
+							if($mylocale == 'en-US' || $mylocale == 'en-GB') {
+							echo '<img class="uu-footer-logo" alt="Logo Utrecht University" src="' . get_template_directory_uri() . '/images/uu-logo-footer-en.svg">';
+							} else {
+							echo '<img class="uu-footer-logo" alt="Logo Universiteti Utrecht" src="' . get_template_directory_uri() . '/images/uu-logo-footer.svg">';
+							} 
+							?>
+							
 							<!-- <nav role="navigation">
 								<?php uu2014_footer_nav(); ?>
 							</nav> -->
@@ -25,13 +36,12 @@
 						<div class="col-sm-6">
 							<p class="source-org copyright pull-right">&copy; <?php echo date('Y'); ?> <?php _e('Utrecht University', 'uu2014'); ?>, <a href="
 								<?php 
-								$mylocale = 'en-US';
-								$mylocale = get_bloginfo('language');
-										if($mylocale == 'en-US' || $mylocale == 'en-GB') {
-										echo 'https://www.uu.nl/en/organisation/privacy-statement-utrecht-university';
-										} else {
-										echo 'https://www.uu.nl/organisatie/privacyverklaring-universiteit-utrecht';
-										} ?>"><?php _e('Privacy statement', 'uu2014'); ?></a></p>
+								if($mylocale == 'en-US' || $mylocale == 'en-GB') {
+								echo 'https://www.uu.nl/en/organisation/privacy-statement-utrecht-university';
+								} else {
+								echo 'https://www.uu.nl/organisatie/privacyverklaring-universiteit-utrecht';
+								} ?>"><?php _e('Privacy statement', 'uu2014'); ?></a>
+							</p>
 						</div>
 					</div>
 					

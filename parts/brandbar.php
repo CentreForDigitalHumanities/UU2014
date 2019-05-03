@@ -10,7 +10,10 @@
                     <span class="icon-bar"></span>
                 </button>
 
-<?php if(function_exists('get_field') && get_field('uu_options_custom_logo', 'options') )	{ 
+<?php 
+
+	$mylocale = get_bloginfo('language');
+	if(function_exists('get_field') && get_field('uu_options_custom_logo', 'options') )	{ 
 	$image = get_field('uu_options_custom_logo', 'options'); ?>
 
 	<?php if(get_field('uu_options_custom_logo_url', 'options')) { ?>	
@@ -22,18 +25,13 @@
 		</a>			
 <?php 
 
-} else { ?>
-
-		<a href="
-				<?php $mylocale = get_bloginfo('language');
-										if($mylocale == 'en-US') {
-										echo 'https://www.uu.nl/en';
-										} else {
-										echo 'https://www.uu.nl';
-										} ?>
-				"><img src="<?php echo get_template_directory_uri() ?>/images/uu-logo.svg" alt="<?php _e('Logo Utrecht University', 'uu2014'); ?>" /></a>
-			
-<?php } ?>
+} else { 
+		if($mylocale == 'en-US' || $mylocale == 'en-GB') {
+		echo '<a href="https://www.uu.nl/en"><img src="' . get_template_directory_uri() . '/images/uu-logo-en.svg" alt="Logo Utrecht University" /></a>';
+		} else {
+		echo '<a href="https://www.uu.nl"><img src="' . get_template_directory_uri() . '/images/uu-logo.svg" alt="Logo Universiteit Utrecht" /></a>';
+		} 
+	 } ?>
 
 		<div class="visible-print-block">	
 			<h1><?php bloginfo('name'); ?></h1>

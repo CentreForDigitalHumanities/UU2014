@@ -71,12 +71,14 @@ span.amp {
 
 // alerts and notices  -  *You'll need to be using Sass 3.2+ for these to work.
 %alert {
-	margin: 10px;
-	padding: 5px 18px;
+	margin: 10px 0;
+  padding: 10px 18px;
+  border: 1px solid;
+  font-family: "open sans", sans-serif;
 	border: 1px solid;
 }
 
-.alert-help {
+.alert-help, .alert-warning {
 	@extend %alert;
 	border-color: darken($alert-yellow, 5%);
 	background: $alert-yellow;
@@ -88,7 +90,7 @@ span.amp {
 	background: $alert-blue;
 }
 
-.alert-error {
+.alert-error, .alert-danger {
 	@extend %alert;
 	border-color: darken($alert-red, 5%);
 	background: $alert-red;

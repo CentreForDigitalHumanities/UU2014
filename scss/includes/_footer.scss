@@ -15,6 +15,12 @@ footer#colophon {
 			margin-bottom: 10px;
 		}
 	}
+	.uu-footer-logo {
+		width: 300px;
+		@include bp(xs) {
+			width: 100%;
+		}
+	}
 }
 
 #footer-widget-area {
