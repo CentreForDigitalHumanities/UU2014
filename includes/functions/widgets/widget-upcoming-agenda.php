@@ -166,5 +166,8 @@ global $post;
  
  
 } // end class uu_upcoming_agenda_widget
-add_action('widgets_init', create_function('', 'return register_widget("uu_upcoming_agenda_widget");'));
-?>
+
+function load_uu_upcoming_agenda_widget() {
+    register_widget( 'uu_upcoming_agenda_widget' );
+}
+add_action( 'widgets_init', 'load_uu_upcoming_agenda_widget' );

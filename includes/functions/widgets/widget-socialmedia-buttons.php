@@ -97,5 +97,10 @@ class uu_social_media_buttons_widget extends WP_Widget {
  
  
 } // end class uu_social_media_buttons_widget
-add_action('widgets_init', create_function('', 'return register_widget("uu_social_media_buttons_widget");'));
+
+function load_uu_social_media_buttons_widget() {
+    register_widget( 'uu_social_media_buttons_widget' );
+}
+add_action( 'widgets_init', 'load_uu_social_media_buttons_widget' );
+
 ?>

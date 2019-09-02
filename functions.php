@@ -120,15 +120,15 @@ add_action('wp_enqueue_scripts', 'uu2014_scripts_and_styles', 20 );
 
 
 
+if(get_current_blog_id() == 1) {
+function datatables_bootstrap() {
+	wp_enqueue_script('datatables-js-uu', get_stylesheet_directory_uri().'/js/datatables/jquery.dataTables.min.js', array( 'jquery' ) );
+	wp_enqueue_script('datatables-bootstrap-js-uu', get_stylesheet_directory_uri().'/js/datatables/dataTables.bootstrap.min.js', array( 'jquery' ) );
+	wp_enqueue_script('datatables-yadcf-js-uu', get_stylesheet_directory_uri().'/js/datatables/jquery.dataTables.yadcf.js', array( 'jquery' ) );
+	}
 
-// function datatables_bootstrap() {
-// 	wp_enqueue_script('datatables-js', get_stylesheet_directory_uri().'/js/datatables/jquery.dataTables.min.js', array( 'jquery' ) );
-// 	wp_enqueue_script('datatables-bootstrap-js', get_stylesheet_directory_uri().'/js/datatables/dataTables.bootstrap.min.js', array( 'jquery' ) );
-// 	wp_enqueue_script('datatables-yadcf-js', get_stylesheet_directory_uri().'/js/datatables/jquery.dataTables.yadcf.js', array( 'jquery' ) );
-// }
-// if(get_current_blog_id() == 1) {
-// 	add_action( 'wp_enqueue_scripts', 'datatables_bootstrap' );
-// }
+	add_action( 'wp_enqueue_scripts', 'datatables_bootstrap' );
+}
 
 // ui-datepicker z-index bug
 add_action('admin_head', 'my_custom_admin_css');
@@ -1034,8 +1034,10 @@ if(!function_exists('wpmu_get_mapped_domain_link')){
 
 	function wpmu_get_mapped_domain_link($blog_id){
 		global $wpdb;
-		$data = $wpdb->get_row( $wpdb->prepare( 'SELECT * FROM '.$wpdb->prefix.'domain_mapping WHERE blog_id = %d ', $blog_id ) );
-
+		$table_name = $wpdb->prefix . 'domain_mapping';
+		if($wpdb->get_var("SHOW TABLES LIKE '$table_name'") == $table_name) {
+			$data = $wpdb->get_row( $wpdb->prepare( 'SELECT * FROM '. $table_name .' WHERE blog_id = %d ', $blog_id ) );
+		}
 		if(!$data) return get_site_url( $blog_id );
 
 		if($data->scheme == 1){

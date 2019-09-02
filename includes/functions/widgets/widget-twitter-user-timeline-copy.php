@@ -132,5 +132,9 @@ if(!(isset($username)) || !(isset($comsumer_key)) || !(isset($comsumer_secret)) 
  
  
 } // end class uu_twitter_user_timeline_widget
-add_action('widgets_init', create_function('', 'return register_widget("uu_twitter_user_timeline_widget");'));
+
+function load_uu_twitter_user_timeline_widget() {
+    register_widget( 'uu_twitter_user_timeline_widget' );
+}
+add_action( 'widgets_init', 'load_uu_twitter_user_timeline_widget' );
 ?>
