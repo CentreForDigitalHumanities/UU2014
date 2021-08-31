@@ -131,7 +131,7 @@ function datatables_bootstrap() {
 }
 
 // ui-datepicker z-index bug
-add_action('admin_head', 'my_custom_admin_css');
+//add_action('admin_head', 'my_custom_admin_css');
 
 function my_custom_admin_css() {
   echo '<style>
@@ -147,6 +147,12 @@ function my_custom_admin_css() {
 /*********************
 3. THEME SUPPORT
 *********************/
+
+if( get_field('uu_options_enable_gutenberg', 'option') ) { 
+
+} else {
+	add_filter( 'use_block_editor_for_post', '__return_false' );
+}
 
 // Adding WP 3+ Functions & Theme Support
 function uu2014_theme_support() {
@@ -696,10 +702,6 @@ function uu2014_excerpt_more($more) {
 	}
 }
 
-function uu2014_custom_excerpt_length( $length ) {
-	return 30;
-}
-add_filter( 'excerpt_length', 'uu2014_custom_excerpt_length', 999 );
 
 //This is a modified the_author_posts_link() which just returns the link.
 //This is necessary to allow usage of the usual l10n process with printf().
@@ -817,6 +819,7 @@ if( function_exists('acf_add_options_page') ) {
 		'page_title' 	=> 'Theme Options',
 		'menu_title'	=> __('UU Theme Options', 'uu2014'),
 		'menu_slug' 	=> 'uu-theme-options',
+		'capability'	=> 'manage_options',
 		'parent_slug'	=> 'uu-options',
 	));
 	
@@ -1058,4 +1061,4 @@ function uu_delete_agenda_transients() {
 		delete_transient( 'home_agenda_posts' );
 	}
 }
-add_action( 'save_post', 'uu_delete_agenda_transients' );
+//add_action( 'save_post', 'uu_delete_agenda_transients' );

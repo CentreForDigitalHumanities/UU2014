@@ -188,40 +188,6 @@ CLIENT UX FUNCTIONS
 // }
 // add_action('admin_init','uu2014_increase_editor_permissions');
 
-// Removes the Powered By WPEngine widget
-wp_unregister_sidebar_widget( 'wpe_widget_powered_by' );
-
-//Remove some of the admin bar links to keep from confusing client admins
-function uu2014_remove_admin_bar_links() {
-	global $wp_admin_bar;
-	$wp_admin_bar->remove_menu('wp-logo'); // Remove Wordpress Logo From Admin Bar
-	$wp_admin_bar->remove_menu('wpseo-menu'); // Remove SEO from Admin Bar
-}
-add_action( 'wp_before_admin_bar_render', 'uu2014_remove_admin_bar_links' );
-
-// Custom Backend Footer
-function uu2014_custom_admin_footer() {
-	echo '<span id="footer-thankyou">Developed by <a href="https://www.uu.nl/ictenmedia" target="_blank">ICT&Media</a></span>. For questions mail: <a href="mailto:ictenmedia@uu.nl">ictenmedia@uu.nl</a>';
-}
-add_filter('admin_footer_text', 'uu2014_custom_admin_footer');
-
-// CUSTOM LOGIN PAGE
-// calling your own login css so you can style it
-function uu2014_login_css() {
-	/* I couldn't get wp_enqueue_style to work :( */
-	echo '<link rel="stylesheet" href="' . get_stylesheet_directory_uri() . '/css/login.css">';
-}
-
-// changing the logo link from wordpress.org to your site
-function uu2014_login_url() {  return home_url(); }
-
-// changing the alt text on the logo to show your site name
-function uu2014_login_title() { return get_option('blogname'); }
-
-// calling it only on the login page
-add_action('login_head', 'uu2014_login_css');
-add_filter('login_headerurl', 'uu2014_login_url');
-add_filter('login_headertitle', 'uu2014_login_title');
 
 //Add page title attribute to a tags
 function uu2014_wp_list_pages_filter($output) {

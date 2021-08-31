@@ -14,7 +14,9 @@
 				get_template_part( 'parts/carousel', '' ); ?>
 
 		<?php	} else { 
-				uu2014_header_image(); 
+				
+					uu2014_header_image(); 
+			
 					if( function_exists('get_field') && get_field('uu_options_banner_widget_on_all_pages', 'options') || is_front_page() )	{ 
 						?>
 
