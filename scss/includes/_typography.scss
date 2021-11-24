@@ -269,6 +269,7 @@ table {
 	margin: 10px 0px 15px 0px;
 	width: 100%;
 	text-align: left;
+	font-size: 0.9em;
 
 	thead {
 		text-align: center;
@@ -285,7 +286,8 @@ table {
 	td {
 		border: 0px;
 		color: #3D3D3D;
-		padding: 5px 15px;
+		/*padding: 5px 15px;*/
+		padding: 0.33em 0.85em;
 		vertical-align: top;
 	}
 
