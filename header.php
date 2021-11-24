@@ -40,7 +40,7 @@
 
   ?></title>
 
-<base href="<?php get_site_url(); ?>">
+<base href="<?php echo get_site_url(); ?>">
 
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
