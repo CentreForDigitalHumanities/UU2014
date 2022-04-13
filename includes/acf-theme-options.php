@@ -140,7 +140,7 @@ acf_add_local_field_group(array (
 		array (
 			'default_value' => '',
 			'min' => 1,
-			'max' => 10,
+			'max' => 50,
 			'step' => 1,
 			'placeholder' => '',
 			'prepend' => '',

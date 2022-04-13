@@ -1,0 +1,1760 @@
+@charset "UTF-8";
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Editor Stylesheet
+
+This stylesheet is only for the wysiwyg editor.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author: 
+
+Stylesheet: Variables
+
+******************************************************************/
+/* BS tooltip  */
+/* line 10, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .container:before, .container:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .container:after {
+    clear: both; }
+  @media (min-width: 768px) {
+    /* line 10, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss */
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) {
+    /* line 10, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss */
+    .container {
+      width: 970px; } }
+  @media (min-width: 1168px) {
+    /* line 10, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss */
+    .container {
+      width: 1170px; } }
+
+/* line 30, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss */
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .container-fluid:before, .container-fluid:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .container-fluid:after {
+    clear: both; }
+
+/* line 39, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss */
+.row {
+  margin-left: -15px;
+  margin-right: -15px; }
+  /* line 14, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .row:before, .row:after {
+    content: " ";
+    display: table; }
+  /* line 19, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss */
+  .row:after {
+    clear: both; }
+
+/* line 11, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+/* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+  float: left; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-1 {
+  width: 8.33333%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-2 {
+  width: 16.66667%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-3 {
+  width: 25%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-4 {
+  width: 33.33333%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-5 {
+  width: 41.66667%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-6 {
+  width: 50%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-7 {
+  width: 58.33333%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-8 {
+  width: 66.66667%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-9 {
+  width: 75%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-10 {
+  width: 83.33333%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-11 {
+  width: 91.66667%; }
+
+/* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-12 {
+  width: 100%; }
+
+/* line 55, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-0 {
+  right: auto; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-1 {
+  right: 8.33333%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-2 {
+  right: 16.66667%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-3 {
+  right: 25%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-4 {
+  right: 33.33333%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-5 {
+  right: 41.66667%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-6 {
+  right: 50%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-7 {
+  right: 58.33333%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-8 {
+  right: 66.66667%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-9 {
+  right: 75%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-10 {
+  right: 83.33333%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-11 {
+  right: 91.66667%; }
+
+/* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-pull-12 {
+  right: 100%; }
+
+/* line 45, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-0 {
+  left: auto; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-1 {
+  left: 8.33333%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-2 {
+  left: 16.66667%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-3 {
+  left: 25%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-4 {
+  left: 33.33333%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-5 {
+  left: 41.66667%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-6 {
+  left: 50%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-7 {
+  left: 58.33333%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-8 {
+  left: 66.66667%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-9 {
+  left: 75%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-10 {
+  left: 83.33333%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-11 {
+  left: 91.66667%; }
+
+/* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-push-12 {
+  left: 100%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-0 {
+  margin-left: 0%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-1 {
+  margin-left: 8.33333%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-2 {
+  margin-left: 16.66667%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-3 {
+  margin-left: 25%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-4 {
+  margin-left: 33.33333%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-5 {
+  margin-left: 41.66667%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-6 {
+  margin-left: 50%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-7 {
+  margin-left: 58.33333%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-8 {
+  margin-left: 66.66667%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-9 {
+  margin-left: 75%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-10 {
+  margin-left: 83.33333%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-11 {
+  margin-left: 91.66667%; }
+
+/* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+.col-xs-offset-12 {
+  margin-left: 100%; }
+
+@media (min-width: 768px) {
+  /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    float: left; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-1 {
+    width: 8.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-2 {
+    width: 16.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-3 {
+    width: 25%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-4 {
+    width: 33.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-5 {
+    width: 41.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-6 {
+    width: 50%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-7 {
+    width: 58.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-8 {
+    width: 66.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-9 {
+    width: 75%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-10 {
+    width: 83.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-11 {
+    width: 91.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-12 {
+    width: 100%; }
+
+  /* line 55, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-0 {
+    right: auto; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-1 {
+    right: 8.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-2 {
+    right: 16.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-3 {
+    right: 25%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-4 {
+    right: 33.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-5 {
+    right: 41.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-6 {
+    right: 50%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-7 {
+    right: 58.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-8 {
+    right: 66.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-9 {
+    right: 75%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-10 {
+    right: 83.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-11 {
+    right: 91.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-pull-12 {
+    right: 100%; }
+
+  /* line 45, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-0 {
+    left: auto; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-1 {
+    left: 8.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-2 {
+    left: 16.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-3 {
+    left: 25%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-4 {
+    left: 33.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-5 {
+    left: 41.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-6 {
+    left: 50%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-7 {
+    left: 58.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-8 {
+    left: 66.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-9 {
+    left: 75%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-10 {
+    left: 83.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-11 {
+    left: 91.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-push-12 {
+    left: 100%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-0 {
+    margin-left: 0%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-1 {
+    margin-left: 8.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-2 {
+    margin-left: 16.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-3 {
+    margin-left: 25%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-4 {
+    margin-left: 33.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-5 {
+    margin-left: 41.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-6 {
+    margin-left: 50%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-7 {
+    margin-left: 58.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-8 {
+    margin-left: 66.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-9 {
+    margin-left: 75%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-10 {
+    margin-left: 83.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-11 {
+    margin-left: 91.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-sm-offset-12 {
+    margin-left: 100%; } }
+@media (min-width: 992px) {
+  /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-1 {
+    width: 8.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-2 {
+    width: 16.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-3 {
+    width: 25%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-4 {
+    width: 33.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-5 {
+    width: 41.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-6 {
+    width: 50%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-7 {
+    width: 58.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-8 {
+    width: 66.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-9 {
+    width: 75%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-10 {
+    width: 83.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-11 {
+    width: 91.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-12 {
+    width: 100%; }
+
+  /* line 55, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-0 {
+    right: auto; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-1 {
+    right: 8.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-2 {
+    right: 16.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-3 {
+    right: 25%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-4 {
+    right: 33.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-5 {
+    right: 41.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-6 {
+    right: 50%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-7 {
+    right: 58.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-8 {
+    right: 66.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-9 {
+    right: 75%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-10 {
+    right: 83.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-11 {
+    right: 91.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-pull-12 {
+    right: 100%; }
+
+  /* line 45, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-0 {
+    left: auto; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-1 {
+    left: 8.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-2 {
+    left: 16.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-3 {
+    left: 25%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-4 {
+    left: 33.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-5 {
+    left: 41.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-6 {
+    left: 50%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-7 {
+    left: 58.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-8 {
+    left: 66.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-9 {
+    left: 75%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-10 {
+    left: 83.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-11 {
+    left: 91.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-push-12 {
+    left: 100%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-0 {
+    margin-left: 0%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-1 {
+    margin-left: 8.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-2 {
+    margin-left: 16.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-3 {
+    margin-left: 25%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-4 {
+    margin-left: 33.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-5 {
+    margin-left: 41.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-6 {
+    margin-left: 50%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-7 {
+    margin-left: 58.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-8 {
+    margin-left: 66.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-9 {
+    margin-left: 75%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-10 {
+    margin-left: 83.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-11 {
+    margin-left: 91.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-md-offset-12 {
+    margin-left: 100%; } }
+@media (min-width: 1168px) {
+  /* line 27, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-1 {
+    width: 8.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-2 {
+    width: 16.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-3 {
+    width: 25%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-4 {
+    width: 33.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-5 {
+    width: 41.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-6 {
+    width: 50%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-7 {
+    width: 58.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-8 {
+    width: 66.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-9 {
+    width: 75%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-10 {
+    width: 83.33333%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-11 {
+    width: 91.66667%; }
+
+  /* line 35, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-12 {
+    width: 100%; }
+
+  /* line 55, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-0 {
+    right: auto; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-1 {
+    right: 8.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-2 {
+    right: 16.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-3 {
+    right: 25%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-4 {
+    right: 33.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-5 {
+    right: 41.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-6 {
+    right: 50%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-7 {
+    right: 58.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-8 {
+    right: 66.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-9 {
+    right: 75%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-10 {
+    right: 83.33333%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-11 {
+    right: 91.66667%; }
+
+  /* line 50, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-pull-12 {
+    right: 100%; }
+
+  /* line 45, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-0 {
+    left: auto; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-1 {
+    left: 8.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-2 {
+    left: 16.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-3 {
+    left: 25%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-4 {
+    left: 33.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-5 {
+    left: 41.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-6 {
+    left: 50%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-7 {
+    left: 58.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-8 {
+    left: 66.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-9 {
+    left: 75%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-10 {
+    left: 83.33333%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-11 {
+    left: 91.66667%; }
+
+  /* line 40, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-push-12 {
+    left: 100%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-0 {
+    margin-left: 0%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-1 {
+    margin-left: 8.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-2 {
+    margin-left: 16.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-3 {
+    margin-left: 25%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-4 {
+    margin-left: 33.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-5 {
+    margin-left: 41.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-6 {
+    margin-left: 50%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-7 {
+    margin-left: 58.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-8 {
+    margin-left: 66.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-9 {
+    margin-left: 75%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-10 {
+    margin-left: 83.33333%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-11 {
+    margin-left: 91.66667%; }
+
+  /* line 60, ../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
+  .col-lg-offset-12 {
+    margin-left: 100%; } }
+/* line 3, ../scss/includes/_uu-huisstijl.scss */
+.uu-main-news-header {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 42px; }
+
+/* line 10, ../scss/includes/_uu-huisstijl.scss */
+.uu-sub-news-heading {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 36px; }
+
+/* line 17, ../scss/includes/_uu-huisstijl.scss */
+.uu-large-breaker {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 64px; }
+
+/* line 24, ../scss/includes/_uu-huisstijl.scss */
+.uu-subsite-header {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 38px;
+  line-height: 48px;
+  color: #F52A01; }
+
+/* line 32, ../scss/includes/_uu-huisstijl.scss */
+.uu-content-h1, h1, .h1 {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 44px;
+  color: #3B3B3B;
+  font-weight: 100; }
+
+/* line 41, ../scss/includes/_uu-huisstijl.scss */
+.uu-content-h2, h2, .h2 {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  font-size: 28px;
+  line-height: 46px;
+  color: #3B3B3B;
+  font-weight: 100;
+  margin-top: 2em;
+  margin-bottom: 1em; }
+
+/* line 52, ../scss/includes/_uu-huisstijl.scss */
+.uu-content-h3, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #3B3B3B;
+  margin-top: 3em;
+  margin-bottom: 1em; }
+
+/* line 62, ../scss/includes/_uu-huisstijl.scss */
+.uu-main-intro {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px; }
+
+/* line 69, ../scss/includes/_uu-huisstijl.scss */
+.uu-sub-intro {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 34px; }
+
+/* line 76, ../scss/includes/_uu-huisstijl.scss */
+.uu-body, body {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 34px; }
+
+/* line 83, ../scss/includes/_uu-huisstijl.scss */
+.uu-quote, blockquote {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 46px; }
+
+/* line 90, ../scss/includes/_uu-huisstijl.scss */
+.uu-caption-main, .wp-caption p.wp-caption-text {
+  font-family: "Merriweather", serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  margin-top: -1px;
+  color: #262626;
+  padding: 10px 20px;
+  border: 1px solid #ccc; }
+
+/* line 101, ../scss/includes/_uu-huisstijl.scss */
+.uu-caption-sub {
+  font-family: "Open Sans", "Frutiger", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #888888; }
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography Stylesheet
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins & Constants Stylesheet
+
+This is where you can take advantage of Sass' great features:
+Mixins & Constants. I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques like gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+******************************************************************/
+/*********************
+CLEARFIX - http://nicolasgallagher.com/micro-clearfix-hack/
+*********************/
+/* line 23, ../scss/includes/_mixins.scss */
+.clearfix {
+  zoom: 1; }
+  /* line 25, ../scss/includes/_mixins.scss */
+  .clearfix:before, .clearfix:after {
+    content: " ";
+    display: table; }
+  /* line 26, ../scss/includes/_mixins.scss */
+  .clearfix:after {
+    clear: both; }
+
+/*********************
+IMAGES
+*********************/
+/* line 33, ../scss/includes/_mixins.scss */
+.img-border {
+  border: 1px solid #CCC;
+  padding: 5px; }
+
+/* line 38, ../scss/includes/_mixins.scss */
+.img-rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px; }
+
+/* line 44, ../scss/includes/_mixins.scss */
+.img-polaroid {
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+
+/* line 54, ../scss/includes/_mixins.scss */
+.img-circle {
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+  border-radius: 500px; }
+
+/*********************
+TYPOGRAPHY
+*********************/
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+/* line 67, ../scss/includes/_mixins.scss */
+span.amp {
+  font-family: Arial, serif !important;
+  font-style: italic; }
+
+/* line 73, ../scss/includes/_mixins.scss */
+.alert-help, .alert-warning, .alert-info, .alert-error, .alert-danger, .alert-success {
+  margin: 10px 0;
+  padding: 10px 18px;
+  border: 1px solid;
+  font-family: "open sans", sans-serif;
+  border: 1px solid; }
+
+/* line 81, ../scss/includes/_mixins.scss */
+.alert-help, .alert-warning {
+  border-color: #e8dc59;
+  background: #ebe16f; }
+
+/* line 87, ../scss/includes/_mixins.scss */
+.alert-info {
+  border-color: #bfe4f4;
+  background: #d5edf8; }
+
+/* line 93, ../scss/includes/_mixins.scss */
+.alert-error, .alert-danger {
+  border-color: #f8cdce;
+  background: #fbe3e4; }
+
+/* line 99, ../scss/includes/_mixins.scss */
+.alert-success {
+  border-color: #deeaae;
+  background: #e6efc2; }
+
+/* line 116, ../scss/includes/_mixins.scss */
+.mobile-only,
+tr.mobile-only,
+th.mobile-only,
+td.mobile-only {
+  display: none !important; }
+
+@media only screen and (max-width: 480px) {
+  /* line 108, ../scss/includes/_mixins.scss */
+  .mobile-only {
+    display: block !important; }
+
+  /* line 109, ../scss/includes/_mixins.scss */
+  tr.mobile-only {
+    display: table-row !important; }
+
+  /* line 110, ../scss/includes/_mixins.scss */
+  th.mobile-only,
+  td.mobile-only {
+    display: table-cell !important; } }
+/* line 108, ../scss/includes/_mixins.scss */
+.mobile-hide {
+  display: block !important; }
+
+/* line 109, ../scss/includes/_mixins.scss */
+tr.mobile-hide {
+  display: table-row !important; }
+
+/* line 110, ../scss/includes/_mixins.scss */
+th.mobile-hide,
+td.mobile-hide {
+  display: table-cell !important; }
+
+@media only screen and (max-width: 480px) {
+  /* line 116, ../scss/includes/_mixins.scss */
+  .mobile-hide,
+  tr.mobile-hide,
+  th.mobile-hide,
+  td.mobile-hide {
+    display: none !important; } }
+/* line 116, ../scss/includes/_mixins.scss */
+.tablet-only,
+tr.tablet-only,
+th.tablet-only,
+td.tablet-only {
+  display: none !important; }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 108, ../scss/includes/_mixins.scss */
+  .tablet-only {
+    display: block !important; }
+
+  /* line 109, ../scss/includes/_mixins.scss */
+  tr.tablet-only {
+    display: table-row !important; }
+
+  /* line 110, ../scss/includes/_mixins.scss */
+  th.tablet-only,
+  td.tablet-only {
+    display: table-cell !important; } }
+/* line 108, ../scss/includes/_mixins.scss */
+.tablet-hide {
+  display: block !important; }
+
+/* line 109, ../scss/includes/_mixins.scss */
+tr.tablet-hide {
+  display: table-row !important; }
+
+/* line 110, ../scss/includes/_mixins.scss */
+th.tablet-hide,
+td.tablet-hide {
+  display: table-cell !important; }
+
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  /* line 116, ../scss/includes/_mixins.scss */
+  .tablet-hide,
+  tr.tablet-hide,
+  th.tablet-hide,
+  td.tablet-hide {
+    display: none !important; } }
+/* line 116, ../scss/includes/_mixins.scss */
+.desktop-only,
+tr.desktop-only,
+th.desktop-only,
+td.desktop-only {
+  display: none !important; }
+
+@media only screen and (min-width: 768px) {
+  /* line 108, ../scss/includes/_mixins.scss */
+  .desktop-only {
+    display: block !important; }
+
+  /* line 109, ../scss/includes/_mixins.scss */
+  tr.desktop-only {
+    display: table-row !important; }
+
+  /* line 110, ../scss/includes/_mixins.scss */
+  th.desktop-only,
+  td.desktop-only {
+    display: table-cell !important; } }
+/* line 108, ../scss/includes/_mixins.scss */
+.desktop-hide {
+  display: block !important; }
+
+/* line 109, ../scss/includes/_mixins.scss */
+tr.desktop-hide {
+  display: table-row !important; }
+
+/* line 110, ../scss/includes/_mixins.scss */
+th.desktop-hide,
+td.desktop-hide {
+  display: table-cell !important; }
+
+@media only screen and (min-width: 768px) {
+  /* line 116, ../scss/includes/_mixins.scss */
+  .desktop-hide,
+  tr.desktop-hide,
+  th.desktop-hide,
+  td.desktop-hide {
+    display: none !important; } }
+/******************************************************************
+ UTILITY STYLES
+******************************************************************/
+/* line 174, ../scss/includes/_mixins.scss */
+.float-left {
+  float: left; }
+
+/* line 175, ../scss/includes/_mixins.scss */
+.float-none {
+  float: none; }
+
+/* line 176, ../scss/includes/_mixins.scss */
+.float-right {
+  float: right; }
+
+/* line 177, ../scss/includes/_mixins.scss */
+.clear-left {
+  clear: left; }
+
+/* line 178, ../scss/includes/_mixins.scss */
+.clear-both {
+  clear: both; }
+
+/* line 179, ../scss/includes/_mixins.scss */
+.clear-right {
+  clear: right; }
+
+/* Image replacement */
+/* line 182, ../scss/includes/_mixins.scss */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+/* line 189, ../scss/includes/_mixins.scss */
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+/* line 200, ../scss/includes/_mixins.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+/* line 209, ../scss/includes/_mixins.scss */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+/* line 225, ../scss/includes/_mixins.scss */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/* Hide visually and from screenreaders, but maintain layout */
+/* line 237, ../scss/includes/_mixins.scss */
+.invisible {
+  visibility: hidden; }
+
+/*********************
+TRANSITION
+*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*********************/
+/*********************
+ANIMATION
+*
+Compass CSS3 mixins don't yet handle vendor prefixes for CSS animations, so this is a very simple mixin to simulate that functionality.
+*********************/
+/*********************
+VERTICAL ALIGN DYNAMIC HEIGHT - http://css-tricks.com/centering-in-the-unknown/
+*********************/
+/*********************
+TEXT TRUNCATION
+*********************/
+/*********************
+GRAYSCALE
+*********************/
+/*********************
+TRANSPARENT BG-COLOR
+*********************/
+/*********************
+CSS3 GRADIENTS
+*
+Be careful with these since they can
+really slow down your CSS. Don't overdue it.
+USAGE: @include css-gradient(#dfdfdf,#f8f8f8);
+*********************/
+/********************
+CUSTOMIZED RESET VALUES
+*********************/
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/wp-content/themes/UU2014/fonts//OpenSans-Regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/wp-content/themes/UU2014/fonts/OpenSans-Light-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Open Sans';
+  src: url("/wp-content/themes/UU2014/fonts/OpenSans-Bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("/wp-content/themes/UU2014/fonts/merriweather-regular-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("/wp-content/themes/UU2014/fonts/merriweather-LightItalic-webfont.woff") format("woff");
+  font-weight: 400;
+  font-style: italic; }
+@font-face {
+  font-family: 'Merriweather';
+  src: url("/wp-content/themes/UU2014/fonts/merriweather-bold-webfont.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+@font-face {
+  font-family: "icomoon";
+  src: local(icomoon), local(Icomoon), url("/wp-content/themes/UU2014/fonts/icomoon.ttf?6tvktt") format("truetype"), url("/wp-content/themes/UU2014/fonts/icomoon.woff?6tvktt") format("woff"), url("/wp-content/themes/UU2014/fonts/icomoon.svg?6tvktt#icomoon") format("svg");
+  font-style: normal;
+  font-weight: normal; }
+/* line 83, ../scss/includes/_typography.scss */
+.page-content, .page-content-inner, .mce-content-body {
+  font-family: "Merriweather", serif; }
+  /* line 85, ../scss/includes/_typography.scss */
+  .page-content a[target="_blank"]:after, .page-content-inner a[target="_blank"]:after, .mce-content-body a[target="_blank"]:after {
+    font-family: "icomoon";
+    content: "";
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 7px;
+    padding: 0 0 0 7px;
+    text-decoration: none; }
+
+/* line 96, ../scss/includes/_typography.scss */
+.page-content li {
+  margin-bottom: 1em; }
+
+/* line 100, ../scss/includes/_typography.scss */
+p {
+  -webkit-hyphens: manual;
+  -epub-hyphens: manual;
+  -moz-hyphens: manual;
+  hyphens: manual;
+  margin: 0 0 1em 0; }
+
+/* line 107, ../scss/includes/_typography.scss */
+ul, ol {
+  margin: 1em 2em; }
+
+/* line 110, ../scss/includes/_typography.scss */
+ul {
+  list-style-type: disc; }
+
+/* line 113, ../scss/includes/_typography.scss */
+ol {
+  list-style-type: decimal; }
+
+/* line 145, ../scss/includes/_typography.scss */
+b, strong, .strong {
+  font-weight: bold; }
+
+/* line 149, ../scss/includes/_typography.scss */
+cite, dfn, em, i, .em {
+  font-style: italic; }
+
+/* line 153, ../scss/includes/_typography.scss */
+small, .small {
+  font-size: 75%; }
+
+/* line 157, ../scss/includes/_typography.scss */
+hr {
+  clear: both; }
+
+/* line 165, ../scss/includes/_typography.scss */
+video {
+  width: 100% !important;
+  height: auto !important; }
+
+/* line 170, ../scss/includes/_typography.scss */
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999; }
+
+/* line 176, ../scss/includes/_typography.scss */
+blockquote {
+  border-left: 0; }
+
+/* line 185, ../scss/includes/_typography.scss */
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #999999; }
+
+/* line 191, ../scss/includes/_typography.scss */
+blockquote small:before {
+  content: '\2014 \00A0'; }
+
+/* line 195, ../scss/includes/_typography.scss */
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: ""; }
+
+/* line 202, ../scss/includes/_typography.scss */
+address {
+  display: block;
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 20px; }
+
+/* line 209, ../scss/includes/_typography.scss */
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333333;
+  border-radius: 0; }
+
+/* line 218, ../scss/includes/_typography.scss */
+code {
+  padding: 2px 4px;
+  color: #d14;
+  white-space: pre-wrap;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  display: inline-block; }
+
+/* line 227, ../scss/includes/_typography.scss */
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0; }
+
+/* line 243, ../scss/includes/_typography.scss */
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: transparent;
+  border: 0; }
+
+/* line 252, ../scss/includes/_typography.scss */
+hr {
+  margin: 1.429em 0;
+  border: 0;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #ffffff; }
+
+/* line 259, ../scss/includes/_typography.scss */
+.screen-reader-text {
+  display: none; }
+
+/*********************
+* TABLE STYLES
+*********************/
+/* line 266, ../scss/includes/_typography.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0px;
+  margin: 10px 0px 15px 0px;
+  width: 100%;
+  text-align: left; }
+  /* line 273, ../scss/includes/_typography.scss */
+  table thead {
+    text-align: center; }
+  /* line 277, ../scss/includes/_typography.scss */
+  table th {
+    background-color: #ffcd00;
+    border: 0px solid #FFFFFF;
+    padding: 10px 15px;
+    color: #3D3D3D;
+    text-align: center; }
+  /* line 285, ../scss/includes/_typography.scss */
+  table td {
+    border: 0px;
+    color: #3D3D3D;
+    padding: 5px 15px;
+    vertical-align: top; }
+  /* line 292, ../scss/includes/_typography.scss */
+  table tr.even {
+    background-color: #FFFFFF; }
+  /* line 296, ../scss/includes/_typography.scss */
+  table tr.odd {
+    background-color: #F0F0F0; }
+
+/*********************
+LINK STYLES
+*********************/
+/* line 307, ../scss/includes/_typography.scss */
+a, a:visited {
+  color: #262626; }
+
+/* line 310, ../scss/includes/_typography.scss */
+a:hover, a:focus {
+  color: #787878;
+  transition: color 0.5s ease 0s; }
+
+/* line 315, ../scss/includes/_typography.scss */
+.page-content,
+article {
+  /* on hover */
+  /* on click */ }
+  /* line 317, ../scss/includes/_typography.scss */
+  .page-content a, .page-content a:visited,
+  article a,
+  article a:visited {
+    text-decoration: underline; }
+  /* line 323, ../scss/includes/_typography.scss */
+  .page-content a:hover, .page-content a:focus,
+  article a:hover,
+  article a:focus {
+    text-decoration: underline; }
+  /* line 331, ../scss/includes/_typography.scss */
+  .page-content a:link,
+  article a:link {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+/* line 340, ../scss/includes/_typography.scss */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  text-rendering: optimizelegibility; }
+  /* line 344, ../scss/includes/_typography.scss */
+  h1 a, .h1 a, h2 a, .h2 a, h3 a, .h3 a, h4 a, .h4 a, h5 a, .h5 a {
+    text-decoration: none; }
+
+/* line 353, ../scss/includes/_typography.scss */
+.single h1 {
+  margin-top: 22px; }
+
+/* line 362, ../scss/includes/_typography.scss */
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4 {
+  margin: 2em 0 1em 0; }
+
+/* line 368, ../scss/includes/_typography.scss */
+.page-content-inner h1:first-child, .page-content-inner h2:first-child, .page-content-inner h3:first-child, .page-content-inner h4:first-child {
+  margin-top: 0; }
+
+/******************************************************************
+ TINYMCE STYLES DROPDOWN
+******************************************************************/
+/* line 397, ../scss/includes/_typography.scss */
+.underline {
+  text-decoration: underline; }
+
+/* line 401, ../scss/includes/_typography.scss */
+.italic {
+  font-style: italic; }
+
+/* line 405, ../scss/includes/_typography.scss */
+.bold {
+  font-weight: bold; }
+
+/* line 409, ../scss/includes/_typography.scss */
+.text-left {
+  text-align: left; }
+
+/* line 413, ../scss/includes/_typography.scss */
+.text-center {
+  text-align: center; }
+
+/* line 417, ../scss/includes/_typography.scss */
+.text-right {
+  text-align: right; }
+
+/* image alignment */
+/* line 422, ../scss/includes/_typography.scss */
+.alignleft, img.alignleft {
+  float: left;
+  margin: 0 15px 10px 0; }
+
+/* line 427, ../scss/includes/_typography.scss */
+.alignright, img.alignright {
+  float: right;
+  margin: 0 0 10px 15px; }
+
+/* line 432, ../scss/includes/_typography.scss */
+.aligncenter, img.aligncenter {
+  display: block;
+  margin: 0 auto 10px auto; }
+
+/* line 437, ../scss/includes/_typography.scss */
+.alignnone, img.alignnone {
+  display: block;
+  margin: 0 0 10px 0; }
+
+/* line 442, ../scss/includes/_typography.scss */
+.aligncenter, img.aligncenter,
+.alignnone, img.alignnone {
+  clear: both; }
+
+/*Image Caption*/
+/* line 448, ../scss/includes/_typography.scss */
+.wp-caption {
+  max-width: 100% !important;
+  /* images inside wp-caption */ }
+  /* line 453, ../scss/includes/_typography.scss */
+  .wp-caption img {
+    margin-bottom: 0;
+    width: 100%; }
+
+/* end .wp-caption */
+/*Core Media Player*/
+/*video player*/
+/* line 494, ../scss/includes/_typography.scss */
+.mejs-video {
+  width: 100% !important;
+  height: auto !important;
+  padding-top: 57%; }
+  /* line 503, ../scss/includes/_typography.scss */
+  .mejs-video .mejs-inner .mejs-mediaelement video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100% !important;
+    height: 100% !important; }
+  /* line 526, ../scss/includes/_typography.scss */
+  .mejs-video .mejs-inner .mejs-layers .mejs-poster {
+    width: 100% !important;
+    height: 100% !important; }
+  /* line 534, ../scss/includes/_typography.scss */
+  .mejs-video .mejs-inner .mejs-overlay-play {
+    width: 100% !important;
+    height: 100% !important; }
+
+/*audio player*/
+/* Audio Playlist */
+/* line 578, ../scss/includes/_typography.scss */
+.wp-playlist {
+  overflow: hidden; }
+  /* line 605, ../scss/includes/_typography.scss */
+  .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption {
+    display: block; }
+    /* line 608, ../scss/includes/_typography.scss */
+    .wp-playlist .wp-playlist-tracks .wp-playlist-item .wp-playlist-caption .wp-playlist-item-title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+
+/*Block Quote Alignment*/
+/*Image Sizes*/
+/* line 626, ../scss/includes/_typography.scss */
+.size-auto,
+.size-full,
+.size-large,
+.size-medium,
+.size-thumbnail {
+  max-width: 100%;
+  height: auto; }
+  @media (max-width: 420px) {
+    /* line 626, ../scss/includes/_typography.scss */
+    .size-auto,
+    .size-full,
+    .size-large,
+    .size-medium,
+    .size-thumbnail {
+      width: 100%;
+      float: none; } }
+
+/*Use this class for any Editor Specific Styles to help the user experience
+ * set the max size of the content area in the editor to match the template*/
+/* line 649, ../scss/includes/_typography.scss */
+.mceContentBody {
+  background-color: #FDFDFD; }

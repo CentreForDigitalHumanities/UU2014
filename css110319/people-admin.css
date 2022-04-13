@@ -1,0 +1,14 @@
+/* line 2, ../scss/people-admin.scss */
+.personalia-admin label {
+  width: 150px;
+  display: inline-block; }
+/* line 6, ../scss/people-admin.scss */
+.personalia-admin .personalia-photo {
+  width: 150px;
+  float: left; }
+/* line 10, ../scss/people-admin.scss */
+.personalia-admin .personalia-content {
+  margin-left: 150px; }
+/* line 13, ../scss/people-admin.scss */
+.personalia-admin textarea {
+  vertical-align: top; }

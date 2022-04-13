@@ -9,7 +9,7 @@
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						<section class="entry-content">
-							<div class="row">
+							<div>
 							<?php the_content(); ?>
 							
 							<?php if( have_rows('persoon') ): ?>
@@ -46,17 +46,17 @@
 									}  else {
 
 										?>
-										<?php if($thumb) { ?>
+										<?php //if($thumb) { ?>
 
 											<div class="people-item people-item-large row">
 
-												<div class="people-item-image col-sm-6">
+												<div class="people-item-image col-sm-3">
 												
 													<img class="img-responsive" src="<?php echo $large[0]; ?>" alt="" />
 												
 												</div>
 
-												<div class="people-item-content col-sm-6">	
+												<div class="people-item-content col-sm-9">	
 
 												    	<div class="people-item-content-naam"><?php echo $naam; ?></div>
 												    <?php if( $rol ): ?>	
@@ -95,14 +95,14 @@
 
 											</div>
 
-											<?php } else { ?>
-												<div class="people-item-content-naam-geen-foto">
+											<?php //} else { ?>
+												<!-- <div class="people-item-content-naam-geen-foto">
 												<?php if( $url ) { ?><a href="<?php echo $url; ?>"><?php } ?>			
 														<?php echo $naam; ?>
 												<?php if( $url ) { ?></a><?php } ?>			
-												</div>
+												</div> -->
 
-											<?php } ?>	
+											<?php //} ?>	
 								
 
 										<?php 
