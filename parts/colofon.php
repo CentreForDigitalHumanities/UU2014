@@ -23,7 +23,7 @@
 							$mylocale = get_bloginfo('language');
 
               if ($mylocale == 'en-US' || $mylocale == 'en-GB') {
-                  echo '<img class="uu-footer-logo" alt="A Logo Utrecht University" src="' . get_theme_file_uri( '/images/uu-logo-footer-en.png' ) . '">';
+                  echo '<img class="uu-footer-logo" alt="Logo Utrecht University" src="' . get_theme_file_uri( '/images/uu-logo-footer-en.png' ) . '">';
               } else {
                   echo '<img class="uu-footer-logo" alt="Logo Universiteit Utrecht" src="' . get_theme_file_uri( '/images/uu-logo-footer.png' ) . '">';
               }
