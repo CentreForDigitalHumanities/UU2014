@@ -18,7 +18,6 @@ This is the Wordpress logo in the admin area.
 You'll have to load your own images and mess
 with the width and height.
 */
-/* line 28, ../scss/login.scss */
 .login h1 a {
   /* Add a logo file in and update these lines
   background: url(../images/login-logo.png) no-repeat top center;
@@ -29,25 +28,19 @@ with the width and height.
   white-space: nowrap;
   overflow: hidden;
   padding-bottom: 15px;
-  display: block; }
+  display: block;
+}
 
-/* line 41, ../scss/login.scss */
 form {
   margin-left: 8px;
   padding: 26px 24px 46px;
   font-weight: normal;
   background: white;
   border: 1px solid #E5E5E5;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
+}
 
-/* line 51, ../scss/login.scss */
 body form .input {
-  font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",sans-serif;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", sans-serif;
   font-weight: 200;
   font-size: 24px;
   width: 97%;
@@ -58,12 +51,11 @@ body form .input {
   border: 1px solid #E5E5E5;
   background: #FBFBFB;
   outline: none;
-  -webkit-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
-  -moz-box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
-  box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2); }
+  box-shadow: inset 1px 1px 2px rgba(200, 200, 200, 0.2);
+}
 
 /*
 You'll have to override some of the default styles
 but since we're referencing the id, it should be easy.
 */
-/* login button*/
+/* login button*//*# sourceMappingURL=login.css.map */

@@ -24,14 +24,23 @@ though, go for it.
 
     // show links on printed pages
     &:after {
-      content: " (" attr(href) ")";
+      content: " (" attr(href) ")" !important;
+      display: inline-block !important;
+      font-family: inherit !important;
+      font-size: 1em !important;
+      margin-left: 1em;
     }
 
     // show title too
     abbr[title]:after {
       content: " (" attr(title) ")";
     }
+   
   }
+
+  a[href]:after {
+		content: " (" attr(href) ")";
+	}
 
   .ir a:after,
   a[href^="javascript:"]:after,
@@ -48,7 +57,7 @@ though, go for it.
     display: table-header-group;
   }
 
-  tr, img {
+  tr, img, p {
     page-break-inside: avoid;
   }
 
@@ -57,7 +66,7 @@ though, go for it.
   }
 
     @page {
-      margin: 0.5cm;
+      margin: 1cm;
     }
 
     p, h2, h3 {
@@ -76,11 +85,16 @@ though, go for it.
     .wp-prev-next,
     .respond-form,
     nav,
-    .hidden-print {
+    .hidden-print,
+    .sr-only {
       display: none;
     }
     
 .collapse {
     display: block !important;
     height: auto !important;
+}
+
+.site-logo {
+  height: 2cm;
 }

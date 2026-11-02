@@ -54,9 +54,9 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-soci
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' );
 }
-if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
-    require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
-}
+// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
+//     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
+// }
 
 
 
@@ -79,7 +79,7 @@ function uu2014_scripts_and_styles() {
 
 	// register main stylesheet
 
-	wp_enqueue_style( 'uu2014-stylesheet', get_template_directory_uri() . '/css/production/style.css', array(), '', 'screen' );	
+	wp_enqueue_style( 'uu2014-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'screen' );	
 	wp_enqueue_style( 'uu2014-print-stylesheet', get_template_directory_uri() . '/css/print.css', array(), '', 'print' );	
 	// ie-only style sheet
 	wp_enqueue_style( 'uu2014-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
@@ -147,12 +147,18 @@ function my_custom_admin_css() {
 /*********************
 3. THEME SUPPORT
 *********************/
-
-if( get_field('uu_options_enable_gutenberg', 'option') ) { 
-
-} else {
-	add_filter( 'use_block_editor_for_post', '__return_false' );
+function uu2014_disable_gutenberg() {
+	if(function_exists('get_field')) {
+		if( get_field('uu_options_enable_gutenberg', 'option') ) { 
+	
+		} else {
+			add_filter( 'use_block_editor_for_post', '__return_false' );
+		}
+	}
 }
+
+add_action('init', 'uu2014_disable_gutenberg');
+
 
 // Adding WP 3+ Functions & Theme Support
 function uu2014_theme_support() {
@@ -261,7 +267,7 @@ function uu2014_custom_headers_callback() {
 
 // Thumbnail sizes
 
-add_action( 'after_setup_theme', 'uu_2014_custom_thumb_size' );
+//add_action( 'after_setup_theme', 'uu_2014_custom_thumb_size' );
 
 function uu_2014_custom_thumb_size() {	
 	add_image_size( 'uu-thumbnail', 100, 100, true );
@@ -276,7 +282,7 @@ function uu_2014_custom_thumb_size() {
 }
 
 
-add_filter( 'image_size_names_choose', 'my_custom_sizes' );
+//add_filter( 'image_size_names_choose', 'my_custom_sizes' );
 
 function my_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
@@ -730,7 +736,7 @@ function caroussel_excerpt() {
     if( $post->post_excerpt ) {
         $content = get_the_excerpt();
     } else {
-    	$lenght = "50";
+    	$length = "50";
         $content = "test";
         $content = get_the_content();
         $content = wp_trim_words( $content , $length );
@@ -813,17 +819,22 @@ function uu2014_custom_excerpts($limit) {
 /*  ACF Options page  */
 
 
-if( function_exists('acf_add_options_page') ) {
+add_action('acf/init', 'uu2014_add_theme_options_pages');
+
+function uu2014_add_theme_options_pages() {
+	if( function_exists('acf_add_options_page') ) {
 	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Theme Options',
-		'menu_title'	=> __('UU Theme Options', 'uu2014'),
-		'menu_slug' 	=> 'uu-theme-options',
-		'capability'	=> 'manage_options',
-		'parent_slug'	=> 'uu-options',
-	));
-	
+		acf_add_options_sub_page(array(
+			'page_title' 	=> 'Theme Options',
+			'menu_title'	=> __('UU Theme Options', 'uu2014'),
+			'menu_slug' 	=> 'uu2014-theme-options',
+			'capability'	=> 'manage_options',
+			'parent_slug'	=> 'uu-options',
+		));
+		
+	}
 }
+
 
 
 if ( file_exists( dirname( __FILE__ ) . '/includes/acf-theme-options.php' ) ) {
@@ -1062,3 +1073,47 @@ function uu_delete_agenda_transients() {
 	}
 }
 //add_action( 'save_post', 'uu_delete_agenda_transients' );
+
+
+// Show Custom Post Types in Tag Archives
+function uu2014_add_post_types_to_archives( $query ) {
+    
+    if ( is_admin() || ! $query->is_main_query() ) {
+        return;    
+    }
+
+    if ( is_category() || is_tag() && empty( $query->query_vars['suppress_filters'] ) ) {
+        $cptui_post_types = cptui_get_post_type_slugs();
+
+        $query->set(
+            'post_type',
+            array_merge(
+                array( 'post' ),
+                $cptui_post_types
+            )
+        );
+    }
+}
+
+//add_filter( 'pre_get_posts', 'uu2014_add_post_types_to_archives' );
+
+function uu2014_customizer( $wp_customize ) {
+    global $wp_customize;
+    //=============================================================
+    // Remove header image and widgets option from theme customizer
+    //=============================================================
+    $wp_customize->remove_section("custom_css");
+    $wp_customize->remove_control("site_icon");
+    //$wp_customize->remove_panel("widgets");
+
+    //=============================================================
+    // Remove Colors, Background image, and Static front page 
+    // option from theme customizer     
+    //=============================================================
+    $wp_customize->remove_section("colors");
+    $wp_customize->remove_section("background_image");
+    //$wp_customize->remove_section("static_front_page");
+
+}
+
+add_action( "customize_register", "uu2014_customizer", 999,1 );

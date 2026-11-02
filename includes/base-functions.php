@@ -237,9 +237,9 @@ function uu2014_remove_img_dimensions($html) {
 	}
 	return $html;
 }
-add_filter('post_thumbnail_html', 'uu2014_remove_img_dimensions', 10);
+//add_filter('post_thumbnail_html', 'uu2014_remove_img_dimensions', 10);
 //add_filter('the_content', 'uu2014_remove_img_dimensions', 10); //Options - This has been removed from the content filter so that clients can still edit image sizes in the editor
-add_filter('get_avatar','uu2014_remove_img_dimensions', 10);
+//add_filter('get_avatar','uu2014_remove_img_dimensions', 10);
 
 // remove the p from around imgs (https://css-tricks.com/snippets/wordpress/remove-paragraph-tags-from-around-images/)
 function uu2014_filter_ptags_on_images($content){

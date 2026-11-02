@@ -17,19 +17,19 @@
 	$image = get_field('uu_options_custom_logo', 'options'); ?>
 
 	<?php if(get_field('uu_options_custom_logo_url', 'options')) { ?>	
-		<a href="<?php get_field('uu_options_custom_logo_url', 'options'); ?>"> 
+		<a href="<?php echo get_field('uu_options_custom_logo_url', 'options'); ?>"> 
 	<?php } else { ?>
 		<a href="<?php echo get_option('siteurl'); ?>">
 	<?php  } ?>
-			<img src="<?php echo $image['url']; ?>" class="alternative-logo" alt="logo" />
+			<img src="<?php echo $image['url']; ?>" class="alternative-logo" alt="logo" class="site-logo" />
 		</a>			
 <?php 
 
 } else { 
 		if($mylocale == 'en-US' || $mylocale == 'en-GB') {
-		echo '<a href="https://www.uu.nl/en"><img src="' . get_template_directory_uri() . '/images/uu-logo-en.svg" alt="Logo Utrecht University" /></a>';
+		echo '<a href="https://www.uu.nl/en"><img src="' . get_template_directory_uri() . '/images/uu-logo-en.svg" alt="Logo Utrecht University" class="site-logo" /></a>';
 		} else {
-		echo '<a href="https://www.uu.nl"><img src="' . get_template_directory_uri() . '/images/uu-logo.svg" alt="Logo Universiteit Utrecht" /></a>';
+		echo '<a href="https://www.uu.nl"><img src="' . get_template_directory_uri() . '/images/uu-logo.svg" alt="Logo Universiteit Utrecht" class="site-logo" /></a>';
 		} 
 	 } ?>
 

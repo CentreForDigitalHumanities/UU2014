@@ -24,7 +24,7 @@
  
 
   // Add the blog name.
-  bloginfo( 'name' );
+  echo get_bloginfo( 'name' );
 
   // Add the blog description for the home/front page.
   
@@ -62,11 +62,6 @@
 <link rel="apple-touch-icon" href="<?php echo $custom_icon; ?>">
 
 
-<!--[if IE]><link rel="shortcut icon" href="<?php echo $favicon; ?>">
-<![endif]-->
-
-
-
 
 <meta name="msapplication-TileColor" content="#f01d4f">
 <meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/images/win8-tile-icon.png">
@@ -75,31 +70,63 @@
 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 <!-- Open Graph Meta Tags for Facebook and LinkedIn Sharing !-->
-<?php if ( is_home() || is_front_page() ) 
-   { $og_title = get_bloginfo( 'name' ) . ' | ' . get_bloginfo( 'description', 'display' ); } else { $og_title = get_the_title(); } ?>
-<meta property="og:title" content="<?php echo $og_title; ?>"/>
-<?php if ( $site_description && ( is_home() || is_front_page() ) )
-   { $og_desc = $site_description; } else { $og_desc = apply_filters('get_the_excerpt', get_post_field('post_excerpt', $post->ID));  } 
-   if ( $og_desc == '' ) {
-    $og_desc = wp_trim_words( $post->post_content, 70 );
-	}
+<?php
+$og_title = '';
+$og_desc = '';
+$og_url = '';
+$og_image_id = '';
+$og_image_url = '';
+$og_type = '';
 
-   ?>
+if ( is_home() || is_front_page() ) { 
+		$og_title = get_bloginfo( 'name' ) . ' | ' . get_bloginfo( 'description', 'display' ); 
+		if($site_description) {
+			$og_desc = $site_description;
+		} else {
+			$og_desc = wp_trim_words( $post->post_content, 70 );
+		}
+		$og_url = get_home_url();
+		$og_type = 'website';
+		if(function_exists('get_field') && get_field('uu_options_site_share_image', 'options') ) {
+			$og_image_id = get_field('uu_options_site_share_image', 'options');
+			$og_image_url = wp_get_attachment_image_url($og_image_id, 'full');
+		} else {
+			$image = get_header_image();
+			if ( $image ) {
+				$og_image_url = esc_url( $image );
+			}
+		}
+
+		
+	} else { 
+		if( is_singular() ) {
+			$og_title = get_the_title(); 
+			$og_type = 'article';
+		} elseif ( is_archive() ) {
+			$og_title = get_the_archive_title( '', false ); 
+			$og_type = 'website';
+		} else {
+			$og_title = get_bloginfo( 'name' );
+			$og_type = 'website';
+		}
+		$og_desc = wp_trim_words( $post->post_content, 70 );
+		$og_url = get_the_permalink();
+
+		if (has_post_thumbnail( $post->ID ) ) {
+			$og_image_url = get_the_post_thumbnail_url($post->ID, 'full');
+		} else {
+			$image = get_header_image();
+			if ( $image ) {
+				$og_image_url = esc_url( $image );
+			}
+		}
+		
+	} ?>
+<meta property="og:title" content="<?php echo $og_title; ?>"/>
 <meta property="og:description" content="<?php echo $og_desc; ?>" />
-<?php if ( is_home() || is_front_page() ) 
-   { $og_url = get_home_url(); } else { $og_url = get_the_permalink(); } ?>
 <meta property="og:url" content="<?php echo $og_url; ?>" />
-<?php 
-if(function_exists('get_field') && get_field('uu_options_site_share_image', 'options') )	{ 
-	$fb_image_id = get_field('uu_options_site_share_image', 'options');
-	$fb_image_url = wp_get_attachment_image_url($fb_image_id, 'full');
-?>
-<meta property="og:image" content="<?php echo $fb_image_url; ?>" />
-<?php } else { ?>
-<meta property="og:image" content="<?php header_image(); ?>" />
-<?php } ?>
-<meta property="og:type" content="<?php
-	if (is_single() || is_page()) { echo "article"; } else { echo "website";} ?>" />
+<meta property="og:image" content="<?php echo $og_image_url; ?>" />
+<meta property="og:type" content="<?php echo $og_type; ?>" />
 <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 <!-- End Open Graph Meta Tags !-->
 
@@ -138,10 +165,3 @@ if(function_exists('get_field') && get_field('uu_options_site_share_image', 'opt
 		<a class="skip-link sr-only" href="#content"><?php _e( 'Skip to content', 'uu2014' ); ?></a>
 
 <?php uu_main_navigation(); ?>
-
-
- 	
-			
-       
-
-		

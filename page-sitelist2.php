@@ -11,8 +11,8 @@ test
 
 $args = array(
 		"public" => 1,
-		"number" => 500,
-		"orderby" => 'domain'	
+		"number" => 800,
+		"orderby" => 'registered'	
 	);
 
 $sites_list = get_sites ($args); 

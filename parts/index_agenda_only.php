@@ -27,7 +27,7 @@
 						$args = array(
 							'post_type'		=> 'post',
 							'cat' => $agendaterms,
-							'posts_per_page'	=> $amount,
+							'posts_per_page'	=> 100,
 							'meta_key'		=> 'uu_agenda_start_date',
 							'orderby'             => 'meta_value',
 							'order'               => 'ASC',

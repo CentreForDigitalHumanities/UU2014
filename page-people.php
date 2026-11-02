@@ -12,7 +12,9 @@
 							<div class="row">
 							<?php the_content(); ?>
 							
-							<?php if( have_rows('persoon') ): ?>
+							<?php
+							$post_id = get_the_ID();	
+							if( have_rows('persoon', $post_id) ): ?>
 
 							
 
@@ -20,7 +22,7 @@
 
 									$i = 0;		
 
-									while( have_rows('persoon') ): the_row(); 
+									while( have_rows('persoon', $post_id) ): the_row(); 
 
 									// vars
 									$type = get_sub_field('uu_people_type');

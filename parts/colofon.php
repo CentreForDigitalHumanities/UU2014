@@ -23,9 +23,9 @@
 							$mylocale = get_bloginfo('language');
 
 							if($mylocale == 'en-US' || $mylocale == 'en-GB') {
-							echo '<img class="uu-footer-logo" alt="Logo Utrecht University" src="' . get_template_directory_uri() . '/images/uu-logo-footer-en.svg">';
+							echo '<img class="uu-footer-logo" alt="Logo Utrecht University" src="' . get_template_directory_uri() . '/images/uu-white-en.svg">';
 							} else {
-							echo '<img class="uu-footer-logo" alt="Logo Universiteti Utrecht" src="' . get_template_directory_uri() . '/images/uu-logo-footer.svg">';
+							echo '<img class="uu-footer-logo" alt="Logo Universiteti Utrecht" src="' . get_template_directory_uri() . '/images/uu-white-nl.svg">';
 							} 
 							?>
 							
