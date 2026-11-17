@@ -54,9 +54,6 @@ if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-soci
 if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' ) ) {
     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-upcoming-agenda.php' );
 }
-// if ( file_exists( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' ) ) {
-//     require_once( dirname( __FILE__ ) . '/includes/functions/widgets/widget-twitter-user-timeline.php' );
-// }
 
 
 
@@ -82,8 +79,8 @@ function uu2014_scripts_and_styles() {
 	wp_enqueue_style( 'uu2014-stylesheet', get_template_directory_uri() . '/css/style.css', array(), '', 'screen' );	
 	wp_enqueue_style( 'uu2014-print-stylesheet', get_template_directory_uri() . '/css/print.css', array(), '', 'print' );	
 	// ie-only style sheet
-	wp_enqueue_style( 'uu2014-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
-	$wp_styles->add_data( 'uu2014-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
+	// wp_enqueue_style( 'uu2014-ie-only', get_stylesheet_directory_uri() . '/css/ie.css', array(), '' );
+	// $wp_styles->add_data( 'uu2014-ie-only', 'conditional', 'lt IE 9' ); // add conditional wrapper around ie stylesheet
 
 	// Bootstrap javascript
 	wp_enqueue_script( 'bootstrapjs', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true );
@@ -244,13 +241,16 @@ function uu2014_theme_support() {
 4. CUSTOM PAGE HEADERS
 *********************/
 
-register_default_headers( array(
-	'default' => array(
-		'url' => get_template_directory_uri().'/images/headers/default.jpg',
-		'thumbnail_url' => get_template_directory_uri().'/images/headers/default.jpg',
-		'description' => __( 'default', 'uu2014' )
-	)
-));
+function uu2014_register_default_headers() {
+	register_default_headers( array(
+		'default' => array(
+			'url' => get_template_directory_uri().'/images/headers/default.jpg',
+			'thumbnail_url' => get_template_directory_uri().'/images/headers/default.jpg',
+			'description' => __( 'default', 'uu2014' )
+		)
+	));
+}
+add_action( 'after_setup_theme', 'uu2014_register_default_headers', 20 );
 
 //Set header image as a BG
 function uu2014_custom_headers_callback() {

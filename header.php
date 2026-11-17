@@ -83,7 +83,7 @@ if ( is_home() || is_front_page() ) {
 		if($site_description) {
 			$og_desc = $site_description;
 		} else {
-			$og_desc = wp_trim_words( $post->post_content, 70 );
+			$og_desc = isset( $post->post_content ) ? wp_trim_words( $post->post_content, 70 ) : '';
 		}
 		$og_url = get_home_url();
 		$og_type = 'website';
@@ -109,10 +109,10 @@ if ( is_home() || is_front_page() ) {
 			$og_title = get_bloginfo( 'name' );
 			$og_type = 'website';
 		}
-		$og_desc = wp_trim_words( $post->post_content, 70 );
+		$og_desc = isset( $post->post_content ) ? wp_trim_words( $post->post_content, 70 ) : $site_description;
 		$og_url = get_the_permalink();
 
-		if (has_post_thumbnail( $post->ID ) ) {
+		if (isset( $post->ID ) && has_post_thumbnail( $post->ID ) ) {
 			$og_image_url = get_the_post_thumbnail_url($post->ID, 'full');
 		} else {
 			$image = get_header_image();

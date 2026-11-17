@@ -4,7 +4,6 @@
   "description": "Responsive Design Scaffolding for WordPress =======",
   "main": "Gruntfile.js",
   "dependencies": {
-    "grunt-contrib-watch": "~0.6.1"
   },
   "devDependencies": {},
   "scripts": {
